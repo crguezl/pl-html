@@ -2,4 +2,4 @@
 
 #Itinerario de Computación
 
-Véase [crguezl.github.io/pl-html](crguezl.github.io/pl-html)
+Véase [http://crguezl.github.io/pl-html/](http://crguezl.github.io/pl-html/)
