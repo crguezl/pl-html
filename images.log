@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.1.18)  26 FEB 2014 17:37
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.1.18)  26 FEB 2014 17:41
 entering extended mode
  %&-line parsing enabled.
 **./images.tex
@@ -167,7 +167,15 @@ File: uni-global.def 2004/10/17 UCS: Unicode global data
 \uc@combtoks=\toks30
 \uc@combtoksb=\toks31
 \uc@temptokena=\toks32
-) (/usr/share/texmf-texlive/tex/latex/base/inputenc.sty
+) (/usr/share/texmf-texlive/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: dvips.def on input line 130.
+(/usr/share/texmf-texlive/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)) (/usr/share/texmf-texlive/tex/latex/base/inputenc.sty
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks33
 \inpenc@posthook=\toks34
@@ -295,6 +303,7 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Package option `usenames' ignored on input line 216.
 Package xcolor Info: Driver file: dvips.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
 Package xcolor Info: Model `RGB' extended on input line 1353.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
@@ -347,31 +356,13 @@ File: lstlang2.sty 2004/09/05 1.3 listings language file
 
 Writing index file images.idx
 
-! LaTeX Error: Option clash for package color.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.836 
-      
-The package color has already been loaded with options:
-  []
-There has now been an attempt to load it with options
-  [dvips]
-Adding the global options:
-  ,dvips
-to your \documentclass declaration may fix this.
-Try typing  <return>  to proceed.
-
-
 ! LaTeX Error: Option clash for package inputenc.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.841 
+l.840 
       
 The package inputenc has already been loaded with options:
   [utf8x]
@@ -391,24 +382,24 @@ LaTeX Warning: Label `fig:dfa' multiply defined.
 )
 \openout1 = `images.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 955.
-LaTeX Font Info:    ... okay on input line 955.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 955.
-LaTeX Font Info:    ... okay on input line 955.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 955.
-LaTeX Font Info:    ... okay on input line 955.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 955.
-LaTeX Font Info:    ... okay on input line 955.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 955.
-LaTeX Font Info:    ... okay on input line 955.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 955.
-LaTeX Font Info:    ... okay on input line 955.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 955.
-LaTeX Font Info:    ... okay on input line 955.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 954.
+LaTeX Font Info:    ... okay on input line 954.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 954.
+LaTeX Font Info:    ... okay on input line 954.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 954.
+LaTeX Font Info:    ... okay on input line 954.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 954.
+LaTeX Font Info:    ... okay on input line 954.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 954.
+LaTeX Font Info:    ... okay on input line 954.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 954.
+LaTeX Font Info:    ... okay on input line 954.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 954.
+LaTeX Font Info:    ... okay on input line 954.
 (/usr/share/texmf-texlive/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2003/11/29 Fixes to fontencodings LGR, T3
 )
-Package hyperref Info: Link coloring OFF on input line 955.
+Package hyperref Info: Link coloring OFF on input line 954.
 (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
@@ -416,8 +407,8 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
 \c@section@level=\count138
 )
-LaTeX Info: Redefining \ref on input line 955.
-LaTeX Info: Redefining \pageref on input line 955.
+LaTeX Info: Redefining \ref on input line 954.
+LaTeX Info: Redefining \pageref on input line 954.
 (./images.out) (./images.out)
 \@outlinefile=\write6
 \openout6 = `images.out'.
@@ -447,20 +438,20 @@ latex2htmlLength oddsidemargin=-15.36446pt
 
 latex2htmlLength evensidemargin=-15.36446pt
 
-LaTeX Font Info:    Try loading font information for U+lasy on input line 1079.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 1078.
 
 (/usr/share/texmf-texlive/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 1079.
+LaTeX Font Info:    Try loading font information for U+msa on input line 1078.
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 1079.
+LaTeX Font Info:    Try loading font information for U+msb on input line 1078.
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-l2hSize :tex2html_wrap_inline13166:7.98248pt::7.98248pt::64.81665pt.
+l2hSize :tex2html_wrap_inline13209:7.98248pt::7.98248pt::64.81665pt.
 [1
 
 
@@ -471,12 +462,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8229 strings out of 493858
- 113411 string characters out of 1153328
- 226410 words of memory out of 3000000
- 11360 multiletter control sequences out of 15000+50000
+ 8376 strings out of 493858
+ 115958 string characters out of 1153328
+ 226424 words of memory out of 3000000
+ 11500 multiletter control sequences out of 15000+50000
  8606 words of font info for 35 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 38i,5n,35p,336b,362s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,5n,35p,326b,362s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on images.dvi (1 page, 2436 bytes).
