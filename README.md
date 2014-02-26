@@ -2,4 +2,5 @@
 
 #Itinerario de Computación
 
-Véase [http://crguezl.github.io/pl-html/](http://crguezl.github.io/pl-html/)
+Puede ver los apuntes en 
+[http://crguezl.github.io/pl-html/](http://crguezl.github.io/pl-html/)
