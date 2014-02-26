@@ -383,7 +383,7 @@ $external_labels{$key} = "$URL/" . q|node34.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:eliminaleftrec/;
-$external_labels{$key} = "$URL/" . q|node25.html|; 
+$external_labels{$key} = "$URL/" . q|node26.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/practica:creacionydocdemodulo/;
@@ -627,7 +627,7 @@ $external_labels{$key} = "$URL/" . q|node148.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:eliminarecesquem/;
-$external_labels{$key} = "$URL/" . q|node25.html|; 
+$external_labels{$key} = "$URL/" . q|node26.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:errores/;
@@ -802,7 +802,7 @@ $external_latex_labels{$key} = q|4.1|;
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:eliminaleftrec/;
-$external_latex_labels{$key} = q|3.4.1|; 
+$external_latex_labels{$key} = q|3.5.1|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:heredados/;
@@ -826,7 +826,7 @@ $external_latex_labels{$key} = q|1.2|;
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:eliminarecesquem/;
-$external_latex_labels{$key} = q|3.4.2|; 
+$external_latex_labels{$key} = q|3.5.2|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:prioridades/;

@@ -383,7 +383,7 @@ $ref_files{$key} = "$dir".q|node34.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:eliminaleftrec/;
-$ref_files{$key} = "$dir".q|node25.html|; 
+$ref_files{$key} = "$dir".q|node26.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/practica:creacionydocdemodulo/;
@@ -627,7 +627,7 @@ $ref_files{$key} = "$dir".q|node148.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:eliminarecesquem/;
-$ref_files{$key} = "$dir".q|node25.html|; 
+$ref_files{$key} = "$dir".q|node26.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:errores/;
