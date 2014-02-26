@@ -265,6 +265,12 @@ dos dígitos. Además se pide que si hay ya un espacio después de la coma,
 no se duplique
 
 <P>
+Como función de reemplazo use:
+<PRE>
+f = function(match, p1, p2, offset, string) { return (p1 || p2 + " "); }
+</PRE>
+
+<P>
 </LI>
 <LI>Escribe un patrón regular
 que reconozca las cadenas  que representan números no primos en unario
@@ -866,7 +872,7 @@ function lexer(input) {
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I>Casiano Rodríguez León <BR>
-2014-02-25</I>
+2014-02-26</I>
 </ADDRESS>
 </BODY>
 </HTML>
