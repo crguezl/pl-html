@@ -379,12 +379,6 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img181.png"
  ALT="$ \ldots$">|; 
 
-$key = q/xAalpha;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="39" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="|."$dir".q|img63.png"
- ALT="$ x A \alpha$">|; 
-
 $key = q/X;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="21" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
@@ -396,6 +390,12 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="104" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img111.png"
  ALT="$ \alpha \in (V \cup \Sigma)^*$">|; 
+
+$key = q/xAalpha;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="39" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="|."$dir".q|img63.png"
+ ALT="$ x A \alpha$">|; 
 
 $key = q/ainFIRST(gamma);MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
