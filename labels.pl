@@ -825,10 +825,6 @@ $key = q/fig:pegjs/;
 $external_latex_labels{$key} = q|3.1|; 
 $noresave{$key} = "$nosave";
 
-$key = q/practica:APDR/;
-$external_latex_labels{$key} = q|3.2.12|; 
-$noresave{$key} = "$nosave";
-
 $key = q/sectionpractica:conversordetemperaturas/;
 $external_latex_labels{$key} = q|1.2|; 
 $noresave{$key} = "$nosave";
@@ -901,10 +897,6 @@ $key = q/section:calculadora/;
 $external_latex_labels{$key} = q|4.3|; 
 $noresave{$key} = "$nosave";
 
-$key = q/practica:GAP/;
-$external_latex_labels{$key} = q|3.2.13|; 
-$noresave{$key} = "$nosave";
-
 $key = q/subsection:nfa2dfa/;
 $external_latex_labels{$key} = q|4.5.2|; 
 $noresave{$key} = "$nosave";
@@ -929,12 +921,12 @@ $key = q/subsection:introduccion/;
 $external_latex_labels{$key} = q|3.2.1|; 
 $noresave{$key} = "$nosave";
 
-$key = q/example:asb/;
-$external_latex_labels{$key} = q|4.4.1|; 
-$noresave{$key} = "$nosave";
-
 $key = q/definition:slrautomata/;
 $external_latex_labels{$key} = q|4.4.4|; 
+$noresave{$key} = "$nosave";
+
+$key = q/example:asb/;
+$external_latex_labels{$key} = q|4.4.1|; 
 $noresave{$key} = "$nosave";
 
 $key = q/item:ccomments/;
@@ -961,10 +953,6 @@ $key = q/fig:nfa/;
 $external_latex_labels{$key} = q|4.1|; 
 $noresave{$key} = "$nosave";
 
-$key = q/practica:firstandfollow/;
-$external_latex_labels{$key} = q|3.2.8|; 
-$noresave{$key} = "$nosave";
-
 $key = q/parrafo:jsonstringify/;
 $external_latex_labels{$key} = q|1.3|; 
 $noresave{$key} = "$nosave";
@@ -989,12 +977,12 @@ $key = q/subsection:karma/;
 $external_latex_labels{$key} = q|9.4.2|; 
 $noresave{$key} = "$nosave";
 
-$key = q/example:typesandts/;
-$external_latex_labels{$key} = q|3.3.1|; 
-$noresave{$key} = "$nosave";
-
 $key = q/alg:tables/;
 $external_latex_labels{$key} = q|4.5.4|; 
+$noresave{$key} = "$nosave";
+
+$key = q/example:typesandts/;
+$external_latex_labels{$key} = q|3.3.1|; 
 $noresave{$key} = "$nosave";
 
 $key = q/fig:wrongts/;

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.1.18)  27 FEB 2014 18:37
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.1.18)  27 FEB 2014 18:44
 entering extended mode
  %&-line parsing enabled.
 **./images.tex
@@ -453,281 +453,22 @@ latex2htmlLength oddsidemargin=-15.36446pt
 
 latex2htmlLength evensidemargin=-15.36446pt
 
-LaTeX Font Info:    Try loading font information for U+lasy on input line 978.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 1088.
+
 (/usr/share/texmf-texlive/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 978.
+LaTeX Font Info:    Try loading font information for U+msa on input line 1088.
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 978.
+LaTeX Font Info:    Try loading font information for U+msb on input line 1088.
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-l2hSize :tex2html_wrap_inline12400:7.48248pt::0.0pt::38.4467pt.
+l2hSize :tex2html_wrap_inline14685:7.98248pt::7.98248pt::64.81665pt.
 [1
 
-
-
-]
-l2hSize :tex2html_wrap_inline15081:7.48248pt::0.0pt::19.45145pt.
-[2
-
-
-]
-l2hSize :tex2html_wrap_inline15089:11.52449pt::11.52449pt::137.16289pt.
-[3
-
-
-]
-l2hSize :tex2html_wrap_inline15095:8.7125pt::8.7125pt::24.72882pt.
-[4
-
-
-]
-l2hSize :tex2html_wrap_inline15111:8.7125pt::8.7125pt::31.08507pt.
-[5
-
-
-]
-l2hSize :tex2html_wrap_inline15115:7.98248pt::7.98248pt::67.16867pt.
-[6
-
-
-]
-l2hSize :tex2html_wrap_inline15117:7.98248pt::7.98248pt::13.01326pt.
-[7
-
-
-]
-l2hSize :tex2html_wrap_inline15121:7.98248pt::7.98248pt::36.46822pt.
-[8
-
-
-]
-l2hSize :tex2html_wrap_inline15161:7.48248pt::0.0pt::38.6266pt.
-[9
-
-
-]
-l2hSize :tex2html_wrap_inline15186:8.7125pt::8.7125pt::78.56384pt.
-[10
-
-
-]
-l2hSize :tex2html_wrap_inline15188:8.7125pt::8.7125pt::56.02649pt.
-[11
-
-
-]
-l2hSize :tex2html_wrap_inline15192:7.57185pt::7.57185pt::10.61526pt.
-[12
-
-
-]
-l2hSize :tex2html_wrap_inline15194:7.98248pt::7.98248pt::45.00497pt.
-[13
-
-
-]
-l2hSize :tex2html_wrap_inline15196:7.60416pt::0.0pt::46.86507pt.
-[14
-
-
-]
-l2hSize :tex2html_wrap_inline15225:8.7125pt::8.7125pt::62.05768pt.
-[15
-
-
-]
-l2hSize :tex2html_wrap_inline15230:8.7125pt::8.7125pt::138.66975pt.
-[16
-
-
-]
-l2hSize :tex2html_wrap_inline15241:8.7125pt::8.7125pt::71.06874pt.
-[17
-
-
-]
-l2hSize :tex2html_wrap_inline15243:11.52449pt::11.52449pt::34.99461pt.
-[18
-
-
-]
-l2hSize :tex2html_wrap_inline15247:11.52449pt::11.52449pt::161.98048pt.
-[19
-
-
-]
-l2hSize :tex2html_wrap_inline15286:7.57185pt::7.57185pt::11.87415pt.
-[20
-
-
-]
-l2hSize :tex2html_wrap_inline15290:11.52449pt::11.52449pt::40.04376pt.
-[21
-
-
-]
-l2hSize :tex2html_wrap_inline15292:7.57185pt::7.57185pt::30.9187pt.
-[22
-
-
-]
-l2hSize :tex2html_wrap_indisplay15313:8.10416pt::8.10416pt::27.72615pt.
-[23
-
-
-]
-l2hSize :tex2html_wrap_indisplay15315:8.7434pt::8.7434pt::211.26645pt.
-[24
-
-
-]
-l2hSize :tex2html_wrap_indisplay15319:8.7125pt::8.7125pt::169.3653pt.
-[25
-
-
-]
-l2hSize :tex2html_wrap_inline15325:8.10416pt::8.10416pt::24.96518pt.
-[26
-
-
-]
-l2hSize :tex2html_wrap_inline15327:8.7125pt::8.7125pt::76.28731pt.
-[27
-
-
-]
-l2hSize :tex2html_wrap_inline15329:8.7125pt::8.7125pt::60.50388pt.
-[28
-
-
-]
-l2hSize :tex2html_wrap_inline15331:8.7125pt::8.7125pt::84.53174pt.
-[29
-
-
-]
-l2hSize :tex2html_wrap_indisplay15353:8.7434pt::8.7434pt::208.2096pt.
-[30
-
-
-]
-l2hSize :tex2html_wrap_indisplay15357:8.7125pt::8.7125pt::172.60724pt.
-[31
-
-
-]
-l2hSize :tex2html_wrap_inline15364:8.7125pt::8.7125pt::110.06876pt.
-[32
-
-
-]
-l2hSize :tex2html_wrap_inline15376:8.7125pt::8.7125pt::247.18927pt.
-[33
-
-
-]
-l2hSize :tex2html_wrap_inline15400:8.7125pt::8.7125pt::11.68384pt.
-[34
-
-
-]
-l2hSize :tex2html_wrap_inline15431:8.10416pt::8.10416pt::32.5648pt.
-[35
-
-
-]
-l2hSize :tex2html_wrap_inline15435:8.7125pt::8.7125pt::139.43755pt.
-[36
-
-
-]
-l2hSize :tex2html_wrap_inline15437:8.7125pt::8.7125pt::71.83653pt.
-[37
-
-
-]
-l2hSize :tex2html_wrap_inline15439:8.7125pt::8.7125pt::155.62148pt.
-[38
-
-
-]
-l2hSize :tex2html_wrap_inline15452:8.7125pt::8.7125pt::74.08357pt.
-[39
-
-
-]
-l2hSize :tex2html_wrap_inline15456:8.7125pt::8.7125pt::89.99376pt.
-[40
-
-
-]
-l2hSize :tex2html_wrap_inline15516:8.7125pt::8.7125pt::96.44667pt.
-[41
-
-
-]
-l2hSize :tex2html_wrap_inline15532:8.10416pt::8.10416pt::39.61006pt.
-[42
-
-
-]
-l2hSize :tex2html_wrap_inline15534:8.7125pt::8.7125pt::80.69368pt.
-[43
-
-
-]
-l2hSize :tex2html_wrap_inline15536:8.7125pt::8.7125pt::41.63115pt.
-[44
-
-
-]
-l2hSize :tex2html_wrap_inline15550:7.48248pt::0.0pt::31.02649pt.
-[45
-
-
-]
-l2hSize :tex2html_wrap_inline15552:7.57185pt::7.57185pt::22.65793pt.
-[46
-
-
-]
-l2hSize :tex2html_wrap_inline15569:8.10416pt::8.10416pt::56.92355pt.
-[47
-
-
-]
-l2hSize :tex2html_wrap_inline15571:7.60416pt::0.0pt::16.88965pt.
-[48
-
-
-]
-l2hSize :tex2html_wrap_inline15573:7.98248pt::7.98248pt::61.48853pt.
-[49
-
-
-]
-l2hSize :tex2html_wrap_inline15575:7.98248pt::7.98248pt::85.84236pt.
-[50
-
-
-]
-l2hSize :tex2html_wrap_inline15577:7.60416pt::0.0pt::48.96545pt.
-[51
-
-
-]
-l2hSize :tex2html_wrap_inline15579:8.10416pt::8.10416pt::21.63971pt.
-[52
-
-
-]
-l2hSize :tex2html_wrap_inline16034:7.98248pt::7.98248pt::64.81665pt.
-[53
 
 
 ] (./images.aux)
@@ -736,12 +477,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8386 strings out of 493858
- 116156 string characters out of 1153328
+ 8383 strings out of 493858
+ 116102 string characters out of 1153328
  226424 words of memory out of 3000000
- 11510 multiletter control sequences out of 15000+50000
+ 11507 multiletter control sequences out of 15000+50000
  8606 words of font info for 35 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  38i,5n,35p,326b,362s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on images.dvi (53 pages, 36964 bytes).
+Output written on images.dvi (1 page, 2436 bytes).
