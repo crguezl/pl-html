@@ -981,10 +981,6 @@ $key = q/alg:tables/;
 $external_latex_labels{$key} = q|4.5.4|; 
 $noresave{$key} = "$nosave";
 
-$key = q/example:typesandts/;
-$external_latex_labels{$key} = q|3.3.1|; 
-$noresave{$key} = "$nosave";
-
 $key = q/fig:wrongts/;
 $external_latex_labels{$key} = q|4.12|; 
 $noresave{$key} = "$nosave";
