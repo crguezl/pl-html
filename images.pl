@@ -264,13 +264,6 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img174.png"
  ALT="$ \delta_{\vert V \times Q} : V \times Q \rightarrow Q$">|; 
 
-$key = q/%latex2htmlidmarker14567S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img98.png"
- ALT="% latex2html id marker 14567
-$ S = program$">|; 
-
 $key = q/r;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="13" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
@@ -1132,6 +1125,13 @@ $cached_env_img{$key} = q|<IMG
 ...htarrow} \epsilon$} \\\\
 \emptyset &amp; \mbox{en otro caso}
 \end{array} \right. $">|; 
+
+$key = q/%latex2htmlidmarker14575S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img98.png"
+ ALT="% latex2html id marker 14575
+$ S = program$">|; 
 
 $key = q/Arightarrowalphabeta;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
