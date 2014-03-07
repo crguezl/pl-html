@@ -195,7 +195,7 @@ $ref_files{$key} = "$dir".q|node50.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/section:recursionizquierda/;
-$ref_files{$key} = "$dir".q|node23.html|; 
+$ref_files{$key} = "$dir".q|node21.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:depuracion/;
@@ -599,7 +599,7 @@ $ref_files{$key} = "$dir".q|node203.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/section:esquemas/;
-$ref_files{$key} = "$dir".q|node22.html|; 
+$ref_files{$key} = "$dir".q|node23.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/parrfo:comments/;

@@ -195,7 +195,7 @@ $external_labels{$key} = "$URL/" . q|node50.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/section:recursionizquierda/;
-$external_labels{$key} = "$URL/" . q|node23.html|; 
+$external_labels{$key} = "$URL/" . q|node21.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:depuracion/;
@@ -599,7 +599,7 @@ $external_labels{$key} = "$URL/" . q|node203.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/section:esquemas/;
-$external_labels{$key} = "$URL/" . q|node22.html|; 
+$external_labels{$key} = "$URL/" . q|node23.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/parrfo:comments/;
@@ -810,7 +810,7 @@ $external_latex_labels{$key} = q|4.5.1|;
 $noresave{$key} = "$nosave";
 
 $key = q/section:esquemas/;
-$external_latex_labels{$key} = q|2.4|; 
+$external_latex_labels{$key} = q|2.5|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:heredados/;
@@ -846,7 +846,7 @@ $external_latex_labels{$key} = q|5.11|;
 $noresave{$key} = "$nosave";
 
 $key = q/section:recursionizquierda/;
-$external_latex_labels{$key} = q|2.5|; 
+$external_latex_labels{$key} = q|2.3|; 
 $noresave{$key} = "$nosave";
 
 $key = q/fig:dfa/;

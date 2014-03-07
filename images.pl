@@ -35,7 +35,7 @@ $cached_env_img{$key} = q|<IMG
 $key = q/ArightarrowAalpha;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="69" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="|."$dir".q|img66.png"
+ SRC="|."$dir".q|img58.png"
  ALT="$ A \rightarrow A \alpha$">|; 
 
 $key = q/existsS{array}{c}*Longrightarrow{scriptstyleRM}{array}betaAbx{array}{c}*Longrightarrow{scriptstyleRM}{array}betaalphabx=gamma;MSF=1.6;LFS=11;AAT/;
@@ -127,13 +127,13 @@ $cached_env_img{$key} = q|<IMG
 $key = q/Astackrel{*}{Longrightarrow}Aalpha;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="80" HEIGHT="24" ALIGN="BOTTOM" BORDER="0"
- SRC="|."$dir".q|img65.png"
+ SRC="|."$dir".q|img57.png"
  ALT="$ A \stackrel{*}{\Longrightarrow} A \alpha$">|; 
 
 $key = q/{action};MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="70" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img59.png"
+ SRC="|."$dir".q|img61.png"
  ALT="$ \{ action \}$">|; 
 
 $key = q/&e;MSF=1.6;LFS=11;AAT/;
@@ -188,7 +188,7 @@ $cached_env_img{$key} = q|<IMG
 $key = q/expr;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="40" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img64.png"
+ SRC="|."$dir".q|img66.png"
  ALT="$ expr$">|; 
 
 $key = q/e+;MSF=1.6;LFS=11;AAT/;
@@ -351,7 +351,7 @@ $cached_env_img{$key} = q|<IMG
 $key = q/exprrightarrowexpr_1-NUM;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="179" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img61.png"
+ SRC="|."$dir".q|img63.png"
  ALT="$ expr \rightarrow expr_1 - NUM$">|; 
 
 $key = q/gammabetaalpha;MSF=1.6;LFS=11;AAT/;
@@ -665,7 +665,7 @@ $cached_env_img{$key} = q|<IMG
 $key = q/NUM;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="53" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="|."$dir".q|img63.png"
+ SRC="|."$dir".q|img65.png"
  ALT="$ NUM$">|; 
 
 $key = q/E(A)=left{{array}{ll}{dollar}&mbox{siSstackrel{*}{Longrightarrow}alphaA}emptyset&mbox{enotrocaso}{array}right.;MSF=1.6;LFS=11;AAT/;
@@ -692,7 +692,7 @@ $cached_env_img{$key} = q|<IMG
 $key = q/beta;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img60.png"
+ SRC="|."$dir".q|img62.png"
  ALT="$ \beta$">|; 
 
 $key = q/goto(i,A)=delta(A,I_i);MSF=1.6;LFS=11;AAT/;
@@ -815,13 +815,6 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="69" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img87.png"
  ALT="$ A \rightarrow A \beta$">|; 
-
-$key = q/%latex2htmlidmarker14873S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img98.png"
- ALT="% latex2html id marker 14873
-$ S = program$">|; 
 
 $key = q/{a^nb^nc^nslashninmathcal{N}};MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1136,13 +1129,13 @@ $cached_env_img{$key} = q|<IMG
 $key = q/Arightarrowalphabeta;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="67" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img57.png"
+ SRC="|."$dir".q|img59.png"
  ALT="$ A \rightarrow \alpha \beta $">|; 
 
 $key = q/Arightarrowalpha{action}beta;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="132" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img58.png"
+ SRC="|."$dir".q|img60.png"
  ALT="$ A \rightarrow \alpha \{ action \} \beta $">|; 
 
 $key = q/s;MSF=1.6;LFS=11;AAT/;
@@ -1232,7 +1225,7 @@ $cached_env_img{$key} = q|<IMG
 $key = q/exprrightarrowNUM;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="116" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img62.png"
+ SRC="|."$dir".q|img64.png"
  ALT="$ expr \rightarrow NUM$">|; 
 
 $key = q/G=(V,Sigma,P,S);MSF=1.6;LFS=11;AAT/;
@@ -1330,6 +1323,13 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="145" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img187.png"
  ALT="$ C = \left \{ I_1, I_2, \cdots I_n \right \}$">|; 
+
+$key = q/%latex2htmlidmarker14871S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img98.png"
+ ALT="% latex2html id marker 14871
+$ S = program$">|; 
 
 1;
 
