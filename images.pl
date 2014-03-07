@@ -94,13 +94,6 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img141.png"
  ALT="$ Si X \in V  y X \rightarrow Y_1 Y_2 \cdots Y_k \in P entonces$">|; 
 
-$key = q/%latex2htmlidmarker15015S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img98.png"
- ALT="% latex2html id marker 15015
-$ S = program$">|; 
-
 $key = q/FOLLOW(S)={dollar};MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="163" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
@@ -130,6 +123,13 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="396" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img195.png"
  ALT="$ \forall a \in FOLLOW(A): action[i][a] = reduce A \rightarrow \alpha$">|; 
+
+$key = q/%latex2htmlidmarker15017S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img98.png"
+ ALT="% latex2html id marker 15017
+$ S = program$">|; 
 
 $key = q/Astackrel{*}{Longrightarrow}Aalpha;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
