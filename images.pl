@@ -816,13 +816,6 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img87.png"
  ALT="$ A \rightarrow A \beta$">|; 
 
-$key = q/%latex2htmlidmarker14709S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img98.png"
- ALT="% latex2html id marker 14709
-$ S = program$">|; 
-
 $key = q/{a^nb^nc^nslashninmathcal{N}};MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="131" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
@@ -1110,6 +1103,13 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="78" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img115.png"
  ALT="$ \alpha \in FSD$">|; 
+
+$key = q/%latex2htmlidmarker14729S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img98.png"
+ ALT="% latex2html id marker 14729
+$ S = program$">|; 
 
 $key = q/N(alpha)=left{{array}{ll}left{epsilonright}&mbox{sialphastackrel{*}{Longrightarrow}epsilon}emptyset&mbox{enotrocaso}{array}right.;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
