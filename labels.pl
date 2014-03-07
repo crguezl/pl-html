@@ -937,10 +937,6 @@ $key = q/subsection:first/;
 $external_latex_labels{$key} = q|4.5.1|; 
 $noresave{$key} = "$nosave";
 
-$key = q/program:adrp/;
-$external_latex_labels{$key} = q|3.2.1|; 
-$noresave{$key} = "$nosave";
-
 $key = q/section:algoritmoLR/;
 $external_latex_labels{$key} = q|4.9|; 
 $noresave{$key} = "$nosave";
@@ -953,12 +949,12 @@ $key = q/fig:nfa/;
 $external_latex_labels{$key} = q|4.1|; 
 $noresave{$key} = "$nosave";
 
-$key = q/parrafo:jsonstringify/;
-$external_latex_labels{$key} = q|1.3|; 
-$noresave{$key} = "$nosave";
-
 $key = q/section:calculadoraampliada/;
 $external_latex_labels{$key} = q|4.6|; 
+$noresave{$key} = "$nosave";
+
+$key = q/parrafo:jsonstringify/;
+$external_latex_labels{$key} = q|1.3|; 
 $noresave{$key} = "$nosave";
 
 $key = q/figure:csv/;
