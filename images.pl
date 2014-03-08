@@ -804,13 +804,6 @@ $cached_env_img{$key} = q|<IMG
  ALT="$ PV = \left \{ \delta \in (\Sigma \cup V)* : \exists S \begin{array}{c} * \Lo...
 ...mbox{ y }\delta es un prefijo de handle_2(\alpha) = \beta \gamma \right \}$">|; 
 
-$key = q/%latex2htmlidmarker15085S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img98.png"
- ALT="% latex2html id marker 15085
-$ S = program$">|; 
-
 $key = q/X_1ldotsX_n;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="76" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
@@ -1294,6 +1287,13 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="117" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img214.png"
  ALT="$ A \rightarrow X_1 \ldots X_n$">|; 
+
+$key = q/%latex2htmlidmarker15107S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img98.png"
+ ALT="% latex2html id marker 15107
+$ S = program$">|; 
 
 $key = q/mu;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
