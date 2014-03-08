@@ -27,7 +27,7 @@ $external_labels{$key} = "$URL/" . q|node141.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_pilgrimhtml5/;
-$external_labels{$key} = "$URL/" . q|node93.html|; 
+$external_labels{$key} = "$URL/" . q|node94.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:copia/;
@@ -55,7 +55,7 @@ $external_labels{$key} = "$URL/" . q|node238.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_mogensen2011introduction/;
-$external_labels{$key} = "$URL/" . q|node93.html|; 
+$external_labels{$key} = "$URL/" . q|node94.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:samplec/;
@@ -67,7 +67,7 @@ $external_labels{$key} = "$URL/" . q|node64.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/sinatrachuchu/;
-$external_labels{$key} = "$URL/" . q|node87.html|; 
+$external_labels{$key} = "$URL/" . q|node88.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:ejercicioslastindex/;
@@ -123,7 +123,7 @@ $external_labels{$key} = "$URL/" . q|node20.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/sinatalayout/;
-$external_labels{$key} = "$URL/" . q|node87.html|; 
+$external_labels{$key} = "$URL/" . q|node88.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:tiempodematching/;
@@ -188,6 +188,10 @@ $noresave{$key} = "$nosave";
 
 $key = q/section:estructuraflex/;
 $external_labels{$key} = "$URL/" . q|node20.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/chapter:slim/;
+$external_labels{$key} = "$URL/" . q|node84.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:prioridades/;
@@ -291,7 +295,7 @@ $external_labels{$key} = "$URL/" . q|node35.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_wilson2008beautiful/;
-$external_labels{$key} = "$URL/" . q|node93.html|; 
+$external_labels{$key} = "$URL/" . q|node94.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:pila/;
@@ -343,7 +347,7 @@ $external_labels{$key} = "$URL/" . q|node132.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_nathanclosures/;
-$external_labels{$key} = "$URL/" . q|node93.html|; 
+$external_labels{$key} = "$URL/" . q|node94.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/practica:lineasyerrores/;
@@ -359,7 +363,7 @@ $external_labels{$key} = "$URL/" . q|node147.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/sinatraindex/;
-$external_labels{$key} = "$URL/" . q|node87.html|; 
+$external_labels{$key} = "$URL/" . q|node88.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/practica:fases/;
@@ -411,7 +415,7 @@ $external_labels{$key} = "$URL/" . q|node238.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_Muchnick:1998:ACD:286076/;
-$external_labels{$key} = "$URL/" . q|node93.html|; 
+$external_labels{$key} = "$URL/" . q|node94.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:mediaregla/;
@@ -483,7 +487,7 @@ $external_labels{$key} = "$URL/" . q|node62.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/item:ccomments/;
-$external_labels{$key} = "$URL/" . q|node87.html|; 
+$external_labels{$key} = "$URL/" . q|node88.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:callyapply/;
@@ -671,7 +675,7 @@ $external_labels{$key} = "$URL/" . q|node72.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_nathanuniversity/;
-$external_labels{$key} = "$URL/" . q|node93.html|; 
+$external_labels{$key} = "$URL/" . q|node94.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:nfa2dfa/;
@@ -853,6 +857,10 @@ $key = q/section:prioridades/;
 $external_latex_labels{$key} = q|5.11|; 
 $noresave{$key} = "$nosave";
 
+$key = q/chapter:slim/;
+$external_latex_labels{$key} = q|14|; 
+$noresave{$key} = "$nosave";
+
 $key = q/section:recursionizquierda/;
 $external_latex_labels{$key} = q|2.3|; 
 $noresave{$key} = "$nosave";
@@ -933,12 +941,12 @@ $key = q/subsection:introduccion/;
 $external_latex_labels{$key} = q|2.2.1|; 
 $noresave{$key} = "$nosave";
 
-$key = q/definition:slrautomata/;
-$external_latex_labels{$key} = q|5.4.4|; 
-$noresave{$key} = "$nosave";
-
 $key = q/example:asb/;
 $external_latex_labels{$key} = q|5.4.1|; 
+$noresave{$key} = "$nosave";
+
+$key = q/definition:slrautomata/;
+$external_latex_labels{$key} = q|5.4.4|; 
 $noresave{$key} = "$nosave";
 
 $key = q/item:ccomments/;
