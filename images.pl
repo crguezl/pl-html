@@ -558,13 +558,6 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img168.png"
  ALT="$ \overline{A} = \{ q \in Q / \exists q' \in Q : \hat{\delta}(q', \epsilon) = q \}$">|; 
 
-$key = q/%latex2htmlidmarker15535S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img99.png"
- ALT="% latex2html id marker 15535
-$ S = program$">|; 
-
 $key = q/A^*=cup_{n=0}^{infty}A^n;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="109" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
@@ -643,6 +636,13 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="26" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img204.png"
  ALT="$ X_j$">|; 
+
+$key = q/%latex2htmlidmarker15541S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img99.png"
+ ALT="% latex2html id marker 15541
+$ S = program$">|; 
 
 $key = q/RrightarrowalphaR|epsilon;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
