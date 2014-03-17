@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.1.18)  16 MAR 2014 18:17
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.1.18)  17 MAR 2014 12:37
 entering extended mode
  %&-line parsing enabled.
 **./images.tex
@@ -362,7 +362,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.852 
+l.855 
       
 The package inputenc has already been loaded with options:
   [utf8x]
@@ -397,24 +397,24 @@ LaTeX Warning: Label `fig:dfa' multiply defined.
 )
 \openout1 = `images.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 966.
-LaTeX Font Info:    ... okay on input line 966.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 966.
-LaTeX Font Info:    ... okay on input line 966.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 966.
-LaTeX Font Info:    ... okay on input line 966.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 966.
-LaTeX Font Info:    ... okay on input line 966.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 966.
-LaTeX Font Info:    ... okay on input line 966.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 966.
-LaTeX Font Info:    ... okay on input line 966.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 966.
-LaTeX Font Info:    ... okay on input line 966.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 969.
+LaTeX Font Info:    ... okay on input line 969.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 969.
+LaTeX Font Info:    ... okay on input line 969.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 969.
+LaTeX Font Info:    ... okay on input line 969.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 969.
+LaTeX Font Info:    ... okay on input line 969.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 969.
+LaTeX Font Info:    ... okay on input line 969.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 969.
+LaTeX Font Info:    ... okay on input line 969.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 969.
+LaTeX Font Info:    ... okay on input line 969.
 (/usr/share/texmf-texlive/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2003/11/29 Fixes to fontencodings LGR, T3
 )
-Package hyperref Info: Link coloring OFF on input line 966.
+Package hyperref Info: Link coloring OFF on input line 969.
 (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
@@ -422,8 +422,8 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
 \c@section@level=\count138
 )
-LaTeX Info: Redefining \ref on input line 966.
-LaTeX Info: Redefining \pageref on input line 966.
+LaTeX Info: Redefining \ref on input line 969.
+LaTeX Info: Redefining \pageref on input line 969.
 (./images.out) (./images.out)
 \@outlinefile=\write6
 \openout6 = `images.out'.
@@ -453,20 +453,20 @@ latex2htmlLength oddsidemargin=-15.36446pt
 
 latex2htmlLength evensidemargin=-15.36446pt
 
-LaTeX Font Info:    Try loading font information for U+lasy on input line 1112.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 1116.
 
 (/usr/share/texmf-texlive/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 1112.
+LaTeX Font Info:    Try loading font information for U+msa on input line 1116.
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 1112.
+LaTeX Font Info:    Try loading font information for U+msb on input line 1116.
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-l2hSize :tex2html_wrap_inline15584:7.98248pt::7.98248pt::64.81665pt.
+l2hSize :tex2html_wrap_inline15649:7.98248pt::7.98248pt::64.81665pt.
 [1
 
 
@@ -477,10 +477,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8392 strings out of 493858
- 116178 string characters out of 1153328
+ 8393 strings out of 493858
+ 116183 string characters out of 1153328
  226424 words of memory out of 3000000
- 11516 multiletter control sequences out of 15000+50000
+ 11517 multiletter control sequences out of 15000+50000
  8606 words of font info for 35 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  38i,5n,35p,326b,362s stack positions out of 5000i,500n,10000p,200000b,50000s
