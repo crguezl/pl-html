@@ -1192,13 +1192,6 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img26.png"
  ALT="$ L(G) = \{ x \in \Sigma^* : S \stackrel{*}{\Longrightarrow} x \}$">|; 
 
-$key = q/%latex2htmlidmarker16267S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img99.png"
- ALT="% latex2html id marker 16267
-$ S = program$">|; 
-
 $key = q/G;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="19" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
@@ -1258,6 +1251,13 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
  SRC="|."$dir".q|img69.png"
  ALT="$ R$">|; 
+
+$key = q/%latex2htmlidmarker16271S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img99.png"
+ ALT="% latex2html id marker 16271
+$ S = program$">|; 
 
 $key = q/displaystyleFIRST(alpha)=FIRST(alpha)cupFIRST(X_i)-{epsilon};;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
