@@ -246,20 +246,20 @@ $key = q/ejercicio:tutugrammar/;
 $external_labels{$key} = "$URL/" . q|node45.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/subsection:regexpcondicionales/;
-$external_labels{$key} = "$URL/" . q|node36.html|; 
-$noresave{$key} = "$nosave";
-
-$key = q/section:simplec/;
-$external_labels{$key} = "$URL/" . q|node140.html|; 
-$noresave{$key} = "$nosave";
-
 $key = q/practica:calculodelasdirecciones/;
 $external_labels{$key} = "$URL/" . q|node73.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:lookaheadlookbehind/;
 $external_labels{$key} = "$URL/" . q|node36.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/subsection:regexpcondicionales/;
+$external_labels{$key} = "$URL/" . q|node36.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/section:simplec/;
+$external_labels{$key} = "$URL/" . q|node140.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/definition:arbolconcreto/;
