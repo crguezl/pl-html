@@ -112,13 +112,6 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img40.png"
  ALT="$ L(A)$">|; 
 
-$key = q/%latex2htmlidmarker17853S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img99.png"
- ALT="% latex2html id marker 17853
-$ S = program$">|; 
-
 $key = q/|;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="10" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
@@ -204,18 +197,18 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img83.png"
  ALT="$ e+$">|; 
 
+$key = q/_1;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="12" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img200.png"
+ ALT="$ _1$">|; 
+
 $key = q/delta(Arightarrowalpha_uparrowBbeta,epsilon)=Brightarrow_uparrowgammaforallBrightarrowgammainP;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="309" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img126.png"
  ALT="$ \delta(A \rightarrow \alpha _\uparrow B \beta, \epsilon) = B \rightarrow
 _\uparrow \gamma \forall B \rightarrow \gamma \in P$">|; 
-
-$key = q/_1;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="12" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img200.png"
- ALT="$ _1$">|; 
 
 $key = q/Rrightarrowalpha;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -668,6 +661,13 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="70" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img106.png"
  ALT="$ \alpha = \beta \gamma x$">|; 
+
+$key = q/%latex2htmlidmarker17865S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img99.png"
+ ALT="% latex2html id marker 17865
+$ S = program$">|; 
 
 $key = q/alpha,betain(VcupSigma)^*;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
