@@ -336,13 +336,6 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img137.png"
  ALT="$ FOLLOW(A) = \left \{ b \in \Sigma : \exists S \stackrel{*}{\Longrightarrow} \alpha A b \beta \right \} \cup E(A)$">|; 
 
-$key = q/%latex2htmlidmarker17722S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img99.png"
- ALT="% latex2html id marker 17722
-$ S = program$">|; 
-
 $key = q/ArightarrowbetaR;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="69" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
@@ -354,6 +347,13 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="162" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img15.png"
  ALT="$ \mu = \alpha A \beta \in (V \cup \Sigma)^*$">|; 
+
+$key = q/%latex2htmlidmarker17742S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img99.png"
+ ALT="% latex2html id marker 17742
+$ S = program$">|; 
 
 $key = q/exprrightarrowexpr_1-NUM;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
