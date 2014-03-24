@@ -852,6 +852,13 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img148.png"
  ALT="$\displaystyle si (\epsilon \in FIRST(Y_k) and i &gt; k) FIRST(X) = FIRST(X) \cup \{ \epsilon \}$">|; 
 
+$key = q/%latex2htmlidmarker18059S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img99.png"
+ ALT="% latex2html id marker 18059
+$ S = program$">|; 
+
 $key = q/FSD=left{alphain(SigmacupV)*:existsS{array}{c}*Longrightarrow{scriptstyleRM}{array}alpharight};MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="291" HEIGHT="82" ALIGN="MIDDLE" BORDER="0"
@@ -1149,13 +1156,6 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="13" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
  SRC="|."$dir".q|img179.png"
  ALT="$ s$">|; 
-
-$key = q/%latex2htmlidmarker18060S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img99.png"
- ALT="% latex2html id marker 18060
-$ S = program$">|; 
 
 $key = q/gamma=X_1ldotsX_n;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
