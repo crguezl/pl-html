@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.1.18)  26 MAR 2014 07:28
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.1.18)  26 MAR 2014 18:44
 entering extended mode
  %&-line parsing enabled.
 **./images.tex
@@ -453,96 +453,22 @@ latex2htmlLength oddsidemargin=-15.36446pt
 
 latex2htmlLength evensidemargin=-15.36446pt
 
-LaTeX Font Info:    Try loading font information for U+lasy on input line 994.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 1418.
+
 (/usr/share/texmf-texlive/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 994.
+LaTeX Font Info:    Try loading font information for U+msa on input line 1418.
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 994.
+LaTeX Font Info:    Try loading font information for U+msb on input line 1418.
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-l2hSize :tex2html_wrap_inline25570:8.7125pt::8.7125pt::6.02254pt.
+l2hSize :tex2html_wrap_inline31283:7.98248pt::7.98248pt::64.81665pt.
 [1
 
-
-
-]
-! Undefined control sequence.
-l.1000 $ \mathsurround \z
-                         @ \tmspace  +\thinmuskip {.1667em}$%
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   @
-l.1000 $ \mathsurround \z@
-                           \tmspace  +\thinmuskip {.1667em}$%
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   @
-l.1000 $ \mathsurround \z@
-                           \tmspace  +\thinmuskip {.1667em}$%
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-l2hSize :tex2html_wrap_inline26006:7.60416pt::0.0pt::10.88919pt.
-[2
-
-
-]
-l2hSize :tex2html_wrap_inline29929:8.7125pt::8.7125pt::76.02257pt.
-[3
-
-
-]
-l2hSize :tex2html_wrap_inline29978:7.60416pt::0.0pt::6.59285pt.
-[4
-
-
-]
-l2hSize :tex2html_wrap_inline29980:8.10416pt::8.10416pt::26.54869pt.
-[5
-
-
-]
-l2hSize :tex2html_wrap_inline29982:7.07185pt::0.0pt::10.16177pt.
-[6
-
-
-]
-l2hSize :tex2html_wrap_inline29994:8.7125pt::8.7125pt::12.06786pt.
-[7
-
-
-]
-l2hSize :tex2html_wrap_inline29996:8.7125pt::8.7125pt::11.6382pt.
-[8
-
-
-]
-l2hSize :tex2html_wrap_inline30220:8.7125pt::8.7125pt::6.02254pt.
-[9
-
-
-]
-l2hSize :tex2html_wrap_inline31281:7.98248pt::7.98248pt::64.81665pt.
-[10
 
 
 ] (./images.aux)
@@ -559,4 +485,4 @@ Here is how much of TeX's memory you used:
  714 hyphenation exceptions out of 8191
  38i,5n,35p,326b,362s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on images.dvi (10 pages, 8200 bytes).
+Output written on images.dvi (1 page, 2436 bytes).
