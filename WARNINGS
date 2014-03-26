@@ -10,6 +10,9 @@ An unknown named entity (&quot;) appears in the source text.
 ? brace missing for \
 
 Substitution of arg to newlabelxx delayed.
+couldn't convert character &acute into available encodings
+
+ ...set $ACCENT_IMAGES  to get an image 
 
 ? brace missing for \newedenvironment
 
