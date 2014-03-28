@@ -6,6 +6,10 @@ $key = q/parrafo:bloquesanidados/;
 $ref_files{$key} = "$dir".q|node23.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/subsection:rspecconrack/;
+$ref_files{$key} = "$dir".q|node122.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/scheme:errinlists/;
 $ref_files{$key} = "$dir".q|node134.html|; 
 $noresave{$key} = "$nosave";
@@ -27,7 +31,7 @@ $ref_files{$key} = "$dir".q|node141.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_pilgrimhtml5/;
-$ref_files{$key} = "$dir".q|node130.html|; 
+$ref_files{$key} = "$dir".q|node221.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:copia/;
@@ -46,8 +50,12 @@ $key = q/program:hoc1l/;
 $ref_files{$key} = "$dir".q|node129.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/section:cookies/;
+$ref_files{$key} = "$dir".q|node103.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/cite_friedl/;
-$ref_files{$key} = "$dir".q|node130.html|; 
+$ref_files{$key} = "$dir".q|node221.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/cite_eloquentjavascript/;
@@ -55,7 +63,7 @@ $ref_files{$key} = "$dir".q|node238.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_mogensen2011introduction/;
-$ref_files{$key} = "$dir".q|node130.html|; 
+$ref_files{$key} = "$dir".q|node221.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:samplec/;
@@ -67,7 +75,7 @@ $ref_files{$key} = "$dir".q|node64.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/sinatrachuchu/;
-$ref_files{$key} = "$dir".q|node124.html|; 
+$ref_files{$key} = "$dir".q|node215.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:ejercicioslastindex/;
@@ -82,12 +90,20 @@ $key = q/section:nogreedy/;
 $ref_files{$key} = "$dir".q|node22.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/section:correo/;
+$ref_files{$key} = "$dir".q|node154.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/practica:pruebaslexico/;
 $ref_files{$key} = "$dir".q|node64.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/parrafo:palindromospostregexp/;
 $ref_files{$key} = "$dir".q|node23.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/routes/;
+$ref_files{$key} = "$dir".q|node133.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:introyacc/;
@@ -99,7 +115,7 @@ $ref_files{$key} = "$dir".q|node23.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/section:ejemplodedatamapper/;
-$ref_files{$key} = "$dir".q|node107.html|; 
+$ref_files{$key} = "$dir".q|node198.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:ejemplosimple/;
@@ -112,6 +128,10 @@ $noresave{$key} = "$nosave";
 
 $key = q/sectionpractica:csv/;
 $ref_files{$key} = "$dir".q|node10.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/section:http/;
+$ref_files{$key} = "$dir".q|node100.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:optimizacion/;
@@ -127,7 +147,7 @@ $ref_files{$key} = "$dir".q|node20.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/sinatalayout/;
-$ref_files{$key} = "$dir".q|node124.html|; 
+$ref_files{$key} = "$dir".q|node215.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:tiempodematching/;
@@ -174,6 +194,14 @@ $key = q/subsection:flex/;
 $ref_files{$key} = "$dir".q|node116.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/practica:rpscss/;
+$ref_files{$key} = "$dir".q|node112.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/chapter:datamapperysinatra/;
+$ref_files{$key} = "$dir".q|node172.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/section:heredados/;
 $ref_files{$key} = "$dir".q|node72.html|; 
 $noresave{$key} = "$nosave";
@@ -195,7 +223,7 @@ $ref_files{$key} = "$dir".q|node20.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/chapter:slim/;
-$ref_files{$key} = "$dir".q|node109.html|; 
+$ref_files{$key} = "$dir".q|node200.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:prioridades/;
@@ -226,16 +254,16 @@ $key = q/section:recuperryacc/;
 $ref_files{$key} = "$dir".q|node133.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/section:tablas/;
-$ref_files{$key} = "$dir".q|node69.html|; 
+$key = q/practica:invitaciones/;
+$ref_files{$key} = "$dir".q|node29.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:aat/;
 $ref_files{$key} = "$dir".q|node69.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/practica:invitaciones/;
-$ref_files{$key} = "$dir".q|node29.html|; 
+$key = q/section:tablas/;
+$ref_files{$key} = "$dir".q|node69.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/exa:conflicto/;
@@ -246,16 +274,16 @@ $key = q/ejercicio:tutugrammar/;
 $ref_files{$key} = "$dir".q|node60.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/subsection:regexpcondicionales/;
-$ref_files{$key} = "$dir".q|node23.html|; 
+$key = q/practica:calculodelasdirecciones/;
+$ref_files{$key} = "$dir".q|node73.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:simplec/;
 $ref_files{$key} = "$dir".q|node140.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/practica:calculodelasdirecciones/;
-$ref_files{$key} = "$dir".q|node73.html|; 
+$key = q/subsection:regexpcondicionales/;
+$ref_files{$key} = "$dir".q|node23.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:lookaheadlookbehind/;
@@ -291,7 +319,7 @@ $ref_files{$key} = "$dir".q|node59.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/parrafo:procfile/;
-$ref_files{$key} = "$dir".q|node96.html|; 
+$ref_files{$key} = "$dir".q|node187.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/parrafo:lastpar/;
@@ -299,7 +327,7 @@ $ref_files{$key} = "$dir".q|node22.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_wilson2008beautiful/;
-$ref_files{$key} = "$dir".q|node130.html|; 
+$ref_files{$key} = "$dir".q|node221.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:pila/;
@@ -342,6 +370,10 @@ $key = q/parrafo:fincas/;
 $ref_files{$key} = "$dir".q|node22.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/practica:ticatactoe/;
+$ref_files{$key} = "$dir".q|node159.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/section:calculadoraampliada/;
 $ref_files{$key} = "$dir".q|node65.html|; 
 $noresave{$key} = "$nosave";
@@ -351,11 +383,11 @@ $ref_files{$key} = "$dir".q|node132.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_nathanclosures/;
-$ref_files{$key} = "$dir".q|node130.html|; 
+$ref_files{$key} = "$dir".q|node221.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/chapter:googleoauth/;
-$ref_files{$key} = "$dir".q|node110.html|; 
+$ref_files{$key} = "$dir".q|node201.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/practica:lineasyerrores/;
@@ -371,7 +403,7 @@ $ref_files{$key} = "$dir".q|node147.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/sinatraindex/;
-$ref_files{$key} = "$dir".q|node124.html|; 
+$ref_files{$key} = "$dir".q|node215.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/practica:fases/;
@@ -384,6 +416,10 @@ $noresave{$key} = "$nosave";
 
 $key = q/subsectionpractica:calculadora/;
 $ref_files{$key} = "$dir".q|node62.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/subsection:metodosdepeticionhttp/;
+$ref_files{$key} = "$dir".q|node100.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/item:parada/;
@@ -423,7 +459,7 @@ $ref_files{$key} = "$dir".q|node238.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_Muchnick:1998:ACD:286076/;
-$ref_files{$key} = "$dir".q|node130.html|; 
+$ref_files{$key} = "$dir".q|node221.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:mediaregla/;
@@ -462,6 +498,10 @@ $key = q/cite_power/;
 $ref_files{$key} = "$dir".q|node114.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/section:authentication/;
+$ref_files{$key} = "$dir".q|node156.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/section:consejoseyapp/;
 $ref_files{$key} = "$dir".q|node125.html|; 
 $noresave{$key} = "$nosave";
@@ -475,35 +515,43 @@ $ref_files{$key} = "$dir".q|node20.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/chapter:heroku/;
-$ref_files{$key} = "$dir".q|node95.html|; 
+$ref_files{$key} = "$dir".q|node186.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/subsectionpruebasunitarias/;
+$ref_files{$key} = "$dir".q|node122.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:ejemplo/;
 $ref_files{$key} = "$dir".q|node22.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/chapter:introcomp/;
-$ref_files{$key} = "$dir".q|node60.html|; 
-$noresave{$key} = "$nosave";
-
 $key = q/definition:slrautomata/;
 $ref_files{$key} = "$dir".q|node63.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/chapter:introcomp/;
+$ref_files{$key} = "$dir".q|node60.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/repaso:fases/;
 $ref_files{$key} = "$dir".q|node62.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/item:ccomments/;
-$ref_files{$key} = "$dir".q|node124.html|; 
-$noresave{$key} = "$nosave";
-
 $key = q/subsection:callyapply/;
 $ref_files{$key} = "$dir".q|node173.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/item:ccomments/;
+$ref_files{$key} = "$dir".q|node215.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/subsection:first/;
 $ref_files{$key} = "$dir".q|node64.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/section:requestobject/;
+$ref_files{$key} = "$dir".q|node139.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/practica:pl0/;
@@ -590,6 +638,10 @@ $key = q/example:typesandts/;
 $ref_files{$key} = "$dir".q|node24.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/section:gestiondesesiones/;
+$ref_files{$key} = "$dir".q|node104.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/item:conflictos/;
 $ref_files{$key} = "$dir".q|node78.html|; 
 $noresave{$key} = "$nosave";
@@ -602,6 +654,10 @@ $key = q/prog:prec/;
 $ref_files{$key} = "$dir".q|node130.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/section:depuracionsinatra/;
+$ref_files{$key} = "$dir".q|node180.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/section:input/;
 $ref_files{$key} = "$dir".q|node20.html|; 
 $noresave{$key} = "$nosave";
@@ -612,6 +668,10 @@ $noresave{$key} = "$nosave";
 
 $key = q/section:tstingfacil/;
 $ref_files{$key} = "$dir".q|node203.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/practica:rackandhaml/;
+$ref_files{$key} = "$dir".q|node112.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:esquemas/;
@@ -674,6 +734,10 @@ $key = q/subsection:cuantificadoresposesivos/;
 $ref_files{$key} = "$dir".q|node23.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/practica:tictactoedatamapper/;
+$ref_files{$key} = "$dir".q|node160.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/table:tablaslalr/;
 $ref_files{$key} = "$dir".q|node100.html|; 
 $noresave{$key} = "$nosave";
@@ -687,7 +751,7 @@ $ref_files{$key} = "$dir".q|node72.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_nathanuniversity/;
-$ref_files{$key} = "$dir".q|node130.html|; 
+$ref_files{$key} = "$dir".q|node221.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:nfa2dfa/;
@@ -730,6 +794,10 @@ $key = q/section:opciones/;
 $ref_files{$key} = "$dir".q|node22.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/section:basicauthentication/;
+$ref_files{$key} = "$dir".q|node157.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/practica:peephole/;
 $ref_files{$key} = "$dir".q|node76.html|; 
 $noresave{$key} = "$nosave";
@@ -755,7 +823,7 @@ $ref_files{$key} = "$dir".q|node59.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/chapter:datamapper/;
-$ref_files{$key} = "$dir".q|node104.html|; 
+$ref_files{$key} = "$dir".q|node195.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:algoritmoLR/;
@@ -798,6 +866,10 @@ $key = q/section:g/;
 $ref_files{$key} = "$dir".q|node22.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/practica:despliegueenherokurps/;
+$ref_files{$key} = "$dir".q|node126.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/section:precandascoyacc/;
 $ref_files{$key} = "$dir".q|node130.html|; 
 $noresave{$key} = "$nosave";
@@ -808,6 +880,10 @@ $noresave{$key} = "$nosave";
 
 $key = q/parrafo:inifile/;
 $ref_files{$key} = "$dir".q|node16.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/practica:rpsconsessionsypruebas/;
+$ref_files{$key} = "$dir".q|node123.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/prog:calc1err/;
