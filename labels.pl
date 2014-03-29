@@ -394,6 +394,10 @@ $key = q/cite_nathanclosures/;
 $external_labels{$key} = "$URL/" . q|node218.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/section:estructuradeunaapprack/;
+$external_labels{$key} = "$URL/" . q|node109.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/chapter:googleoauth/;
 $external_labels{$key} = "$URL/" . q|node199.html|; 
 $noresave{$key} = "$nosave";
@@ -1355,6 +1359,10 @@ $noresave{$key} = "$nosave";
 
 $key = q/section:repetidas/;
 $external_latex_labels{$key} = q|3.4.2|; 
+$noresave{$key} = "$nosave";
+
+$key = q/section:estructuradeunaapprack/;
+$external_latex_labels{$key} = q|15.14|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:g/;
