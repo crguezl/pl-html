@@ -390,13 +390,6 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img189.png"
  ALT="$ A \rightarrow \alpha_\uparrow$">|; 
 
-$key = q/%latex2htmlidmarker41275S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img108.png"
- ALT="% latex2html id marker 41275
-$ S = program$">|; 
-
 $key = q/(Arightarrowalpha,n);MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="88" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
@@ -409,17 +402,17 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img85.png"
  ALT="$ A \leftarrow e$">|; 
 
-$key = q/displaystylemientras(epsiloninFIRST(X_i)and(ileqn));MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="312" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img161.png"
- ALT="$\displaystyle mientras (\epsilon \in FIRST(X_i) and (i \leq n))$">|; 
-
 $key = q/i;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="11" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
  SRC="|."$dir".q|img182.png"
  ALT="$ i$">|; 
+
+$key = q/displaystylemientras(epsiloninFIRST(X_i)and(ileqn));MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="312" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img161.png"
+ ALT="$\displaystyle mientras (\epsilon \in FIRST(X_i) and (i \leq n))$">|; 
 
 $key = q/ldots;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -767,6 +760,13 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="88" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img214.png"
  ALT="$ X \in V \cup \Sigma$">|; 
+
+$key = q/%latex2htmlidmarker41282S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img108.png"
+ ALT="% latex2html id marker 41282
+$ S = program$">|; 
 
 $key = q/error;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
