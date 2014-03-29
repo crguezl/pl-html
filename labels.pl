@@ -234,6 +234,10 @@ $key = q/section:recursionizquierda/;
 $external_labels{$key} = "$URL/" . q|node36.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/section:middleware/;
+$external_labels{$key} = "$URL/" . q|node113.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/section:depuracion/;
 $external_labels{$key} = "$URL/" . q|node76.html|; 
 $noresave{$key} = "$nosave";
@@ -332,6 +336,10 @@ $noresave{$key} = "$nosave";
 
 $key = q/section:pila/;
 $external_labels{$key} = "$URL/" . q|node74.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/chapter:rack/;
+$external_labels{$key} = "$URL/" . q|node95.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:pack/;
@@ -1201,6 +1209,10 @@ $key = q/section:depuracion/;
 $external_latex_labels{$key} = q|7.17|; 
 $noresave{$key} = "$nosave";
 
+$key = q/section:middleware/;
+$external_latex_labels{$key} = q|15.18|; 
+$noresave{$key} = "$nosave";
+
 $key = q/alg:parser/;
 $external_latex_labels{$key} = q|7.9.1|; 
 $noresave{$key} = "$nosave";
@@ -1279,6 +1291,10 @@ $noresave{$key} = "$nosave";
 
 $key = q/section:basicauthentication/;
 $external_latex_labels{$key} = q|17.26|; 
+$noresave{$key} = "$nosave";
+
+$key = q/chapter:rack/;
+$external_latex_labels{$key} = q|15|; 
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:introduccion/;

@@ -234,6 +234,10 @@ $key = q/section:recursionizquierda/;
 $ref_files{$key} = "$dir".q|node36.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/section:middleware/;
+$ref_files{$key} = "$dir".q|node113.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/section:depuracion/;
 $ref_files{$key} = "$dir".q|node76.html|; 
 $noresave{$key} = "$nosave";
@@ -332,6 +336,10 @@ $noresave{$key} = "$nosave";
 
 $key = q/section:pila/;
 $ref_files{$key} = "$dir".q|node74.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/chapter:rack/;
+$ref_files{$key} = "$dir".q|node95.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:pack/;
