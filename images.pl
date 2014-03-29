@@ -234,6 +234,13 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img36.png"
  ALT="$ \alpha A x$">|; 
 
+$key = q/%latex2htmlidmarker41192S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img108.png"
+ ALT="% latex2html id marker 41192
+$ S = program$">|; 
+
 $key = q/Arightarrowbetaalpha*;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="76" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
@@ -1067,13 +1074,6 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="117" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img139.png"
  ALT="$ LR(0)-items$">|; 
-
-$key = q/%latex2htmlidmarker41160S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img108.png"
- ALT="% latex2html id marker 41160
-$ S = program$">|; 
 
 $key = q/displaystyleFOLLOW(B)=FOLLOW(B)cupFOLLOW(A);MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
