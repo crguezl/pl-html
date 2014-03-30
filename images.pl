@@ -234,6 +234,13 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img36.png"
  ALT="$ \alpha A x$">|; 
 
+$key = q/%latex2htmlidmarker41677S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img108.png"
+ ALT="% latex2html id marker 41677
+$ S = program$">|; 
+
 $key = q/Arightarrowbetaalpha*;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="76" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
@@ -965,13 +972,6 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="118" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img170.png"
  ALT="$ \epsilon \in FIRST(\beta)$">|; 
-
-$key = q/%latex2htmlidmarker41675S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img108.png"
- ALT="% latex2html id marker 41675
-$ S = program$">|; 
 
 $key = q/displaystylemientras(epsiloninFIRST(Y_i)and(ileqk));MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
