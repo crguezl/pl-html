@@ -791,6 +791,13 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img149.png"
  ALT="$ Si X \in \Sigma entonces FIRST(X) = {X}$">|; 
 
+$key = q/%latex2htmlidmarker41681S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img108.png"
+ ALT="% latex2html id marker 41681
+$ S = program$">|; 
+
 $key = q/X_i=B;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="62" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
@@ -947,13 +954,6 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="187" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img111.png"
  ALT="$ S \stackrel{*}{\Longrightarrow} y A z \Longrightarrow y w z = x$">|; 
-
-$key = q/%latex2htmlidmarker41679S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img108.png"
- ALT="% latex2html id marker 41679
-$ S = program$">|; 
 
 $key = q/x_1ldotsx_n;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
