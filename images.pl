@@ -930,6 +930,13 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img181.png"
  ALT="\begin{figure}\centerline{\epsfig{file=chapter_bottomup/dfa.eps, width=12cm}}\end{figure}">|; 
 
+$key = q/%latex2htmlidmarker41951S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img108.png"
+ ALT="% latex2html id marker 41951
+$ S = program$">|; 
+
 $key = q/V;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="19" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
@@ -1335,13 +1342,6 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="158" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img203.png"
  ALT="$ action[i][\$] = accept$">|; 
-
-$key = q/%latex2htmlidmarker41947S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img108.png"
- ALT="% latex2html id marker 41947
-$ S = program$">|; 
 
 $key = q/I_i;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
