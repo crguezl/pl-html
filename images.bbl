@@ -42,4 +42,11 @@ T.~Mogensen and T.A. Mogensen.
 \newblock Undergraduate topics in computer science. Springer London, Limited,
   2011.
 
+\bibitem{Proebsting}
+Todd~A. Proebsting.
+\newblock Burg, iburg, wburg, gburg: so many trees to rewrite, so little time
+  {\it (invited talk)}.
+\newblock In {\em ACM SIGPLAN Workshop on Rule-Based Programming}, pages
+  53--54, 2002.
+
 \end{thebibliography}
