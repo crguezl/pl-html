@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.1.18)  23 APR 2014 22:09
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.1.18)  24 APR 2014 12:58
 entering extended mode
  %&-line parsing enabled.
 **./images.tex
@@ -469,24 +469,9 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 1419.
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-l2hSize :tex2html_wrap_inline43642:7.98248pt::7.98248pt::64.81665pt.
+l2hSize :tex2html_wrap_inline43667:7.98248pt::7.98248pt::64.81665pt.
 [1
 
-
-
-]
-l2hSize :tex2html_wrap_inline45335:8.7125pt::8.7125pt::98.75804pt.
-[2
-
-
-]
-l2hSize :tex2html_wrap_inline45337:7.4181pt::0.0pt::10.45314pt.
-[3
-
-
-]
-l2hSize :tex2html_wrap_inline45341:8.7125pt::8.7125pt::150.72118pt.
-[4
 
 
 ] (./images.aux)
@@ -503,4 +488,4 @@ Here is how much of TeX's memory you used:
  714 hyphenation exceptions out of 8191
  38i,5n,35p,326b,362s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on images.dvi (4 pages, 4572 bytes).
+Output written on images.dvi (1 page, 2436 bytes).
