@@ -763,18 +763,6 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img176.png"
  ALT="$ \overline{A}$">|; 
 
-$key = q/(x,y);MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img361.png"
- ALT="$ (x, y)$">|; 
-
-$key = q/Longleftarrow;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="33" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="|."$dir".q|img220.png"
- ALT="$ \Longleftarrow$">|; 
-
 $key = q/Sstackrel{*}{Longrightarrow}yAzLongrightarrowywz=x;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="187" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
@@ -786,6 +774,18 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="251" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img247.png"
  ALT="$ ASSIGN(NUM, PRINT(ID))$">|; 
+
+$key = q/(x,y);MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img361.png"
+ ALT="$ (x, y)$">|; 
+
+$key = q/Longleftarrow;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="33" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="|."$dir".q|img220.png"
+ ALT="$ \Longleftarrow$">|; 
 
 $key = q/displaystylemientras(epsiloninFIRST(Y_i)and(ileqk));MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1284,13 +1284,6 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="249" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img228.png"
  ALT="$ a \in FOLLOW(A) \cap FIRST(\gamma)$">|; 
-
-$key = q/%latex2htmlidmarker43880S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img108.png"
- ALT="% latex2html id marker 43880
-$ S = program$">|; 
 
 $key = q/rho(x)=0forallxinV;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -2039,6 +2032,13 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="92" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img357.png"
  ALT="$ S_1(X, Y, Y)$">|; 
+
+$key = q/%latex2htmlidmarker43884S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img108.png"
+ ALT="% latex2html id marker 43884
+$ S = program$">|; 
 
 $key = q/{figure}{centerline{epsfig{file=chapter_bottomupslashnfa.eps,width=12cm}}{{{{figure};LFS=11;FSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
