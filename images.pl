@@ -763,6 +763,18 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img176.png"
  ALT="$ \overline{A}$">|; 
 
+$key = q/Sstackrel{*}{Longrightarrow}yAzLongrightarrowywz=x;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="187" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img111.png"
+ ALT="$ S \stackrel{*}{\Longrightarrow} y A z \Longrightarrow y w z = x$">|; 
+
+$key = q/ASSIGN(NUM,PRINT(ID));MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="251" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img247.png"
+ ALT="$ ASSIGN(NUM, PRINT(ID))$">|; 
+
 $key = q/(x,y);MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
@@ -775,17 +787,12 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img220.png"
  ALT="$ \Longleftarrow$">|; 
 
-$key = q/Sstackrel{*}{Longrightarrow}yAzLongrightarrowywz=x;MSF=1.6;LFS=11;AAT/;
+$key = q/%latex2htmlidmarker43910S=program;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
- WIDTH="187" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img111.png"
- ALT="$ S \stackrel{*}{\Longrightarrow} y A z \Longrightarrow y w z = x$">|; 
-
-$key = q/ASSIGN(NUM,PRINT(ID));MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="251" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img247.png"
- ALT="$ ASSIGN(NUM, PRINT(ID))$">|; 
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img108.png"
+ ALT="% latex2html id marker 43910
+$ S = program$">|; 
 
 $key = q/displaystylemientras(epsiloninFIRST(Y_i)and(ileqk));MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1834,13 +1841,6 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="53" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
  SRC="|."$dir".q|img74.png"
  ALT="$ NUM$">|; 
-
-$key = q/%latex2htmlidmarker43886S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img108.png"
- ALT="% latex2html id marker 43886
-$ S = program$">|; 
 
 $key = q/L(G)={NIL,CONS(A,NIL),CONS(A,CONS(A,NIL)),ldots};MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
