@@ -763,18 +763,6 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img176.png"
  ALT="$ \overline{A}$">|; 
 
-$key = q/Sstackrel{*}{Longrightarrow}yAzLongrightarrowywz=x;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="187" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img111.png"
- ALT="$ S \stackrel{*}{\Longrightarrow} y A z \Longrightarrow y w z = x$">|; 
-
-$key = q/ASSIGN(NUM,PRINT(ID));MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="251" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img247.png"
- ALT="$ ASSIGN(NUM, PRINT(ID))$">|; 
-
 $key = q/(x,y);MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
@@ -786,6 +774,18 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="33" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
  SRC="|."$dir".q|img220.png"
  ALT="$ \Longleftarrow$">|; 
+
+$key = q/Sstackrel{*}{Longrightarrow}yAzLongrightarrowywz=x;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="187" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img111.png"
+ ALT="$ S \stackrel{*}{\Longrightarrow} y A z \Longrightarrow y w z = x$">|; 
+
+$key = q/ASSIGN(NUM,PRINT(ID));MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="251" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img247.png"
+ ALT="$ ASSIGN(NUM, PRINT(ID))$">|; 
 
 $key = q/displaystylemientras(epsiloninFIRST(Y_i)and(ileqk));MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
