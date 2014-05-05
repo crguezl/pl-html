@@ -763,18 +763,6 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img176.png"
  ALT="$ \overline{A}$">|; 
 
-$key = q/(x,y);MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img361.png"
- ALT="$ (x, y)$">|; 
-
-$key = q/Longleftarrow;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="33" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="|."$dir".q|img220.png"
- ALT="$ \Longleftarrow$">|; 
-
 $key = q/Sstackrel{*}{Longrightarrow}yAzLongrightarrowywz=x;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="187" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
@@ -786,6 +774,18 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="251" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img247.png"
  ALT="$ ASSIGN(NUM, PRINT(ID))$">|; 
+
+$key = q/(x,y);MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img361.png"
+ ALT="$ (x, y)$">|; 
+
+$key = q/Longleftarrow;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="33" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="|."$dir".q|img220.png"
+ ALT="$ \Longleftarrow$">|; 
 
 $key = q/displaystylemientras(epsiloninFIRST(Y_i)and(ileqk));MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1455,13 +1455,6 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img116.png"
  ALT="$ x \in \Sigma^*$">|; 
 
-$key = q/%latex2htmlidmarker44163S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img108.png"
- ALT="% latex2html id marker 44163
-$ S = program$">|; 
-
 $key = q/Sigma_k={ainSigma:rho(a)=k};MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="194" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
@@ -2117,6 +2110,13 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="187" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img277.png"
  ALT="$ list \rightarrow CONS(exp,list)$">|; 
+
+$key = q/%latex2htmlidmarker44167S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img108.png"
+ ALT="% latex2html id marker 44167
+$ S = program$">|; 
 
 $key = q/FOLLOW(A);MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
