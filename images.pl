@@ -401,12 +401,6 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img322.png"
  ALT="$ action$">|; 
 
-$key = q/A;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="|."$dir".q|img1.png"
- ALT="$ A$">|; 
-
 $key = q/mustackrel{*}{Longrightarrow}delta;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="61" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
@@ -418,6 +412,12 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="73" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img296.png"
  ALT="$ t \in B(\Sigma)$">|; 
+
+$key = q/A;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="|."$dir".q|img1.png"
+ ALT="$ A$">|; 
 
 $key = q/SiArightarrowalphaBbetaentonces;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1038,13 +1038,6 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="47" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img81.png"
  ALT="$ e1 / e2$">|; 
-
-$key = q/%latex2htmlidmarker33620S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img99.png"
- ALT="% latex2html id marker 33620
-$ S = program$">|; 
 
 $key = q/Arightarrowaalpha;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1702,6 +1695,13 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img363.png"
  ALT="$ \theta = \{x/PLUS(NUM, x), y/TIMES(ID, NUM)\}$">|; 
 
+$key = q/%latex2htmlidmarker16096S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img99.png"
+ ALT="% latex2html id marker 16096
+$ S = program$">|; 
+
 $key = q/tLongrightarrowt';MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="60" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
@@ -1884,15 +1884,6 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img140.png"
  ALT="$ Si X \in \Sigma entonces FIRST(X) = {X}$">|; 
 
-$key = q/{figure}center{{centerline{epsfig{file=chapter1slashjavascript_natives.eps,width=12cm}}{center{{{{figure};LFS=11;FSF=1.6;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="543" HEIGHT="358" BORDER="0"
- SRC="|."$dir".q|img389.png"
- ALT="\begin{figure}\begin{center}
-\centerline{\epsfig{file=chapter1/javascript_natives.eps, width=12cm}}
-\end{center}
-\end{figure}">|; 
-
 $key = q/V={x_1,x_2,ldots};MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="130" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
@@ -2036,15 +2027,6 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="232" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img266.png"
  ALT="$ L(G) = \{ t \in B(\Sigma): \exists S \stackrel{*}{\Longrightarrow} t \}$">|; 
-
-$key = q/{figure}center{{centerline{epsfig{file=chapter1slashproto_and_prototypes.eps,width=12cm}}{center{{{{figure};LFS=11;FSF=1.6;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="543" HEIGHT="340" BORDER="0"
- SRC="|."$dir".q|img390.png"
- ALT="\begin{figure}\begin{center}
-\centerline{\epsfig{file=chapter1/proto_and_prototypes.eps, width=12cm}}
-\end{center}
-\end{figure}">|; 
 
 $key = q/V;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
