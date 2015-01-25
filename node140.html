@@ -7,8 +7,8 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 <HTML>
 <HEAD>
-<TITLE>Triggering Another Route: calling call</TITLE>
-<META NAME="description" CONTENT="Triggering Another Route: calling call">
+<TITLE>QUINTA PARTE: HTML</TITLE>
+<META NAME="description" CONTENT="QUINTA PARTE: HTML">
 <META NAME="keywords" CONTENT="javascriptexamples">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -19,42 +19,42 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 
 <LINK REL="STYLESHEET" HREF="mystyle.css">
 
-<LINK REL="next" HREF="node141.html">
-<LINK REL="previous" HREF="node139.html">
-<LINK REL="up" HREF="node125.html">
+<LINK REL="next" HREF="node144.html">
+<LINK REL="previous" HREF="node138.html">
+<LINK REL="up" HREF="javascriptexamples.html">
 <LINK REL="next" HREF="node141.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html4259"
+<A NAME="tex2html4175"
   HREF="node141.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html4253"
-  HREF="node125.html">
+<A NAME="tex2html4169"
+  HREF="javascriptexamples.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html4247"
+<A NAME="tex2html4163"
   HREF="node139.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html4255"
-  HREF="node215.html">
+<A NAME="tex2html4171"
+  HREF="node289.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html4257"
-  HREF="node218.html">
+<A NAME="tex2html4173"
+  HREF="node292.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/~plgrado/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
  SRC="logoLPP.png"
  ALT="PL"></A><A NAME="tex2html3"
+  HREF="https://campusvirtual.ull.es/1415/course/view.php?id=5669"><IMG
+  WIDTH="50" ALIGN="BOTTOM" BORDER="0"
+ SRC="moodleLHPlogo.jpeg"
+ ALT="PL moodle 2014/2015"></A><A NAME="tex2html4"
   HREF="http://campusvirtual.ull.es/1314/course/view.php?id=1104"><IMG
   WIDTH="50" ALIGN="BOTTOM" BORDER="0"
  SRC="moodleLHPlogo.jpeg"
- ALT="PL moodle"></A><A NAME="tex2html4"
-  HREF="http://campusvirtual.ull.es/1213m2/course/view.php?id=271"><IMG
-  WIDTH="50" ALIGN="BOTTOM" BORDER="0"
- SRC="moodleLHPlogo.jpeg"
- ALT="PL moodle"></A><A NAME="tex2html5"
+ ALT="PL moodle 2013/2014"></A><A NAME="tex2html5"
   HREF="javascriptexamples.pdf"><IMG
   WIDTH="30" ALIGN="BOTTOM" BORDER="0"
  SRC="gv.jpeg"
@@ -92,82 +92,72 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html4260"
-  HREF="node141.html">Logging</A>
-<B>Sup:</B> <A NAME="tex2html4254"
-  HREF="node125.html">Fundamentos</A>
-<B> Ant:</B> <A NAME="tex2html4248"
-  HREF="node139.html">Passing a Request</A>
+<B> Sig:</B> <A NAME="tex2html4176"
+  HREF="node141.html">Semantic Templates</A>
+<B>Sup:</B> <A NAME="tex2html4170"
+  HREF="javascriptexamples.html">Apuntes de la Asignatura</A>
+<B> Ant:</B> <A NAME="tex2html4164"
+  HREF="node139.html">Bootstrap</A>
 <B> Con:</B> 
-<A NAME="tex2html4255"
-  HREF="node215.html">
+<A NAME="tex2html4171"
+  HREF="node289.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html4257"
-  HREF="node218.html">
+<A NAME="tex2html4173"
+  HREF="node292.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
 <!--End of Navigation Panel-->
 
-<H1><A NAME="SECTION063150000000000000000">
-Triggering Another Route: calling <TT>call</TT></A>
+<H1><A NAME="SECTION08000000000000000000">
+QUINTA PARTE: HTML</A>
 </H1>
-Sometimes <code>pass</code> is not what you want, 
-instead you would like to get the result of calling another route. 
-Simply use <code>call</code> to achieve this:
 
 <P>
-<PRE>
-get '/foo' do
-  status, headers, body = call env.merge("PATH_INFO" =&gt; '/bar')
-  [status, headers, body.map(&amp;:upcase)]
-end
+<BR> <HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
 
-get '/bar' do
-  "bar"
-end
-</PRE>
-
-<P>
-Note that in the example above, you would ease testing and increase performance by simply moving <code>"bar"</code> into a helper used by both <code>/foo</code> and <code>/bar</code>.
-
-<P>
-If you want the request to be sent to the same application instance rather than a duplicate, use <code>call!</code> instead of <code>call</code>.
-
-<P>
-Check out the Rack specification if you want to learn more about <code>call</code>.
-
-<P>
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html4177"
+  HREF="node141.html">Semantic Templates</A>
+<UL>
+<LI><A NAME="tex2html4178"
+  HREF="node142.html">Moustache</A>
+<LI><A NAME="tex2html4179"
+  HREF="node143.html">handlebars</A>
+</UL></UL>
+<!--End of Table of Child-Links-->
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html4259"
+<A NAME="tex2html4175"
   HREF="node141.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html4253"
-  HREF="node125.html">
+<A NAME="tex2html4169"
+  HREF="javascriptexamples.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html4247"
+<A NAME="tex2html4163"
   HREF="node139.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html4255"
-  HREF="node215.html">
+<A NAME="tex2html4171"
+  HREF="node289.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html4257"
-  HREF="node218.html">
+<A NAME="tex2html4173"
+  HREF="node292.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/~plgrado/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
  SRC="logoLPP.png"
  ALT="PL"></A><A NAME="tex2html3"
+  HREF="https://campusvirtual.ull.es/1415/course/view.php?id=5669"><IMG
+  WIDTH="50" ALIGN="BOTTOM" BORDER="0"
+ SRC="moodleLHPlogo.jpeg"
+ ALT="PL moodle 2014/2015"></A><A NAME="tex2html4"
   HREF="http://campusvirtual.ull.es/1314/course/view.php?id=1104"><IMG
   WIDTH="50" ALIGN="BOTTOM" BORDER="0"
  SRC="moodleLHPlogo.jpeg"
- ALT="PL moodle"></A><A NAME="tex2html4"
-  HREF="http://campusvirtual.ull.es/1213m2/course/view.php?id=271"><IMG
-  WIDTH="50" ALIGN="BOTTOM" BORDER="0"
- SRC="moodleLHPlogo.jpeg"
- ALT="PL moodle"></A><A NAME="tex2html5"
+ ALT="PL moodle 2013/2014"></A><A NAME="tex2html5"
   HREF="javascriptexamples.pdf"><IMG
   WIDTH="30" ALIGN="BOTTOM" BORDER="0"
  SRC="gv.jpeg"
@@ -205,17 +195,17 @@ Check out the Rack specification if you want to learn more about <code>call</cod
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html4260"
-  HREF="node141.html">Logging</A>
-<B>Sup:</B> <A NAME="tex2html4254"
-  HREF="node125.html">Fundamentos</A>
-<B> Ant:</B> <A NAME="tex2html4248"
-  HREF="node139.html">Passing a Request</A>
+<B> Sig:</B> <A NAME="tex2html4176"
+  HREF="node141.html">Semantic Templates</A>
+<B>Sup:</B> <A NAME="tex2html4170"
+  HREF="javascriptexamples.html">Apuntes de la Asignatura</A>
+<B> Ant:</B> <A NAME="tex2html4164"
+  HREF="node139.html">Bootstrap</A>
 </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I>Casiano Rodríguez León <BR>
-2014-09-02</I>
+2015-01-25</I>
 </ADDRESS>
 </BODY>
 </HTML>

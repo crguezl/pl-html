@@ -7,8 +7,8 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 <HTML>
 <HEAD>
-<TITLE>Aplicaciones Modulares</TITLE>
-<META NAME="description" CONTENT="Aplicaciones Modulares">
+<TITLE>Inventing a language for turtle graphics</TITLE>
+<META NAME="description" CONTENT="Inventing a language for turtle graphics">
 <META NAME="keywords" CONTENT="javascriptexamples">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -19,42 +19,41 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 
 <LINK REL="STYLESHEET" HREF="mystyle.css">
 
-<LINK REL="next" HREF="node162.html">
-<LINK REL="previous" HREF="node156.html">
-<LINK REL="up" HREF="node88.html">
+<LINK REL="previous" HREF="node160.html">
+<LINK REL="up" HREF="node150.html">
 <LINK REL="next" HREF="node162.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html4571"
+<A NAME="tex2html4521"
   HREF="node162.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html4565"
-  HREF="node88.html">
+<A NAME="tex2html4515"
+  HREF="node150.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html4559"
+<A NAME="tex2html4511"
   HREF="node160.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html4567"
-  HREF="node215.html">
+<A NAME="tex2html4517"
+  HREF="node289.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html4569"
-  HREF="node218.html">
+<A NAME="tex2html4519"
+  HREF="node292.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/~plgrado/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
  SRC="logoLPP.png"
  ALT="PL"></A><A NAME="tex2html3"
+  HREF="https://campusvirtual.ull.es/1415/course/view.php?id=5669"><IMG
+  WIDTH="50" ALIGN="BOTTOM" BORDER="0"
+ SRC="moodleLHPlogo.jpeg"
+ ALT="PL moodle 2014/2015"></A><A NAME="tex2html4"
   HREF="http://campusvirtual.ull.es/1314/course/view.php?id=1104"><IMG
   WIDTH="50" ALIGN="BOTTOM" BORDER="0"
  SRC="moodleLHPlogo.jpeg"
- ALT="PL moodle"></A><A NAME="tex2html4"
-  HREF="http://campusvirtual.ull.es/1213m2/course/view.php?id=271"><IMG
-  WIDTH="50" ALIGN="BOTTOM" BORDER="0"
- SRC="moodleLHPlogo.jpeg"
- ALT="PL moodle"></A><A NAME="tex2html5"
+ ALT="PL moodle 2013/2014"></A><A NAME="tex2html5"
   HREF="javascriptexamples.pdf"><IMG
   WIDTH="30" ALIGN="BOTTOM" BORDER="0"
  SRC="gv.jpeg"
@@ -92,82 +91,59 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html4572"
-  HREF="node162.html">Testing en Sinatra</A>
-<B>Sup:</B> <A NAME="tex2html4566"
-  HREF="node88.html">PARTE: SINATRA</A>
-<B> Ant:</B> <A NAME="tex2html4560"
-  HREF="node160.html">Petición y Respuesta</A>
+<B> Sig:</B> <A NAME="tex2html4522"
+  HREF="node162.html">PARTE: SINATRA</A>
+<B>Sup:</B> <A NAME="tex2html4516"
+  HREF="node150.html">PARTE: CREATE YOUR OWN</A>
+<B> Ant:</B> <A NAME="tex2html4512"
+  HREF="node160.html">Functions and all that</A>
 <B> Con:</B> 
-<A NAME="tex2html4567"
-  HREF="node215.html">
+<A NAME="tex2html4517"
+  HREF="node289.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html4569"
-  HREF="node218.html">
+<A NAME="tex2html4519"
+  HREF="node292.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
 <!--End of Navigation Panel-->
 
-<H1><A NAME="SECTION06500000000000000000">
-Aplicaciones Modulares</A>
+<H1><A NAME="SECTION011600000000000000000">
+ Inventing a language for turtle graphics</A>
 </H1>
-
-<P>
-Las aplicaciones normales Sinatra se denominan <A NAME="14113"></A><SPAN  CLASS="textbf">alicaciones clásicas sinatra</SPAN>
-y viven en <A NAME="tex2html536"
-  HREF="https://github.com/sinatra/sinatra/blob/master/lib/sinatra/base.rb">Sinatra::Application</A>,
-que es una subclase de <A NAME="tex2html537"
-  HREF="https://github.com/sinatra/sinatra/blob/master/lib/sinatra/base.rb">Sinatra::Base</A>.
-
-<P>
-En las aplicaciones clásicas Sinatra extiende la clase <code>Object</code> en el momento 
-de cargarse lo que, en cierto modo, contamina el espacio de nombres global. Eso dificulta que nuestra aplicación 
-pueda ser distribuída como una gema y que se puedan tener varias aplicaciones clásicas 
-en un único proceso.
-
-<P>
-Una aplicación Sinatra se dice una <A NAME="14119"></A><SPAN  CLASS="textbf">aplicación modular sinatra</SPAN>
-si no hace uso de <A NAME="tex2html538"
-  HREF="https://github.com/sinatra/sinatra/blob/master/lib/sinatra/base.rb">Sinatra::Application</A>,
-renunciando al DSL de alto nivel proveído por Sinatra,
-sino que hereda de <A NAME="tex2html539"
-  HREF="https://github.com/sinatra/sinatra/blob/master/lib/sinatra/base.rb">Sinatra::Base</A>.
-
-<P>
-Podemos combinar una aplicación clásica  con una modular, pero sólo puede haber una aplicación clásica por proceso.
-
+<A NAME="tex2html431"
+  HREF="http://nathansuniversity.com/turtle.html">http://nathansuniversity.com/turtle.html</A>
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html4571"
+<A NAME="tex2html4521"
   HREF="node162.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html4565"
-  HREF="node88.html">
+<A NAME="tex2html4515"
+  HREF="node150.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html4559"
+<A NAME="tex2html4511"
   HREF="node160.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html4567"
-  HREF="node215.html">
+<A NAME="tex2html4517"
+  HREF="node289.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html4569"
-  HREF="node218.html">
+<A NAME="tex2html4519"
+  HREF="node292.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/~plgrado/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
  SRC="logoLPP.png"
  ALT="PL"></A><A NAME="tex2html3"
+  HREF="https://campusvirtual.ull.es/1415/course/view.php?id=5669"><IMG
+  WIDTH="50" ALIGN="BOTTOM" BORDER="0"
+ SRC="moodleLHPlogo.jpeg"
+ ALT="PL moodle 2014/2015"></A><A NAME="tex2html4"
   HREF="http://campusvirtual.ull.es/1314/course/view.php?id=1104"><IMG
   WIDTH="50" ALIGN="BOTTOM" BORDER="0"
  SRC="moodleLHPlogo.jpeg"
- ALT="PL moodle"></A><A NAME="tex2html4"
-  HREF="http://campusvirtual.ull.es/1213m2/course/view.php?id=271"><IMG
-  WIDTH="50" ALIGN="BOTTOM" BORDER="0"
- SRC="moodleLHPlogo.jpeg"
- ALT="PL moodle"></A><A NAME="tex2html5"
+ ALT="PL moodle 2013/2014"></A><A NAME="tex2html5"
   HREF="javascriptexamples.pdf"><IMG
   WIDTH="30" ALIGN="BOTTOM" BORDER="0"
  SRC="gv.jpeg"
@@ -205,17 +181,17 @@ Podemos combinar una aplicación clásica  con una modular, pero sólo puede hab
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html4572"
-  HREF="node162.html">Testing en Sinatra</A>
-<B>Sup:</B> <A NAME="tex2html4566"
-  HREF="node88.html">PARTE: SINATRA</A>
-<B> Ant:</B> <A NAME="tex2html4560"
-  HREF="node160.html">Petición y Respuesta</A>
+<B> Sig:</B> <A NAME="tex2html4522"
+  HREF="node162.html">PARTE: SINATRA</A>
+<B>Sup:</B> <A NAME="tex2html4516"
+  HREF="node150.html">PARTE: CREATE YOUR OWN</A>
+<B> Ant:</B> <A NAME="tex2html4512"
+  HREF="node160.html">Functions and all that</A>
 </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I>Casiano Rodríguez León <BR>
-2014-09-02</I>
+2015-01-25</I>
 </ADDRESS>
 </BODY>
 </HTML>

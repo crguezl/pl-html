@@ -46,6 +46,13 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img169.png"
  ALT="$ \hat{\delta}$">|; 
 
+$key = q/%latex2htmlidmarker34211S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img99.png"
+ ALT="% latex2html id marker 34211
+$ S = program$">|; 
+
 $key = q/rightarrowPLUS(expr,expr);MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="169" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
@@ -401,17 +408,17 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img322.png"
  ALT="$ action$">|; 
 
-$key = q/mustackrel{*}{Longrightarrow}delta;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="61" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img24.png"
- ALT="$ \mu \stackrel{*}{\Longrightarrow} \delta$">|; 
-
 $key = q/tinB(Sigma);MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="73" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img296.png"
  ALT="$ t \in B(\Sigma)$">|; 
+
+$key = q/mustackrel{*}{Longrightarrow}delta;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="61" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img24.png"
+ ALT="$ \mu \stackrel{*}{\Longrightarrow} \delta$">|; 
 
 $key = q/A;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1877,6 +1884,15 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img140.png"
  ALT="$ Si X \in \Sigma entonces FIRST(X) = {X}$">|; 
 
+$key = q/{figure}center{{centerline{epsfig{file=chapter1slashjavascript_natives.eps,width=12cm}}{center{{{{figure};LFS=11;FSF=1.6;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="543" HEIGHT="358" BORDER="0"
+ SRC="|."$dir".q|img389.png"
+ ALT="\begin{figure}\begin{center}
+\centerline{\epsfig{file=chapter1/javascript_natives.eps, width=12cm}}
+\end{center}
+\end{figure}">|; 
+
 $key = q/V={x_1,x_2,ldots};MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="130" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
@@ -2021,6 +2037,15 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img266.png"
  ALT="$ L(G) = \{ t \in B(\Sigma): \exists S \stackrel{*}{\Longrightarrow} t \}$">|; 
 
+$key = q/{figure}center{{centerline{epsfig{file=chapter1slashproto_and_prototypes.eps,width=12cm}}{center{{{{figure};LFS=11;FSF=1.6;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="543" HEIGHT="340" BORDER="0"
+ SRC="|."$dir".q|img390.png"
+ ALT="\begin{figure}\begin{center}
+\centerline{\epsfig{file=chapter1/proto_and_prototypes.eps, width=12cm}}
+\end{center}
+\end{figure}">|; 
+
 $key = q/V;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="19" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
@@ -2140,13 +2165,6 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="14" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img202.png"
  ALT="$ _n$">|; 
-
-$key = q/%latex2htmlidmarker31221S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img99.png"
- ALT="% latex2html id marker 31221
-$ S = program$">|; 
 
 $key = q/betagamma;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG

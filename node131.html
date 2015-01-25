@@ -7,8 +7,8 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 <HTML>
 <HEAD>
-<TITLE>Manejo de Errores</TITLE>
-<META NAME="description" CONTENT="Manejo de Errores">
+<TITLE>n</TITLE>
+<META NAME="description" CONTENT="n">
 <META NAME="keywords" CONTENT="javascriptexamples">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -21,40 +21,40 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 
 <LINK REL="next" HREF="node132.html">
 <LINK REL="previous" HREF="node130.html">
-<LINK REL="up" HREF="node125.html">
+<LINK REL="up" HREF="node129.html">
 <LINK REL="next" HREF="node132.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html4118"
+<A NAME="tex2html4051"
   HREF="node132.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html4112"
-  HREF="node125.html">
+<A NAME="tex2html4045"
+  HREF="node129.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html4106"
+<A NAME="tex2html4039"
   HREF="node130.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html4114"
-  HREF="node215.html">
+<A NAME="tex2html4047"
+  HREF="node289.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html4116"
-  HREF="node218.html">
+<A NAME="tex2html4049"
+  HREF="node292.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/~plgrado/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
  SRC="logoLPP.png"
  ALT="PL"></A><A NAME="tex2html3"
+  HREF="https://campusvirtual.ull.es/1415/course/view.php?id=5669"><IMG
+  WIDTH="50" ALIGN="BOTTOM" BORDER="0"
+ SRC="moodleLHPlogo.jpeg"
+ ALT="PL moodle 2014/2015"></A><A NAME="tex2html4"
   HREF="http://campusvirtual.ull.es/1314/course/view.php?id=1104"><IMG
   WIDTH="50" ALIGN="BOTTOM" BORDER="0"
  SRC="moodleLHPlogo.jpeg"
- ALT="PL moodle"></A><A NAME="tex2html4"
-  HREF="http://campusvirtual.ull.es/1213m2/course/view.php?id=271"><IMG
-  WIDTH="50" ALIGN="BOTTOM" BORDER="0"
- SRC="moodleLHPlogo.jpeg"
- ALT="PL moodle"></A><A NAME="tex2html5"
+ ALT="PL moodle 2013/2014"></A><A NAME="tex2html5"
   HREF="javascriptexamples.pdf"><IMG
   WIDTH="30" ALIGN="BOTTOM" BORDER="0"
  SRC="gv.jpeg"
@@ -92,167 +92,103 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html4119"
-  HREF="node132.html">The methods body, status</A>
-<B>Sup:</B> <A NAME="tex2html4113"
-  HREF="node125.html">Fundamentos</A>
-<B> Ant:</B> <A NAME="tex2html4107"
-  HREF="node130.html">Filtros</A>
+<B> Sig:</B> <A NAME="tex2html4052"
+  HREF="node132.html">Google Chrome y Javascript</A>
+<B>Sup:</B> <A NAME="tex2html4046"
+  HREF="node129.html">Herramientas</A>
+<B> Ant:</B> <A NAME="tex2html4040"
+  HREF="node130.html">npm</A>
 <B> Con:</B> 
-<A NAME="tex2html4114"
-  HREF="node215.html">
+<A NAME="tex2html4047"
+  HREF="node289.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html4116"
-  HREF="node218.html">
+<A NAME="tex2html4049"
+  HREF="node292.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
 <!--End of Navigation Panel-->
-<!--Table of Child-Links-->
-<A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
 
-<UL CLASS="ChildLinks">
-<LI><UL>
-<LI><UL>
-<LI><A NAME="tex2html4120"
-  HREF="node131.html#SECTION06360010000000000000">not_found</A>
-<LI><A NAME="tex2html4121"
-  HREF="node131.html#SECTION06360020000000000000">error</A>
-</UL></UL></UL>
-<!--End of Table of Child-Links-->
-<HR>
-
-<H1><A NAME="SECTION06360000000000000000">
-Manejo de Errores</A>
+<H1><A NAME="SECTION052420000000000000000">
+n</A>
 </H1>
 
 <P>
-
-<OL>
-<LI>The HTTP specification states that response status in the range  200-299
-indicate success in processing a request
-</LI>
-<LI>500-599 is reserved for server errors
-</LI>
-<LI>Sinatra  offers helpers for the 404 (Not Found) and 500 (Internal Server Error) status
-</LI>
-</OL>
-
-<P>
-
-<H4><A NAME="SECTION06360010000000000000">
-not_found</A>
-</H4>
-  
-
-When a <code>Sinatra::NotFound</code> exception is raised, or the response’s
-status code is 404, the <code>not_found</code> handler is invoked:
+ <TT>n</TT>  es una herramienta parecida a  <TT>rvm</TT>  para Node.js:
+<PRE>
+$sudo npm install n -g
+</PRE>
+y
 
 <P>
 <PRE>
-not_found do
-  'This is nowhere to be found.'
-end
+[~/Dropbox/src/javascript/node.js/creating_modules(master)]$ n help
+
+  Usage: n [options] [COMMAND] [config]
+
+  Commands:
+
+    n                            Output versions installed
+    n latest [config ...]        Install or activate the latest node release
+    n stable [config ...]        Install or activate the latest stable node release
+    n &lt;version&gt; [config ...]     Install and/or use node &lt;version&gt;
+    n use &lt;version&gt; [args ...]   Execute node &lt;version&gt; with [args ...]
+    n bin &lt;version&gt;              Output bin path for &lt;version&gt;
+    n rm &lt;version ...&gt;           Remove the given version(s)
+    n prev                       Revert to the previously activated version
+    n --latest                   Output the latest node version available
+    n --stable                   Output the latest stable node version available
+    n ls                         Output the versions of node available
+
+  Options:
+
+    -V, --version   Output current version of n
+    -h, --help      Display help information
+
+  Aliases:
+
+    which   bin
+    use     as
+    list    ls
+    -       rm
 </PRE>
-
-<P>
-
-<H4><A NAME="SECTION06360020000000000000">
-error</A>
-</H4>
-  
-
-The <code>error</code> handler is invoked any time an exception is raised from
-a route block or a filter. 
-
-<P>
-The exception object can be obtained
-from the <code>sinatra.error</code> Rack variable:
 
 <P>
 <PRE>
-error do
-  'Sorry there was a nasty error - ' + env['sinatra.error'].name
-end
+$ sudo n latest
 </PRE>
-Custom errors:
-
-<P>
-<PRE>
-error MyCustomError do
-  'So what happened was...' + env['sinatra.error'].message
-end
-</PRE>
-Then, if this happens:
-
-<P>
-<PRE>
-get '/' do
-  raise MyCustomError, 'something bad'
-end
-</PRE>
-You get this:
-
-<P>
-<PRE>
-So what happened was... something bad
-</PRE>
-Alternatively, you can install an error handler for a status code:
-
-<P>
-<PRE>
-error 403 do
-  'Access forbidden'
-end
-
-get '/secret' do
-  403
-end
-</PRE>
-Or a range:
-
-<P>
-<PRE>
-error 400..510 do
-  'Boom'
-end
-</PRE>
-Sinatra installs special <code>not_found</code> and <code>error</code> handlers 
-when running under the development environment to display nice stack
-traces and additional debugging information in your browser (esto es,
-en producción estos handlers son mucho mas "parcos").
 
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html4118"
+<A NAME="tex2html4051"
   HREF="node132.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html4112"
-  HREF="node125.html">
+<A NAME="tex2html4045"
+  HREF="node129.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html4106"
+<A NAME="tex2html4039"
   HREF="node130.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html4114"
-  HREF="node215.html">
+<A NAME="tex2html4047"
+  HREF="node289.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html4116"
-  HREF="node218.html">
+<A NAME="tex2html4049"
+  HREF="node292.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/~plgrado/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
  SRC="logoLPP.png"
  ALT="PL"></A><A NAME="tex2html3"
+  HREF="https://campusvirtual.ull.es/1415/course/view.php?id=5669"><IMG
+  WIDTH="50" ALIGN="BOTTOM" BORDER="0"
+ SRC="moodleLHPlogo.jpeg"
+ ALT="PL moodle 2014/2015"></A><A NAME="tex2html4"
   HREF="http://campusvirtual.ull.es/1314/course/view.php?id=1104"><IMG
   WIDTH="50" ALIGN="BOTTOM" BORDER="0"
  SRC="moodleLHPlogo.jpeg"
- ALT="PL moodle"></A><A NAME="tex2html4"
-  HREF="http://campusvirtual.ull.es/1213m2/course/view.php?id=271"><IMG
-  WIDTH="50" ALIGN="BOTTOM" BORDER="0"
- SRC="moodleLHPlogo.jpeg"
- ALT="PL moodle"></A><A NAME="tex2html5"
+ ALT="PL moodle 2013/2014"></A><A NAME="tex2html5"
   HREF="javascriptexamples.pdf"><IMG
   WIDTH="30" ALIGN="BOTTOM" BORDER="0"
  SRC="gv.jpeg"
@@ -290,17 +226,17 @@ en producción estos handlers son mucho mas "parcos").
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html4119"
-  HREF="node132.html">The methods body, status</A>
-<B>Sup:</B> <A NAME="tex2html4113"
-  HREF="node125.html">Fundamentos</A>
-<B> Ant:</B> <A NAME="tex2html4107"
-  HREF="node130.html">Filtros</A>
+<B> Sig:</B> <A NAME="tex2html4052"
+  HREF="node132.html">Google Chrome y Javascript</A>
+<B>Sup:</B> <A NAME="tex2html4046"
+  HREF="node129.html">Herramientas</A>
+<B> Ant:</B> <A NAME="tex2html4040"
+  HREF="node130.html">npm</A>
 </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I>Casiano Rodríguez León <BR>
-2014-09-02</I>
+2015-01-25</I>
 </ADDRESS>
 </BODY>
 </HTML>

@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{pilgrimhtml5}
 Mark Pilgrim.
@@ -42,5 +42,26 @@ Todd~A. Proebsting.
   {\it (invited talk)}.
 \newblock In {\em ACM SIGPLAN Workshop on Rule-Based Programming}, pages
   53--54, 2002.
+
+\bibitem{osmani2012learning}
+A.~Osmani.
+\newblock {\em {\htmladdnormallink{Learning JavaScript Design
+  Patterns}{http://addyosmani.com/resources/essentialjsdesignpatterns/book/}}}.
+\newblock Oreilly and Associate Series. O'Reilly Media, Incorporated, 2012.
+
+\bibitem{learningnode}
+S.~Powers.
+\newblock {\em Learning Node}.
+\newblock Oreilly and Associate Series. O'Reilly Media, Incorporated, 2012.
+
+\bibitem{eloquentjavascript}
+M.~Haverbeke.
+\newblock {\em Eloquent JavaScript: A Modern Introduction to Programming}.
+\newblock No Starch Press Series. No Starch Press, 2011.
+
+\bibitem{holzner2003sams}
+S.~Holzner.
+\newblock {\em Sams Teach Yourself Xml in 21 Days}.
+\newblock Sams Teach Yourself. Sams, 2003.
 
 \end{thebibliography}

@@ -7,8 +7,8 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 <HTML>
 <HEAD>
-<TITLE>halt</TITLE>
-<META NAME="description" CONTENT="halt">
+<TITLE>CUARTA PARTE: CSS</TITLE>
+<META NAME="description" CONTENT="CUARTA PARTE: CSS">
 <META NAME="keywords" CONTENT="javascriptexamples">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -19,42 +19,42 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 
 <LINK REL="STYLESHEET" HREF="mystyle.css">
 
-<LINK REL="next" HREF="node139.html">
+<LINK REL="next" HREF="node140.html">
 <LINK REL="previous" HREF="node137.html">
-<LINK REL="up" HREF="node125.html">
+<LINK REL="up" HREF="javascriptexamples.html">
 <LINK REL="next" HREF="node139.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html4231"
+<A NAME="tex2html4148"
   HREF="node139.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html4225"
-  HREF="node125.html">
+<A NAME="tex2html4142"
+  HREF="javascriptexamples.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html4219"
+<A NAME="tex2html4136"
   HREF="node137.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html4227"
-  HREF="node215.html">
+<A NAME="tex2html4144"
+  HREF="node289.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html4229"
-  HREF="node218.html">
+<A NAME="tex2html4146"
+  HREF="node292.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/~plgrado/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
  SRC="logoLPP.png"
  ALT="PL"></A><A NAME="tex2html3"
+  HREF="https://campusvirtual.ull.es/1415/course/view.php?id=5669"><IMG
+  WIDTH="50" ALIGN="BOTTOM" BORDER="0"
+ SRC="moodleLHPlogo.jpeg"
+ ALT="PL moodle 2014/2015"></A><A NAME="tex2html4"
   HREF="http://campusvirtual.ull.es/1314/course/view.php?id=1104"><IMG
   WIDTH="50" ALIGN="BOTTOM" BORDER="0"
  SRC="moodleLHPlogo.jpeg"
- ALT="PL moodle"></A><A NAME="tex2html4"
-  HREF="http://campusvirtual.ull.es/1213m2/course/view.php?id=271"><IMG
-  WIDTH="50" ALIGN="BOTTOM" BORDER="0"
- SRC="moodleLHPlogo.jpeg"
- ALT="PL moodle"></A><A NAME="tex2html5"
+ ALT="PL moodle 2013/2014"></A><A NAME="tex2html5"
   HREF="javascriptexamples.pdf"><IMG
   WIDTH="30" ALIGN="BOTTOM" BORDER="0"
  SRC="gv.jpeg"
@@ -92,97 +92,65 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html4232"
-  HREF="node139.html">Passing a Request</A>
-<B>Sup:</B> <A NAME="tex2html4226"
-  HREF="node125.html">Fundamentos</A>
-<B> Ant:</B> <A NAME="tex2html4220"
-  HREF="node137.html">Uploads. Subida de Ficheros</A>
+<B> Sig:</B> <A NAME="tex2html4149"
+  HREF="node139.html">Bootstrap</A>
+<B>Sup:</B> <A NAME="tex2html4143"
+  HREF="javascriptexamples.html">Apuntes de la Asignatura</A>
+<B> Ant:</B> <A NAME="tex2html4137"
+  HREF="node137.html">TERCERA PARTE: HTTP</A>
 <B> Con:</B> 
-<A NAME="tex2html4227"
-  HREF="node215.html">
+<A NAME="tex2html4144"
+  HREF="node289.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html4229"
-  HREF="node218.html">
+<A NAME="tex2html4146"
+  HREF="node292.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
 <!--End of Navigation Panel-->
 
-<H1><A NAME="SECTION063130000000000000000">
-halt</A>
+<H1><A NAME="SECTION07000000000000000000">
+CUARTA PARTE: CSS</A>
 </H1>
+<BR> <HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
 
-<P>
-Sometimes we want to stop the program: maybe a critical error has ocurred.
-To immediately stop a request within a filter or route use:
-
-<P>
-<PRE>
-halt
-</PRE>
-You can also specify the status when halting:
-
-<P>
-<PRE>
-halt 410
-</PRE>
-Or the body:
-
-<P>
-<PRE>
-halt 'this will be the body'
-</PRE>
-Or both:
-
-<P>
-<PRE>
-halt 401, 'go away!'
-</PRE>
-With headers:
-
-<P>
-<PRE>
-halt 402, {'Content-Type' =&gt; 'text/plain'}, 'revenge'
-</PRE>
-It is of course possible to combine a template with halt:
-
-<P>
-<PRE>
-halt erb(:error)
-</PRE>
-
-<P>
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html4150"
+  HREF="node139.html">Bootstrap</A>
+</UL>
+<!--End of Table of Child-Links-->
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html4231"
+<A NAME="tex2html4148"
   HREF="node139.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html4225"
-  HREF="node125.html">
+<A NAME="tex2html4142"
+  HREF="javascriptexamples.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html4219"
+<A NAME="tex2html4136"
   HREF="node137.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html4227"
-  HREF="node215.html">
+<A NAME="tex2html4144"
+  HREF="node289.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html4229"
-  HREF="node218.html">
+<A NAME="tex2html4146"
+  HREF="node292.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/~plgrado/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
  SRC="logoLPP.png"
  ALT="PL"></A><A NAME="tex2html3"
+  HREF="https://campusvirtual.ull.es/1415/course/view.php?id=5669"><IMG
+  WIDTH="50" ALIGN="BOTTOM" BORDER="0"
+ SRC="moodleLHPlogo.jpeg"
+ ALT="PL moodle 2014/2015"></A><A NAME="tex2html4"
   HREF="http://campusvirtual.ull.es/1314/course/view.php?id=1104"><IMG
   WIDTH="50" ALIGN="BOTTOM" BORDER="0"
  SRC="moodleLHPlogo.jpeg"
- ALT="PL moodle"></A><A NAME="tex2html4"
-  HREF="http://campusvirtual.ull.es/1213m2/course/view.php?id=271"><IMG
-  WIDTH="50" ALIGN="BOTTOM" BORDER="0"
- SRC="moodleLHPlogo.jpeg"
- ALT="PL moodle"></A><A NAME="tex2html5"
+ ALT="PL moodle 2013/2014"></A><A NAME="tex2html5"
   HREF="javascriptexamples.pdf"><IMG
   WIDTH="30" ALIGN="BOTTOM" BORDER="0"
  SRC="gv.jpeg"
@@ -220,17 +188,17 @@ halt erb(:error)
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html4232"
-  HREF="node139.html">Passing a Request</A>
-<B>Sup:</B> <A NAME="tex2html4226"
-  HREF="node125.html">Fundamentos</A>
-<B> Ant:</B> <A NAME="tex2html4220"
-  HREF="node137.html">Uploads. Subida de Ficheros</A>
+<B> Sig:</B> <A NAME="tex2html4149"
+  HREF="node139.html">Bootstrap</A>
+<B>Sup:</B> <A NAME="tex2html4143"
+  HREF="javascriptexamples.html">Apuntes de la Asignatura</A>
+<B> Ant:</B> <A NAME="tex2html4137"
+  HREF="node137.html">TERCERA PARTE: HTTP</A>
 </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I>Casiano Rodríguez León <BR>
-2014-09-02</I>
+2015-01-25</I>
 </ADDRESS>
 </BODY>
 </HTML>

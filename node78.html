@@ -7,8 +7,8 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 <HTML>
 <HEAD>
-<TITLE>Closures</TITLE>
-<META NAME="description" CONTENT="Closures">
+<TITLE>Estructura Léxica</TITLE>
+<META NAME="description" CONTENT="Estructura Léxica">
 <META NAME="keywords" CONTENT="javascriptexamples">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -19,41 +19,42 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 
 <LINK REL="STYLESHEET" HREF="mystyle.css">
 
+<LINK REL="next" HREF="node79.html">
 <LINK REL="previous" HREF="node77.html">
-<LINK REL="up" HREF="node77.html">
+<LINK REL="up" HREF="node76.html">
 <LINK REL="next" HREF="node79.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2914"
+<A NAME="tex2html3250"
   HREF="node79.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2908"
-  HREF="node77.html">
+<A NAME="tex2html3244"
+  HREF="node76.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2904"
+<A NAME="tex2html3238"
   HREF="node77.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2910"
-  HREF="node215.html">
+<A NAME="tex2html3246"
+  HREF="node289.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2912"
-  HREF="node218.html">
+<A NAME="tex2html3248"
+  HREF="node292.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/~plgrado/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
  SRC="logoLPP.png"
  ALT="PL"></A><A NAME="tex2html3"
+  HREF="https://campusvirtual.ull.es/1415/course/view.php?id=5669"><IMG
+  WIDTH="50" ALIGN="BOTTOM" BORDER="0"
+ SRC="moodleLHPlogo.jpeg"
+ ALT="PL moodle 2014/2015"></A><A NAME="tex2html4"
   HREF="http://campusvirtual.ull.es/1314/course/view.php?id=1104"><IMG
   WIDTH="50" ALIGN="BOTTOM" BORDER="0"
  SRC="moodleLHPlogo.jpeg"
- ALT="PL moodle"></A><A NAME="tex2html4"
-  HREF="http://campusvirtual.ull.es/1213m2/course/view.php?id=271"><IMG
-  WIDTH="50" ALIGN="BOTTOM" BORDER="0"
- SRC="moodleLHPlogo.jpeg"
- ALT="PL moodle"></A><A NAME="tex2html5"
+ ALT="PL moodle 2013/2014"></A><A NAME="tex2html5"
   HREF="javascriptexamples.pdf"><IMG
   WIDTH="30" ALIGN="BOTTOM" BORDER="0"
  SRC="gv.jpeg"
@@ -91,60 +92,58 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2915"
-  HREF="node79.html">Your First Compiler</A>
-<B>Sup:</B> <A NAME="tex2html2909"
-  HREF="node77.html">JavaScript Review</A>
-<B> Ant:</B> <A NAME="tex2html2905"
-  HREF="node77.html">JavaScript Review</A>
+<B> Sig:</B> <A NAME="tex2html3251"
+  HREF="node79.html">Tipos, Valores y Variables</A>
+<B>Sup:</B> <A NAME="tex2html3245"
+  HREF="node76.html">SEGUNDA PARTE: APUNTES DE</A>
+<B> Ant:</B> <A NAME="tex2html3239"
+  HREF="node77.html">Introducción</A>
 <B> Con:</B> 
-<A NAME="tex2html2910"
-  HREF="node215.html">
+<A NAME="tex2html3246"
+  HREF="node289.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2912"
-  HREF="node218.html">
+<A NAME="tex2html3248"
+  HREF="node292.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
 <!--End of Navigation Panel-->
 
-<H1><A NAME="SECTION05110000000000000000">
-Closures</A>
+<H1><A NAME="SECTION05200000000000000000">
+Estructura Léxica</A>
 </H1>
-<A NAME="tex2html310"
-  HREF="http://nathansjslessons.appspot.com/">http://nathansjslessons.appspot.com/</A>
 
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2914"
+<A NAME="tex2html3250"
   HREF="node79.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2908"
-  HREF="node77.html">
+<A NAME="tex2html3244"
+  HREF="node76.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2904"
+<A NAME="tex2html3238"
   HREF="node77.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2910"
-  HREF="node215.html">
+<A NAME="tex2html3246"
+  HREF="node289.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2912"
-  HREF="node218.html">
+<A NAME="tex2html3248"
+  HREF="node292.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/~plgrado/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
  SRC="logoLPP.png"
  ALT="PL"></A><A NAME="tex2html3"
+  HREF="https://campusvirtual.ull.es/1415/course/view.php?id=5669"><IMG
+  WIDTH="50" ALIGN="BOTTOM" BORDER="0"
+ SRC="moodleLHPlogo.jpeg"
+ ALT="PL moodle 2014/2015"></A><A NAME="tex2html4"
   HREF="http://campusvirtual.ull.es/1314/course/view.php?id=1104"><IMG
   WIDTH="50" ALIGN="BOTTOM" BORDER="0"
  SRC="moodleLHPlogo.jpeg"
- ALT="PL moodle"></A><A NAME="tex2html4"
-  HREF="http://campusvirtual.ull.es/1213m2/course/view.php?id=271"><IMG
-  WIDTH="50" ALIGN="BOTTOM" BORDER="0"
- SRC="moodleLHPlogo.jpeg"
- ALT="PL moodle"></A><A NAME="tex2html5"
+ ALT="PL moodle 2013/2014"></A><A NAME="tex2html5"
   HREF="javascriptexamples.pdf"><IMG
   WIDTH="30" ALIGN="BOTTOM" BORDER="0"
  SRC="gv.jpeg"
@@ -182,17 +181,17 @@ Closures</A>
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2915"
-  HREF="node79.html">Your First Compiler</A>
-<B>Sup:</B> <A NAME="tex2html2909"
-  HREF="node77.html">JavaScript Review</A>
-<B> Ant:</B> <A NAME="tex2html2905"
-  HREF="node77.html">JavaScript Review</A>
+<B> Sig:</B> <A NAME="tex2html3251"
+  HREF="node79.html">Tipos, Valores y Variables</A>
+<B>Sup:</B> <A NAME="tex2html3245"
+  HREF="node76.html">SEGUNDA PARTE: APUNTES DE</A>
+<B> Ant:</B> <A NAME="tex2html3239"
+  HREF="node77.html">Introducción</A>
 </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I>Casiano Rodríguez León <BR>
-2014-09-02</I>
+2015-01-25</I>
 </ADDRESS>
 </BODY>
 </HTML>
