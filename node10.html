@@ -558,24 +558,26 @@ index.html</A>
 &lt;html&gt;
   &lt;head&gt;
      &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
-     &lt;title&gt;JavaScript Temperature Converter&lt;/title&gt;
-     &lt;link href=normalize.css" rel="stylesheet" type="text/css"&gt;
+     &lt;title&gt;CSV Analyzer&lt;/title&gt;
      &lt;link href="global.css" rel="stylesheet" type="text/css"&gt;
 
-     &lt;script type="text/javascript" src="temperature.js"&gt;&lt;/script&gt;
+     &lt;script type="text/javascript" src="../../underscore/underscore.js"&gt;&lt;/script&gt;
+     &lt;script type="text/javascript" src="../../jquery/starterkit/jquery.js"&gt;&lt;/script&gt;
+     &lt;script type="text/javascript" src="csv.js"&gt;&lt;/script&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;h1&gt;Temperature Converter&lt;/h1&gt;
+    &lt;h1&gt;Comma Separated Value Analyzer&lt;/h1&gt;
+    &lt;div&gt;
+      &lt;i&gt;Write a CSV string. Click the table button. The program outputs a table with the specified data.&lt;/i&gt;
+    &lt;/div&gt;
     &lt;table&gt;
       &lt;tr&gt;
-        &lt;th&gt;Enter  Temperature (examples: 32F, 45C, -2.5f):&lt;/th&gt;
-        &lt;td&gt;&lt;input id="original" autofocus onchange="calculate();" placeholder="32F" size="50"&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;th&gt;Converted Temperature:&lt;/th&gt;
-        &lt;td&gt;&lt;span class="output" id="converted"&gt;&lt;/span&gt;&lt;/td&gt;
+        &lt;th&gt;CSV string:&lt;/th&gt; &lt;!-- autofocus attribute is HTML5 --&gt;
+        &lt;td&gt;&lt;textarea autofocus cols = "80" rows = "5" id="original"&gt;&lt;/textarea&gt;&lt;/td&gt; 
       &lt;/tr&gt;
     &lt;/table&gt;
+    &lt;button type="button"&gt;table:&lt;/button&gt;&lt;br&gt;
+    &lt;span class="output" id="finaltable"&gt;&lt;/span&gt;
   &lt;/body&gt;
 &lt;/html&gt;
 </PRE>
