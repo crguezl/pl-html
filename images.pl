@@ -401,12 +401,6 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img322.png"
  ALT="$ action$">|; 
 
-$key = q/mustackrel{*}{Longrightarrow}delta;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="61" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img24.png"
- ALT="$ \mu \stackrel{*}{\Longrightarrow} \delta$">|; 
-
 $key = q/tinB(Sigma);MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="73" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
@@ -418,6 +412,12 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
  SRC="|."$dir".q|img1.png"
  ALT="$ A$">|; 
+
+$key = q/mustackrel{*}{Longrightarrow}delta;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="61" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img24.png"
+ ALT="$ \mu \stackrel{*}{\Longrightarrow} \delta$">|; 
 
 $key = q/SiArightarrowalphaBbetaentonces;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -961,6 +961,13 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img387.png"
  ALT="$ 2^s$">|; 
 
+$key = q/%latex2htmlidmarker17638S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img99.png"
+ ALT="% latex2html id marker 17638
+$ S = program$">|; 
+
 $key = q/Arightarrowalpha{action}beta;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="132" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
@@ -1164,13 +1171,6 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="94" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img248.png"
  ALT="$ (X_1, \ldots X_k)$">|; 
-
-$key = q/%latex2htmlidmarker17634S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img99.png"
- ALT="% latex2html id marker 17634
-$ S = program$">|; 
 
 $key = q/PLUS(NUM,NUM);MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
