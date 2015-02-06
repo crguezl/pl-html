@@ -78,6 +78,10 @@ $key = q/sinatrachuchu/;
 $external_labels{$key} = "$URL/" . q|node284.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/subsection:mocha/;
+$external_labels{$key} = "$URL/" . q|node85.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/section:ejercicioslastindex/;
 $external_labels{$key} = "$URL/" . q|node12.html|; 
 $noresave{$key} = "$nosave";
@@ -134,12 +138,12 @@ $key = q/cite_Proebsting/;
 $external_labels{$key} = "$URL/" . q|node92.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/section:http/;
-$external_labels{$key} = "$URL/" . q|node168.html|; 
-$noresave{$key} = "$nosave";
-
 $key = q/section:optimizacion/;
 $external_labels{$key} = "$URL/" . q|node71.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/section:http/;
+$external_labels{$key} = "$URL/" . q|node168.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:tests/;
@@ -510,12 +514,12 @@ $key = q/practica:generaciondecodigo/;
 $external_labels{$key} = "$URL/" . q|node75.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/subsection:lenguajesarbol/;
-$external_labels{$key} = "$URL/" . q|node69.html|; 
-$noresave{$key} = "$nosave";
-
 $key = q/fig:dfa/;
 $external_labels{$key} = "$URL/" . q|node49.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/subsection:lenguajesarbol/;
+$external_labels{$key} = "$URL/" . q|node69.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:recicla/;
@@ -1091,6 +1095,10 @@ $noresave{$key} = "$nosave";
 
 $key = q/chapter:expresionesregularesyanalisslexico/;
 $external_latex_labels{$key} = q|1|; 
+$noresave{$key} = "$nosave";
+
+$key = q/subsection:mocha/;
+$external_latex_labels{$key} = q|11.4.1|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:ejercicioslastindex/;

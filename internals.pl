@@ -78,6 +78,10 @@ $key = q/sinatrachuchu/;
 $ref_files{$key} = "$dir".q|node284.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/subsection:mocha/;
+$ref_files{$key} = "$dir".q|node85.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/section:ejercicioslastindex/;
 $ref_files{$key} = "$dir".q|node12.html|; 
 $noresave{$key} = "$nosave";
@@ -134,12 +138,12 @@ $key = q/cite_Proebsting/;
 $ref_files{$key} = "$dir".q|node92.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/section:http/;
-$ref_files{$key} = "$dir".q|node168.html|; 
-$noresave{$key} = "$nosave";
-
 $key = q/section:optimizacion/;
 $ref_files{$key} = "$dir".q|node71.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/section:http/;
+$ref_files{$key} = "$dir".q|node168.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:tests/;
@@ -510,12 +514,12 @@ $key = q/practica:generaciondecodigo/;
 $ref_files{$key} = "$dir".q|node75.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/subsection:lenguajesarbol/;
-$ref_files{$key} = "$dir".q|node69.html|; 
-$noresave{$key} = "$nosave";
-
 $key = q/fig:dfa/;
 $ref_files{$key} = "$dir".q|node49.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/subsection:lenguajesarbol/;
+$ref_files{$key} = "$dir".q|node69.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:recicla/;
