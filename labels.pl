@@ -1046,7 +1046,7 @@ $external_latex_labels{$key} = q|5.19|;
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:githubprojectpages/;
-$external_latex_labels{$key} = q|11.4.4|; 
+$external_latex_labels{$key} = q|11.4.3|; 
 $noresave{$key} = "$nosave";
 
 $key = q/alg:parser/;
@@ -1163,10 +1163,6 @@ $noresave{$key} = "$nosave";
 
 $key = q/section:conceptosbasicos/;
 $external_latex_labels{$key} = q|5.4|; 
-$noresave{$key} = "$nosave";
-
-$key = q/subsection:karma/;
-$external_latex_labels{$key} = q|11.4.2|; 
 $noresave{$key} = "$nosave";
 
 $key = q/alg:tables/;
