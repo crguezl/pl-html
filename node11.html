@@ -124,7 +124,7 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <HR>
 
 <H1><A NAME="SECTION04140000000000000000"></A>
-   <A NAME="3212"></A>
+   <A NAME="3217"></A>
   
 <A NAME="sectionpractica:csv"></A>
 <BR>
@@ -580,7 +580,7 @@ jQuery</A>
   HREF="http://jquery.com/download/">Descarga la librería</A>)
 
 <P>
-<A NAME="3239"></A><SPAN  CLASS="textbf">jQuery</SPAN> is a cross-platform JavaScript library designed to simplify
+<A NAME="3244"></A><SPAN  CLASS="textbf">jQuery</SPAN> is a cross-platform JavaScript library designed to simplify
 the client-side scripting of HTML. 
 
 <P>
@@ -806,6 +806,115 @@ $( "p" ).removeClass( "myClass noClass" ).addClass( "yourClass" );
 </PRE>
 
 <P>
+</LI>
+</UL>
+
+<P>
+JavaScript enables you to freely
+pass functions around to be executed at a later time. A <A NAME="3254"></A><SPAN  CLASS="textbf">callback</SPAN> is a
+function that is passed as an argument to another function and is usually 
+executed
+after its parent function has completed. 
+
+<P>
+Callbacks are special because
+they wait to execute until their parent finishes or some event occurs. 
+
+<P>
+Meanwhile, the
+browser can be executing other functions or doing all sorts of other work.
+<PRE>
+[~/javascript/jquery(master)]$ cat app.rb
+require 'sinatra'
+
+set :public_folder, File.dirname(__FILE__) + '/starterkit'
+
+get '/' do
+  erb :index
+end
+
+get '/chuchu' do
+  if request.xhr?
+    "hello world!"
+  else 
+    erb :tutu
+  end
+end
+
+__END__
+
+@@layout
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8" /&gt;
+        &lt;title&gt;Demo&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;a href="http://jquery.com/"&gt;jQuery&lt;/a&gt;
+        &lt;div class="result"&gt;&lt;/div&gt;
+        &lt;script src="jquery.js"&gt;&lt;/script&gt;
+        &lt;%= yield %&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;
+
+@@index
+  &lt;script&gt;
+  $( document ).ready(function() {
+      $( "a" ).click(function( event ) {
+          event.preventDefault();
+          $.get( "/chuchu", function( data ) {
+            $( ".result" ).html( data );
+            alert( "Load was performed." );
+          });
+      });
+  });
+  &lt;/script&gt;
+
+@@tutu
+  &lt;h1&gt;Not an Ajax Request!&lt;/h1&gt;
+</PRE>
+
+<P>
+
+<UL>
+<LI><code>jQuery.get( url [, data ] [, success(data, textStatus, jqXHR) ] [, dataType ] )</code>
+load data from the server using a HTTP GET request.
+
+<P>
+</LI>
+<LI><code>url</code>
+
+<P>
+Type: String
+
+<P>
+A string containing the URL to which the request is sent.
+</LI>
+<LI><code>data</code>
+
+<P>
+Type: PlainObject or String
+
+<P>
+A plain object or string that is sent to the server with the request.
+</LI>
+<LI><code>success(data, textStatus, jqXHR)</code>
+
+<P>
+Type: Function()
+
+<P>
+A callback function that is executed if the request succeeds.
+</LI>
+<LI><code>dataType</code>
+
+<P>
+Type: String
+
+<P>
+The type of data expected from the server. Default: Intelligent Guess 
+(<code>xml</code>, <code>json</code>, <code>script</code>, <code>or</code> <code>html</code>).
 </LI>
 </UL>
 
