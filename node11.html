@@ -28,19 +28,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html992"
+<A NAME="tex2html995"
   HREF="node12.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html986"
+<A NAME="tex2html989"
   HREF="node7.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html980"
+<A NAME="tex2html983"
   HREF="node10.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html988"
+<A NAME="tex2html991"
   HREF="node90.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html990"
+<A NAME="tex2html993"
   HREF="node93.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -80,18 +80,18 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html993"
+<B> Sig:</B> <A NAME="tex2html996"
   HREF="node12.html">Comentarios y Consejos</A>
-<B>Sup:</B> <A NAME="tex2html987"
+<B>Sup:</B> <A NAME="tex2html990"
   HREF="node7.html">Expresiones Regulares y Análisis</A>
-<B> Ant:</B> <A NAME="tex2html981"
+<B> Ant:</B> <A NAME="tex2html984"
   HREF="node10.html">Práctica: Conversor de Temperaturas</A>
 <B> Con:</B> 
-<A NAME="tex2html988"
+<A NAME="tex2html991"
   HREF="node90.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html990"
+<A NAME="tex2html993"
   HREF="node93.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
@@ -103,28 +103,28 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <UL CLASS="ChildLinks">
 <LI><UL>
 <LI><UL>
-<LI><A NAME="tex2html994"
-  HREF="node11.html#SECTION04140010000000000000">Donde</A>
-<LI><A NAME="tex2html995"
-  HREF="node11.html#SECTION04140020000000000000">Introducción al formato CSV</A>
-<LI><A NAME="tex2html996"
-  HREF="node11.html#SECTION04140030000000000000">Ejemplo de ejecución</A>
 <LI><A NAME="tex2html997"
-  HREF="node11.html#SECTION04140040000000000000">Aproximación al análisis mediante expresiones regulares de CSV</A>
+  HREF="node11.html#SECTION04140010000000000000">Donde</A>
 <LI><A NAME="tex2html998"
-  HREF="node11.html#SECTION04140050000000000000">index.html</A>
+  HREF="node11.html#SECTION04140020000000000000">Introducción al formato CSV</A>
 <LI><A NAME="tex2html999"
-  HREF="node11.html#SECTION04140060000000000000">jQuery</A>
+  HREF="node11.html#SECTION04140030000000000000">Ejemplo de ejecución</A>
 <LI><A NAME="tex2html1000"
-  HREF="node11.html#SECTION04140070000000000000">How JQuery Works</A>
+  HREF="node11.html#SECTION04140040000000000000">Aproximación al análisis mediante expresiones regulares de CSV</A>
 <LI><A NAME="tex2html1001"
+  HREF="node11.html#SECTION04140050000000000000">index.html</A>
+<LI><A NAME="tex2html1002"
+  HREF="node11.html#SECTION04140060000000000000">jQuery</A>
+<LI><A NAME="tex2html1003"
+  HREF="node11.html#SECTION04140070000000000000">How JQuery Works</A>
+<LI><A NAME="tex2html1004"
   HREF="node11.html#SECTION04140080000000000000">Tareas</A>
 </UL></UL></UL>
 <!--End of Table of Child-Links-->
 <HR>
 
 <H1><A NAME="SECTION04140000000000000000"></A>
-   <A NAME="3190"></A>
+   <A NAME="3212"></A>
   
 <A NAME="sectionpractica:csv"></A>
 <BR>
@@ -580,7 +580,7 @@ jQuery</A>
   HREF="http://jquery.com/download/">Descarga la librería</A>)
 
 <P>
-<A NAME="3217"></A><SPAN  CLASS="textbf">jQuery</SPAN> is a cross-platform JavaScript library designed to simplify
+<A NAME="3239"></A><SPAN  CLASS="textbf">jQuery</SPAN> is a cross-platform JavaScript library designed to simplify
 the client-side scripting of HTML. 
 
 <P>
@@ -647,6 +647,169 @@ en GitHub
 </UL>
 
 <P>
+<PRE>
+~/javascript/jquery(master)]$ cat index.html 
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;title&gt;Demo&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;a href="http://jquery.com/"&gt;jQuery&lt;/a&gt;
+    &lt;script src="starterkit/jquery.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+ 
+    // Your code goes here.
+ 
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</PRE>
+
+<P>
+To ensure that their code runs after the browser finishes loading the document, many JavaScript programmers wrap their code in an onload function:
+
+<P>
+<PRE>
+window.onload = function() { alert( "welcome" ); }
+</PRE>
+
+<P>
+Unfortunately, the code doesn't run until all images are finished downloading, including banner ads. To run code as soon as the document is ready to be manipulated, jQuery has a statement known as the ready event:
+
+<P>
+<PRE>
+$( document ).ready(function() {
+    // Your code here.
+});
+</PRE>
+For <code>click</code> and most other events, you can prevent the default
+behavior by calling 
+<A NAME="tex2html90"
+  HREF="http://api.jquery.com/event.preventdefault/">event.preventDefault()</A>
+in the event handler.
+If this method is called, the default action of the event will not be triggered.
+For example, clicked anchors will not take the browser to a new URL.
+
+<P>
+<PRE>
+[~/javascript/jquery(master)]$ cat index2.html 
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;title&gt;Demo&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;a href="http://jquery.com/"&gt;jQuery&lt;/a&gt;
+    &lt;script src="starterkit/jquery.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+ 
+    $( document ).ready(function() {
+        $( "a" ).click(function( event ) {
+            alert( "The link will no longer take you to jquery.com" );
+            event.preventDefault();
+        });
+    });
+ 
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</PRE>
+Borrowing from CSS 1–3, and then adding its own, jQuery offers a powerful set of tools for matching a set of elements in a document.
+
+<P>
+See jQuery <A NAME="tex2html91"
+  HREF="http://api.jquery.com/category/selectors/">Category: Selectors</A>.
+
+<P>
+Another common task is adding or removing a class.
+jQuery also provides some handy effects.
+
+<P>
+<PRE>
+[~/javascript/jquery(master)]$ cat index3.html 
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;style&gt;
+        a.test { font-weight: bold; }
+    &lt;/style&gt;
+    &lt;title&gt;Demo&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;a href="http://jquery.com/"&gt;jQuery&lt;/a&gt;
+    &lt;script src="starterkit/jquery.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+ 
+    $( document ).ready(function() {
+        $( "a" ).click(function( event ) {
+            $( "a" ).addClass( "test" );
+            alert( "The link will no longer take you to jquery.com" );
+            event.preventDefault();
+            $( "a" ).removeClass( "test" );
+            $( this ).hide( "slow" );
+            $( this ).show( "slow" );
+        });
+    });
+ 
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</PRE>
+
+<UL>
+<LI>In JavaScript <code>this</code> always refers to the <I>owner</I> of the function
+we're executing, or rather, <I>to the object that a function is a method of</I>.
+
+<P>
+</LI>
+<LI>When we define our function <code>tutu()</code> in a page, its owner is the
+page, or rather, the <code>window</code> object (or <code>global</code> object) of JavaScript. 
+
+<P>
+</LI>
+<LI>An <code>onclick</code> property, though, is owned by the HTML element it belongs to.
+
+<P>
+</LI>
+<LI>The method
+<A NAME="tex2html92"
+  HREF="http://api.jquery.com/addclass/">.addClass( className )</A>
+adds the specified class(es) to each of the set of matched elements.
+
+<P>
+<code>className</code> is a String containing 
+one or more space-separated classes to be added to the class attribute of each matched element.
+
+<P>
+This method does not replace a class. It simply adds the class, appending
+it to any which may already be assigned to the elements.
+</LI>
+<LI>The method <code>.removeClass( [className ] )</code>
+removes a single class, multiple classes, or all classes from each element in the set of matched elements.
+
+<P>
+If a class name is included as a parameter, then only that class will be
+removed from the set of matched elements. If no class names are specified
+in the parameter, all classes will be removed.
+
+<P>
+This method is often used with <code>.addClass()</code> 
+to switch elements' classes from one to another, like so:
+
+<P>
+<PRE>
+$( "p" ).removeClass( "myClass noClass" ).addClass( "yourClass" );
+</PRE>
+
+<P>
+</LI>
+</UL>
+
+<P>
 
 <H4><A NAME="SECTION04140080000000000000">
 Tareas</A>
@@ -667,19 +830,19 @@ Tareas</A>
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html992"
+<A NAME="tex2html995"
   HREF="node12.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html986"
+<A NAME="tex2html989"
   HREF="node7.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html980"
+<A NAME="tex2html983"
   HREF="node10.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html988"
+<A NAME="tex2html991"
   HREF="node90.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html990"
+<A NAME="tex2html993"
   HREF="node93.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -719,11 +882,11 @@ Tareas</A>
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html993"
+<B> Sig:</B> <A NAME="tex2html996"
   HREF="node12.html">Comentarios y Consejos</A>
-<B>Sup:</B> <A NAME="tex2html987"
+<B>Sup:</B> <A NAME="tex2html990"
   HREF="node7.html">Expresiones Regulares y Análisis</A>
-<B> Ant:</B> <A NAME="tex2html981"
+<B> Ant:</B> <A NAME="tex2html984"
   HREF="node10.html">Práctica: Conversor de Temperaturas</A>
 </DIV>
 <!--End of Navigation Panel-->
