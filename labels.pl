@@ -1149,10 +1149,6 @@ $key = q/fig:nfa/;
 $external_latex_labels{$key} = q|5.1|; 
 $noresave{$key} = "$nosave";
 
-$key = q/parrafo:jsonstringify/;
-$external_latex_labels{$key} = q|1.4|; 
-$noresave{$key} = "$nosave";
-
 $key = q/section:calculadoraampliada/;
 $external_latex_labels{$key} = q|5.8|; 
 $noresave{$key} = "$nosave";
