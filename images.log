@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.1.18)  8 MAR 2015 20:08
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.1.18)  8 MAR 2015 20:22
 entering extended mode
  %&-line parsing enabled.
 **./images.tex
@@ -453,36 +453,612 @@ latex2htmlLength oddsidemargin=-15.36446pt
 
 latex2htmlLength evensidemargin=-15.36446pt
 
-LaTeX Font Info:    Try loading font information for U+lasy on input line 1160.
+(/home/casiano/Documentos/plgrado/chapter2/regexp.tex
+Cap\'{\i }tulo 1.
 
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\begingroup' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\utf@viii@undeferr' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\endgroup' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\begingroup' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\utf@viii@undeferr' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\endgroup' on input line 1.
+
+(/usr/share/texmf-texlive/tex/latex/ucs/data/uni-0.def
+File: uni-0.def 2004/10/17 UCS: Unicode data U+0000..U+00FF
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 32.
 (/usr/share/texmf-texlive/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 1160.
+LaTeX Font Info:    Try loading font information for U+msa on input line 32.
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 1160.
+LaTeX Font Info:    Try loading font information for U+msb on input line 32.
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-l2hSize :tex2html_wrap_inline18458:7.98248pt::7.98248pt::64.81665pt.
+Overfull \hbox (123.86877pt too wide) in paragraph at lines 58--58
+[]        \OT1/cmtt/m/n/10.95 <td><input id="original" autofocus onchange="calc
+ulate();" placeholder="32F" size="50"></td>[] 
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 76.
+(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 76.
+
+Overfull \hbox (169.85828pt too wide) in paragraph at lines 186--186
+[]\OT1/cmtt/m/n/10.95 th, td      { vertical-align: top; text-align: right; fon
+t-size:large; }     /* Don't center table cells  */[] 
+ []
+
+
+Overfull \hbox (169.85828pt too wide) in paragraph at lines 186--186
+[]\OT1/cmtt/m/n/10.95 #converted  { color: red; font-weight: bold; font-size:la
+rge;          }     /* Calculated values in bold */[] 
+ []
+
+
+Overfull \hbox (146.86353pt too wide) in paragraph at lines 186--186
+[] \OT1/cmtt/m/n/10.95 font-family: "Lucida Sans Typewriter", "Lucida Console",
+ Monaco, "Bitstream Vera Sans Mono", monospace;[] 
+ []
+
+
+Overfull \hbox (169.85828pt too wide) in paragraph at lines 192--192
+[]\OT1/cmtt/m/n/10.95 th, td      { vertical-align: top; text-align: right; fon
+t-size:large; }     /* Don't center table cells  */[] 
+ []
+
+
+Overfull \hbox (122.5004pt too wide) in paragraph at lines 228--228
+ []\OT1/cmtt/m/n/10.95 #converted  { color: red; font-weight: bold; font-size:l
+arge; } /* Calculated values in bold */[] 
+ []
+
+(/usr/share/texmf-texlive/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2004/10/17 UCS: Unicode data U+2000..U+20FF
+)
+Overfull \hbox (10.9688pt too wide) in paragraph at lines 508--509
+[][][][][]
+ []
+
+(/home/casiano/Documentos/plgrado/chapter11/package_json.tex
+Overfull \hbox (2.1477pt too wide) in paragraph at lines 62--62
+[]\OT1/cmtt/m/n/10.95 description: ULL ESIT Grado de Inform^^Satica. 3$[]$. PL.
+ Lab "Temperature Converter"[] 
+ []
+
+
+Overfull \hbox (31.88977pt too wide) in paragraph at lines 62--62
+[]\OT1/cmtt/m/n/10.95 git repository: (ssh://git@bitbucket.org/casiano/pl-grado
+-temperature-converter.git)[] 
+ []
+
+
+Overfull \hbox (53.8859pt too wide) in paragraph at lines 62--62
+[]  \OT1/cmtt/m/n/10.95 "description": "ULL ESIT Grado de Inform^^Satica. 3$[]$
+. PL. Lab \"Temperature Converter\"",[] 
+ []
+
+
+Overfull \hbox (3.14633pt too wide) in paragraph at lines 62--62
+[]    \OT1/cmtt/m/n/10.95 "url": "ssh://git@bitbucket.org/casiano/pl-grado-temp
+erature-converter.git"[] 
+ []
+
+
+Overfull \hbox (49.13583pt too wide) in paragraph at lines 75--75
+[]\OT1/cmtt/m/n/10.95 > pl-grado-temperature-converter@0.0.1 test /private/tmp/
+pl-grado-temperature-converter[] 
+ []
+
+) (/home/casiano/Documentos/plgrado/chapter11/mocha_chai.tex
+Overfull \hbox (284.83203pt too wide) in paragraph at lines 92--92
+[]\OT1/cmtt/m/n/10.95 [/tmp/pl-grado-temperature-converter(karma)]$ curl https:
+//raw.githubusercontent.com/chaijs/chai/master/chai.js -o tests/chai.js[] 
+ []
+
+
+Overfull \hbox (3.14633pt too wide) in paragraph at lines 92--92
+[]  \OT1/cmtt/m/n/10.95 % Total    % Received % Xferd  Average Speed   Time    
+Time     Time  Current[] 
+ []
+
+) (/home/casiano/Documentos/plgrado/chapter11/gulp.tex
+Overfull \hbox (8.89502pt too wide) in paragraph at lines 113--113
+[]\OT1/cmtt/m/n/10.95 [22:07:58] Using gulpfile ~/local/src/javascript/PLgrado/
+temperature/gulpfile.js[] 
+ []
+
+
+Overfull \hbox (8.89502pt too wide) in paragraph at lines 138--138
+[]\OT1/cmtt/m/n/10.95 [22:00:40] Using gulpfile ~/local/src/javascript/PLgrado/
+temperature/gulpfile.js[] 
+ []
+
+
+Overfull \hbox (8.89502pt too wide) in paragraph at lines 147--147
+[]\OT1/cmtt/m/n/10.95 [22:00:46] Using gulpfile ~/local/src/javascript/PLgrado/
+temperature/gulpfile.js[] 
+ []
+
+)
+Overfull \hbox (118.30939pt too wide) in paragraph at lines 660--665
+\OT1/cmr/m/n/10.95 ting fra-me-work Mo-cha y Chai en el re-po-si-to-rio [][][][
+]:
+ []
+
+
+Overfull \hbox (155.44817pt too wide) in paragraph at lines 660--665
+[][][][] 
+ []
+
+(/home/casiano/Documentos/plgrado/chapter11/karma.tex
+Overfull \hbox (88.34758pt too wide) in paragraph at lines 20--22
+[]\OT1/cmr/m/n/10.95 manually, by vi-si-ting the URL whe-re the Kar-ma ser-ver 
+is lis-te-ning (ty-pi-ca-lly []\OT1/cmtt/m/n/10.95 http://localhost:9876/\OT1/c
+mr/m/n/10.95 ) 
+ []
+
+
+Overfull \hbox (28.85382pt too wide) in paragraph at lines 44--46
+[][][][][]
+ []
+
+
+Overfull \hbox (15.10541pt too wide) in paragraph at lines 48--49
+[][][][][] \OT1/cmr/m/n/10.95 Voj-
+ []
+
+
+Overfull \hbox (8.89502pt too wide) in paragraph at lines 70--70
+[]\OT1/cmtt/m/n/10.95 Run --help with particular command to see its description
+ and available options.[] 
+ []
+
+
+Overfull \hbox (31.88977pt too wide) in paragraph at lines 100--100
+[]\OT1/cmtt/m/n/10.95 Press tab to list possible options. Enter empty string to
+ move to the next question.[] 
+ []
+
+
+Overfull \hbox (123.86877pt too wide) in paragraph at lines 119--119
+[]\OT1/cmtt/m/n/10.95 Config file generated at "/Users/casiano/local/src/javasc
+ript/PLgrado/mocha-tutorial/karma.conf.js".[] 
+ []
+
+
+Overfull \hbox (238.84253pt too wide) in paragraph at lines 197--197
+[]    \OT1/cmtt/m/n/10.95 // possible values: config.LOG_DISABLE || config.LOG_
+ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG[] 
+ []
+
+
+Overfull \hbox (26.14108pt too wide) in paragraph at lines 197--197
+[]    \OT1/cmtt/m/n/10.95 // enable / disable watching file and executing tests
+ whenever any file changes[] 
+ []
+
+
+Overfull \hbox (54.88452pt too wide) in paragraph at lines 197--197
+[]    \OT1/cmtt/m/n/10.95 // - Safari (only Mac; has to be installed with `npm 
+install karma-safari-launcher`)[] 
+ []
+
+
+Overfull \hbox (31.88977pt too wide) in paragraph at lines 197--197
+[]    \OT1/cmtt/m/n/10.95 // - IE (only Windows; has to be installed with `npm 
+install karma-ie-launcher`)[] 
+ []
+
+
+Overfull \hbox (14.6437pt too wide) in paragraph at lines 238--238
+[]  \OT1/cmtt/m/n/10.95 --log-level           <disable | error | warn | info | 
+debug> Level of logging.[] 
+ []
+
+
+Overfull \hbox (89.37665pt too wide) in paragraph at lines 238--238
+[]  \OT1/cmtt/m/n/10.95 --reporters           List of reporters (available: dot
+s, progress, junit, growl, coverage).[] 
+ []
+
+
+Overfull \hbox (95.12534pt too wide) in paragraph at lines 238--238
+[]  \OT1/cmtt/m/n/10.95 --browsers            List of browsers to start (eg. --
+browsers Chrome,ChromeCanary,Firefox).[] 
+ []
+
+
+Overfull \hbox (43.38715pt too wide) in paragraph at lines 238--238
+[]  \OT1/cmtt/m/n/10.95 --capture-timeout     <integer> Kill browser if does no
+t capture in given time [ms].[] 
+ []
+
+
+Overfull \hbox (31.88977pt too wide) in paragraph at lines 238--238
+[]  \OT1/cmtt/m/n/10.95 --report-slower-than  <integer> Report tests that are s
+lower than given time [ms].[] 
+ []
+
+
+Overfull \hbox (238.84253pt too wide) in paragraph at lines 352--352
+[]    \OT1/cmtt/m/n/10.95 // possible values: config.LOG_DISABLE || config.LOG_
+ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG[] 
+ []
+
+
+Overfull \hbox (26.14108pt too wide) in paragraph at lines 352--352
+[]    \OT1/cmtt/m/n/10.95 // enable / disable watching file and executing tests
+ whenever any file changes[] 
+ []
+
+
+Overfull \hbox (54.88452pt too wide) in paragraph at lines 352--352
+[]    \OT1/cmtt/m/n/10.95 // - Safari (only Mac; has to be installed with `npm 
+install karma-safari-launcher`)[] 
+ []
+
+
+Overfull \hbox (31.88977pt too wide) in paragraph at lines 352--352
+[]    \OT1/cmtt/m/n/10.95 // - IE (only Windows; has to be installed with `npm 
+install karma-ie-launcher`)[] 
+ []
+
+
+Overfull \hbox (9.47849pt too wide) in paragraph at lines 353--355
+ \OT1/cmr/m/n/10.95 ([][][][]). 
+ []
+
+)
+File: chapter2/csv.eps Graphic file (type eps)
+<chapter2/csv.eps>
+Overfull \hbox (16.32129pt too wide) in paragraph at lines 983--986
+[]\OT1/cmr/m/n/10.95 If you are exe-cu-ting a match sim-ply to find []\OT1/cmtt
+/m/n/10.95 true \OT1/cmr/m/n/10.95 or []\OT1/cmtt/m/n/10.95 false\OT1/cmr/m/n/1
+0.95 , use the []\OT1/cmtt/m/n/10.95 RegExp.prototype.test()
+ []
+
+
+Overfull \hbox (226.33568pt too wide) in paragraph at lines 1023--1035
+[][] 
+ []
+
+
+Overfull \hbox (20.3924pt too wide) in paragraph at lines 1092--1092
+[]     \OT1/cmtt/m/n/10.95 <script type="text/javascript" src="../../underscore
+/underscore.js"></script>[] 
+ []
+
+
+Overfull \hbox (37.63846pt too wide) in paragraph at lines 1092--1092
+[]     \OT1/cmtt/m/n/10.95 <script type="text/javascript" src="../../jquery/sta
+rterkit/jquery.js"></script>[] 
+ []
+
+
+Overfull \hbox (175.60696pt too wide) in paragraph at lines 1092--1092
+[]      \OT1/cmtt/m/n/10.95 <i>Write a CSV string. Click the table button. The 
+program outputs a table with the specified data.</i>[] 
+ []
+
+
+Overfull \hbox (37.63846pt too wide) in paragraph at lines 1092--1092
+[]        \OT1/cmtt/m/n/10.95 <td><textarea autofocus cols = "80" rows = "5" id
+="original"></textarea></td>[] 
+ []
+
+(/home/casiano/Documentos/plgrado/chapter11/jquery.tex
+Overfull \hbox (30.5214pt too wide) in paragraph at lines 235--237
+[][]\OT1/cmtt/m/n/10.95 jQuery.get( url [, data ] [, success(data, textStatus, 
+jqXHR) ] [, dataType ] )
+ []
+
+
+Overfull \hbox (20.3924pt too wide) in paragraph at lines 292--292
+[]\OT1/cmtt/m/n/10.95 [~/javascript/jquery/how-jquery-works-tutorial(getallpara
+ms)]$ cat views/index.ejs[] 
+ []
+
+
+Overfull \hbox (8.89502pt too wide) in paragraph at lines 292--292
+[]              \OT1/cmtt/m/n/10.95 $.get( "/chuchu", {nombres: ["juan", "pedro
+"]}, function( data ) {[] 
+ []
+
+
+Overfull \hbox (3.14633pt too wide) in paragraph at lines 314--314
+[]\OT1/cmtt/m/n/10.95 [~/javascript/jquery/how-jquery-works-tutorial(getallpara
+ms)]$ cat package.json[] 
+ []
+
+
+Overfull \hbox (135.36615pt too wide) in paragraph at lines 335--335
+[]           \OT1/cmtt/m/n/10.95 pipe(shell("open https://github.com/crguezl/ho
+w-jquery-works-tutorial/tree/getallparams"));[] 
+ []
+
+
+Overfull \hbox (30.5214pt too wide) in paragraph at lines 416--418
+[][]\OT1/cmtt/m/n/10.95 jQuery.get( url [, data ] [, success(data, textStatus, 
+jqXHR) ] [, dataType ] )
+ []
+
+) (/home/casiano/Documentos/plgrado/chapter11/jsonstringify.tex) (/home/casiano
+/Documentos/plgrado/chapter11/underscore.tex
+Overfull \hbox (31.61667pt too wide) in paragraph at lines 91--91
+ []\OT1/cmtt/m/n/10.95 > uu.reduce([1, 2, 3, 4], function(s, num){ return Math.
+max(s, num); }, -1)[] 
+ []
+
+
+Overfull \hbox (31.61667pt too wide) in paragraph at lines 91--91
+ []\OT1/cmtt/m/n/10.95 > uu.reduce([1, 2, 3, 4], function(s, num){ return Math.
+min(s, num); }, 99)[] 
+ []
+
+
+Overfull \hbox (2.87323pt too wide) in paragraph at lines 97--97
+ []\OT1/cmtt/m/n/10.95 > uu.filter([1, 2, 3, 4, 5, 6], function(num){ return nu
+m % 2 == 0; })[] 
+ []
+
+
+Overfull \hbox (2.87323pt too wide) in paragraph at lines 197--197
+ []\OT1/cmtt/m/n/10.95 '<% _.each(people, function(name) { %> <li><%= name %></
+li> <% }); %>'[] 
+ []
+
+
+Overfull \hbox (146.59042pt too wide) in paragraph at lines 233--233
+ []    \OT1/cmtt/m/n/10.95 var __t,__p=\'\',__j=Array.prototype.join,print=func
+tion(){__p+=__j.call(arguments,\'\');};[] 
+ []
+
+
+Overfull \hbox (77.60617pt too wide) in paragraph at lines 241--241
+ []\OT1/cmtt/m/n/10.95 _.template("Using 'with': <%= data.answer %>", {answer: 
+'no'}, {variable: 'data'});[] 
+ []
+
+
+Overfull \hbox (31.61667pt too wide) in paragraph at lines 310--310
+ []\OT1/cmtt/m/n/10.95 > compiled = uu.template("Escaped: {{- value }}\nNot esc
+aped: {{ value }}")[] 
+ []
+
+
+Overfull \hbox (1072.12915pt too wide) in paragraph at lines 310--310
+ []  \OT1/cmtt/m/n/10.95 source: 'function(obj){\nvar __t,__p=\'\',__j=Array.pr
+ototype.join,print=function(){__p+=__j.call(arguments,\'\');};\nwith(obj||{}){\
+n__p+=\'Escaped: \'+\n((__t=( value ))==null?\'\':_.escape(__t))+\n\'\\nNot esc
+aped: {{ value }}\';\n}\nreturn __p;\n}' }[] 
+ []
+
+
+Overfull \hbox (31.61667pt too wide) in paragraph at lines 323--323
+ []\OT1/cmtt/m/n/10.95 > s = " <@ _.each([0,1,2,3,4], function(i) { @>  <p><@= 
+i @></p> <@ }); @>"[] 
+ []
+
+
+Overfull \hbox (53.51614pt too wide) in paragraph at lines 350--350
+ []\OT1/cmtt/m/n/10.95 _.template("Using 'with': <%= data.answer %>", {answer: 
+'no'}, {variable: 'data'});[] 
+ []
+
+)
+Overfull \hbox (256.0886pt too wide) in paragraph at lines 1108--1108
+[]\OT1/cmtt/m/n/10.95 <script type="text/javascript" src="https://cdnjs.cloudfl
+are.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>[] 
+ []
+
+
+Overfull \hbox (60.63321pt too wide) in paragraph at lines 1108--1108
+[]\OT1/cmtt/m/n/10.95 <script src="https://ajax.googleapis.com/ajax/libs/jquery
+/1.10.2/jquery.min.js"></script>[] 
+ []
+
+(/home/casiano/Documentos/plgrado/chapter11/localstorage.tex
+Overfull \hbox (14.08582pt too wide) in paragraph at lines 56--58
+[][][][][]
+ []
+
+)
+Overfull \hbox (227.34515pt too wide) in paragraph at lines 1192--1192
+[]   \OT1/cmtt/m/n/10.95 /* The !important ensures that nothing can override wh
+at you've set in this style (unless it is also important). */[] 
+ []
+
+
+Overfull \hbox (77.87927pt too wide) in paragraph at lines 1192--1192
+[]\OT1/cmtt/m/n/10.95 input        { text-align: right;  border: none;       } 
+    /* Align input to the right  */[] 
+ []
+
+
+Overfull \hbox (13.27533pt too wide) in paragraph at lines 1633--1633
+ []    \OT1/cmtt/m/n/10.95 <meta http-equiv="Content-Type" content="text/html; 
+charset=ISO-8859-1">[] 
+ []
+
+
+Overfull \hbox (30.5214pt too wide) in paragraph at lines 1633--1633
+ []          \OT1/cmtt/m/n/10.95 window.alert(RegExp.input + " isn't a phone nu
+mber with area code!");[] 
+ []
+
+
+Overfull \hbox (151.24384pt too wide) in paragraph at lines 1633--1633
+ []      \OT1/cmtt/m/n/10.95 <input id="phone"><button onclick="testInfo(docume
+nt.getElementById('phone'));">Check</button>[] 
+ []
+
+
+Overfull \hbox (25.86798pt too wide) in paragraph at lines 1707--1707
+ []\OT1/cmtt/m/n/10.95 > f = function(match, p1, p2, offset, string) { return (
+p1 || p2 + " "); }[] 
+ []
+
+
+Overfull \hbox (20.3924pt too wide) in paragraph at lines 1800--1800
+[]     \OT1/cmtt/m/n/10.95 <script type="text/javascript" src="../../underscore
+/underscore.js"></script>[] 
+ []
+
+
+Overfull \hbox (37.63846pt too wide) in paragraph at lines 1800--1800
+[]     \OT1/cmtt/m/n/10.95 <script type="text/javascript" src="../../jquery/sta
+rterkit/jquery.js"></script>[] 
+ []
+
+
+Overfull \hbox (31.88977pt too wide) in paragraph at lines 1848--1848
+[]   \OT1/cmtt/m/n/10.95 /* The !important ensures that nothing can override wh
+at you've set in this style[] 
+ []
+
+
+Overfull \hbox (77.87927pt too wide) in paragraph at lines 1848--1848
+[]\OT1/cmtt/m/n/10.95 input        { text-align: right;  border: none;       } 
+    /* Align input to the right  */[] 
+ []
+
+
+Overfull \hbox (60.63321pt too wide) in paragraph at lines 1905--1905
+[]  \OT1/cmtt/m/n/10.95 return contents.replace(/____________________/__,'_____
+_____________________________');[] 
+ []
+
+
+Overfull \hbox (131.63538pt too wide) in paragraph at lines 2017--2019
+[]\OT1/cmr/m/n/10.95 Repositorio con-te-nien-do el c^^Sodi-go (ini-cial) del an
+a-li-za-dor de fi-che-ros []\OT1/cmtt/m/n/10.95 ini\OT1/cmr/m/n/10.95 : [][][][
+] 
+ []
+
+
+Overfull \hbox (284.83203pt too wide) in paragraph at lines 2060--2060
+[]     \OT1/cmtt/m/n/10.95 <script type="text/javascript" src="https://cdnjs.cl
+oudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>[] 
+ []
+
+
+Overfull \hbox (89.37665pt too wide) in paragraph at lines 2060--2060
+[]     \OT1/cmtt/m/n/10.95 <script src="https://ajax.googleapis.com/ajax/libs/j
+query/1.10.2/jquery.min.js"></script>[] 
+ []
+
+
+Overfull \hbox (1.78072pt too wide) in paragraph at lines 2186--2188
+[][]\OT1/cmtt/m/n/10.95 FileReader.readAsArrayBuffer() \OT1/cmr/m/n/10.95 Start
+s reading the con-tents of the spe-ci-fied []\OT1/cmtt/m/n/10.95 Blob\OT1/cmr/m
+/n/10.95 ,
+ []
+
+
+Overfull \hbox (227.34515pt too wide) in paragraph at lines 2281--2281
+[]   \OT1/cmtt/m/n/10.95 /* The !important ensures that nothing can override wh
+at you've set in this style (unless it is also important). */[] 
+ []
+
+
+Overfull \hbox (77.87927pt too wide) in paragraph at lines 2281--2281
+[]\OT1/cmtt/m/n/10.95 input        { text-align: right;  border: none;       } 
+    /* Align input to the right  */[] 
+ []
+
+
+Overfull \hbox (957.4285pt too wide) in paragraph at lines 2468--2468
+[]  \OT1/cmtt/m/n/10.95 "[section_one]\none = 1\ntwo = 2\n\n[section_two]\nthre
+e =         3\nmulti = multiline \\\nsupport\n\n; comments should be ignored\n[
+section three]\nfour   =4\nfive=5\nsix =6\n\n[section_four]\n   [section_five]\
+n seven and eight= 7 & 8\n\n",[] 
+ []
+
+
+Overfull \hbox (28.58018pt too wide) in paragraph at lines 2480--2482
+[]\OT1/cmr/m/n/10.95 Pueden co-men-zar ha-cien-do un fork del re-po-si-to-rio [
+][][][]. 
+ []
+
+
+Overfull \hbox (66.96611pt too wide) in paragraph at lines 2604--2609
+[]\OT1/cmr/m/n/10.95 Puede ver tam-bi^^Sen la apli-ca-ci^^Son co-rrien-do en lo
+s ser-vi-do-res de He-ro-ku en [][][][].
+ []
+
+
+LaTeX Warning: Reference `chapter:heroku' on page 1 undefined on input line 261
+4.
+
+
+Overfull \hbox (216.37651pt too wide) in paragraph at lines 2615--2620
+[]\OT1/cmr/m/n/10.95 Una pri-me-ra so-lu-ci^^Son de la que pue-de par-tir se en
+-cuen-tra en: [][][][]
+ []
+
+
+Overfull \hbox (33.386pt too wide) in paragraph at lines 2623--2626
+[]\OT1/cmr/m/n/10.95 Mejore la so-lu-ci^^Son en [][][][] 
+ []
+
+)
+l2hSize :center14950:-15734.63397pt::0.0pt::451.0pt.
 [1
 
 
 
+
+]
+l2hSize :tex2html_wrap_inline15850:7.98248pt::7.98248pt::64.81665pt.
+[2
+
+
 ] (./images.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8404 strings out of 493858
- 116448 string characters out of 1153328
- 226424 words of memory out of 3000000
- 11528 multiletter control sequences out of 15000+50000
- 8606 words of font info for 35 fonts, out of 3000000 for 9000
+ 9258 strings out of 493858
+ 126587 string characters out of 1153328
+ 1619422 words of memory out of 3000000
+ 12324 multiletter control sequences out of 15000+50000
+ 13683 words of font info for 56 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 38i,5n,35p,326b,362s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,11n,46p,607b,675s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on images.dvi (1 page, 2436 bytes).
+Output written on images.dvi (2 pages, 241968 bytes).
