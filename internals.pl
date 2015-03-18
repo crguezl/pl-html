@@ -250,16 +250,16 @@ $key = q/section:recursionizquierda/;
 $ref_files{$key} = "$dir".q|node23.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/section:middleware/;
-$ref_files{$key} = "$dir".q|node181.html|; 
-$noresave{$key} = "$nosave";
-
 $key = q/section:depuracion/;
 $ref_files{$key} = "$dir".q|node65.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:otroslenguajes/;
 $ref_files{$key} = "$dir".q|node25.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/section:middleware/;
+$ref_files{$key} = "$dir".q|node181.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/alg:parser/;
