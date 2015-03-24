@@ -250,16 +250,16 @@ $key = q/section:recursionizquierda/;
 $external_labels{$key} = "$URL/" . q|node23.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/section:middleware/;
-$external_labels{$key} = "$URL/" . q|node181.html|; 
-$noresave{$key} = "$nosave";
-
 $key = q/section:depuracion/;
 $external_labels{$key} = "$URL/" . q|node65.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:otroslenguajes/;
 $external_labels{$key} = "$URL/" . q|node25.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/section:middleware/;
+$external_labels{$key} = "$URL/" . q|node181.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/alg:parser/;
