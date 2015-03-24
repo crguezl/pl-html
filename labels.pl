@@ -31,7 +31,7 @@ $external_labels{$key} = "$URL/" . q|node141.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_pilgrimhtml5/;
-$external_labels{$key} = "$URL/" . q|node100.html|; 
+$external_labels{$key} = "$URL/" . q|node99.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:copia/;
@@ -63,7 +63,7 @@ $external_labels{$key} = "$URL/" . q|node285.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_mogensen2011introduction/;
-$external_labels{$key} = "$URL/" . q|node100.html|; 
+$external_labels{$key} = "$URL/" . q|node99.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:samplec/;
@@ -139,7 +139,7 @@ $external_labels{$key} = "$URL/" . q|node12.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_Proebsting/;
-$external_labels{$key} = "$URL/" . q|node100.html|; 
+$external_labels{$key} = "$URL/" . q|node99.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:optimizacion/;
@@ -250,16 +250,16 @@ $key = q/section:recursionizquierda/;
 $external_labels{$key} = "$URL/" . q|node23.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/section:otroslenguajes/;
-$external_labels{$key} = "$URL/" . q|node25.html|; 
-$noresave{$key} = "$nosave";
-
 $key = q/section:middleware/;
 $external_labels{$key} = "$URL/" . q|node181.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:depuracion/;
 $external_labels{$key} = "$URL/" . q|node65.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/section:otroslenguajes/;
+$external_labels{$key} = "$URL/" . q|node25.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/alg:parser/;
@@ -351,7 +351,7 @@ $external_labels{$key} = "$URL/" . q|node22.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_wilson2008beautiful/;
-$external_labels{$key} = "$URL/" . q|node100.html|; 
+$external_labels{$key} = "$URL/" . q|node99.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:pila/;
@@ -415,7 +415,7 @@ $external_labels{$key} = "$URL/" . q|node132.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_nathanclosures/;
-$external_labels{$key} = "$URL/" . q|node100.html|; 
+$external_labels{$key} = "$URL/" . q|node99.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:estructuradeunaapprack/;
@@ -507,7 +507,7 @@ $external_labels{$key} = "$URL/" . q|node285.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_Muchnick:1998:ACD:286076/;
-$external_labels{$key} = "$URL/" . q|node100.html|; 
+$external_labels{$key} = "$URL/" . q|node99.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:mediaregla/;
@@ -819,7 +819,7 @@ $external_labels{$key} = "$URL/" . q|node72.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_nathanuniversity/;
-$external_labels{$key} = "$URL/" . q|node100.html|; 
+$external_labels{$key} = "$URL/" . q|node99.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:nfa2dfa/;
