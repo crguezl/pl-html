@@ -150,6 +150,11 @@ El error es debido a la primera línea de definición del intérprete:
 [~/src/coffee/coffeepress]$ head -n 1 bin/www
 #!/usr/bin/env node
 </PRE>
+Si comentamos la línea no se producen errores pero si un warning:
+<PRE>
+~/src/coffee/coffeepress]$ js2coffee bin/www &gt; bin/www.coffee
+bin/www:37:6: [warning] Variable shadowing ('port') is not fully supported in CoffeeScript
+</PRE>
 
 <P>
 Now you can run coffee app.coffee to run the same app, but now in
