@@ -132,6 +132,21 @@ Other options:
 </PRE>
 
 <P>
+Vamos a convertir nuestros ficheros <code>*.js</code> a coffee:
+<PRE>
+~/src/coffee/coffeepress]$ ls *js **/*js bin/*
+app.js          bin/www         routes/index.js routes/users.js
+[~/src/coffee/coffeepress]$ js2coffee app.js &gt; app.coffee
+[~/src/coffee/coffeepress]$ js2coffee routes/index.js &gt; routes/index.coffee
+[~/src/coffee/coffeepress]$ js2coffee routes/users.js &gt; routes/users.coffee
+</PRE>
+Cuando probamos con el main obtenemos un error:
+<PRE>
+[~/src/coffee/coffeepress]$ js2coffee bin/www &gt; bin/www.coffee
+bin/www:1:0: [error] Unexpected token ILLEGAL
+</PRE>
+
+<P>
 Now you can run coffee app.coffee to run the same app, but now in
 coffeescript. Take a look at the resulting files to get a feel for what
 has changed. 
