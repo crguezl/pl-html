@@ -155,11 +155,28 @@ Si comentamos la línea no se producen errores pero si un warning:
 ~/src/coffee/coffeepress]$ js2coffee bin/www &gt; bin/www.coffee
 bin/www:37:6: [warning] Variable shadowing ('port') is not fully supported in CoffeeScript
 </PRE>
+Si cambiamos todas las apariciones de <code>port</code>  por p. ej. <code>lport</code>
+en la definición de la función <code>normalizePort</code> el warning desaparece:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ js2coffee bin/www &gt; bin/www.coffee 
+[~/src/coffee/coffeepress(master)]$
+</PRE>
+pero cuando ejecutamos el servidor obtenemos un nuevo error:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ coffee bin/www.coffee 
+TypeError: undefined is not a function
+  at Object.&lt;anonymous&gt; (/Users/casiano/local/src/coffee/coffeepress/bin/www.coffee:15:8)
+  at Object.&lt;anonymous&gt; (/Users/casiano/local/src/coffee/coffeepress/bin/www.coffee:3:1)
+  at Module._compile (module.js:456:26)
+</PRE>
 
 <P>
-Now you can run coffee app.coffee to run the same app, but now in
-coffeescript. Take a look at the resulting files to get a feel for what
-has changed. 
+Movemos la función verb|normalizePort| antes de la definición de <code>port</code> y se arregla el asunto.
+<PRE>
+[~/src/coffee/coffeepress(master)]$ coffee bin/www.coffee 
+GET / 304 298.379 ms - -
+GET /stylesheets/style.css 304 6.048 ms - -
+</PRE>
 
 <P>
 
