@@ -145,6 +145,11 @@ Cuando probamos con el main obtenemos un error:
 [~/src/coffee/coffeepress]$ js2coffee bin/www &gt; bin/www.coffee
 bin/www:1:0: [error] Unexpected token ILLEGAL
 </PRE>
+El error es debido a la primera línea de definición del intérprete:
+<PRE>
+[~/src/coffee/coffeepress]$ head -n 1 bin/www
+#!/usr/bin/env node
+</PRE>
 
 <P>
 Now you can run coffee app.coffee to run the same app, but now in
