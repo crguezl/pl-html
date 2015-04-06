@@ -27,19 +27,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2726"
+<A NAME="tex2html2727"
   HREF="node99.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2720"
+<A NAME="tex2html2721"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2716"
+<A NAME="tex2html2717"
   HREF="node97.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2722"
+<A NAME="tex2html2723"
   HREF="node99.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2724"
+<A NAME="tex2html2725"
   HREF="node102.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -79,23 +79,34 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2727"
+<B> Sig:</B> <A NAME="tex2html2728"
   HREF="node99.html">&#205;ndice General</A>
-<B>Sup:</B> <A NAME="tex2html2721"
+<B>Sup:</B> <A NAME="tex2html2722"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2717"
+<B> Ant:</B> <A NAME="tex2html2718"
   HREF="node97.html">Getting Started</A>
 <B> Con:</B> 
-<A NAME="tex2html2722"
+<A NAME="tex2html2723"
   HREF="node99.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2724"
+<A NAME="tex2html2725"
   HREF="node102.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
 <!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><UL>
+<LI><UL>
+<LI><A NAME="tex2html2729"
+  HREF="node98.html#SECTION06220010000000000000">Ejecución del Servidor</A>
+</UL></UL></UL>
+<!--End of Table of Child-Links-->
+<HR>
 
 <H1><A NAME="SECTION06220000000000000000">
 Porting to Coffeescript</A>
@@ -172,6 +183,15 @@ TypeError: undefined is not a function
 
 <P>
 Movemos la función <code>normalizePort</code> antes de la definición de <code>port</code> y se arregla el asunto.
+
+<P>
+
+<H4><A NAME="SECTION06220010000000000000">
+Ejecución del Servidor</A>
+</H4>
+  
+
+<P>
 <PRE>
 [~/src/coffee/coffeepress(master)]$ coffee bin/www.coffee 
 GET / 304 298.379 ms - -
@@ -206,21 +226,42 @@ wrapper for node, think of it as replacing the word "node" on the command
 line when you run your script.
 
 <P>
+Otra forma de ejecutar programas escritos en coffee 
+consiste en usar la posibilidad que existe de cargar
+el coffee desde un programa JavaScript usando 
+<code>coffee-script/register</code>. Modificamos <code>bin/www</code>
+como sigue:
+<PRE>
+[~/src/coffee/coffeepress.bak(master)]$ cat bin/www
+#!/usr/bin/env node
+// Note the new way of requesting CoffeeScript since 1.7.x
+require('coffee-script/register');
+// This bootstraps your server main file
+require('./www.coffee');
+</PRE>
+y ahora ejecutamos:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ node bin/www
+GET / 304 334.240 ms - -
+GET /stylesheets/style.css 304 7.269 ms - -
+</PRE>
+
+<P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2726"
+<A NAME="tex2html2727"
   HREF="node99.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2720"
+<A NAME="tex2html2721"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2716"
+<A NAME="tex2html2717"
   HREF="node97.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2722"
+<A NAME="tex2html2723"
   HREF="node99.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2724"
+<A NAME="tex2html2725"
   HREF="node102.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -260,11 +301,11 @@ line when you run your script.
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2727"
+<B> Sig:</B> <A NAME="tex2html2728"
   HREF="node99.html">&#205;ndice General</A>
-<B>Sup:</B> <A NAME="tex2html2721"
+<B>Sup:</B> <A NAME="tex2html2722"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2717"
+<B> Ant:</B> <A NAME="tex2html2718"
   HREF="node97.html">Getting Started</A>
 </DIV>
 <!--End of Navigation Panel-->
