@@ -178,6 +178,9 @@ GET / 304 298.379 ms - -
 GET /stylesheets/style.css 304 6.048 ms - -
 </PRE>
 Otra forma de ejecutar el servidor es instalar <code>nodemon</code>
+<PRE>
+npm install -g nodemon
+</PRE>
 y ejecutarlo así:
 <PRE>
 ~/src/coffee/coffeepress(master)]$ nodemon bin/www.coffee
@@ -191,9 +194,6 @@ y ejecutarlo así:
   HREF="http://nodemon.io/">http://nodemon.io/</A>
 )
 is for use during development of a node.js based application.
-<PRE>
-npm install -g nodemon
-</PRE>
 
 <P>
 <code>nodemon</code> will watch the files in the directory in which <code>nodemon</code> was started, and if any files change, <code>nodemon</code> will automatically restart your node application.
