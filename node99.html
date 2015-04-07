@@ -162,6 +162,11 @@ para ejecutarla debemos hacer:
 </PRE>
 
 <P>
+Vamos ahora a hacer una prueba sobre nuestro código. 
+Nuestro objetivo es hacer que nuestra aplicación funcione como un pequeño blog.
+Empezaremos describiendo como debe ser la ruta <code>index</code>.
+
+<P>
 <PRE>
 [~/src/coffee/coffeepress(master)]$ cat test/routes-test.coffee 
 chai     = require 'chai'
@@ -190,6 +195,19 @@ rendered view is <code>index</code> and that the variable <code>title</code>
 is equal to what we expect to be passed in. 
 </LI>
 </UL>
+La ruta <code>index</code> que fué generada por Express contiene el siguiente código:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat routes/index.coffee 
+express = require('express')
+router = express.Router()
+
+### GET home page. ###
+
+router.get '/', (req, res, next) -&gt;
+  res.render 'index', title: 'Express'
+  return
+module.exports = router
+</PRE>
 Run the tests:
 <PRE>
 [~/src/coffee/coffeepress(master)]$ mocha --compilers coffee:coffee-script/register -R spec
