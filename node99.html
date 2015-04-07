@@ -132,6 +132,75 @@ Pruebas</A>
 </PRE>
 
 <P>
+Empecemos con una prueba sencilla.
+Creamos el directorio <code>test</code> para las pruebas:
+
+<P>
+<PRE>
+[~/src/coffee/coffeepress(master)]$ mkdir test
+</PRE>
+y creamos una primera prueba:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat test/example.coffee
+chai     = require 'chai'
+expect   = chai.expect
+
+describe "feature", -&gt;
+  it "should add two numbers", -&gt;
+    expect(2+2).to.equal(4)
+</PRE>
+para ejecutarla debemos hacer:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ mocha --compilers coffee:coffee-script/register -R spec
+
+
+  feature
+    v should add two numbers 
+
+
+  1 passing (7ms)
+</PRE>
+
+<P>
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat test/routes-test.coffee 
+chai     = require 'chai'
+expect   = chai.expect
+routes = require "../routes/index"
+
+describe "routes", -&gt;
+  req = {}
+  res = {}
+  describe "index", -&gt;
+    it "should display index with posts", -&gt;
+      res.render = (view, vars) -&gt;
+          expect(view).equal "index"
+          expect(vars.title).equal "My Coffeepress Blog"
+      routes.index(req, res)
+</PRE>
+
+<P>
+<PRE>
+[~/src/coffee/coffeepress(master)]$ mocha --compilers coffee:coffee-script/register -R spec
+
+
+  routes
+    index
+      1) should display index with posts
+
+
+  0 passing (7ms)
+  1 failing
+
+  1) routes index should display index with posts:
+     TypeError: Object function router(req, res, next) {
+    router.handle(req, res, next);
+  } has no method 'index'
+    at Context.&lt;anonymous&gt; (/Users/casiano/local/src/coffee/coffeepress/test/routes-test.coffee:13:14)
+    ...
+</PRE>
+
+<P>
 
 <DIV CLASS="navigation"><HR>
 <A NAME="tex2html2746"
