@@ -180,6 +180,17 @@ describe "routes", -&gt;
 </PRE>
 
 <P>
+
+<UL>
+<LI>Here we fake our requests and response in order to capture what is
+passed into the response. 
+</LI>
+<LI>We fake the render method and verify that our
+rendered view is <code>index</code> and that the variable <code>title</code> 
+is equal to what we expect to be passed in. 
+</LI>
+</UL>
+Run the tests:
 <PRE>
 [~/src/coffee/coffeepress(master)]$ mocha --compilers coffee:coffee-script/register -R spec
 
