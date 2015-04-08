@@ -258,8 +258,22 @@ que es el que nos permite emitir el mensaje de <code>Listening on</code>:
 debug = require('debug')('coffeepress:server')
   debug 'Listening on ' + bind
 </PRE>
-The <code>DEBUG</code> environment variable is then used to enable these 
-<code>debug('...')</code> messages.
+La primera línea <code> debug = require('debug')('coffeepress:server')</code> carga la librería
+y establece el nombre de <code>www.coffee</code> a efectos de depuración como
+<code>coffeepress:server</code>.
+
+<P>
+The <code>DEBUG</code> environment variable must be set to a list of file names
+separated by commas or spaces. It is then used to enable these 
+<code>debug('...')</code> messages. 
+
+<P>
+Por ejemplo:
+<PRE>
+DEBUG=coffeepress:* bin/www
+</PRE>
+dice que se activan los mensajes de debug en cualquier fichero con 
+prefijo de nombre <code>coffeepress</code>.
 
 <P>
 
