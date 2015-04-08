@@ -265,7 +265,7 @@ You should see output similar to the following:
 </PRE>
 
 <P>
-This is called <A NAME="11483"></A><SPAN  CLASS="textbf">Scaffolding</SPAN>.
+This is called <A NAME="11487"></A><SPAN  CLASS="textbf">Scaffolding</SPAN>.
 
 <P>
 The idea is simple: most projects
@@ -426,10 +426,6 @@ app.js</A>
 <code>app.js</code> loads the middleware, assigns the route handlers, and starts the server. 
 
 <P>
-<PRE>
-</PRE>
-
-<P>
 
 <H4><A NAME="SECTION06210040000000000000">
 The Structure</A>
@@ -441,10 +437,30 @@ There are three folders in the root:
 
 <UL>
 <LI>public: This folder contains the static assets
+<PRE>
+|--- public
+|   |--- images
+|   |--- javascripts
+|   `-- stylesheets
+|       `-- style.css
+</PRE>
 </LI>
 <LI>views: This folder is populated with Jade templates by default
+<PRE>
+| 
+`-- views
+    |--- error.jade
+    |--- index.jade
+    `-- layout.jade
+</PRE>
 </LI>
 <LI>routes: This folder includes the routes (these are the equivalent controllers)
+<PRE>
+|
+|--- routes
+|   |--- index.js
+|   `-- users.js
+</PRE>
 </LI>
 </UL>
 Apart from these existing folders and the models folder, which we need to create ourselves, we might also create folders for tests, logs, or configuration. The best thing about this structure is that
