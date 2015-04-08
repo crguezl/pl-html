@@ -28,19 +28,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2720"
+<A NAME="tex2html2726"
   HREF="node98.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2714"
+<A NAME="tex2html2720"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2708"
+<A NAME="tex2html2714"
   HREF="node96.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2716"
+<A NAME="tex2html2722"
   HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2718"
+<A NAME="tex2html2724"
   HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -80,23 +80,44 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2721"
+<B> Sig:</B> <A NAME="tex2html2727"
   HREF="node98.html">Porting to Coffeescript</A>
-<B>Sup:</B> <A NAME="tex2html2715"
+<B>Sup:</B> <A NAME="tex2html2721"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2709"
+<B> Ant:</B> <A NAME="tex2html2715"
   HREF="node96.html">CoffeeScript y Express</A>
 <B> Con:</B> 
-<A NAME="tex2html2716"
+<A NAME="tex2html2722"
   HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2718"
+<A NAME="tex2html2724"
   HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
 <!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><UL>
+<LI><UL>
+<LI><A NAME="tex2html2728"
+  HREF="node97.html#SECTION06210010000000000000">Express generator</A>
+<LI><A NAME="tex2html2729"
+  HREF="node97.html#SECTION06210020000000000000">package.json</A>
+<LI><A NAME="tex2html2730"
+  HREF="node97.html#SECTION06210030000000000000">app.js</A>
+<LI><A NAME="tex2html2731"
+  HREF="node97.html#SECTION06210040000000000000">The Structure</A>
+<LI><A NAME="tex2html2732"
+  HREF="node97.html#SECTION06210050000000000000">Running</A>
+<LI><A NAME="tex2html2733"
+  HREF="node97.html#SECTION06210060000000000000">El módulo debug</A>
+</UL></UL></UL>
+<!--End of Table of Child-Links-->
+<HR>
 
 <H1><A NAME="SECTION06210000000000000000">
 Getting Started</A>
@@ -175,6 +196,15 @@ Véase la sección <I>Pruebas: Mocha y Chai</I>
 <A HREF="node9.html#parrafo:mochaychai">1.2</A>
 </LI>
 </UL>
+
+<P>
+
+<H4><A NAME="SECTION06210010000000000000">
+Express generator</A>
+</H4>
+  
+
+<P>
 Now let’s bootstrap our project structure. Type 
 <PRE>
 express coffeepress
@@ -235,7 +265,7 @@ You should see output similar to the following:
 </PRE>
 
 <P>
-This is called <A NAME="11471"></A><SPAN  CLASS="textbf">Scaffolding</SPAN>.
+This is called <A NAME="11483"></A><SPAN  CLASS="textbf">Scaffolding</SPAN>.
 
 <P>
 The idea is simple: most projects
@@ -248,6 +278,13 @@ a new project, you just copy this skeleton, or template.
 <P>
 Express has taken a page from Ruby on Rails and provided a utility to
 generate scaffolding to start your Express project.
+
+<P>
+
+<H4><A NAME="SECTION06210020000000000000">
+package.json</A>
+</H4>
+  
 
 <P>
 The <code>package.json</code> file is automatically populated with 
@@ -283,7 +320,7 @@ This is a way to prevent accidental publication of private repositories.
     "serve-favicon": "~2.2.0"
   }
 </PRE>
-The starting script is <code>bin/www</code> and loads <code>app.js</code> 
+The starting script is <code>bin/www</code> which  loads <code>app.js</code> 
 <PRE>
 [/tmp/coffeepress]$ cat bin/www 
 #!/usr/bin/env node
@@ -377,7 +414,30 @@ function onListening() {
   debug('Listening on ' + bind);
 }
 </PRE>
-<code>app.js</code> loads the middleware, assigns the route handlers, and starts the server. There are three folders in the root:
+
+<P>
+
+<H4><A NAME="SECTION06210030000000000000">
+app.js</A>
+</H4>
+  
+
+<P>
+<code>app.js</code> loads the middleware, assigns the route handlers, and starts the server. 
+
+<P>
+<PRE>
+</PRE>
+
+<P>
+
+<H4><A NAME="SECTION06210040000000000000">
+The Structure</A>
+</H4>
+  
+
+<P>
+There are three folders in the root:
 
 <UL>
 <LI>public: This folder contains the static assets
@@ -413,6 +473,13 @@ for example
   HREF="https://html5boilerplate.com/">https://html5boilerplate.com/</A>.
 
 <P>
+
+<H4><A NAME="SECTION06210050000000000000">
+Running</A>
+</H4>
+  
+
+<P>
 Instalamos las dependencias:
 <PRE>
 [~/src/coffee/coffeepress]$ npm install
@@ -425,6 +492,13 @@ y ejecutamos:
   coffeepress:server Listening on port 3000 +0ms
 </PRE>
 Then load <code>http://localhost:3000/</code> in your browser to access the app.
+
+<P>
+
+<H4><A NAME="SECTION06210060000000000000">
+El módulo debug</A>
+</H4>
+  
 
 <P>
 El generador de Express nos produjo el fichero <code>bin/www</code>.
@@ -457,19 +531,19 @@ prefijo de nombre <code>coffeepress</code>.
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2720"
+<A NAME="tex2html2726"
   HREF="node98.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2714"
+<A NAME="tex2html2720"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2708"
+<A NAME="tex2html2714"
   HREF="node96.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2716"
+<A NAME="tex2html2722"
   HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2718"
+<A NAME="tex2html2724"
   HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -509,11 +583,11 @@ prefijo de nombre <code>coffeepress</code>.
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2721"
+<B> Sig:</B> <A NAME="tex2html2727"
   HREF="node98.html">Porting to Coffeescript</A>
-<B>Sup:</B> <A NAME="tex2html2715"
+<B>Sup:</B> <A NAME="tex2html2721"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2709"
+<B> Ant:</B> <A NAME="tex2html2715"
   HREF="node96.html">CoffeeScript y Express</A>
 </DIV>
 <!--End of Navigation Panel-->
