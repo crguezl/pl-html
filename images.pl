@@ -389,13 +389,6 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img208.png"
  ALT="$ B \rightarrow Y_1 \ldots Y_n$">|; 
 
-$key = q/%latex2htmlidmarker19498S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img99.png"
- ALT="% latex2html id marker 19498
-$ S = program$">|; 
-
 $key = q/=alpha;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="34" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
@@ -414,17 +407,17 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img1.png"
  ALT="$ A$">|; 
 
-$key = q/tinB(Sigma);MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="73" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img296.png"
- ALT="$ t \in B(\Sigma)$">|; 
-
 $key = q/mustackrel{*}{Longrightarrow}delta;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="61" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img24.png"
  ALT="$ \mu \stackrel{*}{\Longrightarrow} \delta$">|; 
+
+$key = q/tinB(Sigma);MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="73" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img296.png"
+ ALT="$ t \in B(\Sigma)$">|; 
 
 $key = q/SiArightarrowalphaBbetaentonces;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -455,6 +448,13 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="287" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img168.png"
  ALT="$ \overline{A} = \{ q \in Q / \exists q' \in Q : \hat{\delta}(q', \epsilon) = q \}$">|; 
+
+$key = q/%latex2htmlidmarker19504S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img99.png"
+ ALT="% latex2html id marker 19504
+$ S = program$">|; 
 
 $key = q/handle_2(alpha))=betagamma;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
