@@ -28,19 +28,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2730"
+<A NAME="tex2html2731"
   HREF="node98.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2724"
+<A NAME="tex2html2725"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2718"
+<A NAME="tex2html2719"
   HREF="node96.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2726"
+<A NAME="tex2html2727"
   HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2728"
+<A NAME="tex2html2729"
   HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -80,18 +80,18 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2731"
+<B> Sig:</B> <A NAME="tex2html2732"
   HREF="node98.html">Porting to Coffeescript</A>
-<B>Sup:</B> <A NAME="tex2html2725"
+<B>Sup:</B> <A NAME="tex2html2726"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2719"
+<B> Ant:</B> <A NAME="tex2html2720"
   HREF="node96.html">CoffeeScript y Express</A>
 <B> Con:</B> 
-<A NAME="tex2html2726"
+<A NAME="tex2html2727"
   HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2728"
+<A NAME="tex2html2729"
   HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
@@ -103,17 +103,17 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <UL CLASS="ChildLinks">
 <LI><UL>
 <LI><UL>
-<LI><A NAME="tex2html2732"
-  HREF="node97.html#SECTION06210010000000000000">Express generator</A>
 <LI><A NAME="tex2html2733"
-  HREF="node97.html#SECTION06210020000000000000">package.json</A>
+  HREF="node97.html#SECTION06210010000000000000">Express generator</A>
 <LI><A NAME="tex2html2734"
-  HREF="node97.html#SECTION06210030000000000000">app.js</A>
+  HREF="node97.html#SECTION06210020000000000000">package.json</A>
 <LI><A NAME="tex2html2735"
-  HREF="node97.html#SECTION06210040000000000000">The Structure</A>
+  HREF="node97.html#SECTION06210030000000000000">app.js</A>
 <LI><A NAME="tex2html2736"
-  HREF="node97.html#SECTION06210050000000000000">Running</A>
+  HREF="node97.html#SECTION06210040000000000000">The Structure</A>
 <LI><A NAME="tex2html2737"
+  HREF="node97.html#SECTION06210050000000000000">Running</A>
+<LI><A NAME="tex2html2738"
   HREF="node97.html#SECTION06210060000000000000">El módulo debug</A>
 </UL></UL></UL>
 <!--End of Table of Child-Links-->
@@ -265,7 +265,7 @@ You should see output similar to the following:
 </PRE>
 
 <P>
-This is called <A NAME="11501"></A><SPAN  CLASS="textbf">Scaffolding</SPAN>.
+This is called <A NAME="11507"></A><SPAN  CLASS="textbf">Scaffolding</SPAN>.
 
 <P>
 The idea is simple: most projects
@@ -544,9 +544,25 @@ module.exports = app;
 </PRE>
 
 <P>
+
+<UL>
+<LI>El método
+<A NAME="tex2html406"
+  HREF="http://expressjs.com/4x/api.html#app.use">app.use</A>
 <code>app.use([path,] function [, function...])</code>
-Mounts the middleware function(s) at the path. 
+mounts the middleware function(s) at the path. 
 If path is not specified, it defaults to <code>"/"</code>.
+
+<P>
+Asi pues 
+<PRE>
+app.use('/', routes);
+app.use('/users', users);
+</PRE>
+
+<P>
+</LI>
+</UL>
 
 <P>
 
@@ -632,7 +648,7 @@ El módulo debug</A>
 <P>
 El generador de Express nos produjo el fichero <code>bin/www</code>.
 Este programa hace uso del módulo 
-<A NAME="tex2html406"
+<A NAME="tex2html407"
   HREF="https://github.com/visionmedia/debug">debug</A>
 que es el que nos permite emitir el mensaje de <code>Listening on</code>:
 <PRE>
@@ -660,19 +676,19 @@ prefijo de nombre <code>coffeepress</code>.
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2730"
+<A NAME="tex2html2731"
   HREF="node98.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2724"
+<A NAME="tex2html2725"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2718"
+<A NAME="tex2html2719"
   HREF="node96.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2726"
+<A NAME="tex2html2727"
   HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2728"
+<A NAME="tex2html2729"
   HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -712,11 +728,11 @@ prefijo de nombre <code>coffeepress</code>.
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2731"
+<B> Sig:</B> <A NAME="tex2html2732"
   HREF="node98.html">Porting to Coffeescript</A>
-<B>Sup:</B> <A NAME="tex2html2725"
+<B>Sup:</B> <A NAME="tex2html2726"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2719"
+<B> Ant:</B> <A NAME="tex2html2720"
   HREF="node96.html">CoffeeScript y Express</A>
 </DIV>
 <!--End of Navigation Panel-->
