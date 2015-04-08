@@ -595,7 +595,12 @@ The Structure</A>
 There are three folders in the root:
 
 <UL>
-<LI>public: This folder contains the static assets
+<LI>public: This folder contains the static assets.
+Express relies on a middleware to handle static files.
+The static middleware allows you to designate one or more directories
+as containing static resources that are simply to be delivered to the
+client without any special handling. This is where you would put things
+like images, CSS files, and client-side JavaScript files.
 <PRE>
 |--- public
 |   |--- images
