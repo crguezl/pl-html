@@ -211,7 +211,7 @@ y ejecutarlo así:
 6 Apr 14:12:01 - [nodemon] starting `coffee bin/www.coffee`
 </PRE>
 <code>Nodemon</code> (see
-<A NAME="tex2html402"
+<A NAME="tex2html403"
   HREF="http://nodemon.io/">http://nodemon.io/</A>
 )
 is for use during development of a node.js based application.
@@ -246,34 +246,6 @@ y ahora ejecutamos:
 GET / 304 334.240 ms - -
 GET /stylesheets/style.css 304 7.269 ms - -
 </PRE>
-
-<P>
-El generador de Express nos produjo el fichero <code>bin/www</code>.
-Este programa hace uso del módulo 
-<A NAME="tex2html403"
-  HREF="https://github.com/visionmedia/debug">debug</A>
-que es el que nos permite emitir el mensaje de <code>Listening on</code>:
-<PRE>
-[~/src/coffee/coffeepress(master)]$ grep debug bin/www.coffee 
-debug = require('debug')('coffeepress:server')
-  debug 'Listening on ' + bind
-</PRE>
-La primera línea <code> debug = require('debug')('coffeepress:server')</code> carga la librería
-y establece el nombre de <code>www.coffee</code> a efectos de depuración como
-<code>coffeepress:server</code>.
-
-<P>
-The <code>DEBUG</code> environment variable must be set to a list of file names
-separated by commas or spaces. It is then used to enable these 
-<code>debug('...')</code> messages. 
-
-<P>
-Por ejemplo:
-<PRE>
-DEBUG=coffeepress:* bin/www
-</PRE>
-dice que se activan los mensajes de debug en cualquier fichero con 
-prefijo de nombre <code>coffeepress</code>.
 
 <P>
 

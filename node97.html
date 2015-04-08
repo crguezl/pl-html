@@ -398,6 +398,34 @@ y ejecutamos:
 Then load <code>http://localhost:3000/</code> in your browser to access the app.
 
 <P>
+El generador de Express nos produjo el fichero <code>bin/www</code>.
+Este programa hace uso del módulo 
+<A NAME="tex2html402"
+  HREF="https://github.com/visionmedia/debug">debug</A>
+que es el que nos permite emitir el mensaje de <code>Listening on</code>:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ grep debug bin/www.coffee 
+debug = require('debug')('coffeepress:server')
+  debug 'Listening on ' + bind
+</PRE>
+La primera línea <code>debug = require('debug')('coffeepress:server')</code> carga la librería
+y establece el nombre de <code>www.coffee</code> a efectos de depuración como
+<code>coffeepress:server</code>.
+
+<P>
+The <code>DEBUG</code> environment variable must be set to a list of file names
+separated by commas or spaces. It is then used to enable these 
+<code>debug('...')</code> messages. 
+
+<P>
+Por ejemplo:
+<PRE>
+DEBUG=coffeepress:* bin/www
+</PRE>
+dice que se activan los mensajes de debug en cualquier fichero con 
+prefijo de nombre <code>coffeepress</code>.
+
+<P>
 
 <DIV CLASS="navigation"><HR>
 <A NAME="tex2html2720"
