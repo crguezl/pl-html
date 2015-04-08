@@ -269,7 +269,7 @@ You should see output similar to the following:
 </PRE>
 
 <P>
-This is called <A NAME="11514"></A><SPAN  CLASS="textbf">Scaffolding</SPAN>.
+This is called <A NAME="11515"></A><SPAN  CLASS="textbf">Scaffolding</SPAN>.
 
 <P>
 The idea is simple: most projects
@@ -422,7 +422,11 @@ This is a way to prevent accidental publication of private repositories.
 <LI>The module
 <A NAME="tex2html402"
   HREF="https://github.com/expressjs/body-parser">body-parser</A>
-provides a body parsing middleware
+is a piece of express middleware that·
+reads a form's input and stores it as a javascript
+object accessible through <code>req.body</code>·
+
+<P>
 </LI>
 <LI>The module
 <A NAME="tex2html403"
@@ -667,6 +671,12 @@ app.use(function(req, res, next) {
 Las Rutas</A>
 </H4>
   
+
+<P>
+
+<FONT COLOR="#ff0000"> Routing is the mechanism by which requests 
+(as specified by a URL and HTTP method) are 
+routed to the code that handles them</FONT>. 
 
 <P>
 
