@@ -28,19 +28,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2728"
+<A NAME="tex2html2730"
   HREF="node98.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2722"
+<A NAME="tex2html2724"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2716"
+<A NAME="tex2html2718"
   HREF="node96.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2724"
+<A NAME="tex2html2726"
   HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2726"
+<A NAME="tex2html2728"
   HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -80,18 +80,18 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2729"
+<B> Sig:</B> <A NAME="tex2html2731"
   HREF="node98.html">Porting to Coffeescript</A>
-<B>Sup:</B> <A NAME="tex2html2723"
+<B>Sup:</B> <A NAME="tex2html2725"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2717"
+<B> Ant:</B> <A NAME="tex2html2719"
   HREF="node96.html">CoffeeScript y Express</A>
 <B> Con:</B> 
-<A NAME="tex2html2724"
+<A NAME="tex2html2726"
   HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2726"
+<A NAME="tex2html2728"
   HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
@@ -103,17 +103,17 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <UL CLASS="ChildLinks">
 <LI><UL>
 <LI><UL>
-<LI><A NAME="tex2html2730"
-  HREF="node97.html#SECTION06210010000000000000">Express generator</A>
-<LI><A NAME="tex2html2731"
-  HREF="node97.html#SECTION06210020000000000000">package.json</A>
 <LI><A NAME="tex2html2732"
-  HREF="node97.html#SECTION06210030000000000000">app.js</A>
+  HREF="node97.html#SECTION06210010000000000000">Express generator</A>
 <LI><A NAME="tex2html2733"
-  HREF="node97.html#SECTION06210040000000000000">The Structure</A>
+  HREF="node97.html#SECTION06210020000000000000">package.json</A>
 <LI><A NAME="tex2html2734"
-  HREF="node97.html#SECTION06210050000000000000">Running</A>
+  HREF="node97.html#SECTION06210030000000000000">app.js</A>
 <LI><A NAME="tex2html2735"
+  HREF="node97.html#SECTION06210040000000000000">The Structure</A>
+<LI><A NAME="tex2html2736"
+  HREF="node97.html#SECTION06210050000000000000">Running</A>
+<LI><A NAME="tex2html2737"
   HREF="node97.html#SECTION06210060000000000000">El módulo debug</A>
 </UL></UL></UL>
 <!--End of Table of Child-Links-->
@@ -265,7 +265,7 @@ You should see output similar to the following:
 </PRE>
 
 <P>
-This is called <A NAME="11495"></A><SPAN  CLASS="textbf">Scaffolding</SPAN>.
+This is called <A NAME="11499"></A><SPAN  CLASS="textbf">Scaffolding</SPAN>.
 
 <P>
 The idea is simple: most projects
@@ -322,13 +322,25 @@ This is a way to prevent accidental publication of private repositories.
 </PRE>
 
 <UL>
-<LI>The 
+<LI>The module
 <A NAME="tex2html401"
-  HREF="h">morgan</A>ttps://github.com/expressjs/morgan
+  HREF="https://github.com/expressjs/body-parser">body-parser</A>
+</LI>
+<LI>The module
+<A NAME="tex2html402"
+  HREF="https://github.com/expressjs/cookie-parser">cookie-parser</A>
+parses the Cookie header and populate <code>req.cookies</code> 
+with an object keyed by the cookie names. 
+
+<P>
+</LI>
+<LI>The 
+<A NAME="tex2html403"
+  HREF="https://github.com/expressjs/morgan">morgan</A>
 module provides a HTTP request logger middleware.
 </LI>
 <LI>The
-<A NAME="tex2html402"
+<A NAME="tex2html404"
   HREF="https://github.com/expressjs/serve-favicon">serve-favicon</A>
 module provides a middleware for serving a favicon
 </LI>
@@ -512,7 +524,7 @@ it's easy to get started with and is known to most developers.
 </PRE>
 Boilerplate is also useful for the actual HTML that will be delivered to the client. See 
 for example  
-<A NAME="tex2html403"
+<A NAME="tex2html405"
   HREF="https://html5boilerplate.com/">https://html5boilerplate.com/</A>.
 
 <P>
@@ -546,7 +558,7 @@ El módulo debug</A>
 <P>
 El generador de Express nos produjo el fichero <code>bin/www</code>.
 Este programa hace uso del módulo 
-<A NAME="tex2html404"
+<A NAME="tex2html406"
   HREF="https://github.com/visionmedia/debug">debug</A>
 que es el que nos permite emitir el mensaje de <code>Listening on</code>:
 <PRE>
@@ -574,19 +586,19 @@ prefijo de nombre <code>coffeepress</code>.
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2728"
+<A NAME="tex2html2730"
   HREF="node98.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2722"
+<A NAME="tex2html2724"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2716"
+<A NAME="tex2html2718"
   HREF="node96.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2724"
+<A NAME="tex2html2726"
   HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2726"
+<A NAME="tex2html2728"
   HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -626,11 +638,11 @@ prefijo de nombre <code>coffeepress</code>.
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2729"
+<B> Sig:</B> <A NAME="tex2html2731"
   HREF="node98.html">Porting to Coffeescript</A>
-<B>Sup:</B> <A NAME="tex2html2723"
+<B>Sup:</B> <A NAME="tex2html2725"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2717"
+<B> Ant:</B> <A NAME="tex2html2719"
   HREF="node96.html">CoffeeScript y Express</A>
 </DIV>
 <!--End of Navigation Panel-->
