@@ -500,8 +500,15 @@ app.set('view engine', 'jade');
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
-app.use(bodyParser.json());
+app.use(bodyParser.json()); // Returns middleware that only parses json
+/* 
+URLs can only be sent over the Internet using the ASCII character-set.
+Since URLs often contain characters outside the ASCII set, 
+the URL has to be converted into a valid ASCII format.
+*/
 app.use(bodyParser.urlencoded({ extended: false }));
+   //The "extended" syntax allows for rich objects and arrays to be encoded 
+
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
