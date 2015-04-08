@@ -276,8 +276,33 @@ way is to create a rough skeleton of a project, and every time you need
 a new project, you just copy this skeleton, or template.
 
 <P>
-Express has taken a page from Ruby on Rails and provided a utility to
+Express has taken a page from Ruby on Rails and provided the <code>express</code>
+utility  to
 generate scaffolding to start your Express project.
+
+<P>
+<PRE>
+[~/src/coffee]$ express --help
+
+  Usage: express [options] [dir]
+
+  Options:
+
+    -h, --help          output usage information
+    -V, --version       output the version number
+    -e, --ejs           add ejs engine support (defaults to jade)
+        --hbs           add handlebars engine support
+    -H, --hogan         add hogan.js engine support
+    -c, --css &lt;engine&gt;  add stylesheet &lt;engine&gt; support (less|stylus|compass) (defaults to plain css)
+        --git           add .gitignore
+    -f, --force         force on non-empty directory
+</PRE>
+
+<P>
+Boilerplate is also useful for the actual HTML that will be delivered to the client. See 
+for example  
+<A NAME="tex2html401"
+  HREF="https://html5boilerplate.com/">https://html5boilerplate.com/</A>.
 
 <P>
 
@@ -323,12 +348,12 @@ This is a way to prevent accidental publication of private repositories.
 
 <UL>
 <LI>The module
-<A NAME="tex2html401"
+<A NAME="tex2html402"
   HREF="https://github.com/expressjs/body-parser">body-parser</A>
 provides a boyd parsing middleware
 </LI>
 <LI>The module
-<A NAME="tex2html402"
+<A NAME="tex2html403"
   HREF="https://github.com/expressjs/cookie-parser">cookie-parser</A>
 parses the Cookie header and populate <code>req.cookies</code> 
 with an object keyed by the cookie names. 
@@ -336,12 +361,12 @@ with an object keyed by the cookie names.
 <P>
 </LI>
 <LI>The 
-<A NAME="tex2html403"
+<A NAME="tex2html404"
   HREF="https://github.com/expressjs/morgan">morgan</A>
 module provides a HTTP request logger middleware.
 </LI>
 <LI>The
-<A NAME="tex2html404"
+<A NAME="tex2html405"
   HREF="https://github.com/expressjs/serve-favicon">serve-favicon</A>
 module provides a middleware for serving a favicon
 </LI>
@@ -505,28 +530,6 @@ Apart from these existing folders and the models folder, which we need to create
 <P>
 The best thing about this structure is that
 it's easy to get started with and is known to most developers.
-
-<P>
-<PRE>
-[~/src/coffee]$ express --help
-
-  Usage: express [options] [dir]
-
-  Options:
-
-    -h, --help          output usage information
-    -V, --version       output the version number
-    -e, --ejs           add ejs engine support (defaults to jade)
-        --hbs           add handlebars engine support
-    -H, --hogan         add hogan.js engine support
-    -c, --css &lt;engine&gt;  add stylesheet &lt;engine&gt; support (less|stylus|compass) (defaults to plain css)
-        --git           add .gitignore
-    -f, --force         force on non-empty directory
-</PRE>
-Boilerplate is also useful for the actual HTML that will be delivered to the client. See 
-for example  
-<A NAME="tex2html405"
-  HREF="https://html5boilerplate.com/">https://html5boilerplate.com/</A>.
 
 <P>
 
