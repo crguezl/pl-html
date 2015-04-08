@@ -28,19 +28,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2732"
+<A NAME="tex2html2733"
   HREF="node98.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2726"
+<A NAME="tex2html2727"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2720"
+<A NAME="tex2html2721"
   HREF="node96.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2728"
+<A NAME="tex2html2729"
   HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2730"
+<A NAME="tex2html2731"
   HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -80,18 +80,18 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2733"
+<B> Sig:</B> <A NAME="tex2html2734"
   HREF="node98.html">Porting to Coffeescript</A>
-<B>Sup:</B> <A NAME="tex2html2727"
+<B>Sup:</B> <A NAME="tex2html2728"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2721"
+<B> Ant:</B> <A NAME="tex2html2722"
   HREF="node96.html">CoffeeScript y Express</A>
 <B> Con:</B> 
-<A NAME="tex2html2728"
+<A NAME="tex2html2729"
   HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2730"
+<A NAME="tex2html2731"
   HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
@@ -103,20 +103,22 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <UL CLASS="ChildLinks">
 <LI><UL>
 <LI><UL>
-<LI><A NAME="tex2html2734"
-  HREF="node97.html#SECTION06210010000000000000">Express generator</A>
 <LI><A NAME="tex2html2735"
-  HREF="node97.html#SECTION06210020000000000000">package.json</A>
+  HREF="node97.html#SECTION06210010000000000000">Express generator</A>
 <LI><A NAME="tex2html2736"
-  HREF="node97.html#SECTION06210030000000000000">app.js</A>
+  HREF="node97.html#SECTION06210020000000000000">The Structure</A>
 <LI><A NAME="tex2html2737"
-  HREF="node97.html#SECTION06210040000000000000">El método <TT>app.use</TT></A>
+  HREF="node97.html#SECTION06210030000000000000">package.json</A>
 <LI><A NAME="tex2html2738"
-  HREF="node97.html#SECTION06210050000000000000">The Structure</A>
+  HREF="node97.html#SECTION06210040000000000000">app.js</A>
 <LI><A NAME="tex2html2739"
-  HREF="node97.html#SECTION06210060000000000000">Running</A>
+  HREF="node97.html#SECTION06210050000000000000">El método <TT>app.use</TT></A>
 <LI><A NAME="tex2html2740"
-  HREF="node97.html#SECTION06210070000000000000">El módulo debug</A>
+  HREF="node97.html#SECTION06210060000000000000">Las Rutas</A>
+<LI><A NAME="tex2html2741"
+  HREF="node97.html#SECTION06210070000000000000">Running</A>
+<LI><A NAME="tex2html2742"
+  HREF="node97.html#SECTION06210080000000000000">El módulo debug</A>
 </UL></UL></UL>
 <!--End of Table of Child-Links-->
 <HR>
@@ -267,7 +269,7 @@ You should see output similar to the following:
 </PRE>
 
 <P>
-This is called <A NAME="11513"></A><SPAN  CLASS="textbf">Scaffolding</SPAN>.
+This is called <A NAME="11514"></A><SPAN  CLASS="textbf">Scaffolding</SPAN>.
 
 <P>
 The idea is simple: most projects
@@ -309,6 +311,74 @@ for example
 <P>
 
 <H4><A NAME="SECTION06210020000000000000">
+The Structure</A>
+</H4>
+  
+
+<P>
+There are three folders in the root:
+
+<UL>
+<LI>public: This folder contains the static assets.
+Express relies on a middleware to handle static files.
+<PRE>
+app.use(express.static(path.join(__dirname, 'public')));
+</PRE>
+The static middleware allows you to designate one or more directories
+as containing static resources that are simply to be delivered to the
+client without any special handling. This is where you would put things
+like images, CSS files, and client-side JavaScript files.
+<PRE>
+|--- public
+|   |--- images
+|   |--- javascripts
+|   `-- stylesheets
+|       `-- style.css
+</PRE>
+</LI>
+<LI>views: This folder is populated with Jade templates by default
+<PRE>
+| 
+`-- views
+    |--- error.jade
+    |--- index.jade
+    `-- layout.jade
+</PRE>
+Where a view differs from a static resource (like an image or CSS file)
+is that a view doesn’t necessarily have to be static: the HTML can be
+constructed on the fly to provide a customized page for each request.
+
+<P>
+Express supports many different view engines that provide different levels of abstraction. 
+Express gives some preference to a view engine called Jade 
+</LI>
+<LI>routes: This folder includes the routes (these are the equivalent controllers)
+<PRE>
+|
+|--- routes
+|   |--- index.js
+|   `-- users.js
+</PRE>
+</LI>
+</UL>
+Apart from these existing folders and the models folder, which we need to create ourselves, we might also create folders for 
+
+<UL>
+<LI>tests, 
+</LI>
+<LI>logs, or 
+</LI>
+<LI>configuration. 
+</LI>
+</UL>
+
+<P>
+The best thing about this structure is that
+it's easy to get started with and is known to most developers.
+
+<P>
+
+<H4><A NAME="SECTION06210030000000000000">
 package.json</A>
 </H4>
   
@@ -472,7 +542,7 @@ function onListening() {
 
 <P>
 
-<H4><A NAME="SECTION06210030000000000000">
+<H4><A NAME="SECTION06210040000000000000">
 app.js</A>
 </H4>
   
@@ -554,7 +624,7 @@ module.exports = app;
 
 <P>
 
-<H4><A NAME="SECTION06210040000000000000">
+<H4><A NAME="SECTION06210050000000000000">
 El método <TT>app.use</TT></A>
 </H4>
   
@@ -593,75 +663,14 @@ app.use(function(req, res, next) {
 
 <P>
 
-<H4><A NAME="SECTION06210050000000000000">
-The Structure</A>
+<H4><A NAME="SECTION06210060000000000000">
+Las Rutas</A>
 </H4>
   
 
 <P>
-There are three folders in the root:
 
-<UL>
-<LI>public: This folder contains the static assets.
-Express relies on a middleware to handle static files.
-<PRE>
-app.use(express.static(path.join(__dirname, 'public')));
-</PRE>
-The static middleware allows you to designate one or more directories
-as containing static resources that are simply to be delivered to the
-client without any special handling. This is where you would put things
-like images, CSS files, and client-side JavaScript files.
-<PRE>
-|--- public
-|   |--- images
-|   |--- javascripts
-|   `-- stylesheets
-|       `-- style.css
-</PRE>
-</LI>
-<LI>views: This folder is populated with Jade templates by default
-<PRE>
-| 
-`-- views
-    |--- error.jade
-    |--- index.jade
-    `-- layout.jade
-</PRE>
-Where a view differs from a static resource (like an image or CSS file)
-is that a view doesn’t necessarily have to be static: the HTML can be
-constructed on the fly to provide a customized page for each request.
-
-<P>
-Express supports many different view engines that provide different levels of abstraction. 
-Express gives some preference to a view engine called Jade 
-</LI>
-<LI>routes: This folder includes the routes (these are the equivalent controllers)
-<PRE>
-|
-|--- routes
-|   |--- index.js
-|   `-- users.js
-</PRE>
-</LI>
-</UL>
-Apart from these existing folders and the models folder, which we need to create ourselves, we might also create folders for 
-
-<UL>
-<LI>tests, 
-</LI>
-<LI>logs, or 
-</LI>
-<LI>configuration. 
-</LI>
-</UL>
-
-<P>
-The best thing about this structure is that
-it's easy to get started with and is known to most developers.
-
-<P>
-
-<H4><A NAME="SECTION06210060000000000000">
+<H4><A NAME="SECTION06210070000000000000">
 Running</A>
 </H4>
   
@@ -682,7 +691,7 @@ Then load <code>http://localhost:3000/</code> in your browser to access the app.
 
 <P>
 
-<H4><A NAME="SECTION06210070000000000000">
+<H4><A NAME="SECTION06210080000000000000">
 El módulo debug</A>
 </H4>
   
@@ -718,19 +727,19 @@ prefijo de nombre <code>coffeepress</code>.
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2732"
+<A NAME="tex2html2733"
   HREF="node98.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2726"
+<A NAME="tex2html2727"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2720"
+<A NAME="tex2html2721"
   HREF="node96.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2728"
+<A NAME="tex2html2729"
   HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2730"
+<A NAME="tex2html2731"
   HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -770,11 +779,11 @@ prefijo de nombre <code>coffeepress</code>.
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2733"
+<B> Sig:</B> <A NAME="tex2html2734"
   HREF="node98.html">Porting to Coffeescript</A>
-<B>Sup:</B> <A NAME="tex2html2727"
+<B>Sup:</B> <A NAME="tex2html2728"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2721"
+<B> Ant:</B> <A NAME="tex2html2722"
   HREF="node96.html">CoffeeScript y Express</A>
 </DIV>
 <!--End of Navigation Panel-->
