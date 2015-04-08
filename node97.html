@@ -265,7 +265,7 @@ You should see output similar to the following:
 </PRE>
 
 <P>
-This is called <A NAME="11509"></A><SPAN  CLASS="textbf">Scaffolding</SPAN>.
+This is called <A NAME="11511"></A><SPAN  CLASS="textbf">Scaffolding</SPAN>.
 
 <P>
 The idea is simple: most projects
@@ -597,6 +597,9 @@ There are three folders in the root:
 <UL>
 <LI>public: This folder contains the static assets.
 Express relies on a middleware to handle static files.
+<PRE>
+app.use(express.static(path.join(__dirname, 'public')));
+</PRE>
 The static middleware allows you to designate one or more directories
 as containing static resources that are simply to be delivered to the
 client without any special handling. This is where you would put things
