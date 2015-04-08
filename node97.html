@@ -265,7 +265,7 @@ You should see output similar to the following:
 </PRE>
 
 <P>
-This is called <A NAME="11507"></A><SPAN  CLASS="textbf">Scaffolding</SPAN>.
+This is called <A NAME="11509"></A><SPAN  CLASS="textbf">Scaffolding</SPAN>.
 
 <P>
 The idea is simple: most projects
@@ -568,6 +568,10 @@ las rutas especificadas en <code>routes</code> quedan montadas en la raiz
 y las rutas especificadas en <code>users</code> quedan montadas en <code>users/...</code>
 </LI>
 </UL>
+mientras que este middleware queda asociado con la raiz:
+<PRE>
+app.use(express.static(path.join(__dirname, 'public')));
+</PRE>
 
 <P>
 
