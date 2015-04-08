@@ -556,11 +556,16 @@ If path is not specified, it defaults to <code>"/"</code>.
 <P>
 Asi pues 
 <PRE>
+var routes = require('./routes/index');
+var users = require('./routes/users');
+
+....
+
 app.use('/', routes);
 app.use('/users', users);
 </PRE>
-
-<P>
+las rutas especificadas en <code>routes</code> quedan montadas en la raiz 
+y las rutas especificadas en <code>users</code> quedan montadas en <code>users/...</code>
 </LI>
 </UL>
 
