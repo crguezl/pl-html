@@ -289,9 +289,11 @@ describe "routes", -&gt;
       res.render = (view, vars) -&gt;
           expect(view).equal "index"
           expect(vars.title).equal "My Coffeepress Blog"
-          expect(vars.posts).eql []
+          expect(vars.posts).deep.equal []
       routes.index(req, res)
 </PRE>
+Obsérvese  que hemos usado el método <code>deep</code>. También podríamos haber usado <code>eql</code> en vez
+de <code>.deep.equal</code>.
 
 <P>
 Now the tests fail:
