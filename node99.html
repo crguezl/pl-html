@@ -409,6 +409,17 @@ Cuando ejecutamos las pruebas pasan:
 
   2 passing (8ms)
 </PRE>
+Esto es así porque <code>res.render</code> nunca es llamado ya que 
+el cuerpo de <code>newPost</code> es vacío.
+
+<P>
+<PRE>
+18        res.render = (view, vars) -&gt;
+19            expect(view).equal "add_post"
+20            expect(vars.title).equal "Write New Post"
+21      
+22        routes.newPost(req, res)
+</PRE>
 
 <P>
 
