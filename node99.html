@@ -434,6 +434,10 @@ How can we make absolutely sure it gets called during our test run?
 <LI>In
 the method declaration of our test specify a parameter named <code>done</code>. 
 </LI>
+<LI>By adding <code>done</code> to the callback of <code>it()</code> 
+
+<FONT COLOR="#ff0000"> Mocha will know that it should wait for completion</FONT>.
+</LI>
 <LI><code>done</code>
 is a callback that we can call anywhere to indicate the test is
 done. 
