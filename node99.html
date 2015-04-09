@@ -570,6 +570,44 @@ Ahora podemos ejecutar las pruebas:
 </PRE>
 
 <P>
+Vamos a crear un <code>gulpfile</code> para ejecutar las tareas mas comunes:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat gulpfile.coffee 
+gulp = require('gulp')
+shell = require('gulp-shell')
+
+# run coffee server via nodemon https://github.com/remy/nodemon
+gulp.task 'default', -&gt;
+  gulp.src('').pipe shell([ 'DEBUG=coffeepress:* DEBUG=coffeepress:* nodemon bin/www.coffee' ])
+
+# run coffee server
+gulp.task 'cofserver', -&gt;
+  gulp.src('').pipe shell([ 'coffee app.coffee' ])
+
+gulp.task 'test', [ 'mocha' ]
+gulp.task 'mocha', -&gt;
+  gulp.src('').pipe shell(['mocha --compilers coffee:coffee-script/register -R spec'])
+
+# run mongod server
+gulp.task 'mongod', -&gt;
+  gulp.src('').pipe shell([ 'mongod' ])
+</PRE>
+
+<P>
+Este es el código de la version javascript:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat gulpfile.js
+// Note the new way of requesting CoffeeScript since 1.7.x
+require('coffee-script/register');
+// This bootstraps your Gulp's main file
+require('./gulpfile.coffee');
+</PRE>
+Es necesario instalar <code>gulp-shell</code>:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ npm install --save-dev gulp-shell
+</PRE>
+
+<P>
 
 <DIV CLASS="navigation"><HR>
 <A NAME="tex2html2771"
