@@ -285,7 +285,8 @@ que nos sale un warning:
 ~/src/coffee/coffeepress]$ js2coffee bin/www &gt; bin/www.coffee
 bin/www:37:6: [warning] Variable shadowing ('port') is not fully supported in CoffeeScript
 </PRE>
-Si cambiamos todas las apariciones de <code>port</code>  por p. ej. <code>lport</code>
+Si cambiamos todas las apariciones de la variable 
+<code>port</code>  por p. ej. <code>lport</code>
 en la definición de la función <code>normalizePort</code> el warning desaparece:
 <PRE>
 [~/src/coffee/coffeepress(master)]$ js2coffee bin/www &gt; bin/www.coffee 
