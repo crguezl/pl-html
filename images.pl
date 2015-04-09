@@ -136,6 +136,13 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img360.png"
  ALT="$ \theta = \{x/A, y/CONS(A, NIL)\}$">|; 
 
+$key = q/%latex2htmlidmarker19887S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img99.png"
+ ALT="% latex2html id marker 19887
+$ S = program$">|; 
+
 $key = q/FIRST(alpha)=left{binSigma:alphastackrel{*}{Longrightarrow}bbetaright}cupN(alpha);MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="319" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
@@ -166,13 +173,6 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="63" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img251.png"
  ALT="$ X_j \in N$">|; 
-
-$key = q/%latex2htmlidmarker19876S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img99.png"
- ALT="% latex2html id marker 19876
-$ S = program$">|; 
 
 $key = q/((Sigma,rho),N,P,S);MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG

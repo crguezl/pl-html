@@ -409,6 +409,10 @@ Cuando ejecutamos las pruebas pasan:
 
   2 passing (8ms)
 </PRE>
+
+<FONT COLOR="#ff0000"> That’s not good</FONT>. 
+
+<P>
 Esto es así porque <code>res.render</code> nunca es llamado ya que 
 el cuerpo de <code>newPost</code> es vacío.
 
@@ -420,6 +424,25 @@ el cuerpo de <code>newPost</code> es vacío.
 21      
 22        routes.newPost(req, res)
 </PRE>
+
+<P>
+How can we make absolutely sure it gets called during our test run? 
+
+<UL>
+<LI>Mocha has a feature that allows for easy testing in these situations. 
+</LI>
+<LI>In
+the method declaration of our test specify a parameter named <code>done</code>. 
+</LI>
+<LI><code>done</code>
+is a callback that we can call anywhere to indicate the test is
+done. 
+</LI>
+<LI>Basically the test will wait up to a default of 2000ms for it to
+be called. 
+</LI>
+</UL>
+With this in mind, let’s modify our tests with the following:
 
 <P>
 
