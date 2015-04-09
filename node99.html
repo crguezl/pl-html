@@ -211,6 +211,8 @@ module.exports = router
 como se ve, lo que estamos haciendo en la prueba es sobreescribir el método <code>render</code> por 
 un falso <code>render</code> que hace las dos pruebas:
 <PRE>
+routes = require "../routes/index"
+...
       res.render = (view, vars) -&gt;
           expect(view).equal "index"
           expect(vars.title).equal "My Coffeepress Blog"
@@ -237,6 +239,30 @@ Run the tests:
   } has no method 'index'
     at Context.&lt;anonymous&gt; (/Users/casiano/local/src/coffee/coffeepress/test/routes-test.coffee:13:14)
     ...
+</PRE>
+Se queja de que <code>routes = require "../routes/index"</code> no tiene un método <code>index</code>.
+Se lo añadimos:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat routes/index.coffee 
+express = require('express')
+
+module.exports = 
+  index: (req, res) -&gt;
+    res.render 'index', { title: 'My Coffeepress Blog' }
+</PRE>
+
+<P>
+Y ahora las pruebas pasan:
+
+<P>
+<PRE>
+[~/src/coffee/coffeepress(master)]$ mocha --compilers coffee:coffee-script/register -R spec
+
+  routes
+    index
+      ok: should display index with posts 
+
+  1 passing (6ms)
 </PRE>
 
 <P>
