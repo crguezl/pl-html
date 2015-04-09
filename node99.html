@@ -447,6 +447,46 @@ be called.
 </LI>
 </UL>
 With this in mind, let’s modify our tests with the following:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat test/routes-test.coffee 
+chai     = require 'chai'
+expect   = chai.expect
+routes = require "../routes/index"
+
+describe "routes", -&gt;
+  req = {}
+  res = {}
+  describe "index", -&gt;
+    it "should display index with posts", -&gt;
+      ...
+
+  describe "new post", -&gt;
+    it "should display the add post page", (done)-&gt;
+      res.render = (view, vars) -&gt;
+          expect(view).equal "add_post"
+          expect(vars.title).equal "Write New Post"
+    
+      routes.newPost(req, res)
+</PRE>
+Now it fails:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ mocha --compilers coffee:coffee-script/register -R spec test/routes-test.coffee 
+
+
+  routes
+    index
+      ok: should display index with posts 
+    new post
+      1) should display the add post page
+
+
+  1 passing (2s)
+  1 failing
+
+  1) routes new post should display the add post page:
+     Error: timeout of 2000ms exceeded
+    at [object Object].&lt;anonymous&gt; (/usr/loc
+</PRE>
 
 <P>
 
