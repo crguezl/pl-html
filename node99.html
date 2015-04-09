@@ -311,6 +311,29 @@ Now the tests fail:
   1) routes index should display index with posts:
      AssertionError: expected undefined to deeply equal []
 </PRE>
+Let us change the route to have a <code>posts</code> 
+array variable available in the template.
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat routes/index.coffee 
+express = require('express')
+
+module.exports = 
+  index: (req, res) -&gt;
+    res.render 'index', 
+      title: 'My Coffeepress Blog' 
+      posts: []
+</PRE>
+and now the tests pass:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ mocha --compilers coffee:coffee-script/register -R spec
+
+  routes
+    index
+      ok: should display index with posts 
+
+
+  1 passing (12ms)
+</PRE>
 
 <P>
 
