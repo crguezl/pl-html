@@ -266,6 +266,53 @@ Y ahora las pruebas pasan:
 </PRE>
 
 <P>
+Now let’s add a post variable that will be an array of posts we’ll display on the front page. Add the following assertion 
+<PRE>
+          expect(vars.posts).eql []
+</PRE>
+
+<P>
+right after the title assertion:
+
+<P>
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat test/routes-test.coffee 
+chai     = require 'chai'
+expect   = chai.expect
+routes = require "../routes/index"
+
+describe "routes", -&gt;
+  req = {}
+  res = {}
+  describe "index", -&gt;
+    it "should display index with posts", -&gt;
+      res.render = (view, vars) -&gt;
+          expect(view).equal "index"
+          expect(vars.title).equal "My Coffeepress Blog"
+          expect(vars.posts).eql []
+      routes.index(req, res)
+</PRE>
+
+<P>
+Now the tests fail:
+
+<P>
+<PRE>
+[~/src/coffee/coffeepress(master)]$ mocha --compilers coffee:coffee-script/register -R spec
+
+  routes
+    index
+      1) should display index with posts
+
+
+  0 passing (12ms)
+  1 failing
+
+  1) routes index should display index with posts:
+     AssertionError: expected undefined to deeply equal []
+</PRE>
+
+<P>
 
 <DIV CLASS="navigation"><HR>
 <A NAME="tex2html2771"
