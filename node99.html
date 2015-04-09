@@ -363,9 +363,27 @@ Next let’s write tests for the
     21      
     22        routes.newPost(req, res)
 </PRE>
-El test falla:
+El test falla porque <code>routes</code> carece de un método <code>newPost</code>:
 <PRE>
+[~/src/coffee/coffeepress(master)]$ mocha --compilers coffee:coffee-script/register -R spec test/routes-test.coffee 
+
+
+  routes
+    index
+      ok: should display index with posts 
+    new post
+      1) should display the add post page
+
+
+  1 passing (17ms)
+  1 failing
+
+  1) routes new post should display the add post page:
+     TypeError: Object #&lt;Object&gt; has no method 'newPost'
 </PRE>
+
+<P>
+Lo añadimos al código:
 
 <P>
 
