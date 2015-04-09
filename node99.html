@@ -539,7 +539,9 @@ doctype html
 html
   head
     title= title
-    link(rel="stylesheet", href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css")
+    link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+    script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
     style(type="text/css")
       #content { padding-top: 60px;}
   body
@@ -551,6 +553,20 @@ html
             ul.nav
               li: a(href="/post/new") New Post
     #content.container!=body
+</PRE>
+Ahora podemos ejecutar las pruebas:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ mocha --compilers coffee:coffee-script/register -R spec test/routes-test.coffee 
+
+
+  routes
+    index
+      ok: should display index with posts 
+    new post
+      ok: should display the add post page 
+
+
+  2 passing (9ms)
 </PRE>
 
 <P>
