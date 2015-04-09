@@ -28,19 +28,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2757"
+<A NAME="tex2html2758"
   HREF="node99.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2751"
+<A NAME="tex2html2752"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2745"
+<A NAME="tex2html2746"
   HREF="node97.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2753"
+<A NAME="tex2html2754"
   HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2755"
+<A NAME="tex2html2756"
   HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -80,18 +80,18 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2758"
+<B> Sig:</B> <A NAME="tex2html2759"
   HREF="node99.html">Pruebas</A>
-<B>Sup:</B> <A NAME="tex2html2752"
+<B>Sup:</B> <A NAME="tex2html2753"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2746"
+<B> Ant:</B> <A NAME="tex2html2747"
   HREF="node97.html">Getting Started</A>
 <B> Con:</B> 
-<A NAME="tex2html2753"
+<A NAME="tex2html2754"
   HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2755"
+<A NAME="tex2html2756"
   HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
@@ -103,7 +103,7 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <UL CLASS="ChildLinks">
 <LI><UL>
 <LI><UL>
-<LI><A NAME="tex2html2759"
+<LI><A NAME="tex2html2760"
   HREF="node98.html#SECTION06220010000000000000">Ejecución del Servidor</A>
 </UL></UL></UL>
 <!--End of Table of Child-Links-->
@@ -254,7 +254,33 @@ definición del intérprete:
 </PRE>
 
 <P>
-Si comentamos la primera línea no se producen errores pero si un warning:
+Obsérvense las líneas:
+<PRE>
+29  server.on('error', onError);
+30  server.on('listening', onListening);
+</PRE>
+
+<P>
+Many objects in Node emit events: 
+
+<UL>
+<LI>a <code>net.Server</code> emits an event each time a peer connects to it, 
+</LI>
+<LI>a <code>fs.readStream</code> emits an event when the file is opened. 
+</LI>
+</UL>
+All objects which emit events are instances of 
+<A NAME="tex2html408"
+  HREF="https://nodejs.org/api/events.html">events.EventEmitter </A>.
+
+<P>
+Functions can then be attached to objects, to be executed when an event is
+emitted. These functions are called <A NAME="11569"></A><SPAN  CLASS="textbf">listeners</SPAN>. 
+
+<P>
+Volviendo a nuestra traducción de <code>bin/www</code>, 
+si comentamos la primera línea no se producen errores pero si 
+que nos sale un warning:
 <PRE>
 ~/src/coffee/coffeepress]$ js2coffee bin/www &gt; bin/www.coffee
 bin/www:37:6: [warning] Variable shadowing ('port') is not fully supported in CoffeeScript
@@ -303,7 +329,7 @@ y ejecutarlo así:
 6 Apr 14:12:01 - [nodemon] starting `coffee bin/www.coffee`
 </PRE>
 <code>Nodemon</code> (see
-<A NAME="tex2html408"
+<A NAME="tex2html409"
   HREF="http://nodemon.io/">http://nodemon.io/</A>
 )
 is for use during development of a node.js based application.
@@ -342,19 +368,19 @@ GET /stylesheets/style.css 304 7.269 ms - -
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2757"
+<A NAME="tex2html2758"
   HREF="node99.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2751"
+<A NAME="tex2html2752"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2745"
+<A NAME="tex2html2746"
   HREF="node97.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2753"
+<A NAME="tex2html2754"
   HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2755"
+<A NAME="tex2html2756"
   HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -394,11 +420,11 @@ GET /stylesheets/style.css 304 7.269 ms - -
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2758"
+<B> Sig:</B> <A NAME="tex2html2759"
   HREF="node99.html">Pruebas</A>
-<B>Sup:</B> <A NAME="tex2html2752"
+<B>Sup:</B> <A NAME="tex2html2753"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2746"
+<B> Ant:</B> <A NAME="tex2html2747"
   HREF="node97.html">Getting Started</A>
 </DIV>
 <!--End of Navigation Panel-->
