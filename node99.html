@@ -208,6 +208,16 @@ router.get '/', (req, res, next) -&gt;
   return
 module.exports = router
 </PRE>
+como se ve, lo que estamos haciendo en la prueba es sobreescribir el método <code>render</code> por 
+un falso <code>render</code> que hace las dos pruebas:
+<PRE>
+      res.render = (view, vars) -&gt;
+          expect(view).equal "index"
+          expect(vars.title).equal "My Coffeepress Blog"
+      routes.index(req, res)
+</PRE>
+
+<P>
 Run the tests:
 <PRE>
 [~/src/coffee/coffeepress(master)]$ mocha --compilers coffee:coffee-script/register -R spec
