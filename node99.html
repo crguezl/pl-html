@@ -465,6 +465,7 @@ describe "routes", -&gt;
       res.render = (view, vars) -&gt;
           expect(view).equal "add_post"
           expect(vars.title).equal "Write New Post"
+          done()
     
       routes.newPost(req, res)
 </PRE>
@@ -486,6 +487,70 @@ Now it fails:
   1) routes new post should display the add post page:
      Error: timeout of 2000ms exceeded
     at [object Object].&lt;anonymous&gt; (/usr/loc
+</PRE>
+Let’s go ahead and implement the route and connect it into our router.
+<PRE>
+~/src/coffee/coffeepress(master)]$ cat routes/index.coffee 
+express = require('express')
+
+module.exports = 
+  index: (req, res) -&gt;
+    ...
+
+  newPost: (req, res) -&gt;
+    res.render 'add_post', title:"Write New Post"
+</PRE>
+And connecting it up in the <code>app.coffee</code>:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ sed -ne '20,21p' app.coffee 
+app.get '/', routes.index
+app.get '/post/new', routes.newPost
+</PRE>
+Ademas tenemos que añadir la vista  <code>add_post</code>:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat views/add_post.jade 
+form(method="post", action="/post/new")
+  fieldset
+    legend=title
+    .clearfix
+      label(for="title") Title
+      .input
+        input.xlarge#title(type="text", name="post[title]")
+    .clearfix
+      label(for="post") Post
+      .input
+        textarea#post.xxlarge(name="post[body]",rows="3")
+    .actions
+      input.btn.primary(type="submit", value="Publish!")
+      |   
+      a.btn(href="/") Cancel
+</PRE>
+
+<UL>
+<LI>The <code>&lt;fieldset&gt;</code> tag is used to group related elements in a form.
+</LI>
+<LI>The <code>&lt;fieldset&gt;</code> tag draws a box around the related elements.
+</LI>
+</UL>
+Necesitamos también un <code>layout</code>:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat views/layout.jade 
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css")
+    style(type="text/css")
+      #content { padding-top: 60px;}
+  body
+    .topbar-wrapper
+      .topbar
+        .topbar-inner
+          .container
+            h3: a(href="/") My Coffeepress Blog
+            ul.nav
+              li: a(href="/post/new") New Post
+    #content.container!=body
 </PRE>
 
 <P>
