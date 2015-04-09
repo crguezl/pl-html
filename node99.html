@@ -568,6 +568,15 @@ Ahora podemos ejecutar las pruebas:
 
   2 passing (9ms)
 </PRE>
+Completemos la vista <code>index</code>:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat views/index.jade 
+- each post in posts
+  .page-header
+    h1
+      a(href="/post/#{post.id}")= post.title
+  .content!=post.body
+</PRE>
 
 <P>
 Vamos a crear un <code>gulpfile</code> para ejecutar las tareas mas comunes:
