@@ -157,12 +157,104 @@ Cuando probamos con el main obtenemos un error:
 [~/src/coffee/coffeepress]$ js2coffee bin/www &gt; bin/www.coffee
 bin/www:1:0: [error] Unexpected token ILLEGAL
 </PRE>
-El error es debido a la primera línea de definición del intérprete:
+El error es debido a la primera línea para la bash con la 
+definición del intérprete:
 <PRE>
-[~/src/coffee/coffeepress]$ head -n 1 bin/www
-#!/usr/bin/env node
+[/tmp/coffeepress]$ cat -n bin/www 
+ 1  #!/usr/bin/env node
+ 2  
+ 3  /**
+ 4   * Module dependencies.
+ 5   */
+ 6  
+ 7  var app = require('../app');
+ 8  var debug = require('debug')('coffeepress:server');
+ 9  var http = require('http');
+10  
+11  /**
+12   * Get port from environment and store in Express.
+13   */
+14  
+15  var port = normalizePort(process.env.PORT || '3000');
+16  app.set('port', port);
+17  
+18  /**
+19   * Create HTTP server.
+20   */
+21  
+22  var server = http.createServer(app);
+23  
+24  /**
+25   * Listen on provided port, on all network interfaces.
+26   */
+27  
+28  server.listen(port);
+29  server.on('error', onError);
+30  server.on('listening', onListening);
+31  
+32  /**
+33   * Normalize a port into a number, string, or false.
+34   */
+35  
+36  function normalizePort(val) {
+37    var port = parseInt(val, 10);
+38  
+39    if (isNaN(port)) {
+40      // named pipe
+41      return val;
+42    }
+43  
+44    if (port &gt;= 0) {
+45      // port number
+46      return port;
+47    }
+48  
+49    return false;
+50  }
+51  
+52  /**
+53   * Event listener for HTTP server "error" event.
+54   */
+55  
+56  function onError(error) {
+57    if (error.syscall !== 'listen') {
+58      throw error;
+59    }
+60  
+61    var bind = typeof port === 'string'
+62      ? 'Pipe ' + port
+63      : 'Port ' + port
+64  
+65    // handle specific listen errors with friendly messages
+66    switch (error.code) {
+67      case 'EACCES':
+68        console.error(bind + ' requires elevated privileges');
+69        process.exit(1);
+70        break;
+71      case 'EADDRINUSE':
+72        console.error(bind + ' is already in use');
+73        process.exit(1);
+74        break;
+75      default:
+76        throw error;
+77    }
+78  }
+79  
+80  /**
+81   * Event listener for HTTP server "listening" event.
+82   */
+83  
+84  function onListening() {
+85    var addr = server.address();
+86    var bind = typeof addr === 'string'
+87      ? 'pipe ' + addr
+88      : 'port ' + addr.port;
+89    debug('Listening on ' + bind);
+90  }
 </PRE>
-Si comentamos la línea no se producen errores pero si un warning:
+
+<P>
+Si comentamos la primera línea no se producen errores pero si un warning:
 <PRE>
 ~/src/coffee/coffeepress]$ js2coffee bin/www &gt; bin/www.coffee
 bin/www:37:6: [warning] Variable shadowing ('port') is not fully supported in CoffeeScript
@@ -312,7 +404,7 @@ GET /stylesheets/style.css 304 7.269 ms - -
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I>Casiano Rodríguez León <BR>
-2015-04-08</I>
+2015-04-09</I>
 </ADDRESS>
 </BODY>
 </HTML>

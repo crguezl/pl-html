@@ -271,7 +271,7 @@ You should see output similar to the following:
 </PRE>
 
 <P>
-This is called <A NAME="11519"></A><SPAN  CLASS="textbf">Scaffolding</SPAN>.
+This is called <A NAME="11521"></A><SPAN  CLASS="textbf">Scaffolding</SPAN>.
 
 <P>
 The idea is simple: most projects
@@ -694,6 +694,19 @@ takes three arguments:
 
 <P>
 
+<UL>
+<LI>If you don’t call <code>next()</code>, the pipeline will be terminated, and
+no more route handlers or middleware will be processed. 
+</LI>
+<LI>If you don’t
+call <code>next()</code>, you should send a response to the client 
+(<code>res.send</code>, <code>res.json</code>, <code>res.render</code>, etc.); 
+if you don’t, the client will hang and eventually time out.
+</LI>
+</UL>
+
+<P>
+
 <H4><A NAME="SECTION06210070000000000000">
 Las Rutas / Routing</A>
 </H4>
@@ -826,7 +839,7 @@ prefijo de nombre <code>coffeepress</code>.
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I>Casiano Rodríguez León <BR>
-2015-04-08</I>
+2015-04-09</I>
 </ADDRESS>
 </BODY>
 </HTML>
