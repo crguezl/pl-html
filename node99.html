@@ -342,26 +342,25 @@ Next let’s write tests for the
 
 <P>
 <PRE>
-~/src/coffee/coffeepress(master)]$ cat -n test/routes-test.coffee 
-     1  chai     = require 'chai'
-     2  expect   = chai.expect
-     3  routes = require "../routes/index"
-     4  
-     5  describe "routes", -&gt;
-     6    req = {}
-     7    res = {}
-     8    describe "index", -&gt;
-     9      it "should display index with posts", -&gt;
-    10        res.render = (view, vars) -&gt;
-    ...           ...
-    15  
-    16    describe "new post", -&gt;
-    17      it "should display the add post page", (done) -&gt;
-    18        res.render = (view, vars) -&gt;
-    19            expect(view).equal "add_post"
-    20            expect(vars.title).equal "Write New Post"
-    21      
-    22        routes.newPost(req, res)
+[~/src/coffee/coffeepress(master)]$ cat -n test/routes-test.coffee 
+ 1  chai     = require 'chai'
+ 2  expect   = chai.expect
+ 3  routes = require "../routes/index"
+ 4  
+ 5  describe "routes", -&gt;
+ 6    req = {}
+ 7    res = {}
+ 8    describe "index", -&gt;
+ 9      it "should display index with posts", -&gt;
+..        ...
+15  
+16    describe "new post", -&gt;
+17      it "should display the add post page", -&gt;
+18        res.render = (view, vars) -&gt;
+19            expect(view).equal "add_post"
+20            expect(vars.title).equal "Write New Post"
+21      
+22        routes.newPost(req, res)
 </PRE>
 El test falla porque <code>routes</code> carece de un método <code>newPost</code>:
 <PRE>
@@ -383,7 +382,33 @@ El test falla porque <code>routes</code> carece de un método <code>newPost</cod
 </PRE>
 
 <P>
-Lo añadimos al código:
+Añadamos un método <code>newPost</code> al código de la ruta:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat -n routes/index.coffee 
+     1  express = require('express')
+     2  
+     3  module.exports = 
+     4    index: (req, res) -&gt;
+     5      res.render 'index', 
+     6        title: 'My Coffeepress Blog' 
+     7        posts: []
+     8  
+     9    newPost: (req, res) -&gt;
+    10      # do nothing
+</PRE>
+Cuando ejecutamos las pruebas pasan:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ mocha --compilers coffee:coffee-script/register -R spec test/routes-test.coffee 
+
+
+  routes
+    index
+      ok: should display index with posts 
+    new post
+      ok: should display the add post page 
+
+  2 passing (8ms)
+</PRE>
 
 <P>
 
