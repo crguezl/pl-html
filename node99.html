@@ -688,7 +688,7 @@ describe "routes", -&gt;
     
       routes.newPost(req, res)
 </PRE>
-Now it fails:
+Now it fails since the <code>done()</code> callback is never called:
 <PRE>
 [~/src/coffee/coffeepress(master)]$ mocha --compilers coffee:coffee-script/register -R spec test/routes-test.coffee 
 
