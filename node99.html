@@ -216,6 +216,44 @@ para ejecutarla debemos hacer:
 
 <P>
 
+<UL>
+<LI><code>mocha</code> tiene una opción:
+<PRE>
+--compilers &lt;ext&gt;:&lt;module&gt;,...
+</PRE>
+Que indica que debemos usar el <code>module</code>(s) para compilar los ficheros
+con extensión <code>ext</code>.
+</LI>
+<LI>La opción <code>-R</code> o bien <code>--reporter</code> va segida de un <code>&lt;name&gt;</code>
+y especifica el 
+<FONT COLOR="#ff0000"> reporter</FONT> a utilizar.
+</LI>
+<LI>La  opción <code>--reporters</code> nos da la lista de <code>reporters</code> que 
+podemos utilizar:
+<PRE>
+[~/javascript/expressjs/clase-express-coffee]$ mocha --reporters
+
+    dot - dot matrix
+    doc - html documentation
+    spec - hierarchical spec list
+    json - single json object
+    progress - progress bar
+    list - spec-style listing
+    tap - test-anything-protocol
+    landing - unicode landing strip
+    xunit - xunit reporter
+    html-cov - HTML test coverage
+    json-cov - JSON test coverage
+    min - minimal reporter (great with --watch)
+    json-stream - newline delimited json events
+    markdown - markdown documentation (github flavour)
+    nyan - nyan cat!
+</PRE>
+</LI>
+</UL>
+
+<P>
+
 <H4><A NAME="SECTION06230030000000000000">
 Should display index with posts: red</A>
 </H4>
