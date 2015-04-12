@@ -325,7 +325,12 @@ If provided, the method returns both the possible error and rendered string, but
 <P>
 When an error occurs, the method invokes <code>next(err)</code> 
   internally.
-  
+<PRE>
+// if a callback is specified, the rendered HTML string has to be sent explicitly
+res.render('index', function(err, html) {
+  res.send(html);
+});
+</PRE>
 </LI>
 </UL>
 </LI>
