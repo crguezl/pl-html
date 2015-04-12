@@ -293,6 +293,17 @@ de un método que procesa esa ruta. Así:
 <LI>etc.
 </LI>
 </UL>
+Esta correspondencia entre rutas y métodos se establece en 
+el cuerpo principal de la aplicación:
+<PRE>
+[~/javascript/expressjs/coffee-mongo(master)]$ sed -ne '3p' app.coffee 
+routes   = require "./routes"
+[~/javascript/expressjs/coffee-mongo(master)]$ sed -ne '24,27p' app.coffee 
+app.get "/", routes.index
+app.get "/post/new", routes.newPost
+app.post "/post/new", routes.addPost
+app.get "/post/:id", routes.viewPost
+</PRE>
 
 <P>
 Empezaremos describiendo como debe ser la ruta <code>index</code> del objeto
