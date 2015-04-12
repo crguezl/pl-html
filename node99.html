@@ -348,7 +348,8 @@ router.get '/', (req, res, next) -&gt;
   return
 module.exports = router
 </PRE>
-como se ve, lo que estamos haciendo en la prueba es sobreescribir el método <code>render</code> por 
+como se ve, lo que estamos haciendo en la prueba es sobreescribir el método <code>render</code> 
+del objeto <code>res</code> por 
 un falso <code>render</code> que hace las dos pruebas:
 <PRE>
 routes = require "../routes/index"
