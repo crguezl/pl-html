@@ -27,19 +27,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2778"
+<A NAME="tex2html2782"
   HREF="node100.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2772"
+<A NAME="tex2html2776"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2768"
+<A NAME="tex2html2772"
   HREF="node98.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2774"
+<A NAME="tex2html2778"
   HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2776"
+<A NAME="tex2html2780"
   HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -79,18 +79,18 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2779"
+<B> Sig:</B> <A NAME="tex2html2783"
   HREF="node100.html">&#205;ndice General</A>
-<B>Sup:</B> <A NAME="tex2html2773"
+<B>Sup:</B> <A NAME="tex2html2777"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2769"
+<B> Ant:</B> <A NAME="tex2html2773"
   HREF="node98.html">Porting to Coffeescript</A>
 <B> Con:</B> 
-<A NAME="tex2html2774"
+<A NAME="tex2html2778"
   HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2776"
+<A NAME="tex2html2780"
   HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
@@ -102,20 +102,28 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <UL CLASS="ChildLinks">
 <LI><UL>
 <LI><UL>
-<LI><A NAME="tex2html2780"
-  HREF="node99.html#SECTION06230010000000000000">Mocha: done</A>
-<LI><A NAME="tex2html2781"
-  HREF="node99.html#SECTION06230020000000000000">Escribiendo newPost</A>
-<LI><A NAME="tex2html2782"
-  HREF="node99.html#SECTION06230030000000000000">views/add_post.jade</A>
-<LI><A NAME="tex2html2783"
-  HREF="node99.html#SECTION06230040000000000000">views/layout.jade</A>
 <LI><A NAME="tex2html2784"
-  HREF="node99.html#SECTION06230050000000000000">Should display the add post page: green</A>
+  HREF="node99.html#SECTION06230010000000000000">Mocha, Chai y Expect: instalando las dependencias</A>
 <LI><A NAME="tex2html2785"
-  HREF="node99.html#SECTION06230060000000000000">views/index.jade</A>
+  HREF="node99.html#SECTION06230020000000000000">Una Prueba Sencilla</A>
 <LI><A NAME="tex2html2786"
-  HREF="node99.html#SECTION06230070000000000000">Gulpfile</A>
+  HREF="node99.html#SECTION06230030000000000000">Should display index with posts: red</A>
+<LI><A NAME="tex2html2787"
+  HREF="node99.html#SECTION06230040000000000000">Should display index with posts: green</A>
+<LI><A NAME="tex2html2788"
+  HREF="node99.html#SECTION06230050000000000000">Mocha: done</A>
+<LI><A NAME="tex2html2789"
+  HREF="node99.html#SECTION06230060000000000000">Escribiendo newPost</A>
+<LI><A NAME="tex2html2790"
+  HREF="node99.html#SECTION06230070000000000000">views/add_post.jade</A>
+<LI><A NAME="tex2html2791"
+  HREF="node99.html#SECTION06230080000000000000">views/layout.jade</A>
+<LI><A NAME="tex2html2792"
+  HREF="node99.html#SECTION06230090000000000000">Should display the add post page: green</A>
+<LI><A NAME="tex2html2793"
+  HREF="node99.html#SECTION062300100000000000000">views/index.jade</A>
+<LI><A NAME="tex2html2794"
+  HREF="node99.html#SECTION062300110000000000000">Gulpfile</A>
 </UL></UL></UL>
 <!--End of Table of Child-Links-->
 <HR>
@@ -123,6 +131,14 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <H1><A NAME="SECTION06230000000000000000">
 Pruebas</A>
 </H1>
+
+<P>
+
+<H4><A NAME="SECTION06230010000000000000">
+Mocha, Chai y Expect: instalando las dependencias</A>
+</H4>
+  
+
 <PRE>
 [~/src/coffee/coffeepress(master)]$ npm install --save-dev mocha expect chai
 </PRE>
@@ -155,6 +171,12 @@ Pruebas</A>
 </PRE>
 
 <P>
+
+<H4><A NAME="SECTION06230020000000000000">
+Una Prueba Sencilla</A>
+</H4>
+  
+
 Empecemos con una prueba sencilla.
 Creamos el directorio <code>test</code> para las pruebas:
 
@@ -185,6 +207,12 @@ para ejecutarla debemos hacer:
 </PRE>
 
 <P>
+
+<H4><A NAME="SECTION06230030000000000000">
+Should display index with posts: red</A>
+</H4>
+  
+
 Vamos ahora a hacer una prueba sobre nuestro código. 
 Nuestro objetivo es hacer que nuestra aplicación funcione como un pequeño blog.
 Empezaremos describiendo como debe ser la ruta <code>index</code>.
@@ -263,6 +291,14 @@ Run the tests:
     at Context.&lt;anonymous&gt; (/Users/casiano/local/src/coffee/coffeepress/test/routes-test.coffee:13:14)
     ...
 </PRE>
+
+<P>
+
+<H4><A NAME="SECTION06230040000000000000">
+Should display index with posts: green</A>
+</H4>
+  
+
 Se queja de que <code>routes = require "../routes/index"</code> no tiene un método <code>index</code>.
 Se lo añadimos:
 <PRE>
@@ -450,7 +486,7 @@ el cuerpo de <code>newPost</code> es vacío.
 
 <P>
 
-<H4><A NAME="SECTION06230010000000000000">
+<H4><A NAME="SECTION06230050000000000000">
 Mocha: done</A>
 </H4>
   
@@ -521,7 +557,7 @@ Now it fails:
 
 <P>
 
-<H4><A NAME="SECTION06230020000000000000">
+<H4><A NAME="SECTION06230060000000000000">
 Escribiendo newPost</A>
 </H4>
   
@@ -548,7 +584,7 @@ app.get '/post/new', routes.newPost
 
 <P>
 
-<H4><A NAME="SECTION06230030000000000000">
+<H4><A NAME="SECTION06230070000000000000">
 views/add_post.jade</A>
 </H4>
   
@@ -583,7 +619,7 @@ form(method="post", action="/post/new")
 
 <P>
 
-<H4><A NAME="SECTION06230040000000000000">
+<H4><A NAME="SECTION06230080000000000000">
 views/layout.jade</A>
 </H4>
   
@@ -614,7 +650,7 @@ html
 
 <P>
 
-<H4><A NAME="SECTION06230050000000000000">
+<H4><A NAME="SECTION06230090000000000000">
 Should display the add post page: green</A>
 </H4>
   
@@ -636,7 +672,7 @@ Ahora podemos ejecutar las pruebas:
 
 <P>
 
-<H4><A NAME="SECTION06230060000000000000">
+<H4><A NAME="SECTION062300100000000000000">
 views/index.jade</A>
 </H4>
   
@@ -654,7 +690,7 @@ Completemos la vista <code>index</code>:
 
 <P>
 
-<H4><A NAME="SECTION06230070000000000000">
+<H4><A NAME="SECTION062300110000000000000">
 Gulpfile</A>
 </H4>
   
@@ -701,19 +737,19 @@ ahora podemos ejecutar las pruebas con <code>gulp test</code>.
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2778"
+<A NAME="tex2html2782"
   HREF="node100.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2772"
+<A NAME="tex2html2776"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2768"
+<A NAME="tex2html2772"
   HREF="node98.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2774"
+<A NAME="tex2html2778"
   HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2776"
+<A NAME="tex2html2780"
   HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -753,11 +789,11 @@ ahora podemos ejecutar las pruebas con <code>gulp test</code>.
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2779"
+<B> Sig:</B> <A NAME="tex2html2783"
   HREF="node100.html">&#205;ndice General</A>
-<B>Sup:</B> <A NAME="tex2html2773"
+<B>Sup:</B> <A NAME="tex2html2777"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2769"
+<B> Ant:</B> <A NAME="tex2html2773"
   HREF="node98.html">Porting to Coffeescript</A>
 </DIV>
 <!--End of Navigation Panel-->
