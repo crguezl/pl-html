@@ -133,29 +133,29 @@ por ternas <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="99" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img321.png"
+ SRC="img322.png"
  ALT="$ (p, e, action)$"></SPAN>, donde la primera componente de la
 terna <SPAN CLASS="MATH"><IMG
  WIDTH="14" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img254.png"
+ SRC="img255.png"
  ALT="$ p$"></SPAN> es un <A NAME="9928"></A><SPAN  CLASS="textbf">patrón árbol</SPAN> que dice que árboles
 deben ser seleccionados. La segunda componente 
 <SPAN CLASS="MATH"><IMG
  WIDTH="13" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img77.png"
+ SRC="img78.png"
  ALT="$ e$"></SPAN> dice cómo debe transformarse el árbol que casa con el patrón
 <SPAN CLASS="MATH"><IMG
  WIDTH="14" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img254.png"
+ SRC="img255.png"
  ALT="$ p$"></SPAN>. La acción <SPAN CLASS="MATH"><IMG
  WIDTH="53" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img322.png"
+ SRC="img323.png"
  ALT="$ action$"></SPAN> indica como deben
 computarse los atributos del árbol transformado
 a partir de los atributos 
 del árbol que casa con el patrón <SPAN CLASS="MATH"><IMG
  WIDTH="14" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img254.png"
+ SRC="img255.png"
  ALT="$ p$"></SPAN>.
 Una forma de representar este esquema sería:
 
@@ -166,7 +166,7 @@ Una forma de representar este esquema sería:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="59" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img323.png"
+ SRC="img324.png"
  ALT="$ p \Longrightarrow e$"></SPAN> <code>{ action }</code>
 
 </DIV>
@@ -182,7 +182,7 @@ Por ejemplo:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="277" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img324.png"
+ SRC="img325.png"
  ALT="$ PLUS(NUM_1, NUM_2) \Longrightarrow NUM_3$"></SPAN> <code>{ $NUM_3{VAL} = $NUM_1{VAL} + $NUM_2{VAL} }</code>
 <BR>
 <BR>
@@ -194,17 +194,17 @@ con el <A NAME="9930"></A><SPAN  CLASS="textbf">patrón de entrada</SPAN> <!-- M
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="173" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img325.png"
+ SRC="img326.png"
  ALT="$ PLUS(NUM, NUM)$"></SPAN> deberá sustituirse
 el subárbol <!-- MATH
  $PLUS(NUM, NUM)$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="173" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img325.png"
+ SRC="img326.png"
  ALT="$ PLUS(NUM, NUM)$"></SPAN> por el subárbol <SPAN CLASS="MATH"><IMG
  WIDTH="53" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img65.png"
+ SRC="img66.png"
  ALT="$ NUM$"></SPAN>. Al igual que en los 
 esquemas de traducción, enumeramos las apariciones de los símbolos,
 para distinguirlos en la parte semántica. La acción indica 
@@ -226,13 +226,13 @@ haciendo alusión a propiedades de los atributos, por ejemplo
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="264" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img326.png"
+ SRC="img327.png"
  ALT="$ ASSIGN(LEFTVALUE, x) and$"></SPAN> <code>{ notlive($LEFTVALUE{VAL}) }</code> <!-- MATH
  $\Longrightarrow NIL$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="75" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img327.png"
+ SRC="img328.png"
  ALT="$ \Longrightarrow NIL$"></SPAN>
 </DIV>
 <BR>
@@ -242,17 +242,17 @@ haciendo alusión a propiedades de los atributos, por ejemplo
 indica que se pueden eliminar aquellos árboles de tipo asignación
 en los cuáles la variable asociada con el nodo <SPAN CLASS="MATH"><IMG
  WIDTH="123" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img288.png"
+ SRC="img289.png"
  ALT="$ LEFTVALUE$"></SPAN>
 no se usa posteriormente. 
 
 <P>
 Otros ejemplos con variables <SPAN CLASS="MATH"><IMG
  WIDTH="23" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img328.png"
+ SRC="img329.png"
  ALT="$ S_1$"></SPAN> y <SPAN CLASS="MATH"><IMG
  WIDTH="23" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img329.png"
+ SRC="img330.png"
  ALT="$ S_2$"></SPAN>:
 
 <P>
@@ -262,26 +262,26 @@ Otros ejemplos con variables <SPAN CLASS="MATH"><IMG
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="192" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img330.png"
+ SRC="img331.png"
  ALT="$ IFELSE(NUM, S_1, S_2)$"></SPAN> and <code>{ $NUM{VAL} != 0 }</code> <!-- MATH
  $\Longrightarrow S_1$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="56" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img331.png"
+ SRC="img332.png"
  ALT="$ \Longrightarrow S_1$"></SPAN>
 <BR><!-- MATH
  $IFELSE(NUM, S_1, S_2)$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="192" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img330.png"
+ SRC="img331.png"
  ALT="$ IFELSE(NUM, S_1, S_2)$"></SPAN> and <code>{ $NUM{VAL} == 0 }</code> <!-- MATH
  $\Longrightarrow S_2$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="56" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img332.png"
+ SRC="img333.png"
  ALT="$ \Longrightarrow S_2$"></SPAN>
 </DIV>
 
@@ -291,18 +291,18 @@ Observe que en el patrón de entrada <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="230" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img333.png"
+ SRC="img334.png"
  ALT="$ ASSIGN(LEFTVALUE, x)$"></SPAN> aparece un
 ``comodín'': la variable-árbol <SPAN CLASS="MATH"><IMG
  WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img34.png"
+ SRC="img35.png"
  ALT="$ x$"></SPAN>, que hace que el árbol
 patrón <!-- MATH
  $ASSIGN(LEFTVALUE, x)$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="230" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img333.png"
+ SRC="img334.png"
  ALT="$ ASSIGN(LEFTVALUE, x)$"></SPAN> case con cualquier árbol de asignación,
 independientemente de la forma que tenga su subárbol derecho.
 
@@ -325,7 +325,7 @@ Patrón Árbol</A>
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="48" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img221.png"
+ SRC="img222.png"
  ALT="$ (\Sigma, \rho)$"></SPAN> un alfabeto con función de aridad
 y un conjunto (puede ser infinito) 
 de variables <!-- MATH
@@ -333,7 +333,7 @@ de variables <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="130" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img334.png"
+ SRC="img335.png"
  ALT="$ V =\{ x_1, x_2, \ldots \}$"></SPAN>. 
 Las variables tienen
 aridad cero: 
@@ -344,7 +344,7 @@ aridad cero:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="130" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img335.png"
+ SRC="img336.png"
  ALT="$ \rho(x) = 0 \forall x \in V$"></SPAN>. 
 </I></DIV>
 <P>
@@ -353,11 +353,11 @@ aridad cero:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="78" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img336.png"
+ SRC="img337.png"
  ALT="$ B(V \cup \Sigma)$"></SPAN>
 se denomina <A NAME="9942"></A><SPAN  CLASS="textbf">patrón</SPAN> sobre <SPAN CLASS="MATH"><IMG
  WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img8.png"
+ SRC="img9.png"
  ALT="$ \Sigma$"></SPAN>.</I></DIV><P></P>
 
 <P>
@@ -380,7 +380,7 @@ patrón es un <A NAME="9948"></A><SPAN  CLASS="textbf">patrón lineal</SPAN> si 
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="85" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img337.png"
+ SRC="img338.png"
  ALT="$ (x_1, \ldots x_k)$"></SPAN> si las variables
 que aparecen en el patrón leidas de izquierda a derecha en el árbol
 son <!-- MATH
@@ -388,7 +388,7 @@ son <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="71" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img338.png"
+ SRC="img339.png"
  ALT="$ x_1, \ldots x_k$"></SPAN>.</I></DIV><P></P>
 
 <P>
@@ -399,24 +399,24 @@ son <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="178" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img232.png"
+ SRC="img233.png"
  ALT="$ \Sigma = \{A, CONS, NIL \}$"></SPAN> con <!-- MATH
  $\rho(A) = \rho(NIL) = 0, \rho(CONS) = 2$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="278" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img233.png"
+ SRC="img234.png"
  ALT="$ \rho(A) = \rho(NIL) = 0, \rho(CONS) = 2$"></SPAN>
 y sea <!-- MATH
  $V = \{ x \}$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="69" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img339.png"
+ SRC="img340.png"
  ALT="$ V = \{ x \}$"></SPAN>. Los siguientes árboles son ejemplos de 
 patrones sobre <SPAN CLASS="MATH"><IMG
  WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img8.png"
+ SRC="img9.png"
  ALT="$ \Sigma$"></SPAN>:
 </I>
 <P>
@@ -425,7 +425,7 @@ patrones sobre <SPAN CLASS="MATH"><IMG
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="379" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img340.png"
+ SRC="img341.png"
  ALT="$ x, CONS(A, x), CONS(A, CONS(x, NIL)), \ldots \}$"></SPAN></I></DIV>
 <P>
 <I>El patrón <!-- MATH
@@ -433,22 +433,22 @@ patrones sobre <SPAN CLASS="MATH"><IMG
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="214" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img341.png"
+ SRC="img342.png"
  ALT="$ CONS(x, CONS(x, NIL))$"></SPAN> es un ejemplo de patrón no lineal.
 La idea es que un patrón lineal como éste ``fuerza'' a que los árboles <SPAN CLASS="MATH"><IMG
  WIDTH="11" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img250.png"
+ SRC="img251.png"
  ALT="$ t$"></SPAN>
 que casen con el patrón deben tener iguales los dos correspondientes
 subárboles <SPAN CLASS="MATH"><IMG
  WIDTH="29" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img342.png"
+ SRC="img343.png"
  ALT="$ t/1$"></SPAN> y <!-- MATH
  $t/2 \ldotp 1$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img305.png"
+ SRC="img306.png"
  ALT="$ t/2\ldotp1$"></SPAN> situados en las posiciones de las variables
 <A NAME="tex2html346"
   HREF="footnode.html#foot9810"><SUP><SPAN CLASS="arabic">7</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A></I>
@@ -465,14 +465,14 @@ subárboles <SPAN CLASS="MATH"><IMG
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="118" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img343.png"
+ SRC="img344.png"
  ALT="$ S \rightarrow S_1(a, S, b)$"></SPAN>
 <BR><!-- MATH
  $S \rightarrow S_2(NIL)$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="112" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img344.png"
+ SRC="img345.png"
  ALT="$ S \rightarrow S_2(NIL)$"></SPAN></I></DIV>
 <P>
 <I>la cuál genera los árboles concretos para la gramática
@@ -483,13 +483,13 @@ subárboles <SPAN CLASS="MATH"><IMG
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="72" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img345.png"
+ SRC="img346.png"
  ALT="$ S \rightarrow aSb$"></SPAN> <SPAN CLASS="MATH"><IMG
  WIDTH="10" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img36.png"
+ SRC="img37.png"
  ALT="$ \vert$"></SPAN> <SPAN CLASS="MATH"><IMG
  WIDTH="12" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img5.png"
+ SRC="img6.png"
  ALT="$ \epsilon$"></SPAN></I></DIV>
 <P>
 <I>¿Es <!-- MATH
@@ -497,23 +497,23 @@ subárboles <SPAN CLASS="MATH"><IMG
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="135" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img346.png"
+ SRC="img347.png"
  ALT="$ S_1(a, X(NIL), b)$"></SPAN> un patrón árbol sobre el conjunto de variables <SPAN CLASS="MATH"><IMG
  WIDTH="59" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img347.png"
+ SRC="img348.png"
  ALT="$ \{X, Y\}$"></SPAN>?
 ¿Lo es <!-- MATH
  $S_1(X, Y, a)$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="87" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img348.png"
+ SRC="img349.png"
  ALT="$ S_1(X, Y, a)$"></SPAN>? ¿Es <!-- MATH
  $S_1(X, Y, Y)$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="92" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img349.png"
+ SRC="img350.png"
  ALT="$ S_1(X, Y, Y)$"></SPAN> un patrón árbol?</I></DIV><P></P>
 
 <P>
@@ -528,7 +528,7 @@ subárboles <SPAN CLASS="MATH"><IMG
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="483" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img350.png"
+ SRC="img351.png"
  ALT="$ x, y, PLUS(x, y), ASSIGN(x, TIMES(y,ID)), PRINT(y) \ldots$"></SPAN></I></DIV>
 <P>
 <I>considerando el conjunto de variables <!-- MATH
@@ -536,17 +536,17 @@ subárboles <SPAN CLASS="MATH"><IMG
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="86" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img351.png"
+ SRC="img352.png"
  ALT="$ V = \{ x, y \}$"></SPAN>. El patrón 
 <!-- MATH
  $ASSIGN(x, TIMES(y,ID))$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="232" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img352.png"
+ SRC="img353.png"
  ALT="$ ASSIGN(x, TIMES(y,ID))$"></SPAN> es del tipo <SPAN CLASS="MATH"><IMG
  WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img353.png"
+ SRC="img354.png"
  ALT="$ (x, y)$"></SPAN>.</I></DIV><P></P>
 
 <P>
@@ -560,14 +560,14 @@ Sustitución</A>
 <DIV><B>Definición  <SPAN CLASS="arabic">7</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">4</SPAN></B> &nbsp; 
 <I>Una <A NAME="9954"></A><SPAN  CLASS="textbf">sustitución árbol</SPAN> es una aplicación <SPAN CLASS="MATH"><IMG
  WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img354.png"
+ SRC="img355.png"
  ALT="$ \theta$"></SPAN> que asigna variables
 a patrones <!-- MATH
  $\theta: V \rightarrow B(V \cup \Sigma)$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="143" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img355.png"
+ SRC="img356.png"
  ALT="$ \theta: V \rightarrow B(V \cup \Sigma)$"></SPAN>.
 </I>
 <P>
@@ -583,7 +583,7 @@ por los correspondientes subárboles.
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="202" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img356.png"
+ SRC="img357.png"
  ALT="$ \theta : B(V \cup \Sigma) \rightarrow B(V \cup \Sigma)$"></SPAN></I></TD>
 </TR>
 <TR><TD ALIGN="LEFT"><I> 
@@ -596,7 +596,7 @@ por los correspondientes subárboles.
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="334" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
- SRC="img357.png"
+ SRC="img358.png"
  ALT="$ t \theta = \left \{ \begin{array}{ll}
 x \theta &amp; \mbox{si $t = x \in V$}\\
 ...
@@ -608,10 +608,10 @@ x \theta &amp; \mbox{si $t = x \in V$}\\
 <I>Obsérvese que, al revés de lo que es costumbre, la aplicación 
 de la sustitución <SPAN CLASS="MATH"><IMG
  WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img354.png"
+ SRC="img355.png"
  ALT="$ \theta$"></SPAN> al patrón se escribe por detrás: <SPAN CLASS="MATH"><IMG
  WIDTH="20" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img358.png"
+ SRC="img359.png"
  ALT="$ t \theta$"></SPAN>.
 </I>
 <P>
@@ -620,17 +620,17 @@ de la sustitución <SPAN CLASS="MATH"><IMG
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="204" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img359.png"
+ SRC="img360.png"
  ALT="$ t \theta = t\{x_1/x_1 \theta, \ldots x_k/x_k \theta\}$"></SPAN> si las variables
 que aparecen en <SPAN CLASS="MATH"><IMG
  WIDTH="11" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img250.png"
+ SRC="img251.png"
  ALT="$ t$"></SPAN> de izquierda a derecha son <!-- MATH
  $x_1, \ldots x_k$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="71" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img338.png"
+ SRC="img339.png"
  ALT="$ x_1, \ldots x_k$"></SPAN>.</I></DIV><P></P>
 
 <P>
@@ -641,20 +641,20 @@ que aparecen en <SPAN CLASS="MATH"><IMG
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="237" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img360.png"
+ SRC="img361.png"
  ALT="$ \theta = \{x/A, y/CONS(A, NIL)\}$"></SPAN>
 al patrón <!-- MATH
  $CONS(x, y)$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="100" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img361.png"
+ SRC="img362.png"
  ALT="$ CONS(x, y)$"></SPAN> obtenemos el árbol <!-- MATH
  $CONS(A, CONS(A, NIL))$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="220" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img272.png"
+ SRC="img273.png"
  ALT="$ CONS(A, CONS(A,NIL))$"></SPAN>.
 En efecto:
 </I>
@@ -664,7 +664,7 @@ En efecto:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="484" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img362.png"
+ SRC="img363.png"
  ALT="$ CONS(x, y)\theta = CONS(x\theta, y\theta) = CONS(A, CONS(A, NIL))$"></SPAN></I></DIV>
 <P></DIV><P></P>
 
@@ -676,20 +676,20 @@ En efecto:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="388" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img363.png"
+ SRC="img364.png"
  ALT="$ \theta = \{x/PLUS(NUM, x), y/TIMES(ID, NUM)\}$"></SPAN>
 al patrón <!-- MATH
  $PLUS(x, y)$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="96" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img364.png"
+ SRC="img365.png"
  ALT="$ PLUS(x, y)$"></SPAN> obtenemos el árbol <!-- MATH
  $PLUS(PLUS(NUM,x), TIMES(ID, NUM))$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="367" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img365.png"
+ SRC="img366.png"
  ALT="$ PLUS(PLUS(NUM,x), TIMES(ID, NUM))$"></SPAN>:
 </I>
 <P>
@@ -698,7 +698,7 @@ al patrón <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="622" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img366.png"
+ SRC="img367.png"
  ALT="$ PLUS(x, y)\theta = PLUS(x\theta, y\theta) = PLUS(PLUS(NUM,x), TIMES(ID, NUM))$"></SPAN></I></DIV>
 <P></DIV><P></P>
 
@@ -716,52 +716,52 @@ Casamiento Árbol</A>
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="109" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img367.png"
+ SRC="img368.png"
  ALT="$ \tau \in B(V \cup \Sigma)$"></SPAN> con variables
 <!-- MATH
  $x_1, \ldots x_k$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="71" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img338.png"
+ SRC="img339.png"
  ALT="$ x_1, \ldots x_k$"></SPAN> <A NAME="9960"></A><SPAN  CLASS="textbf">casa con un árbol</SPAN>
 <!-- MATH
  $t \in B(\Sigma)$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="73" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img296.png"
+ SRC="img297.png"
  ALT="$ t \in B(\Sigma)$"></SPAN> si existe una sustitución de <SPAN CLASS="MATH"><IMG
  WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img368.png"
+ SRC="img369.png"
  ALT="$ \tau$"></SPAN> que produce <SPAN CLASS="MATH"><IMG
  WIDTH="11" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img250.png"
+ SRC="img251.png"
  ALT="$ t$"></SPAN>, esto
 es, si existen <!-- MATH
  $t_1, \ldots t_k \in B(\Sigma)$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="126" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img369.png"
+ SRC="img370.png"
  ALT="$ t_1, \ldots t_k \in B(\Sigma)$"></SPAN> tales que 
 <!-- MATH
  $t = \tau \{x_1/t_1, \ldots x_k/t_k\}$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="174" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img370.png"
+ SRC="img371.png"
  ALT="$ t = \tau \{x_1/t_1, \ldots x_k/t_k\}$"></SPAN>. 
 También se dice que <SPAN CLASS="MATH"><IMG
  WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img368.png"
+ SRC="img369.png"
  ALT="$ \tau$"></SPAN> <A NAME="9962"></A><SPAN  CLASS="textbf">casa con la sustitución</SPAN>
 <!-- MATH
  $\{x_1/t_1, \ldots x_k/t_k\}$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="135" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img371.png"
+ SRC="img372.png"
  ALT="$ \{x_1/t_1, \ldots x_k/t_k\}$"></SPAN>.</I></DIV><P></P>
 
 <P>
@@ -772,33 +772,33 @@ También se dice que <SPAN CLASS="MATH"><IMG
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="161" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img372.png"
+ SRC="img373.png"
  ALT="$ \tau = CONS(x, NIL)$"></SPAN> casa con el árbol <!-- MATH
  $t = CONS(CONS(A,NIL),NIL)$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="274" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img373.png"
+ SRC="img374.png"
  ALT="$ t = CONS(CONS(A,NIL),NIL)$"></SPAN> 
 y con el subárbol  <!-- MATH
  $t \ldotp 1$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="28" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img374.png"
+ SRC="img375.png"
  ALT="$ t \ldotp 1$"></SPAN>. Las respectivas sustituciones son <!-- MATH
  $t\{x/CONS(A,NIL)\}$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="173" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img375.png"
+ SRC="img376.png"
  ALT="$ t\{x/CONS(A,NIL)\}$"></SPAN> y 
 <!-- MATH
  $t \ldotp 1 \{x/A\}$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="76" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img376.png"
+ SRC="img377.png"
  ALT="$ t \ldotp 1 \{x/A\}$"></SPAN>.
 </I>
 <P>
@@ -807,14 +807,14 @@ y con el subárbol  <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="206" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img377.png"
+ SRC="img378.png"
  ALT="$ t = \tau \{x/CONS(A,NIL)\}$"></SPAN>
 <BR><!-- MATH
  $t \ldotp 1 = \tau \{x/A\}$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="109" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img378.png"
+ SRC="img379.png"
  ALT="$ t \ldotp 1 = \tau \{x/A\}$"></SPAN></I></DIV>
 <P></DIV><P></P>
 
@@ -826,33 +826,33 @@ y con el subárbol  <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="129" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img379.png"
+ SRC="img380.png"
  ALT="$ \tau = PLUS(x, y)$"></SPAN> y <!-- MATH
  $t = TIMES(PLUS(NUM, NUM), TIMES(ID, ID))$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="425" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img380.png"
+ SRC="img381.png"
  ALT="$ t = TIMES(PLUS(NUM, NUM), TIMES(ID, ID))$"></SPAN>.
 Calcule los subárboles <SPAN CLASS="MATH"><IMG
  WIDTH="16" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
- SRC="img257.png"
+ SRC="img258.png"
  ALT="$ t'$"></SPAN> de <SPAN CLASS="MATH"><IMG
  WIDTH="11" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img250.png"
+ SRC="img251.png"
  ALT="$ t$"></SPAN> y las sustituciones <!-- MATH
  $\{x/t_1, y/t_2\}$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="94" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img381.png"
+ SRC="img382.png"
  ALT="$ \{x/t_1, y/t_2\}$"></SPAN> 
 que hacen que <SPAN CLASS="MATH"><IMG
  WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img368.png"
+ SRC="img369.png"
  ALT="$ \tau$"></SPAN> case con <SPAN CLASS="MATH"><IMG
  WIDTH="16" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
- SRC="img257.png"
+ SRC="img258.png"
  ALT="$ t'$"></SPAN>.  
 </I>
 <P>
@@ -861,7 +861,7 @@ que hacen que <SPAN CLASS="MATH"><IMG
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="27" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img303.png"
+ SRC="img304.png"
  ALT="$ t/\epsilon$"></SPAN> no existe sustitución
 posible:
 </I>
@@ -872,18 +872,18 @@ PLUS(x, y)\{x/t_1, y/t_2\}$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="749" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
- SRC="img382.png"
+ SRC="img383.png"
  ALT="$ t = TIMES(PLUS(NUM, NUM), TIMES(ID, ID)) = \tau\{x/t_1, y/t_2\} =
 PLUS(x, y)\{x/t_1, y/t_2\}$"></SPAN>
 </I>
 <P>
 <I>ya que un término con raíz <SPAN CLASS="MATH"><IMG
  WIDTH="71" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img291.png"
+ SRC="img292.png"
  ALT="$ TIMES$"></SPAN> nunca podrá ser igual a un término con raíz 
 <SPAN CLASS="MATH"><IMG
  WIDTH="56" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img289.png"
+ SRC="img290.png"
  ALT="$ PLUS$"></SPAN>.</I></DIV><P></P>
 
 <P>

@@ -130,19 +130,19 @@ Repasemos las nociones de conjuntos de <A NAME="7570"></A><SPAN  CLASS="textbf">
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="126" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img7.png"
+ SRC="img8.png"
  ALT="$ G =(\Sigma,V,P,S)$"></SPAN> y una frase <!-- MATH
  $\alpha \in (V \cup \Sigma)^*$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="104" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img49.png"
+ SRC="img50.png"
  ALT="$ \alpha \in (V \cup \Sigma)^*$"></SPAN> se define el conjunto <!-- MATH
  $FIRST(\alpha)$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="90" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img48.png"
+ SRC="img49.png"
  ALT="$ FIRST(\alpha)$"></SPAN> como:
 </I>
 <P>
@@ -152,7 +152,7 @@ Repasemos las nociones de conjuntos de <A NAME="7570"></A><SPAN  CLASS="textbf">
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="319" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
- SRC="img50.png"
+ SRC="img51.png"
  ALT="$ FIRST(\alpha) = \left \{ b \in \Sigma : \alpha \stackrel{*}{\Longrightarrow} b \beta \right \}
 \cup N(\alpha)$"></SPAN> 
 </I>
@@ -169,7 +169,7 @@ Repasemos las nociones de conjuntos de <A NAME="7570"></A><SPAN  CLASS="textbf">
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="232" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
- SRC="img51.png"
+ SRC="img52.png"
  ALT="$ N(\alpha) = \left \{ \begin{array}{ll}
 \left \{ \epsilon \right \}&amp; \mbox{si ...
 ...htarrow} \epsilon$} \\
@@ -186,13 +186,13 @@ Repasemos las nociones de conjuntos de <A NAME="7570"></A><SPAN  CLASS="textbf">
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="126" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img7.png"
+ SRC="img8.png"
  ALT="$ G =(\Sigma,V,P,S)$"></SPAN> y una variable <SPAN CLASS="MATH"><IMG
  WIDTH="53" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img38.png"
+ SRC="img39.png"
  ALT="$ A \in V$"></SPAN> se define el conjunto <SPAN CLASS="MATH"><IMG
  WIDTH="115" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img136.png"
+ SRC="img137.png"
  ALT="$ FOLLOW(A)$"></SPAN> como: 
 </I>
 <P>
@@ -201,7 +201,7 @@ Repasemos las nociones de conjuntos de <A NAME="7570"></A><SPAN  CLASS="textbf">
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="385" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
- SRC="img137.png"
+ SRC="img138.png"
  ALT="$ FOLLOW(A) = \left \{ b \in \Sigma : \exists S \stackrel{*}{\Longrightarrow} \alpha A b \beta \right \} \cup E(A)$"></SPAN>
 </I>
 <P>
@@ -217,7 +217,7 @@ Repasemos las nociones de conjuntos de <A NAME="7570"></A><SPAN  CLASS="textbf">
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="234" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
- SRC="img138.png"
+ SRC="img139.png"
  ALT="$ E(A) = \left \{ \begin{array}{ll}
 \{ \$ \}&amp; \mbox{si $S \stackrel{*}{\Longrightarrow} \alpha A$} \\
 \emptyset &amp; \mbox{en otro caso}
@@ -230,7 +230,7 @@ Repasemos las nociones de conjuntos de <A NAME="7570"></A><SPAN  CLASS="textbf">
 <DIV><B>Algoritmo  <SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; 
 <I>Construcción de los conjuntos <SPAN CLASS="MATH"><IMG
  WIDTH="94" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img139.png"
+ SRC="img140.png"
  ALT="$ FIRST(X)$"></SPAN>
 </I>
 <OL>
@@ -239,7 +239,7 @@ Repasemos las nociones de conjuntos de <A NAME="7570"></A><SPAN  CLASS="textbf">
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="286" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img140.png"
+ SRC="img141.png"
  ALT="$ Si X \in \Sigma entonces FIRST(X) = {X}$"></SPAN>
 </LI>
 <LI><!-- MATH
@@ -247,7 +247,7 @@ Repasemos las nociones de conjuntos de <A NAME="7570"></A><SPAN  CLASS="textbf">
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="404" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img141.png"
+ SRC="img142.png"
  ALT="$ Si X \rightarrow \epsilon entonces FIRST(X) = FIRST(X) \cup \{ \epsilon \}$"></SPAN>
 </LI>
 <LI><!-- MATH
@@ -255,7 +255,7 @@ Repasemos las nociones de conjuntos de <A NAME="7570"></A><SPAN  CLASS="textbf">
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="325" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img142.png"
+ SRC="img143.png"
  ALT="$ Si X \in V  y X \rightarrow Y_1 Y_2 \cdots Y_k \in P entonces$"></SPAN>
 <BR>
 <DIV ALIGN="CENTER" CLASS="mathdisplay">
@@ -274,7 +274,7 @@ Repasemos las nociones de conjuntos de <A NAME="7570"></A><SPAN  CLASS="textbf">
 <TD>&nbsp;</TD>
 <TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG
  WIDTH="48" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img143.png"
+ SRC="img144.png"
  ALT="$\displaystyle i = 1;$"></TD>
 <TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
 &nbsp;</TD></TR>
@@ -282,7 +282,7 @@ Repasemos las nociones de conjuntos de <A NAME="7570"></A><SPAN  CLASS="textbf">
 <TD>&nbsp;</TD>
 <TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG
  WIDTH="22" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
- SRC="img144.png"
+ SRC="img145.png"
  ALT="$\displaystyle do$"></TD>
 <TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
 &nbsp;</TD></TR>
@@ -290,7 +290,7 @@ Repasemos las nociones de conjuntos de <A NAME="7570"></A><SPAN  CLASS="textbf">
 <TD>&nbsp;</TD>
 <TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG
  WIDTH="378" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img145.png"
+ SRC="img146.png"
  ALT="$\displaystyle   FIRST(X) = FIRST(X) \cup FIRST(Y_i) - \{ \epsilon \};$"></TD>
 <TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
 &nbsp;</TD></TR>
@@ -298,7 +298,7 @@ Repasemos las nociones de conjuntos de <A NAME="7570"></A><SPAN  CLASS="textbf">
 <TD>&nbsp;</TD>
 <TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG
  WIDTH="62" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img146.png"
+ SRC="img147.png"
  ALT="$\displaystyle   i++;$"></TD>
 <TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
 &nbsp;</TD></TR>
@@ -306,7 +306,7 @@ Repasemos las nociones de conjuntos de <A NAME="7570"></A><SPAN  CLASS="textbf">
 <TD>&nbsp;</TD>
 <TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG
  WIDTH="307" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img147.png"
+ SRC="img148.png"
  ALT="$\displaystyle mientras (\epsilon \in FIRST(Y_i) and (i \leq k))$"></TD>
 <TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
 &nbsp;</TD></TR>
@@ -314,7 +314,7 @@ Repasemos las nociones de conjuntos de <A NAME="7570"></A><SPAN  CLASS="textbf">
 <TD>&nbsp;</TD>
 <TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG
  WIDTH="490" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img148.png"
+ SRC="img149.png"
  ALT="$\displaystyle si (\epsilon \in FIRST(Y_k) and i &gt; k) FIRST(X) = FIRST(X) \cup \{ \epsilon \}$"></TD>
 <TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
 &nbsp;</TD></TR>
@@ -327,13 +327,13 @@ Este algoritmo puede ser extendido para calcular <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="90" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img48.png"
+ SRC="img49.png"
  ALT="$ FIRST(\alpha)$"></SPAN> para <!-- MATH
  $\alpha = X_1 X_2 \cdots X_n \in (V \cup \Sigma)^*$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="221" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img149.png"
+ SRC="img150.png"
  ALT="$ \alpha = X_1 X_2 \cdots X_n \in (V \cup \Sigma)^*$"></SPAN>.
 
 <P>
@@ -344,7 +344,7 @@ Este algoritmo puede ser extendido para calcular <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="90" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img48.png"
+ SRC="img49.png"
  ALT="$ FIRST(\alpha)$"></SPAN> 
 </I>
 <BR>
@@ -365,7 +365,7 @@ Este algoritmo puede ser extendido para calcular <!-- MATH
 <TD>&nbsp;</TD>
 <TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG
  WIDTH="48" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img143.png"
+ SRC="img144.png"
  ALT="$\displaystyle i = 1;$"></TD>
 <TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
 &nbsp;</TD></TR>
@@ -373,7 +373,7 @@ Este algoritmo puede ser extendido para calcular <!-- MATH
 <TD>&nbsp;</TD>
 <TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG
  WIDTH="127" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img150.png"
+ SRC="img151.png"
  ALT="$\displaystyle FIRST(\alpha) = \emptyset;$"></TD>
 <TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
 &nbsp;</TD></TR>
@@ -381,7 +381,7 @@ Este algoritmo puede ser extendido para calcular <!-- MATH
 <TD>&nbsp;</TD>
 <TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG
  WIDTH="22" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
- SRC="img144.png"
+ SRC="img145.png"
  ALT="$\displaystyle do$"></TD>
 <TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
 &nbsp;</TD></TR>
@@ -389,7 +389,7 @@ Este algoritmo puede ser extendido para calcular <!-- MATH
 <TD>&nbsp;</TD>
 <TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG
  WIDTH="374" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img151.png"
+ SRC="img152.png"
  ALT="$\displaystyle   FIRST(\alpha) = FIRST(\alpha) \cup FIRST(X_i) - \{ \epsilon \};$"></TD>
 <TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
 &nbsp;</TD></TR>
@@ -397,7 +397,7 @@ Este algoritmo puede ser extendido para calcular <!-- MATH
 <TD>&nbsp;</TD>
 <TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG
  WIDTH="62" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img146.png"
+ SRC="img147.png"
  ALT="$\displaystyle   i++;$"></TD>
 <TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
 &nbsp;</TD></TR>
@@ -405,7 +405,7 @@ Este algoritmo puede ser extendido para calcular <!-- MATH
 <TD>&nbsp;</TD>
 <TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG
  WIDTH="312" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img152.png"
+ SRC="img153.png"
  ALT="$\displaystyle mientras (\epsilon \in FIRST(X_i) and (i \leq n))$"></TD>
 <TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
 &nbsp;</TD></TR>
@@ -413,7 +413,7 @@ Este algoritmo puede ser extendido para calcular <!-- MATH
 <TD>&nbsp;</TD>
 <TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG
  WIDTH="492" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img153.png"
+ SRC="img154.png"
  ALT="$\displaystyle si (\epsilon \in FIRST(X_n) and i &gt; n) FIRST(\alpha) = FIRST(X) \cup \{ \epsilon \}$"></TD>
 <TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
 &nbsp;</TD></TR>
@@ -425,17 +425,17 @@ Este algoritmo puede ser extendido para calcular <!-- MATH
 <DIV><B>Algoritmo  <SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">3</SPAN></B> &nbsp; 
 <I>Construcción de los conjuntos <SPAN CLASS="MATH"><IMG
  WIDTH="115" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img136.png"
+ SRC="img137.png"
  ALT="$ FOLLOW(A)$"></SPAN>
 para las variables sintácticas <SPAN CLASS="MATH"><IMG
  WIDTH="53" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img38.png"
+ SRC="img39.png"
  ALT="$ A \in V$"></SPAN>: 
 </I>
 <P>
 <I>Repetir los siguientes pasos hasta que ninguno de los conjuntos <SPAN CLASS="MATH"><IMG
  WIDTH="89" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img154.png"
+ SRC="img155.png"
  ALT="$ FOLLOW$"></SPAN> cambie:
 </I>
  
@@ -445,10 +445,10 @@ para las variables sintácticas <SPAN CLASS="MATH"><IMG
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="163" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img155.png"
+ SRC="img156.png"
  ALT="$ FOLLOW(S) = \{\$\} $"></SPAN> (<SPAN CLASS="MATH"><IMG
  WIDTH="14" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img156.png"
+ SRC="img157.png"
  ALT="$ \$$"></SPAN> representa el final de la entrada)
 </LI>
 <LI><!-- MATH
@@ -456,7 +456,7 @@ para las variables sintácticas <SPAN CLASS="MATH"><IMG
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="178" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
- SRC="img157.png"
+ SRC="img158.png"
  ALT="$ Si A \rightarrow \alpha B \beta entonces$"></SPAN>
 <P><!-- MATH
  \begin{displaymath}
@@ -467,7 +467,7 @@ FOLLOW(B) =  FOLLOW(B) \cup (FIRST(\beta) - \{\epsilon\})
 <DIV ALIGN="CENTER" CLASS="mathdisplay">
 <IMG
  WIDTH="414" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img158.png"
+ SRC="img159.png"
  ALT="$\displaystyle FOLLOW(B) = FOLLOW(B) \cup (FIRST(\beta) - \{\epsilon\})$">
 </DIV><P></P>
 </LI>
@@ -476,20 +476,20 @@ FOLLOW(B) =  FOLLOW(B) \cup (FIRST(\beta) - \{\epsilon\})
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="94" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img159.png"
+ SRC="img160.png"
  ALT="$ Si A \rightarrow \alpha B$"></SPAN> o bien <!-- MATH
  $A \rightarrow \alpha B \beta$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="81" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
- SRC="img160.png"
+ SRC="img161.png"
  ALT="$ A \rightarrow \alpha B \beta$"></SPAN>
 y <!-- MATH
  $\epsilon \in FIRST(\beta)$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="118" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img161.png"
+ SRC="img162.png"
  ALT="$ \epsilon \in FIRST(\beta)$"></SPAN> entonces
 
 <P>
@@ -502,7 +502,7 @@ FOLLOW(B) = FOLLOW(B) \cup FOLLOW(A)
 <DIV ALIGN="CENTER" CLASS="mathdisplay">
 <IMG
  WIDTH="381" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img162.png"
+ SRC="img163.png"
  ALT="$\displaystyle FOLLOW(B) = FOLLOW(B) \cup FOLLOW(A)$">
 </DIV><P></P>
 </LI>
@@ -524,7 +524,7 @@ se construye el <A NAME="7574"></A><SPAN  CLASS="textbf">autómata finito determ
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="91" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img163.png"
+ SRC="img164.png"
  ALT="$ (Q, \Sigma, \delta, q_0)$"></SPAN> equivalente al NFA 
 presentado en la sección
 <A HREF="node50.html#section:conceptosbasicos">5.4</A>
@@ -534,24 +534,24 @@ usando el <A NAME="7578"></A><SPAN  CLASS="textbf">algoritmo de construcción de
 Como recordará, en la construcción del subconjunto,
 partiendo del estado de arranque <SPAN CLASS="MATH"><IMG
  WIDTH="20" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img164.png"
+ SRC="img165.png"
  ALT="$ q_0$"></SPAN> del NFA con <SPAN CLASS="MATH"><IMG
  WIDTH="12" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img5.png"
+ SRC="img6.png"
  ALT="$ \epsilon$"></SPAN>-transiciones
 se calcula su <A NAME="7580"></A><SPAN  CLASS="textbf">clausura</SPAN> <!-- MATH
  $\overline{\{q_0\}}$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="38" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
- SRC="img165.png"
+ SRC="img166.png"
  ALT="$ \overline{\{q_0\}}$"></SPAN> y las 
 clausuras de los conjuntos de estados <!-- MATH
  $\overline{\delta(\overline{\{q_0\}},a)}$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="77" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
- SRC="img166.png"
+ SRC="img167.png"
  ALT="$ \overline{\delta(\overline{\{q_0\}},a)}$"></SPAN> 
 a los que transita.  Se repite el proceso
 con los conjuntos resultantes hasta que no se introducen nuevos
@@ -563,29 +563,29 @@ La clausura <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="18" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
- SRC="img167.png"
+ SRC="img168.png"
  ALT="$ \overline{A}$"></SPAN> de un subconjunto de estados del autómata <SPAN CLASS="MATH"><IMG
  WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img1.png"
+ SRC="img2.png"
  ALT="$ A$"></SPAN> esta formada
 por todos los estados que pueden ser alcanzados mediante transiciones
 etiquetadas con la palabra vacía (denominadas <SPAN CLASS="MATH"><IMG
  WIDTH="12" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img5.png"
+ SRC="img6.png"
  ALT="$ \epsilon$"></SPAN> transiciones)
 desde los estados de <SPAN CLASS="MATH"><IMG
  WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img1.png"
+ SRC="img2.png"
  ALT="$ A$"></SPAN>. Se incluyen en <!-- MATH
  $\overline{A}$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="18" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
- SRC="img167.png"
+ SRC="img168.png"
  ALT="$ \overline{A}$"></SPAN>, naturalmente los estados 
 de <SPAN CLASS="MATH"><IMG
  WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img1.png"
+ SRC="img2.png"
  ALT="$ A$"></SPAN>.
 
 <P>
@@ -595,7 +595,7 @@ de <SPAN CLASS="MATH"><IMG
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="287" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
- SRC="img168.png"
+ SRC="img169.png"
  ALT="$ \overline{A} = \{ q \in Q / \exists q' \in Q : \hat{\delta}(q', \epsilon) = q \}$"></SPAN>
 </DIV>
 
@@ -605,11 +605,11 @@ Aquí <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="13" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
- SRC="img169.png"
+ SRC="img170.png"
  ALT="$ \hat{\delta}$"></SPAN> denota la <A NAME="7582"></A><SPAN  CLASS="textbf">función de transición del autómata</SPAN> extendida  a cadenas
 de <SPAN CLASS="MATH"><IMG
  WIDTH="25" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
- SRC="img170.png"
+ SRC="img171.png"
  ALT="$ \Sigma^*$"></SPAN>.
 
 <P>
@@ -627,7 +627,7 @@ de <SPAN CLASS="MATH"><IMG
 <TR VALIGN="MIDDLE">
 <TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
  WIDTH="278" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
- SRC="img171.png"
+ SRC="img172.png"
  ALT="$\displaystyle \hat{\delta}(q, x) = \left \{ \begin{array}{ll} \delta(\hat{\delt...
 ...,y),a) &amp; \mbox{si $x = ya$}  q &amp; \mbox{si $x = \epsilon$} \end{array} \right.$"></SPAN></TD>
 <TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
@@ -639,17 +639,17 @@ de <SPAN CLASS="MATH"><IMG
 En la práctica, y a partir de ahora así lo haremos, se prescinde de diferenciar
 entre <SPAN CLASS="MATH"><IMG
  WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img22.png"
+ SRC="img23.png"
  ALT="$ \delta$"></SPAN> y <!-- MATH
  $\hat{\delta}$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="13" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
- SRC="img169.png"
+ SRC="img170.png"
  ALT="$ \hat{\delta}$"></SPAN> usándose indistintamente la notación
 <SPAN CLASS="MATH"><IMG
  WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img22.png"
+ SRC="img23.png"
  ALT="$ \delta$"></SPAN> para ambas funciones.
 
 <P>
@@ -672,7 +672,7 @@ en numeración con los generados por <code>jison</code> (véase el cuadro
 DFA equivalente al NFA de la figura <A HREF="node50.html#fig:nfa">5.1</A></CAPTION>
 <TR><TD><IMG
  WIDTH="542" HEIGHT="462" BORDER="0"
- SRC="img172.png"
+ SRC="img173.png"
  ALT="\begin{figure}\centerline{\epsfig{file=chapter_bottomup/dfa.eps, width=12cm}}\end{figure}"></TD></TR>
 </TABLE>
 </DIV>
@@ -693,21 +693,21 @@ obtenido aplicando la construcción del subconjunto al NFA
 definido en <A HREF="node50.html#definition:slrautomata">5.4.4</A>. De hecho es la tabla
 de transiciones restringida a <SPAN CLASS="MATH"><IMG
  WIDTH="19" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img9.png"
+ SRC="img10.png"
  ALT="$ V$"></SPAN> (recuerde que el alfabeto del
 autómata es <!-- MATH
  $V \cup \Sigma$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="51" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img29.png"
+ SRC="img30.png"
  ALT="$ V \cup \Sigma$"></SPAN>, <SPAN CLASS="MATH"><IMG
  WIDTH="11" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img173.png"
+ SRC="img174.png"
  ALT="$ i$"></SPAN> denota al i-ésimo estado resultante
 de aplicar la construcción del subconjunto y que <SPAN CLASS="MATH"><IMG
  WIDTH="18" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img174.png"
+ SRC="img175.png"
  ALT="$ I_i$"></SPAN> denota al conjunto de LR(0)
 item asociado con dicho estado):
 
@@ -718,7 +718,7 @@ item asociado con dicho estado):
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="154" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
- SRC="img175.png"
+ SRC="img176.png"
  ALT="$ \delta_{\vert V \times Q} : V \times Q \rightarrow Q$"></SPAN>. 
 </DIV>
 <P>
@@ -727,7 +727,7 @@ item asociado con dicho estado):
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="156" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img176.png"
+ SRC="img177.png"
  ALT="$ goto(i, A) = \delta(A,I_i)$"></SPAN>
 </DIV>
 
@@ -739,13 +739,13 @@ esto es, <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="151" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
- SRC="img177.png"
+ SRC="img178.png"
  ALT="$ \delta_{\vert \Sigma \times Q} : \Sigma \times Q \rightarrow Q$"></SPAN>
 se adjunta a una tabla que se denomina <A NAME="7594"></A><SPAN  CLASS="textbf">tabla de acciones</SPAN>.
 La tabla de acciones es una tabla de doble entrada en los estados
 y en los símbolos de <SPAN CLASS="MATH"><IMG
  WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img8.png"
+ SRC="img9.png"
  ALT="$ \Sigma$"></SPAN>.
 Las acciones de transición ante terminales 
 se denominan <A NAME="7596"></A><SPAN  CLASS="textbf">acciones de desplazamiento</SPAN> o (<A NAME="7598"></A><SPAN  CLASS="textbf">acciones shift</SPAN>):
@@ -757,7 +757,7 @@ se denominan <A NAME="7596"></A><SPAN  CLASS="textbf">acciones de desplazamiento
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="151" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
- SRC="img177.png"
+ SRC="img178.png"
  ALT="$ \delta_{\vert \Sigma \times Q} : \Sigma \times Q \rightarrow Q$"></SPAN>
 </DIV>
 <P>
@@ -766,38 +766,38 @@ se denominan <A NAME="7596"></A><SPAN  CLASS="textbf">acciones de desplazamiento
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="211" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img178.png"
+ SRC="img179.png"
  ALT="$ action(i, a) = shift \delta(a,I_i)$"></SPAN>
 </DIV>
 
 <P>
 Cuando un estado <SPAN CLASS="MATH"><IMG
  WIDTH="13" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img179.png"
+ SRC="img180.png"
  ALT="$ s$"></SPAN> contiene un LR(0)-item de la forma 
 <!-- MATH
  $A \rightarrow \alpha_\uparrow$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="64" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img180.png"
+ SRC="img181.png"
  ALT="$ A \rightarrow \alpha_\uparrow$"></SPAN>, 
 esto es, el estado corresponde a un posible rechazo,
 ello indica que hemos llegado a un final del prefijo viable, que hemos
 visto <SPAN CLASS="MATH"><IMG
  WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img42.png"
+ SRC="img43.png"
  ALT="$ \alpha$"></SPAN> y que, por tanto, es probable que <!-- MATH
  $A \rightarrow \alpha$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="56" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img12.png"
+ SRC="img13.png"
  ALT="$ A \rightarrow \alpha$"></SPAN>
 sea el <SPAN  CLASS="textbf">handle</SPAN> de la forma sentencial derecha actual. Por tanto,
 añadiremos en entradas de la forma <SPAN CLASS="MATH"><IMG
  WIDTH="44" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img181.png"
+ SRC="img182.png"
  ALT="$ (s,a)$"></SPAN> de la tabla de acciones 
 una acción que indique que hemos encontrado el mango en la 
 posición actual y que la regla asociada es <!-- MATH
@@ -805,7 +805,7 @@ posición actual y que la regla asociada es <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="56" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img12.png"
+ SRC="img13.png"
  ALT="$ A \rightarrow \alpha$"></SPAN>.
 A una acción de este tipo se la denomina <A NAME="7600"></A><SPAN  CLASS="textbf">acción de reducción</SPAN>.
 
@@ -815,11 +815,11 @@ La cuestión es, ¿para que valores de <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="48" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img182.png"
+ SRC="img183.png"
  ALT="$ a \in \Sigma$"></SPAN> debemos disponer que
 la acción para <SPAN CLASS="MATH"><IMG
  WIDTH="44" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img181.png"
+ SRC="img182.png"
  ALT="$ (s,a)$"></SPAN> es de reducción?
 
 <P>
@@ -829,13 +829,13 @@ Se define <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="221" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img183.png"
+ SRC="img184.png"
  ALT="$ action(i, a) = reduce A \rightarrow \alpha$"></SPAN> ¿Pero, para que <!-- MATH
  $a \in \Sigma$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="48" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img182.png"
+ SRC="img183.png"
  ALT="$ a \in \Sigma$"></SPAN>?
 
 </DIV>
@@ -846,7 +846,7 @@ Podríamos decidir que ante cualquier terminal <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="48" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img182.png"
+ SRC="img183.png"
  ALT="$ a \in \Sigma$"></SPAN>
 que produzca un rechazo del autómata, pero podemos ser un poco mas
 selectivos. No cualquier terminal puede estar en la entrada en el momento
@@ -856,11 +856,11 @@ Observemos que si <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="56" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img12.png"
+ SRC="img13.png"
  ALT="$ A \rightarrow \alpha$"></SPAN> es el <SPAN  CLASS="textbf">handle</SPAN>
 de <SPAN CLASS="MATH"><IMG
  WIDTH="15" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img20.png"
+ SRC="img21.png"
  ALT="$ \gamma$"></SPAN> es porque:
 
 <P>
@@ -871,7 +871,7 @@ de <SPAN CLASS="MATH"><IMG
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="228" HEIGHT="82" ALIGN="MIDDLE" BORDER="0"
- SRC="img184.png"
+ SRC="img185.png"
  ALT="$ \exists S \begin{array}{c} * \Longrightarrow  {\scriptstyle RM} \end{array...
 ...* \Longrightarrow  {\scriptstyle RM} \end{array}
 \beta \alpha b x = \gamma$"></SPAN>
@@ -883,20 +883,20 @@ Por tanto, cuando estamos reduciendo por <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="56" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img12.png"
+ SRC="img13.png"
  ALT="$ A \rightarrow \alpha$"></SPAN>
 los únicos terminales legales que cabe esperar en una reducción por <!-- MATH
  $A \rightarrow \alpha$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="56" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img12.png"
+ SRC="img13.png"
  ALT="$ A \rightarrow \alpha$"></SPAN> son los terminales <!-- MATH
  $b \in FOLLOW(A)$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="144" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img185.png"
+ SRC="img186.png"
  ALT="$ b \in FOLLOW(A)$"></SPAN>.
 
 <P>
@@ -906,13 +906,13 @@ Se define <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="219" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img186.png"
+ SRC="img187.png"
  ALT="$ action(i, b) = reduce A \rightarrow \alpha$"></SPAN> Para <!-- MATH
  $b \in FOLLOW(A)$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="144" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img185.png"
+ SRC="img186.png"
  ALT="$ b \in FOLLOW(A)$"></SPAN>
 </DIV>
 
@@ -922,7 +922,7 @@ Dada una gramática <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="126" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img7.png"
+ SRC="img8.png"
  ALT="$ G =(\Sigma,V,P,S)$"></SPAN>, podemos construir las tablas de acciones (<SPAN  CLASS="textbf">action table</SPAN>) y  transiciones (<SPAN  CLASS="textbf">gotos table</SPAN>) mediante el siguiente algoritmo:
 
 <P>
@@ -938,7 +938,7 @@ el Autómata Finito Determinista (DFA) <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="145" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img187.png"
+ SRC="img188.png"
  ALT="$ (Q, V \cup \Sigma, \delta, I_0, F)$"></SPAN>
 equivalente al Autómata Finito No
 Determinista (NFA) definido en <A HREF="node50.html#definition:slrautomata">5.4.4</A>.
@@ -947,18 +947,18 @@ Sea <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="145" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img188.png"
+ SRC="img189.png"
  ALT="$ C = \left \{ I_1, I_2, \cdots I_n \right \}$"></SPAN> el conjunto de estados
 del DFA. Cada estado <SPAN CLASS="MATH"><IMG
  WIDTH="18" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img174.png"
+ SRC="img175.png"
  ALT="$ I_i$"></SPAN> es un conjunto de LR(0)-items o estados
 del NFA. Asociemos un índice <SPAN CLASS="MATH"><IMG
  WIDTH="11" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img173.png"
+ SRC="img174.png"
  ALT="$ i$"></SPAN> con cada conjunto <SPAN CLASS="MATH"><IMG
  WIDTH="18" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img174.png"
+ SRC="img175.png"
  ALT="$ I_i$"></SPAN>.
 </LI>
 <LI>La tabla de <SPAN  CLASS="textbf">gotos</SPAN> no es más que la función de transición del 
@@ -971,16 +971,16 @@ autómata restringida a las variables de la gramática:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="156" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img189.png"
+ SRC="img190.png"
  ALT="$ goto(i,A) = \delta(I_i, A)$"></SPAN> para todo <SPAN CLASS="MATH"><IMG
  WIDTH="53" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img38.png"
+ SRC="img39.png"
  ALT="$ A \in V$"></SPAN>
 </DIV>
 </LI>
 <LI>Las acciones para el estado <SPAN CLASS="MATH"><IMG
  WIDTH="18" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img174.png"
+ SRC="img175.png"
  ALT="$ I_i$"></SPAN> se determinan como sigue:
   
 <OL>
@@ -989,19 +989,19 @@ autómata restringida a las variables de la gramática:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="118" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
- SRC="img190.png"
+ SRC="img191.png"
  ALT="$ A \rightarrow \alpha _\uparrow a \beta \in I_i$"></SPAN>, <!-- MATH
  $\delta(I_i,a) = I_j$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="95" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img191.png"
+ SRC="img192.png"
  ALT="$ \delta(I_i,a) = I_j$"></SPAN>, <!-- MATH
  $a \in \Sigma$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="48" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img182.png"
+ SRC="img183.png"
  ALT="$ a \in \Sigma$"></SPAN> 
   entonces:
 
@@ -1012,7 +1012,7 @@ autómata restringida a las variables de la gramática:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="165" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img192.png"
+ SRC="img193.png"
  ALT="$ action[i][a] = shift j$"></SPAN>
 </DIV>
 </LI>
@@ -1021,7 +1021,7 @@ autómata restringida a las variables de la gramática:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="101" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
- SRC="img193.png"
+ SRC="img194.png"
  ALT="$ S' \rightarrow S_\uparrow \in I_i$"></SPAN> entonces 
 
 <P>
@@ -1031,7 +1031,7 @@ autómata restringida a las variables de la gramática:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="158" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img194.png"
+ SRC="img195.png"
  ALT="$ action[i][\$] = accept$"></SPAN>
 </DIV>
 </LI>
@@ -1040,7 +1040,7 @@ autómata restringida a las variables de la gramática:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="98" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img195.png"
+ SRC="img196.png"
  ALT="$ A \rightarrow \alpha _\uparrow \in I_i$"></SPAN> 
   distinto del anterior hacer
 
@@ -1051,7 +1051,7 @@ autómata restringida a las variables de la gramática:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="396" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img196.png"
+ SRC="img197.png"
  ALT="$ \forall a \in FOLLOW(A): action[i][a] = reduce A \rightarrow \alpha$"></SPAN>
 </DIV>
 </LI>
@@ -1059,7 +1059,7 @@ autómata restringida a las variables de la gramática:
 </LI>
 <LI>Las entradas de la tabla de acción que queden indefinidas después de aplicado el proceso anterior corresponden a acciones de ``<SPAN CLASS="MATH"><IMG
  WIDTH="46" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img197.png"
+ SRC="img198.png"
  ALT="$ error$"></SPAN>''.
 </LI>
 </OL></DIV><P></P>
@@ -1101,7 +1101,7 @@ a la gramática <A HREF="node50.html#example:asb">5.4.1</A>
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> a S b</I></TD>
 </TR>
 <TR><TD ALIGN="LEFT"><I> 
@@ -1112,10 +1112,10 @@ a la gramática <A HREF="node50.html#example:asb">5.4.1</A>
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> <SPAN CLASS="MATH"><IMG
  WIDTH="12" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img5.png"
+ SRC="img6.png"
  ALT="$ \epsilon$"></SPAN> </I></TD>
 </TR>
 </TABLE></DIV><I>
@@ -1139,7 +1139,7 @@ conjuntos de primeros y siguientes
 S    </I></TD>
 <TD ALIGN="LEFT"><I> a, <SPAN CLASS="MATH"><IMG
  WIDTH="12" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img5.png"
+ SRC="img6.png"
  ALT="$ \epsilon$"></SPAN> </I></TD>
 <TD ALIGN="LEFT"><I> b, $</I></TD>
 </TR>
@@ -1193,30 +1193,30 @@ S    </I></TD>
 <P>
 <I>Las entradas denotadas con <SPAN CLASS="MATH"><IMG
  WIDTH="13" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img179.png"
+ SRC="img180.png"
  ALT="$ s$"></SPAN> <SPAN CLASS="MATH"><IMG
  WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img21.png"
+ SRC="img22.png"
  ALT="$ n$"></SPAN> (<SPAN CLASS="MATH"><IMG
  WIDTH="13" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img179.png"
+ SRC="img180.png"
  ALT="$ s$"></SPAN> por shift) indican un desplazamiento
 al estado <SPAN CLASS="MATH"><IMG
  WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img21.png"
+ SRC="img22.png"
  ALT="$ n$"></SPAN>, las denotadas con <SPAN CLASS="MATH"><IMG
  WIDTH="13" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img94.png"
+ SRC="img95.png"
  ALT="$ r$"></SPAN> <SPAN CLASS="MATH"><IMG
  WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img21.png"
+ SRC="img22.png"
  ALT="$ n$"></SPAN> (<SPAN CLASS="MATH"><IMG
  WIDTH="13" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img94.png"
+ SRC="img95.png"
  ALT="$ r$"></SPAN> por reduce o reducción) indican una operación
 de reducción o antiderivación por la regla <SPAN CLASS="MATH"><IMG
  WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img21.png"
+ SRC="img22.png"
  ALT="$ n$"></SPAN>.  Las entradas vacías 
 corresponden a acciones de error.</I></DIV><P></P>
 

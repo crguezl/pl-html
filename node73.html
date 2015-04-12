@@ -144,11 +144,11 @@ La gramática tiene dos variables sintácticas
 que denotan dos tipos de recursos de la máquina: los registros
 representados por la variable sintáctica <SPAN CLASS="MATH"><IMG
  WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img69.png"
+ SRC="img70.png"
  ALT="$ R$"></SPAN> y las direcciones de memoria 
 representadas por <SPAN CLASS="MATH"><IMG
  WIDTH="28" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img307.png"
+ SRC="img308.png"
  ALT="$ M.$"></SPAN> 
 Una instrucción deja su resultado en cierto lugar, normalmente un registro o
 memoria. La idea es que las variables sintácticas en los lados izquierdos
@@ -172,7 +172,7 @@ Ademas, a cada instrucción le asociamos un coste:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> NUM</TD>
 <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=120><code>LOADC R, NUM</code></TD>
 <TD ALIGN="LEFT">1</TD>
@@ -182,7 +182,7 @@ Ademas, a cada instrucción le asociamos un coste:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> M</TD>
 <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=120><code>LOADM R, M</code></TD>
 <TD ALIGN="LEFT">3</TD>
@@ -192,7 +192,7 @@ Ademas, a cada instrucción le asociamos un coste:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> R</TD>
 <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=120><code>STOREM M, R</code></TD>
 <TD ALIGN="LEFT">3</TD>
@@ -202,7 +202,7 @@ Ademas, a cada instrucción le asociamos un coste:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> PLUS(R,M)</TD>
 <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=120><code>PLUSM R, M</code></TD>
 <TD ALIGN="LEFT">3</TD>
@@ -212,7 +212,7 @@ Ademas, a cada instrucción le asociamos un coste:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> PLUS(R,R)</TD>
 <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=120><code>PLUSR R, R</code></TD>
 <TD ALIGN="LEFT">1</TD>
@@ -222,7 +222,7 @@ Ademas, a cada instrucción le asociamos un coste:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> TIMES(R,M)</TD>
 <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=120><code>TIMESM R, M</code></TD>
 <TD ALIGN="LEFT">6</TD>
@@ -232,7 +232,7 @@ Ademas, a cada instrucción le asociamos un coste:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> TIMES(R,R)</TD>
 <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=120><code>TIMESR R, R</code></TD>
 <TD ALIGN="LEFT">4</TD>
@@ -242,7 +242,7 @@ Ademas, a cada instrucción le asociamos un coste:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> PLUS(R,TIMES(NUM,R))</TD>
 <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=120><code>PLUSCR R, NUM, R</code></TD>
 <TD ALIGN="LEFT">4</TD>
@@ -252,7 +252,7 @@ Ademas, a cada instrucción le asociamos un coste:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> TIMES(R,TIMES(NUM,R))</TD>
 <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=120><code>TIMESCR R, NUM, R</code></TD>
 <TD ALIGN="LEFT">5</TD>
@@ -280,7 +280,7 @@ Construyamos una derivación a izquierdas para el árbol anterior:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="174" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img308.png"
+ SRC="img309.png"
  ALT="$ P(M,T(N,T(N,M)))$"></SPAN></SPAN></TD>
 </TR>
 <TR><TD ALIGN="LEFT">Derivación</TD>
@@ -293,14 +293,14 @@ Construyamos una derivación a izquierdas para el árbol anterior:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="51" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img309.png"
+ SRC="img310.png"
  ALT="$ R \Longrightarrow$"></SPAN></TD>
 <TD ALIGN="LEFT">R <!-- MATH
  $\rightarrow$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> PLUS(R,R)</TD>
 <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85><code>PLUSR R, R</code></TD>
 <TD ALIGN="RIGHT">1</TD>
@@ -310,14 +310,14 @@ Construyamos una derivación a izquierdas para el árbol anterior:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="99" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img310.png"
+ SRC="img311.png"
  ALT="$ P(R,R) \Longrightarrow$"></SPAN></TD>
 <TD ALIGN="LEFT">R <!-- MATH
  $\rightarrow$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> M</TD>
 <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85><code>LOADM R, M</code></TD>
 <TD ALIGN="RIGHT">3</TD>
@@ -327,14 +327,14 @@ Construyamos una derivación a izquierdas para el árbol anterior:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="104" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img311.png"
+ SRC="img312.png"
  ALT="$ P(M,R) \Longrightarrow$"></SPAN></TD>
 <TD ALIGN="LEFT">R <!-- MATH
  $\rightarrow$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> TIMES(R,R)</TD>
 <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85><code>TIMESR R, R</code></TD>
 <TD ALIGN="RIGHT">4</TD>
@@ -344,14 +344,14 @@ Construyamos una derivación a izquierdas para el árbol anterior:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="151" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img312.png"
+ SRC="img313.png"
  ALT="$ P(M, T(R, R)) \Longrightarrow$"></SPAN></TD>
 <TD ALIGN="LEFT">R <!-- MATH
  $\rightarrow$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> NUM</TD>
 <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85><code>LOADC R, NUM</code></TD>
 <TD ALIGN="RIGHT">1</TD>
@@ -361,14 +361,14 @@ Construyamos una derivación a izquierdas para el árbol anterior:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="153" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img313.png"
+ SRC="img314.png"
  ALT="$ P(M, T(N, R)) \Longrightarrow$"></SPAN></TD>
 <TD ALIGN="LEFT">R <!-- MATH
  $\rightarrow$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> TIMES(R,R)</TD>
 <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85><code>TIMESR R, R</code></TD>
 <TD ALIGN="RIGHT">4</TD>
@@ -378,14 +378,14 @@ Construyamos una derivación a izquierdas para el árbol anterior:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="200" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img314.png"
+ SRC="img315.png"
  ALT="$ P(M, T(N, T(R, R))) \Longrightarrow$"></SPAN></TD>
 <TD ALIGN="LEFT">R <!-- MATH
  $\rightarrow$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> NUM</TD>
 <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85><code>LOADC R, NUM</code></TD>
 <TD ALIGN="RIGHT">1</TD>
@@ -395,14 +395,14 @@ Construyamos una derivación a izquierdas para el árbol anterior:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="202" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img315.png"
+ SRC="img316.png"
  ALT="$ P(M, T(N, T(N, R))) \Longrightarrow$"></SPAN></TD>
 <TD ALIGN="LEFT">R <!-- MATH
  $\rightarrow$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> M</TD>
 <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85><code>LOADM R, M</code></TD>
 <TD ALIGN="RIGHT">3</TD>
@@ -412,7 +412,7 @@ Construyamos una derivación a izquierdas para el árbol anterior:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="174" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img308.png"
+ SRC="img309.png"
  ALT="$ P(M,T(N,T(N,M)))$"></SPAN></TD>
 <TD ALIGN="LEFT">&nbsp;</TD>
 <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=85>&nbsp;</TD>
@@ -453,7 +453,7 @@ a izquierdas:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="174" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img308.png"
+ SRC="img309.png"
  ALT="$ P(M,T(N,T(N,M)))$"></SPAN></SPAN></TD>
 </TR>
 <TR><TD ALIGN="LEFT">Derivación</TD>
@@ -466,14 +466,14 @@ a izquierdas:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="51" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img309.png"
+ SRC="img310.png"
  ALT="$ R \Longrightarrow$"></SPAN></TD>
 <TD ALIGN="LEFT">R <!-- MATH
  $\rightarrow$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> PLUS(R,TIMES(NUM,R))</TD>
 <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113><code>PLUSCR R, NUM, R</code></TD>
 <TD ALIGN="RIGHT">4</TD>
@@ -483,14 +483,14 @@ a izquierdas:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="148" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img316.png"
+ SRC="img317.png"
  ALT="$ P(R,T(N,R)) \Longrightarrow$"></SPAN></TD>
 <TD ALIGN="LEFT">R <!-- MATH
  $\rightarrow$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> M</TD>
 <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113><code>LOADM R, M</code></TD>
 <TD ALIGN="RIGHT">3</TD>
@@ -500,14 +500,14 @@ a izquierdas:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="153" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img313.png"
+ SRC="img314.png"
  ALT="$ P(M, T(N, R)) \Longrightarrow$"></SPAN></TD>
 <TD ALIGN="LEFT">R <!-- MATH
  $\rightarrow$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> TIMES(R,M)</TD>
 <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113><code>TIMESM R, M</code></TD>
 <TD ALIGN="RIGHT">6</TD>
@@ -517,14 +517,14 @@ a izquierdas:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="172" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img317.png"
+ SRC="img318.png"
  ALT="$ P(M,T(N,T(R,M))) $"></SPAN></TD>
 <TD ALIGN="LEFT">R <!-- MATH
  $\rightarrow$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> NUM</TD>
 <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113><code>LOADC R, NUM</code></TD>
 <TD ALIGN="RIGHT">1</TD>
@@ -534,7 +534,7 @@ a izquierdas:
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="174" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img308.png"
+ SRC="img309.png"
  ALT="$ P(M,T(N,T(N,M)))$"></SPAN></TD>
 <TD ALIGN="LEFT">&nbsp;</TD>
 <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=113>&nbsp;</TD>
@@ -595,23 +595,23 @@ y la página <A NAME="tex2html345"
 <UL>
 <LI>Sea <SPAN CLASS="MATH"><IMG
  WIDTH="34" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img318.png"
+ SRC="img319.png"
  ALT="$ G_M$"></SPAN> la gramática árbol asociada segun la descripción anterior
 con el juego de instrucciones de la máquina <SPAN CLASS="MATH"><IMG
  WIDTH="24" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img319.png"
+ SRC="img320.png"
  ALT="$ M$"></SPAN>. Especifique formalmente
 las cuatro componentes de la gramática <!-- MATH
  $G_M = (\Sigma_M, V_M, P_M, S_M)$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="199" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img320.png"
+ SRC="img321.png"
  ALT="$ G_M = (\Sigma_M, V_M, P_M, S_M)$"></SPAN> 
 </LI>
 <LI>¿Cual es el lenguaje árbol generado por <SPAN CLASS="MATH"><IMG
  WIDTH="34" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img318.png"
+ SRC="img319.png"
  ALT="$ G_M$"></SPAN>?
 </LI>
 <LI>¿A que lenguaje debe pertenecer la representación intermedia IR para

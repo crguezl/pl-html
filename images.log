@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.1.18)  12 APR 2015 20:24
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.1.18)  12 APR 2015 20:32
 entering extended mode
  %&-line parsing enabled.
 **./images.tex
@@ -453,22 +453,27 @@ latex2htmlLength oddsidemargin=-15.36446pt
 
 latex2htmlLength evensidemargin=-15.36446pt
 
-LaTeX Font Info:    Try loading font information for U+lasy on input line 1171.
+l2hSize :tex2html_nomath_inline19041:5.97499pt::5.97499pt::5.71838pt.
+[1
+
+
+
+]
+LaTeX Font Info:    Try loading font information for U+lasy on input line 1177.
 
 (/usr/share/texmf-texlive/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 1171.
+LaTeX Font Info:    Try loading font information for U+msa on input line 1177.
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 1171.
+LaTeX Font Info:    Try loading font information for U+msb on input line 1177.
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-l2hSize :tex2html_wrap_inline20278:7.98248pt::7.98248pt::64.81665pt.
-[1
-
+l2hSize :tex2html_wrap_inline20303:7.98248pt::7.98248pt::64.81665pt.
+[2
 
 
 ] (./images.aux)
@@ -485,4 +490,4 @@ Here is how much of TeX's memory you used:
  714 hyphenation exceptions out of 8191
  38i,5n,35p,326b,362s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on images.dvi (1 page, 2436 bytes).
+Output written on images.dvi (2 pages, 3056 bytes).

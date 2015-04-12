@@ -145,11 +145,11 @@ Introducción
 </H2>
 En este método se asocia una subrutina con cada variable sintáctica <SPAN CLASS="MATH"><IMG
  WIDTH="53" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img38.png"
+ SRC="img39.png"
  ALT="$ A \in V$"></SPAN>. Dicha subrutina 
 (que llamaremos <code>A</code>) reconocerá el lenguaje generado desde la variable <SPAN CLASS="MATH"><IMG
  WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img1.png"
+ SRC="img2.png"
  ALT="$ A$"></SPAN>:
 
 <P>
@@ -159,14 +159,14 @@ En este método se asocia una subrutina con cada variable sintáctica <SPAN CLAS
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="222" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
- SRC="img39.png"
+ SRC="img40.png"
  ALT="$ L_A(G) = \{ x \in \Sigma^* : A \stackrel{*}{\Longrightarrow} x \}$"></SPAN>
 </DIV>
 
 <P>
 En este método se escribe una rutina <code>A</code> por variable sintáctica <SPAN CLASS="MATH"><IMG
  WIDTH="53" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img38.png"
+ SRC="img39.png"
  ALT="$ A \in V$"></SPAN>. 
 Se le da a la rutina asociada el mismo nombre que a la variable sintáctica
 asociada. 
@@ -175,35 +175,35 @@ asociada.
 La función de la rutina <code>A</code> asociada con la variable
 <SPAN CLASS="MATH"><IMG
  WIDTH="53" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img38.png"
+ SRC="img39.png"
  ALT="$ A \in V$"></SPAN> es reconocer el lenguaje <SPAN CLASS="MATH"><IMG
  WIDTH="43" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img40.png"
+ SRC="img41.png"
  ALT="$ L(A)$"></SPAN> generado por <SPAN CLASS="MATH"><IMG
  WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img1.png"
+ SRC="img2.png"
  ALT="$ A$"></SPAN>.
 
 <P>
 La estrategia general que sigue la rutina <code>A</code> para reconocer
 <SPAN CLASS="MATH"><IMG
  WIDTH="43" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img40.png"
+ SRC="img41.png"
  ALT="$ L(A)$"></SPAN> es decidir en términos del terminal <SPAN CLASS="MATH"><IMG
  WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img41.png"
+ SRC="img42.png"
  ALT="$ a$"></SPAN> en la entrada
 que regla de producción concreta <!-- MATH
  $A \rightarrow \alpha$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="56" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img12.png"
+ SRC="img13.png"
  ALT="$ A \rightarrow \alpha$"></SPAN> se aplica para
 a continuación comprobar que la entrada que sigue pertenece al lenguaje generado por 
 <SPAN CLASS="MATH"><IMG
  WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img42.png"
+ SRC="img43.png"
  ALT="$ \alpha$"></SPAN>. 
 
 <P>
@@ -213,7 +213,7 @@ esta siendo observado (denotado habitualmente como
 <code>lookahead</code>) permite determinar unívocamente
 que producción de <SPAN CLASS="MATH"><IMG
  WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img1.png"
+ SRC="img2.png"
  ALT="$ A$"></SPAN> hay que aplicar. 
 
 <P>
@@ -223,38 +223,38 @@ es <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="56" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img12.png"
+ SRC="img13.png"
  ALT="$ A \rightarrow \alpha$"></SPAN> se procede a reconocer <!-- MATH
  $L_{\alpha}(G)$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="53" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img43.png"
+ SRC="img44.png"
  ALT="$ L_{\alpha}(G)$"></SPAN>,
 el lenguaje generado por <SPAN CLASS="MATH"><IMG
  WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img42.png"
+ SRC="img43.png"
  ALT="$ \alpha$"></SPAN>. Si <!-- MATH
  $\alpha = X_1 \ldots X_n$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="111" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img44.png"
+ SRC="img45.png"
  ALT="$ \alpha = X_1 \ldots X_n$"></SPAN>,
 las apariciones de terminales <SPAN CLASS="MATH"><IMG
  WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img45.png"
+ SRC="img46.png"
  ALT="$ X_i$"></SPAN> en <SPAN CLASS="MATH"><IMG
  WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img42.png"
+ SRC="img43.png"
  ALT="$ \alpha$"></SPAN> son emparejadas
 con los terminales en la entrada mientras que las apariciones de variables <SPAN CLASS="MATH"><IMG
  WIDTH="62" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img46.png"
+ SRC="img47.png"
  ALT="$ X_i = B$"></SPAN>
 en <SPAN CLASS="MATH"><IMG
  WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img42.png"
+ SRC="img43.png"
  ALT="$ \alpha$"></SPAN> se traducen en llamadas a la correspondiente subrutina asociada con <code>B</code>.
 
 <P>
@@ -285,10 +285,10 @@ Una Gramática Simple</CAPTION>
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> statement  ';'  statements        <SPAN CLASS="MATH"><IMG
  WIDTH="10" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img36.png"
+ SRC="img37.png"
  ALT="$ \vert$"></SPAN> statement</TD>
 </TR>
 <TR><TD ALIGN="LEFT">statement    <!-- MATH
@@ -296,10 +296,10 @@ Una Gramática Simple</CAPTION>
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> ID '=' expression                 <SPAN CLASS="MATH"><IMG
  WIDTH="10" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img36.png"
+ SRC="img37.png"
  ALT="$ \vert$"></SPAN> P  expression</TD>
 </TR>
 <TR><TD ALIGN="LEFT">expression   <!-- MATH
@@ -307,10 +307,10 @@ Una Gramática Simple</CAPTION>
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> term '+' expression               <SPAN CLASS="MATH"><IMG
  WIDTH="10" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img36.png"
+ SRC="img37.png"
  ALT="$ \vert$"></SPAN> term</TD>
 </TR>
 <TR><TD ALIGN="LEFT">term         <!-- MATH
@@ -318,10 +318,10 @@ Una Gramática Simple</CAPTION>
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> factor '*' term                   <SPAN CLASS="MATH"><IMG
  WIDTH="10" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img36.png"
+ SRC="img37.png"
  ALT="$ \vert$"></SPAN> factor</TD>
 </TR>
 <TR><TD ALIGN="LEFT">factor       <!-- MATH
@@ -329,13 +329,13 @@ Una Gramática Simple</CAPTION>
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.png"
+ SRC="img36.png"
  ALT="$ \rightarrow$"></SPAN> '(' expression ')' <SPAN CLASS="MATH"><IMG
  WIDTH="10" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img36.png"
+ SRC="img37.png"
  ALT="$ \vert$"></SPAN> ID <SPAN CLASS="MATH"><IMG
  WIDTH="10" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img36.png"
+ SRC="img37.png"
  ALT="$ \vert$"></SPAN> NUM</TD>
 </TR>
 </TABLE>
@@ -572,34 +572,34 @@ Como vemos en el ejemplo, el análisis predictivo confía en que, si estamos
 ejecutando la entrada del procedimiento <code>A</code>,
 el cuál está asociado con la variable <SPAN CLASS="MATH"><IMG
  WIDTH="53" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img38.png"
+ SRC="img39.png"
  ALT="$ A \in V$"></SPAN>, el símbolo terminal
 que esta en la entrada <SPAN CLASS="MATH"><IMG
  WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img41.png"
+ SRC="img42.png"
  ALT="$ a$"></SPAN> determine de manera unívoca la regla
 de producción <!-- MATH
  $A \rightarrow a \alpha$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="65" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img47.png"
+ SRC="img48.png"
  ALT="$ A \rightarrow a \alpha$"></SPAN> que debe ser procesada.
 
 <P>
 Si se piensa, esta condición requiere que todas las partes derechas <SPAN CLASS="MATH"><IMG
  WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img42.png"
+ SRC="img43.png"
  ALT="$ \alpha$"></SPAN> de
 las reglas <!-- MATH
  $A \rightarrow \alpha$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="56" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img12.png"
+ SRC="img13.png"
  ALT="$ A \rightarrow \alpha$"></SPAN> de <SPAN CLASS="MATH"><IMG
  WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img1.png"
+ SRC="img2.png"
  ALT="$ A$"></SPAN> 
 <FONT COLOR="#ff0000"> comiencen</FONT> por diferentes símbolos.
 Para formalizar esta idea, introduciremos el concepto de
@@ -608,7 +608,7 @@ conjunto <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="90" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img48.png"
+ SRC="img49.png"
  ALT="$ FIRST(\alpha)$"></SPAN>:
 
 <P>
@@ -620,20 +620,20 @@ conjunto <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="126" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img7.png"
+ SRC="img8.png"
  ALT="$ G =(\Sigma,V,P,S)$"></SPAN> y un símbolo <!-- MATH
  $\alpha \in (V \cup \Sigma)^*$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="104" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img49.png"
+ SRC="img50.png"
  ALT="$ \alpha \in (V \cup \Sigma)^*$"></SPAN> se define el conjunto 
 <!-- MATH
  $FIRST(\alpha)$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="90" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img48.png"
+ SRC="img49.png"
  ALT="$ FIRST(\alpha)$"></SPAN> como:
 </I>
 <P>
@@ -643,7 +643,7 @@ conjunto <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="319" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
- SRC="img50.png"
+ SRC="img51.png"
  ALT="$ FIRST(\alpha) = \left \{ b \in \Sigma : \alpha \stackrel{*}{\Longrightarrow} b \beta \right \}
 \cup N(\alpha)$"></SPAN> 
 </I>
@@ -660,7 +660,7 @@ conjunto <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="232" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
- SRC="img51.png"
+ SRC="img52.png"
  ALT="$ N(\alpha) = \left \{ \begin{array}{ll}
 \left \{ \epsilon \right \}&amp; \mbox{si ...
 ...htarrow} \epsilon$} \\
@@ -676,17 +676,17 @@ Si <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="129" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img52.png"
+ SRC="img53.png"
  ALT="$ A \rightarrow \gamma_1 \mid \ldots \mid \gamma_n$"></SPAN> y los conjuntos <!-- MATH
  $FIRST(\gamma_i)$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="93" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="img53.png"
+ SRC="img54.png"
  ALT="$ FIRST(\gamma_i)$"></SPAN> son 
 disjuntos podemos construir el procedimiento para la variable <SPAN CLASS="MATH"><IMG
  WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img1.png"
+ SRC="img2.png"
  ALT="$ A$"></SPAN> siguiendo
 este seudocódigo:
 
@@ -703,31 +703,31 @@ A = function() {
 <P>
 Donde si <SPAN CLASS="MATH"><IMG
  WIDTH="21" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img54.png"
+ SRC="img55.png"
  ALT="$ \gamma_j$"></SPAN> es <!-- MATH
  $X_1 \ldots X_k$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="76" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img55.png"
+ SRC="img56.png"
  ALT="$ X_1 \ldots X_k$"></SPAN> el código <code>gamma_j</code> consiste
 en una secuencia <!-- MATH
  $i = 1 \ldots k$
  -->
 <SPAN CLASS="MATH"><IMG
  WIDTH="79" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img56.png"
+ SRC="img57.png"
  ALT="$ i = 1 \ldots k$"></SPAN> de llamadas de uno de estos dos tipos:
 
 <UL>
 <LI>Llamar a la subrutina <code>X_i</code> si <SPAN CLASS="MATH"><IMG
  WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img45.png"
+ SRC="img46.png"
  ALT="$ X_i$"></SPAN> es una variable sintáctica
 </LI>
 <LI>Hacer una llamada a <code>match(X_i)</code> si <SPAN CLASS="MATH"><IMG
  WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="img45.png"
+ SRC="img46.png"
  ALT="$ X_i$"></SPAN> es un terminal
 </LI>
 </UL>
