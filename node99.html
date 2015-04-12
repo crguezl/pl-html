@@ -276,7 +276,27 @@ Should display index with posts: red</A>
 
 Vamos ahora a hacer una prueba sobre nuestro código. 
 Nuestro objetivo es hacer que nuestra aplicación funcione como un pequeño blog.
-Empezaremos describiendo como debe ser la ruta <code>index</code>.
+
+<P>
+¿Cómo lo vamos a hacer?
+
+<P>
+Reescribiremos <code>routes/index.coffee</code> de manera que por cada ruta URL de la 
+aplicación el objeto <code>routes</code> exportado por <code>routes/index.coffee</code> disponga
+de un método que procesa esa ruta. Así:
+
+<UL>
+<LI>Así la ruta <code>/</code> será procesada por el método <code>index</code>
+</LI>
+<LI>la ruta <code>/post/new</code> será procesada por un método <code>newPost</code>, 
+</LI>
+<LI>etc.
+</LI>
+</UL>
+
+<P>
+Empezaremos describiendo como debe ser la ruta <code>index</code> del objeto
+<code>routes</code>.
 
 <P>
 <PRE>
