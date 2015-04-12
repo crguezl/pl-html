@@ -27,19 +27,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2771"
+<A NAME="tex2html2778"
   HREF="node100.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2765"
+<A NAME="tex2html2772"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2761"
+<A NAME="tex2html2768"
   HREF="node98.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2767"
+<A NAME="tex2html2774"
   HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2769"
+<A NAME="tex2html2776"
   HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -79,23 +79,46 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2772"
+<B> Sig:</B> <A NAME="tex2html2779"
   HREF="node100.html">&#205;ndice General</A>
-<B>Sup:</B> <A NAME="tex2html2766"
+<B>Sup:</B> <A NAME="tex2html2773"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2762"
+<B> Ant:</B> <A NAME="tex2html2769"
   HREF="node98.html">Porting to Coffeescript</A>
 <B> Con:</B> 
-<A NAME="tex2html2767"
+<A NAME="tex2html2774"
   HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2769"
+<A NAME="tex2html2776"
   HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
 <!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><UL>
+<LI><UL>
+<LI><A NAME="tex2html2780"
+  HREF="node99.html#SECTION06230010000000000000">Mocha: done</A>
+<LI><A NAME="tex2html2781"
+  HREF="node99.html#SECTION06230020000000000000">Escribiendo newPost</A>
+<LI><A NAME="tex2html2782"
+  HREF="node99.html#SECTION06230030000000000000">views/add_post.jade</A>
+<LI><A NAME="tex2html2783"
+  HREF="node99.html#SECTION06230040000000000000">views/layout.jade</A>
+<LI><A NAME="tex2html2784"
+  HREF="node99.html#SECTION06230050000000000000">Should display the add post page: green</A>
+<LI><A NAME="tex2html2785"
+  HREF="node99.html#SECTION06230060000000000000">views/index.jade</A>
+<LI><A NAME="tex2html2786"
+  HREF="node99.html#SECTION06230070000000000000">Gulpfile</A>
+</UL></UL></UL>
+<!--End of Table of Child-Links-->
+<HR>
 
 <H1><A NAME="SECTION06230000000000000000">
 Pruebas</A>
@@ -426,6 +449,13 @@ el cuerpo de <code>newPost</code> es vacío.
 </PRE>
 
 <P>
+
+<H4><A NAME="SECTION06230010000000000000">
+Mocha: done</A>
+</H4>
+  
+
+<P>
 How can we make absolutely sure it gets called during our test run? 
 
 <UL>
@@ -488,6 +518,15 @@ Now it fails:
      Error: timeout of 2000ms exceeded
     at [object Object].&lt;anonymous&gt; (/usr/loc
 </PRE>
+
+<P>
+
+<H4><A NAME="SECTION06230020000000000000">
+Escribiendo newPost</A>
+</H4>
+  
+
+<P>
 Let’s go ahead and implement the route and connect it into our router.
 <PRE>
 ~/src/coffee/coffeepress(master)]$ cat routes/index.coffee 
@@ -506,6 +545,15 @@ And connecting it up in the <code>app.coffee</code>:
 app.get '/', routes.index
 app.get '/post/new', routes.newPost
 </PRE>
+
+<P>
+
+<H4><A NAME="SECTION06230030000000000000">
+views/add_post.jade</A>
+</H4>
+  
+
+<P>
 Ademas tenemos que añadir la vista  <code>add_post</code>:
 <PRE>
 [~/src/coffee/coffeepress(master)]$ cat views/add_post.jade 
@@ -532,6 +580,15 @@ form(method="post", action="/post/new")
 <LI>The <code>&lt;fieldset&gt;</code> tag draws a box around the related elements.
 </LI>
 </UL>
+
+<P>
+
+<H4><A NAME="SECTION06230040000000000000">
+views/layout.jade</A>
+</H4>
+  
+
+<P>
 Necesitamos también un <code>layout</code>:
 <PRE>
 [~/src/coffee/coffeepress(master)]$ cat views/layout.jade 
@@ -554,6 +611,14 @@ html
               li: a(href="/post/new") New Post
     #content.container!=body
 </PRE>
+
+<P>
+
+<H4><A NAME="SECTION06230050000000000000">
+Should display the add post page: green</A>
+</H4>
+  
+
 Ahora podemos ejecutar las pruebas:
 <PRE>
 [~/src/coffee/coffeepress(master)]$ mocha --compilers coffee:coffee-script/register -R spec test/routes-test.coffee 
@@ -568,6 +633,15 @@ Ahora podemos ejecutar las pruebas:
 
   2 passing (9ms)
 </PRE>
+
+<P>
+
+<H4><A NAME="SECTION06230060000000000000">
+views/index.jade</A>
+</H4>
+  
+
+<P>
 Completemos la vista <code>index</code>:
 <PRE>
 [~/src/coffee/coffeepress(master)]$ cat views/index.jade 
@@ -577,6 +651,13 @@ Completemos la vista <code>index</code>:
       a(href="/post/#{post.id}")= post.title
   .content!=post.body
 </PRE>
+
+<P>
+
+<H4><A NAME="SECTION06230070000000000000">
+Gulpfile</A>
+</H4>
+  
 
 <P>
 Vamos a crear un <code>gulpfile</code> para ejecutar las tareas mas comunes:
@@ -620,19 +701,19 @@ ahora podemos ejecutar las pruebas con <code>gulp test</code>.
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2771"
+<A NAME="tex2html2778"
   HREF="node100.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2765"
+<A NAME="tex2html2772"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2761"
+<A NAME="tex2html2768"
   HREF="node98.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2767"
+<A NAME="tex2html2774"
   HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2769"
+<A NAME="tex2html2776"
   HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -672,17 +753,17 @@ ahora podemos ejecutar las pruebas con <code>gulp test</code>.
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2772"
+<B> Sig:</B> <A NAME="tex2html2779"
   HREF="node100.html">&#205;ndice General</A>
-<B>Sup:</B> <A NAME="tex2html2766"
+<B>Sup:</B> <A NAME="tex2html2773"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2762"
+<B> Ant:</B> <A NAME="tex2html2769"
   HREF="node98.html">Porting to Coffeescript</A>
 </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I>Casiano Rodríguez León <BR>
-2015-04-09</I>
+2015-04-12</I>
 </ADDRESS>
 </BODY>
 </HTML>
