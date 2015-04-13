@@ -286,9 +286,11 @@ aplicación el objeto <code>routes</code> exportado por <code>routes/index.coffe
 de un método que procesa esa ruta. Así:
 
 <UL>
-<LI>Así la ruta <code>/</code> será procesada por el método <code>index</code>
+<LI>Así un <code>get</code> a la ruta <code>/</code> será procesada por el método <code>index</code>
 </LI>
-<LI>la ruta <code>/post/new</code> será procesada por un método <code>newPost</code>, 
+<LI>Un <code>get</code> a la ruta <code>/post/new</code> será procesada por un método <code>newPost</code>, 
+</LI>
+<LI>Un <code>post</code> a la ruta <code>/post/new</code> será procesada por un método <code>addPost</code>, 
 </LI>
 <LI>etc.
 </LI>
