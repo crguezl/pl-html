@@ -1009,6 +1009,13 @@ module.exports =
     posts.push post
     res.redirect "/"
 </PRE>
+We also add a new route to <code>app.coffee</code>
+<PRE>
+~/src/coffee/coffeepress(master)]$ sed -ne '20,22p' app.coffee 
+app.get  "/"        , routes.index
+app.get  "/post/new", routes.newPost
+app.post "/post/new", routes.addPost
+</PRE>
 
 <P>
 
