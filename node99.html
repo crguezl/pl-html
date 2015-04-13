@@ -125,9 +125,9 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <LI><A NAME="tex2html2804"
   HREF="node99.html#SECTION062300110000000000000">Escribiendo newPost</A>
 <LI><A NAME="tex2html2805"
-  HREF="node99.html#SECTION062300120000000000000">views/add_post.jade</A>
+  HREF="node99.html#SECTION062300120000000000000">views/layout.jade</A>
 <LI><A NAME="tex2html2806"
-  HREF="node99.html#SECTION062300130000000000000">views/layout.jade</A>
+  HREF="node99.html#SECTION062300130000000000000">views/add_post.jade</A>
 <LI><A NAME="tex2html2807"
   HREF="node99.html#SECTION062300140000000000000">Should display the add post page: (true) green</A>
 <LI><A NAME="tex2html2808"
@@ -741,6 +741,48 @@ app.get '/post/new', routes.newPost
 <P>
 
 <H4><A NAME="SECTION062300120000000000000">
+views/layout.jade</A>
+</H4>
+  
+
+<P>
+Necesitamos un <code>layout</code>:
+<PRE>
+~/src/coffee/coffeepress(master)]$ cat views/layout.jade 
+doctype html
+html
+  head
+    title= title
+    //link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css")
+    //script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+    //script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
+    style(type="text/css")
+      #content { padding-top: 60px;}
+  body
+    .topbar-wrapper
+      .topbar
+        .topbar-inner
+          .container
+            h3: a(href="/") My Coffeepress Blog
+            ul.nav
+              li: a(href="/post/new") New Post
+              #content.container
+                block content
+</PRE>
+
+<UL>
+<LI>Jade supports template inheritance via the <code>block</code> and <code>extends</code> keywords. 
+</LI>
+<LI>A <code>block</code> is simply a 
+<FONT COLOR="#0000ff"> block of Jade</FONT> 
+that may be replaced within a child
+template, this process is recursive.
+</LI>
+</UL>
+
+<P>
+
+<H4><A NAME="SECTION062300130000000000000">
 views/add_post.jade</A>
 </H4>
   
@@ -769,6 +811,21 @@ block content
 </PRE>
 
 <UL>
+<LI>The <code>extends</code> keyword allows a template to extend a layout or parent template. It can then override certain pre-defined blocks of content.
+</LI>
+<LI>Now to extend the <code>layout</code>, we simply create 
+the <code>add_post.jade</code>
+file and use the <code>extends</code> directive, giving the path 
+(with or without the <code>.jade extension</code>). 
+</LI>
+<LI>We then define one or more blocks that will
+override the parent block content
+</LI>
+</UL>
+
+<P>
+
+<UL>
 <LI>The <code>&lt;fieldset&gt;</code> tag is used to group related elements in a form.
 </LI>
 <LI>The 
@@ -785,38 +842,6 @@ tag defines a caption for the
 element.
 </LI>
 </UL>
-
-<P>
-
-<H4><A NAME="SECTION062300130000000000000">
-views/layout.jade</A>
-</H4>
-  
-
-<P>
-Necesitamos también un <code>layout</code>:
-<PRE>
-~/src/coffee/coffeepress(master)]$ cat views/layout.jade 
-doctype html
-html
-  head
-    title= title
-    //link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css")
-    //script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
-    //script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
-    style(type="text/css")
-      #content { padding-top: 60px;}
-  body
-    .topbar-wrapper
-      .topbar
-        .topbar-inner
-          .container
-            h3: a(href="/") My Coffeepress Blog
-            ul.nav
-              li: a(href="/post/new") New Post
-              #content.container
-                block content
-</PRE>
 
 <P>
 
