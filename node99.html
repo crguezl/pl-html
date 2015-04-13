@@ -861,8 +861,15 @@ element.
 
 <UL>
 <LI>On the server side We can access to the data filled in the form 
+(both the input and textarea)
+<PRE>
+input.xlarge#title(type="text", name="title")
+...
+textarea#post.xxlarge(name="body",rows="3")
+</PRE>
 using <code>req.body</code>. It
-Contains key-value pairs of data submitted in the request body. 
+Contains key-value pairs (with keys <code>title</code>, <code>body</code>)
+of data submitted in the request body. 
 
 <P>
 By default, <code>req.body</code> is <code>undefined</code>, 
@@ -870,6 +877,8 @@ and is populated when you use body-parsing middleware such as
 <code>body-parser</code>.
 </LI>
 </UL>
+
+<P>
 
 <img src="formcoffeepress.png" width="50%" />
 
