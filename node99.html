@@ -1130,7 +1130,7 @@ req.params.name
 <code>req.params[n]</code>, where <code>n</code> is the nth capture group. 
 
 <P>
-For example:
+For example, the following:
 <PRE>
 router.get(/^\/commits\/(\w+)(?:\.\.(\w+))?$/, function(req, res){
   var from = req.params[0];
@@ -1138,6 +1138,7 @@ router.get(/^\/commits\/(\w+)(?:\.\.(\w+))?$/, function(req, res){
   res.send('commit range ' + from + '..' + to);
 });
 </PRE>
+would match <code>GET /commits/71dbb9c</code> as well as <code>GET /commits/71dbb9c..4c084f9</code>
 </LI>
 <LI>This rule is applied to unnamed wild card
 matches with string routes such as <code>/file/*</code>:
