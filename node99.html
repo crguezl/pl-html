@@ -1039,6 +1039,10 @@ reads a form's input and stores it as a javascript
 object accessible through <code>req.body</code>·
 We also add a new route to <code>app.coffee</code>
 </LI>
+<LI>By default, <code>req.body</code> is <code>undefined</code>, 
+and is populated when you use body-parsing middleware such as 
+<code>body-parser</code>.
+</LI>
 <LI>On the server side We can access to the data filled in the form 
 (both the input and textarea)
 <PRE>
@@ -1049,11 +1053,6 @@ textarea#post.xxlarge(name="body",rows="3")
 using <code>req.body</code>. It
 Contains key-value pairs (with keys <code>title</code>, <code>body</code>)
 of data submitted in the request body. 
-
-<P>
-By default, <code>req.body</code> is <code>undefined</code>, 
-and is populated when you use body-parsing middleware such as 
-<code>body-parser</code>.
 </LI>
 </UL>
 <PRE>
