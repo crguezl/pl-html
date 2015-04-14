@@ -118,21 +118,21 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <LI><A NAME="tex2html2811"
   HREF="node99.html#SECTION06230070000000000000">Expect vars posts equal empty array: green</A>
 <LI><A NAME="tex2html2812"
-  HREF="node99.html#SECTION06230080000000000000">Should display the add post page: red</A>
+  HREF="node99.html#SECTION06230080000000000000">views/index.jade</A>
 <LI><A NAME="tex2html2813"
-  HREF="node99.html#SECTION06230090000000000000">Should display the add post page: (false) green</A>
+  HREF="node99.html#SECTION06230090000000000000">Should display the add post page: red</A>
 <LI><A NAME="tex2html2814"
-  HREF="node99.html#SECTION062300100000000000000">Mocha: done</A>
+  HREF="node99.html#SECTION062300100000000000000">Should display the add post page: (false) green</A>
 <LI><A NAME="tex2html2815"
-  HREF="node99.html#SECTION062300110000000000000">Escribiendo newPost</A>
+  HREF="node99.html#SECTION062300110000000000000">Mocha: done</A>
 <LI><A NAME="tex2html2816"
-  HREF="node99.html#SECTION062300120000000000000">views/layout.jade</A>
+  HREF="node99.html#SECTION062300120000000000000">Escribiendo newPost</A>
 <LI><A NAME="tex2html2817"
-  HREF="node99.html#SECTION062300130000000000000">views/add_post.jade</A>
+  HREF="node99.html#SECTION062300130000000000000">views/layout.jade</A>
 <LI><A NAME="tex2html2818"
-  HREF="node99.html#SECTION062300140000000000000">Should display the add post page: (true) green</A>
+  HREF="node99.html#SECTION062300140000000000000">views/add_post.jade</A>
 <LI><A NAME="tex2html2819"
-  HREF="node99.html#SECTION062300150000000000000">views/index.jade</A>
+  HREF="node99.html#SECTION062300150000000000000">Should display the add post page: (true) green</A>
 <LI><A NAME="tex2html2820"
   HREF="node99.html#SECTION062300160000000000000">Gulpfile</A>
 <LI><A NAME="tex2html2821"
@@ -547,6 +547,26 @@ and now the tests pass:
 <P>
 
 <H4><A NAME="SECTION06230080000000000000">
+views/index.jade</A>
+</H4>
+  
+
+<P>
+Completemos la vista <code>index</code>:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat views/index.jade 
+extends layout
+block content
+  - each post in posts
+    .page-header
+      li
+        a(href="/post/#{post.id}")= post.title
+        .content!=post.body
+</PRE>
+
+<P>
+
+<H4><A NAME="SECTION06230090000000000000">
 Should display the add post page: red</A>
 </H4>
   
@@ -597,7 +617,7 @@ El test falla porque <code>routes</code> carece de un método <code>newPost</cod
 
 <P>
 
-<H4><A NAME="SECTION06230090000000000000">
+<H4><A NAME="SECTION062300100000000000000">
 Should display the add post page: (false) green</A>
 </H4>
   
@@ -647,7 +667,7 @@ el cuerpo de <code>newPost</code> es vacío.
 
 <P>
 
-<H4><A NAME="SECTION062300100000000000000">
+<H4><A NAME="SECTION062300110000000000000">
 Mocha: done</A>
 </H4>
   
@@ -720,7 +740,7 @@ Now it fails since the <code>done()</code> callback is never called:
 
 <P>
 
-<H4><A NAME="SECTION062300110000000000000">
+<H4><A NAME="SECTION062300120000000000000">
 Escribiendo newPost</A>
 </H4>
   
@@ -747,7 +767,7 @@ app.get '/post/new', routes.newPost
 
 <P>
 
-<H4><A NAME="SECTION062300120000000000000">
+<H4><A NAME="SECTION062300130000000000000">
 views/layout.jade</A>
 </H4>
   
@@ -797,7 +817,7 @@ template, this process is recursive.
 
 <P>
 
-<H4><A NAME="SECTION062300130000000000000">
+<H4><A NAME="SECTION062300140000000000000">
 views/add_post.jade</A>
 </H4>
   
@@ -900,7 +920,7 @@ and is populated when you use body-parsing middleware such as
 
 <P>
 
-<H4><A NAME="SECTION062300140000000000000">
+<H4><A NAME="SECTION062300150000000000000">
 Should display the add post page: (true) green</A>
 </H4>
   
@@ -918,26 +938,6 @@ Ahora podemos ejecutar las pruebas:
 
 
   2 passing (9ms)
-</PRE>
-
-<P>
-
-<H4><A NAME="SECTION062300150000000000000">
-views/index.jade</A>
-</H4>
-  
-
-<P>
-Completemos la vista <code>index</code>:
-<PRE>
-[~/src/coffee/coffeepress(master)]$ cat views/index.jade 
-extends layout
-block content
-  - each post in posts
-    .page-header
-      li
-        a(href="/post/#{post.id}")= post.title
-        .content!=post.body
 </PRE>
 
 <P>
