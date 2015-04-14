@@ -960,7 +960,7 @@ shell = require('gulp-shell')
 
 # run coffee server via nodemon https://github.com/remy/nodemon
 gulp.task 'default', -&gt;
-  gulp.src('').pipe shell([ 'DEBUG=coffeepress:* DEBUG=coffeepress:* nodemon bin/www.coffee' ])
+  gulp.src('').pipe shell([ 'DEBUG=coffeepress:* nodemon bin/www.coffee' ])
 
 # run coffee server
 gulp.task 'cofserver', -&gt;
