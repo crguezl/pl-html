@@ -1052,6 +1052,13 @@ textarea#post.xxlarge(name="body",rows="3")
 using <code>req.body</code>. It
 Contains key-value pairs (with keys <code>title</code>, <code>body</code>)
 of data submitted in the request body. 
+<PRE>
+post = req.body
+</PRE>
+or
+<PRE>
+[post.title, post.body] = [req.body.title, req.body.body]
+</PRE>
 </LI>
 </UL>
 
