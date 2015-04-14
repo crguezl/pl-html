@@ -616,6 +616,35 @@ template, this process is recursive.
 
 <P>
 
+<UL>
+<LI>The <code>extends</code> keyword allows a template to extend a layout or parent template. 
+
+<FONT COLOR="#ff0000"> It can then override certain pre-defined blocks of content</FONT>.
+</LI>
+<LI>Now to extend the <code>layout</code>, we simply create 
+the <code>index.jade</code>
+file and use the <code>extends</code> directive, giving the path 
+(with or without the <code>.jade</code> extension). 
+</LI>
+<LI>We then define  the block 
+<FONT COLOR="#ff0000"> content</FONT> using the 
+<code>block</code> declaration:
+<PRE>
+block content
+</PRE>
+</LI>
+<LI>In general, we can define
+one or more blocks that will
+override the parent block content
+</LI>
+<LI>Véase
+<A NAME="tex2html413"
+  HREF="http://jade-lang.com/reference/inheritance/">Jade: Testing Inheritance</A>
+</LI>
+</UL>
+
+<P>
+
 <H4><A NAME="SECTION062300100000000000000">
 Should display the add post page: red</A>
 </H4>
@@ -846,33 +875,6 @@ block content
         |   
         a.btn(href="/") Cancel
 </PRE>
-
-<UL>
-<LI>The <code>extends</code> keyword allows a template to extend a layout or parent template. 
-
-<FONT COLOR="#ff0000"> It can then override certain pre-defined blocks of content</FONT>.
-</LI>
-<LI>Now to extend the <code>layout</code>, we simply create 
-the <code>add_post.jade</code>
-file and use the <code>extends</code> directive, giving the path 
-(with or without the <code>.jade extension</code>). 
-</LI>
-<LI>We then define  the block 
-<FONT COLOR="#ff0000"> content</FONT> using the 
-<code>block</code> declaration:
-<PRE>
-block content
-</PRE>
-</LI>
-<LI>In general, we can define
-one or more blocks that will
-override the parent block content
-</LI>
-<LI>Véase
-<A NAME="tex2html413"
-  HREF="http://jade-lang.com/reference/inheritance/">Jade: Testing Inheritance</A>
-</LI>
-</UL>
 
 <P>
 
