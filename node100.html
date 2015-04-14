@@ -27,19 +27,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2843"
+<A NAME="tex2html2844"
   HREF="node101.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2837"
+<A NAME="tex2html2838"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2833"
+<A NAME="tex2html2834"
   HREF="node99.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2839"
+<A NAME="tex2html2840"
   HREF="node101.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2841"
+<A NAME="tex2html2842"
   HREF="node104.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -79,18 +79,18 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2844"
+<B> Sig:</B> <A NAME="tex2html2845"
   HREF="node101.html">&#205;ndice General</A>
-<B>Sup:</B> <A NAME="tex2html2838"
+<B>Sup:</B> <A NAME="tex2html2839"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2834"
+<B> Ant:</B> <A NAME="tex2html2835"
   HREF="node99.html">Pruebas</A>
 <B> Con:</B> 
-<A NAME="tex2html2839"
+<A NAME="tex2html2840"
   HREF="node101.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2841"
+<A NAME="tex2html2842"
   HREF="node104.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
@@ -100,9 +100,14 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
 
 <UL CLASS="ChildLinks">
-<LI><A NAME="tex2html2845"
-  HREF="node100.html#SECTION06241000000000000000">Introducción</A>
 <LI><A NAME="tex2html2846"
+  HREF="node100.html#SECTION06241000000000000000">Introducción</A>
+<UL>
+<LI><A NAME="tex2html2847"
+  HREF="node100.html#SECTION06241010000000000000">Document Oriented Database</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html2848"
   HREF="node100.html#SECTION06242000000000000000">Getting Started with MongoDB</A>
 </UL>
 <!--End of Table of Child-Links-->
@@ -124,6 +129,160 @@ Introducción</A>
 <LI>Is classified as a NoSQL database, 
 </LI>
 <LI>MongoDB eschews the traditional table-based relational database structure in favor of JSON-like documents with dynamic schemas (MongoDB calls the format BSON)
+</LI>
+</UL>
+
+<P>
+
+<H4><A NAME="SECTION06241010000000000000">
+Document Oriented Database</A>
+</H4>
+  
+
+<P>
+
+<UL>
+<LI>In a relational database, 
+<FONT COLOR="#ff0000"> data is first categorized into a number of
+predefined types, and tables are created to hold individual entries, or
+records, of each type</FONT>. 
+
+<P>
+</LI>
+<LI>The tables define the data within each record's
+fields, meaning that every record in the table has the same overall
+form. 
+
+<P>
+</LI>
+<LI>The administrator also defines the relations between the tables,
+and selects certain fields that they believe will be most commonly used
+for searching and defines indexes on them. 
+
+<P>
+</LI>
+<LI>A key concept in the relational
+design is that any data that may be repeated is placed in its own table,
+and if these instances are related to each other, a field is selected
+to group them together, the foreign key.
+
+<P>
+</LI>
+<LI>For example, an address book application will generally need to
+store the contact name, an optional image, one or more phone numbers,
+one or more mailing addresses, and one or more email addresses. 
+
+<P>
+</LI>
+<LI>In a
+canonical relational database solution, tables would be created for
+each of these records with predefined fields for each bit of data; the
+<code>CONTACT</code> table might include <code>FIRST_NAME</code>, <code>LAST_NAME</code> and <code>IMAGE</code> fields,
+while the <code>PHONE_NUMBER</code> table might include <code>COUNTRY_CODE</code>, <code>AREA_CODE</code>,
+<code>PHONE_NUMBER</code> and <code>TYPE</code> (home, work, etc). 
+
+<P>
+</LI>
+<LI>The <code>PHONE_NUMBER</code> table also
+contains a <A NAME="11847"></A><SPAN  CLASS="textbf">foreign key</SPAN> field, "<code>CONTACT_ID</code>", which holds the unique <code>ID</code>
+number assigned to the contact when it was created. 
+
+<P>
+</LI>
+<LI>In order to recreate
+the original contact, the system has to search through all of the tables
+and collect the information back together using joins.
+</LI>
+</UL>
+
+<P>
+
+<UL>
+<LI>In contrast, in a document-oriented database there may be no internal
+structure that maps directly onto the concept of a table, and the fields
+and relations generally don't exist as predefined concepts.
+
+<P>
+</LI>
+<LI>Instead, all
+of the data for an object is placed in a single document, and stored in
+the database as a single entry 
+</LI>
+<LI>In the address book example, the document
+would contain the contact's name, image and any contact info, all in a
+single record.
+
+<P>
+</LI>
+<LI>That entry is accessed through a key, some unique bit of
+data, which allows the database to retrieve and return the document to
+the application. No additional work is needed to retrieve the related
+data, all of this is returned in a single object.
+
+<P>
+</LI>
+<LI>A key difference between the document-oriented and relational models is
+that the data formats are not predefined in the document case
+</LI>
+<LI>In most
+cases, any sort of document can be stored in any database, and those
+documents can change in type and form at any time
+</LI>
+<LI>If one wishes to
+add a <code>COUNTRY_FLAG</code> to a <code>CONTACT</code>, simply add this field to new documents
+as they are inserted, this will have no effect on the database or the
+existing documents already stored, they simply won't have this field
+</LI>
+<LI>This
+indicates an advantage of the document-based model; optional fields are
+truly optional, a contact that does not include a mailing address simply
+does not have a mailing address, there is no need to check another table
+to see if there are entries
+</LI>
+<LI>To aid retrieval of information from the database, document-oriented
+systems generally allow the administrator to provide hints to the database
+to look for certain types of information
+</LI>
+<LI>In the address book example,
+the design might add hints for the first and last name fields
+</LI>
+<LI>When the
+document is inserted into the database (or later modified), the database
+engine looks for these bits of information and indexes them, in the same
+fashion as the relational model
+</LI>
+<LI>Additionally, most document-oriented
+databases allow documents to have a type associated with them, like
+<code>address book entry</code>, which allows the programmer to retrieve related
+types of information, like <code>all the address book entries</code>
+</LI>
+<LI>This provides
+functionality similar to a table, but separates the concept (categories
+of data) from its physical implementation (tables)
+</LI>
+<LI>All of this is predicated on the ability of the database engine
+to examine the data in the document and extract fields from the
+formatting, its metadata
+</LI>
+<LI>This is easy in the case of, for example, an
+XML document or HTML page, where markup tags clearly identify various
+bits of data
+</LI>
+<LI>Document-oriented databases may include functionally
+to automatically extract this sort of information from a variety of
+document types, even those that were not originally designed for easy
+access in this manner
+</LI>
+<LI>In other cases the programmer has to provide this
+information using their own code
+</LI>
+<LI>In contrast, a relational database
+relies on the programmer to handle all of these tasks, breaking down
+the document into fields and providing those to the database engine,
+which may require separate instructions if the data spans tables
+</LI>
+<LI>Document-oriented databases normally map more cleanly onto existing
+programming concepts, like object-oriented programming (OOP)
 </LI>
 </UL>
 
@@ -227,19 +386,19 @@ At any point, you can access help for the mongo shell using
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2843"
+<A NAME="tex2html2844"
   HREF="node101.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2837"
+<A NAME="tex2html2838"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2833"
+<A NAME="tex2html2834"
   HREF="node99.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2839"
+<A NAME="tex2html2840"
   HREF="node101.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2841"
+<A NAME="tex2html2842"
   HREF="node104.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -279,11 +438,11 @@ At any point, you can access help for the mongo shell using
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2844"
+<B> Sig:</B> <A NAME="tex2html2845"
   HREF="node101.html">&#205;ndice General</A>
-<B>Sup:</B> <A NAME="tex2html2838"
+<B>Sup:</B> <A NAME="tex2html2839"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2834"
+<B> Ant:</B> <A NAME="tex2html2835"
   HREF="node99.html">Pruebas</A>
 </DIV>
 <!--End of Navigation Panel-->
