@@ -27,19 +27,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2854"
+<A NAME="tex2html2858"
   HREF="node101.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2848"
+<A NAME="tex2html2852"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2844"
+<A NAME="tex2html2848"
   HREF="node99.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2850"
+<A NAME="tex2html2854"
   HREF="node101.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2852"
+<A NAME="tex2html2856"
   HREF="node104.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -79,18 +79,18 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2855"
+<B> Sig:</B> <A NAME="tex2html2859"
   HREF="node101.html">&#205;ndice General</A>
-<B>Sup:</B> <A NAME="tex2html2849"
+<B>Sup:</B> <A NAME="tex2html2853"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2845"
+<B> Ant:</B> <A NAME="tex2html2849"
   HREF="node99.html">Pruebas</A>
 <B> Con:</B> 
-<A NAME="tex2html2850"
+<A NAME="tex2html2854"
   HREF="node101.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2852"
+<A NAME="tex2html2856"
   HREF="node104.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
@@ -100,21 +100,23 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
 
 <UL CLASS="ChildLinks">
-<LI><A NAME="tex2html2856"
+<LI><A NAME="tex2html2860"
   HREF="node100.html#SECTION06241000000000000000">Introducción</A>
 <UL>
-<LI><A NAME="tex2html2857"
+<LI><A NAME="tex2html2861"
   HREF="node100.html#SECTION06241010000000000000">NoSQL</A>
-<LI><A NAME="tex2html2858"
+<LI><A NAME="tex2html2862"
   HREF="node100.html#SECTION06241020000000000000">Relational  Database</A>
-<LI><A NAME="tex2html2859"
+<LI><A NAME="tex2html2863"
   HREF="node100.html#SECTION06241030000000000000">Document Oriented DataBase</A>
 </UL>
 <BR>
-<LI><A NAME="tex2html2860"
+<LI><A NAME="tex2html2864"
   HREF="node100.html#SECTION06242000000000000000">Getting Started with MongoDB</A>
-<LI><A NAME="tex2html2861"
+<LI><A NAME="tex2html2865"
   HREF="node100.html#SECTION06243000000000000000">Create a Collection and Insert Documents</A>
+<LI><A NAME="tex2html2866"
+  HREF="node100.html#SECTION06244000000000000000">Insert Documents using a For Loop or a JavaScript Function</A>
 </UL>
 <!--End of Table of Child-Links-->
 <HR>
@@ -181,7 +183,7 @@ on the problem it must solve
 </LI>
 <LI>Many
 NoSQL stores compromise consistency (in the sense of the CAP<A NAME="tex2html421"
-  HREF="footnode.html#foot11735"><SUP><SPAN CLASS="arabic">15</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A> theorem) in favor of availability and partition tolerance.
+  HREF="footnode.html#foot11736"><SUP><SPAN CLASS="arabic">15</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A> theorem) in favor of availability and partition tolerance.
 </LI>
 </UL>
 
@@ -217,7 +219,7 @@ for searching and defines indexes on them.
 <LI>A key concept in the relational
 design is that any data that may be repeated is placed in its own table,
 and if these instances are related to each other, a field is selected
-to group them together, the <A NAME="11891"></A><SPAN  CLASS="textbf">foreign key</SPAN>.
+to group them together, the <A NAME="11892"></A><SPAN  CLASS="textbf">foreign key</SPAN>.
 
 <P>
 </LI>
@@ -237,14 +239,14 @@ while the <code>PHONE_NUMBER</code> table might include <code>COUNTRY_CODE</code
 <P>
 </LI>
 <LI>The <code>PHONE_NUMBER</code> table also
-contains a <A NAME="11893"></A><SPAN  CLASS="textbf">foreign key</SPAN> field, "<code>CONTACT_ID</code>", which holds the unique <code>ID</code>
+contains a <A NAME="11894"></A><SPAN  CLASS="textbf">foreign key</SPAN> field, "<code>CONTACT_ID</code>", which holds the unique <code>ID</code>
 number assigned to the contact when it was created. 
 
 <P>
 </LI>
 <LI>In order to recreate
 the original contact, the system has to search through all of the tables
-and collect the information back together using <A NAME="11895"></A><SPAN  CLASS="textbf">joins</SPAN><A NAME="tex2html422"
+and collect the information back together using <A NAME="11896"></A><SPAN  CLASS="textbf">joins</SPAN><A NAME="tex2html422"
   HREF="footnode.html#foot11694"><SUP><SPAN CLASS="arabic">15</SPAN>.<SPAN CLASS="arabic">2</SPAN></SUP></A>
 </LI>
 </UL>
@@ -499,23 +501,30 @@ Confirm that the documents exist in the testData collection by issuing a query o
 { "_id" : ObjectId("552d751969c6f61bfbe4e6ed"), "name" : "mongo" }
 { "_id" : ObjectId("552d751a69c6f61bfbe4e6ee"), "x" : 3 }
 </PRE>
+All MongoDB documents must have an <code>_id</code> field with a unique value. These operations do not explicitly specify a value for the <code>_id</code> field, so mongo creates a unique <code>ObjectId</code> value for the field before inserting it into the collection.
+
+<P>
+
+<H2><A NAME="SECTION06244000000000000000">
+Insert Documents using a For Loop or a JavaScript Function</A>
+</H2>
 
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2854"
+<A NAME="tex2html2858"
   HREF="node101.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2848"
+<A NAME="tex2html2852"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2844"
+<A NAME="tex2html2848"
   HREF="node99.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2850"
+<A NAME="tex2html2854"
   HREF="node101.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2852"
+<A NAME="tex2html2856"
   HREF="node104.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -555,11 +564,11 @@ Confirm that the documents exist in the testData collection by issuing a query o
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2855"
+<B> Sig:</B> <A NAME="tex2html2859"
   HREF="node101.html">&#205;ndice General</A>
-<B>Sup:</B> <A NAME="tex2html2849"
+<B>Sup:</B> <A NAME="tex2html2853"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2845"
+<B> Ant:</B> <A NAME="tex2html2849"
   HREF="node99.html">Pruebas</A>
 </DIV>
 <!--End of Navigation Panel-->
