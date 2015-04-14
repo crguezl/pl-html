@@ -1109,6 +1109,35 @@ module.exports =
      post = posts[req.params.id]
      res.render 'post', post: post, title: post.title, id: req.params.id
 </PRE>
+
+<UL>
+<LI><code>req.params</code> is an object containing properties mapped to the 
+<A NAME="11826"></A><SPAN  CLASS="textbf">named route parameters</SPAN>. 
+</LI>
+<LI>For example, if you have the route <code>/user/:name</code>, then the <code>name</code> property is available as 
+<code>req.params.name</code> 
+</LI>
+<LI>The <code>req.params</code> object defaults to <code>{}</code>
+</LI>
+<LI>Example:
+<PRE>
+// GET /user/tj
+req.params.name
+// =&gt; "tj"
+</PRE>
+</LI>
+<LI>When you use a regular expression for the route definition, capture groups are provided in the array using 
+<code>req.params[n]</code>, where <code>n</code> is the nth capture group. 
+</LI>
+<LI>This rule is applied to unnamed wild card
+matches with string routes such as <code>/file/*</code>:
+<PRE>
+// GET /file/javascripts/jquery.js
+req.params[0]
+// =&gt; "javascripts/jquery.js"
+</PRE>
+</LI>
+</UL>
 Y esta es la vista <code>views/post.jade</code>:
 <PRE>
 [~/src/coffee/coffeepress(master)]$ cat views/post.jade 
