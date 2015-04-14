@@ -120,15 +120,15 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <LI><A NAME="tex2html2812"
   HREF="node99.html#SECTION06230080000000000000">views/index.jade</A>
 <LI><A NAME="tex2html2813"
-  HREF="node99.html#SECTION06230090000000000000">Should display the add post page: red</A>
+  HREF="node99.html#SECTION06230090000000000000">views/layout.jade</A>
 <LI><A NAME="tex2html2814"
-  HREF="node99.html#SECTION062300100000000000000">Should display the add post page: (false) green</A>
+  HREF="node99.html#SECTION062300100000000000000">Should display the add post page: red</A>
 <LI><A NAME="tex2html2815"
-  HREF="node99.html#SECTION062300110000000000000">Mocha: done</A>
+  HREF="node99.html#SECTION062300110000000000000">Should display the add post page: (false) green</A>
 <LI><A NAME="tex2html2816"
-  HREF="node99.html#SECTION062300120000000000000">Escribiendo newPost</A>
+  HREF="node99.html#SECTION062300120000000000000">Mocha: done</A>
 <LI><A NAME="tex2html2817"
-  HREF="node99.html#SECTION062300130000000000000">views/layout.jade</A>
+  HREF="node99.html#SECTION062300130000000000000">Escribiendo newPost</A>
 <LI><A NAME="tex2html2818"
   HREF="node99.html#SECTION062300140000000000000">views/add_post.jade</A>
 <LI><A NAME="tex2html2819"
@@ -567,6 +567,56 @@ block content
 <P>
 
 <H4><A NAME="SECTION06230090000000000000">
+views/layout.jade</A>
+</H4>
+  
+
+<P>
+Necesitamos un <code>layout</code>:
+<PRE>
+~/src/coffee/coffeepress(master)]$ cat views/layout.jade 
+doctype html
+html
+  head
+    title= title
+    //link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css")
+    //script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+    //script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
+    style(type="text/css")
+      #content { padding-top: 60px;}
+  body
+    .topbar-wrapper
+      .topbar
+        .topbar-inner
+          .container
+            h3: a(href="/") My Coffeepress Blog
+            ul.nav
+              li: a(href="/post/new") New Post
+              #content.container
+                block content
+</PRE>
+
+<UL>
+<LI>Jade supports template inheritance via the <code>block</code> and <code>extends</code> keywords. 
+<PRE>
+              ...
+              #content.container
+                block content
+</PRE>
+</LI>
+<LI>A <code>block</code> is simply a 
+<FONT COLOR="#0000ff"> block of Jade</FONT> 
+that may be replaced within a child
+template, this process is recursive.
+</LI>
+<LI><A NAME="tex2html412"
+  HREF="http://jade-lang.com/reference/inheritance/">Jade: Testing Inheritance</A>
+</LI>
+</UL>
+
+<P>
+
+<H4><A NAME="SECTION062300100000000000000">
 Should display the add post page: red</A>
 </H4>
   
@@ -617,7 +667,7 @@ El test falla porque <code>routes</code> carece de un método <code>newPost</cod
 
 <P>
 
-<H4><A NAME="SECTION062300100000000000000">
+<H4><A NAME="SECTION062300110000000000000">
 Should display the add post page: (false) green</A>
 </H4>
   
@@ -667,7 +717,7 @@ el cuerpo de <code>newPost</code> es vacío.
 
 <P>
 
-<H4><A NAME="SECTION062300110000000000000">
+<H4><A NAME="SECTION062300120000000000000">
 Mocha: done</A>
 </H4>
   
@@ -740,7 +790,7 @@ Now it fails since the <code>done()</code> callback is never called:
 
 <P>
 
-<H4><A NAME="SECTION062300120000000000000">
+<H4><A NAME="SECTION062300130000000000000">
 Escribiendo newPost</A>
 </H4>
   
@@ -764,56 +814,6 @@ And connecting it up in the <code>app.coffee</code>:
 app.get '/', routes.index
 app.get '/post/new', routes.newPost
 </PRE>
-
-<P>
-
-<H4><A NAME="SECTION062300130000000000000">
-views/layout.jade</A>
-</H4>
-  
-
-<P>
-Necesitamos un <code>layout</code>:
-<PRE>
-~/src/coffee/coffeepress(master)]$ cat views/layout.jade 
-doctype html
-html
-  head
-    title= title
-    //link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css")
-    //script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
-    //script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
-    style(type="text/css")
-      #content { padding-top: 60px;}
-  body
-    .topbar-wrapper
-      .topbar
-        .topbar-inner
-          .container
-            h3: a(href="/") My Coffeepress Blog
-            ul.nav
-              li: a(href="/post/new") New Post
-              #content.container
-                block content
-</PRE>
-
-<UL>
-<LI>Jade supports template inheritance via the <code>block</code> and <code>extends</code> keywords. 
-<PRE>
-              ...
-              #content.container
-                block content
-</PRE>
-</LI>
-<LI>A <code>block</code> is simply a 
-<FONT COLOR="#0000ff"> block of Jade</FONT> 
-that may be replaced within a child
-template, this process is recursive.
-</LI>
-<LI><A NAME="tex2html412"
-  HREF="http://jade-lang.com/reference/inheritance/">Jade: Testing Inheritance</A>
-</LI>
-</UL>
 
 <P>
 
