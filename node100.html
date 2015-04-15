@@ -19,6 +19,7 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 
 <LINK REL="STYLESHEET" HREF="mystyle.css">
 
+<LINK REL="next" HREF="node101.html">
 <LINK REL="previous" HREF="node99.html">
 <LINK REL="up" HREF="node96.html">
 <LINK REL="next" HREF="node101.html">
@@ -27,20 +28,20 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2859"
+<A NAME="tex2html2871"
   HREF="node101.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2853"
+<A NAME="tex2html2865"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2849"
+<A NAME="tex2html2859"
   HREF="node99.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2855"
-  HREF="node101.html">
+<A NAME="tex2html2867"
+  HREF="node103.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2857"
-  HREF="node104.html">
+<A NAME="tex2html2869"
+  HREF="node106.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -79,19 +80,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2860"
-  HREF="node101.html">&#205;ndice General</A>
-<B>Sup:</B> <A NAME="tex2html2854"
+<B> Sig:</B> <A NAME="tex2html2872"
+  HREF="node101.html">Mongoose</A>
+<B>Sup:</B> <A NAME="tex2html2866"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2850"
+<B> Ant:</B> <A NAME="tex2html2860"
   HREF="node99.html">Pruebas</A>
 <B> Con:</B> 
-<A NAME="tex2html2855"
-  HREF="node101.html">
+<A NAME="tex2html2867"
+  HREF="node103.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2857"
-  HREF="node104.html">
+<A NAME="tex2html2869"
+  HREF="node106.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
@@ -100,26 +101,28 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
 
 <UL CLASS="ChildLinks">
-<LI><A NAME="tex2html2861"
+<LI><A NAME="tex2html2873"
   HREF="node100.html#SECTION06241000000000000000">Introducción</A>
 <UL>
-<LI><A NAME="tex2html2862"
+<LI><A NAME="tex2html2874"
   HREF="node100.html#SECTION06241010000000000000">NoSQL</A>
-<LI><A NAME="tex2html2863"
+<LI><A NAME="tex2html2875"
   HREF="node100.html#SECTION06241020000000000000">Relational  Database</A>
-<LI><A NAME="tex2html2864"
+<LI><A NAME="tex2html2876"
   HREF="node100.html#SECTION06241030000000000000">Document Oriented DataBase</A>
 </UL>
 <BR>
-<LI><A NAME="tex2html2865"
+<LI><A NAME="tex2html2877"
   HREF="node100.html#SECTION06242000000000000000">Getting Started with MongoDB</A>
-<LI><A NAME="tex2html2866"
+<LI><A NAME="tex2html2878"
   HREF="node100.html#SECTION06243000000000000000">Create a Collection and Insert Documents</A>
-<LI><A NAME="tex2html2867"
+<LI><A NAME="tex2html2879"
   HREF="node100.html#SECTION06244000000000000000">Insert Documents using a For Loop or a JavaScript Function</A>
 <UL>
-<LI><A NAME="tex2html2868"
+<LI><A NAME="tex2html2880"
   HREF="node100.html#SECTION06244010000000000000">Insert Multiple Documents Using a For Loop</A>
+<LI><A NAME="tex2html2881"
+  HREF="node100.html#SECTION06244020000000000000">Working with the Cursor</A>
 </UL></UL>
 <!--End of Table of Child-Links-->
 <HR>
@@ -186,7 +189,7 @@ on the problem it must solve
 </LI>
 <LI>Many
 NoSQL stores compromise consistency (in the sense of the CAP<A NAME="tex2html421"
-  HREF="footnode.html#foot11741"><SUP><SPAN CLASS="arabic">15</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A> theorem) in favor of availability and partition tolerance.
+  HREF="footnode.html#foot11761"><SUP><SPAN CLASS="arabic">15</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A> theorem) in favor of availability and partition tolerance.
 </LI>
 </UL>
 
@@ -222,7 +225,7 @@ for searching and defines indexes on them.
 <LI>A key concept in the relational
 design is that any data that may be repeated is placed in its own table,
 and if these instances are related to each other, a field is selected
-to group them together, the <A NAME="11897"></A><SPAN  CLASS="textbf">foreign key</SPAN>.
+to group them together, the <A NAME="11917"></A><SPAN  CLASS="textbf">foreign key</SPAN>.
 
 <P>
 </LI>
@@ -242,14 +245,14 @@ while the <code>PHONE_NUMBER</code> table might include <code>COUNTRY_CODE</code
 <P>
 </LI>
 <LI>The <code>PHONE_NUMBER</code> table also
-contains a <A NAME="11899"></A><SPAN  CLASS="textbf">foreign key</SPAN> field, "<code>CONTACT_ID</code>", which holds the unique <code>ID</code>
+contains a <A NAME="11919"></A><SPAN  CLASS="textbf">foreign key</SPAN> field, "<code>CONTACT_ID</code>", which holds the unique <code>ID</code>
 number assigned to the contact when it was created. 
 
 <P>
 </LI>
 <LI>In order to recreate
 the original contact, the system has to search through all of the tables
-and collect the information back together using <A NAME="11901"></A><SPAN  CLASS="textbf">joins</SPAN><A NAME="tex2html422"
+and collect the information back together using <A NAME="11921"></A><SPAN  CLASS="textbf">joins</SPAN><A NAME="tex2html422"
   HREF="footnode.html#foot11694"><SUP><SPAN CLASS="arabic">15</SPAN>.<SPAN CLASS="arabic">2</SPAN></SUP></A>
 </LI>
 </UL>
@@ -539,6 +542,11 @@ Use find() to query the collection:
 ....
 { "_id" : ObjectId("552d791269c6f61bfbe4e701"), "x" : 18 }
 Type "it" for more
+</PRE>
+Iterate through the cursor.
+The find() method returns a cursor. To iterate the cursor and return more documents, type 
+<code>it</code> in the mongo shell. The shell will exhaust the cursor and return these documents:
+<PRE>
 &gt; it
 { "_id" : ObjectId("552d791269c6f61bfbe4e702"), "x" : 19 }
 .....
@@ -547,21 +555,39 @@ Type "it" for more
 
 <P>
 
+<H4><A NAME="SECTION06244020000000000000">
+Working with the Cursor</A>
+</H4>
+  
+
+<P>
+When you query a collection, MongoDB returns a “cursor” object that
+contains the results of the query. The mongo shell then iterates over
+the cursor to display the results. Rather than returning all results at
+once, the shell iterates over the cursor 20 times to display the first
+20 results and then waits for a request to iterate over the remaining
+results. In the shell, enter it to iterate over the next set of results.
+
+<P>
+The procedures in this section show other ways to work with a cursor. For comprehensive documentation on cursors, see Iterate the Returned Cursor.
+
+<P>
+
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2859"
+<A NAME="tex2html2871"
   HREF="node101.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2853"
+<A NAME="tex2html2865"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2849"
+<A NAME="tex2html2859"
   HREF="node99.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2855"
-  HREF="node101.html">
+<A NAME="tex2html2867"
+  HREF="node103.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2857"
-  HREF="node104.html">
+<A NAME="tex2html2869"
+  HREF="node106.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -600,17 +626,17 @@ Type "it" for more
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2860"
-  HREF="node101.html">&#205;ndice General</A>
-<B>Sup:</B> <A NAME="tex2html2854"
+<B> Sig:</B> <A NAME="tex2html2872"
+  HREF="node101.html">Mongoose</A>
+<B>Sup:</B> <A NAME="tex2html2866"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2850"
+<B> Ant:</B> <A NAME="tex2html2860"
   HREF="node99.html">Pruebas</A>
 </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I>Casiano Rodríguez León <BR>
-2015-04-14</I>
+2015-04-15</I>
 </ADDRESS>
 </BODY>
 </HTML>

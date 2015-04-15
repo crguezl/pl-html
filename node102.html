@@ -7,8 +7,8 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 <HTML>
 <HEAD>
-<TITLE>&#205;ndice de Figuras</TITLE>
-<META NAME="description" CONTENT="&#205;ndice de Figuras">
+<TITLE>Añadiendo Persistencia: Posts con MongoDB y Mongoose</TITLE>
+<META NAME="description" CONTENT="Añadiendo Persistencia: Posts con MongoDB y Mongoose">
 <META NAME="keywords" CONTENT="javascriptexamples">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -19,29 +19,28 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 
 <LINK REL="STYLESHEET" HREF="mystyle.css">
 
-<LINK REL="next" HREF="node103.html">
 <LINK REL="previous" HREF="node101.html">
-<LINK REL="up" HREF="javascriptexamples.html">
+<LINK REL="up" HREF="node96.html">
 <LINK REL="next" HREF="node103.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html3039"
+<A NAME="tex2html2906"
   HREF="node103.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html3033"
-  HREF="javascriptexamples.html">
+<A NAME="tex2html2900"
+  HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html3027"
+<A NAME="tex2html2896"
   HREF="node101.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html3035"
-  HREF="node101.html">
+<A NAME="tex2html2902"
+  HREF="node103.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html3037"
-  HREF="node104.html">
+<A NAME="tex2html2904"
+  HREF="node106.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -80,47 +79,117 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html3040"
-  HREF="node103.html">&#205;ndice de Tablas</A>
-<B>Sup:</B> <A NAME="tex2html3034"
-  HREF="javascriptexamples.html">Apuntes de la Asignatura</A>
-<B> Ant:</B> <A NAME="tex2html3028"
-  HREF="node101.html">&#205;ndice General</A>
+<B> Sig:</B> <A NAME="tex2html2907"
+  HREF="node103.html">&#205;ndice General</A>
+<B>Sup:</B> <A NAME="tex2html2901"
+  HREF="node96.html">CoffeeScript y Express</A>
+<B> Ant:</B> <A NAME="tex2html2897"
+  HREF="node101.html">Mongoose</A>
 <B> Con:</B> 
-<A NAME="tex2html3035"
-  HREF="node101.html">
+<A NAME="tex2html2902"
+  HREF="node103.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html3037"
-  HREF="node104.html">
+<A NAME="tex2html2904"
+  HREF="node106.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
 <!--End of Navigation Panel-->
-<BR>
 
-<H2><A NAME="SECTION08000000000000000000">
-&#205;ndice de Figuras</A>
-</H2><OL>
-<LI><A NAME="tex2html307"
-  HREF="node50.html#7062">NFA que reconoce los prefijos viables</A>
-<LI><A NAME="tex2html309"
-  HREF="node51.html#7432">DFA equivalente al NFA de la figura</A> <A HREF="node50.html#fig:nfa">5.1</A></OL>
+<H1><A NAME="SECTION06260000000000000000">
+Añadiendo Persistencia: Posts con MongoDB y Mongoose</A>
+</H1>
+Let’s add a dependency on mongoose to our project and freeze it at version 4.0.1.
+As always, run <code>npm install</code> to bring it in. 
+<PRE>
+$ npm install --save mongoose
+$ grep mongoose package.json 
+    "mongoose": "~4.0.1"
+</PRE>
+Now we’ll create an initial test to just test mongoose out.
+<PRE>
+~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ cat test/post-test.coffee 
+mongoose = require 'mongoose'
+Post     = require '../models/Post'
+chai     = require 'chai'
+expect   = chai.expect
+
+describe 'Post', -&gt;
+  before (done) -&gt;
+    mongoose.connect 'mongodb://localhost/coffeepress', -&gt;
+      Post.remove done
+  it 'should create a new post', (done) -&gt;
+    post = new Post(title:'First!', body:'First post bastiches!')
+    post.save -&gt;
+      Post.findOne _id: post._id, (err, retrievedPost) -&gt;
+        expect(retrievedPost.title).eql "First!"
+        expect(retrievedPost.body).eql "First post bastiches!"
+        done()
+</PRE>
+
+<UL>
+<LI>Here we import both <code>mongoose</code> and the model object that we’re going
+to create
+</LI>
+<LI>Since we want our test to start with a clean slate, we use
+the <code>before</code> hook (which runs once before anything else in the test runs)
+to both connect to the database and then remove all of the Post objects
+from mongodb
+</LI>
+<LI>We pass the <code>done</code> callback to the remove call 
+<FONT COLOR="#ff0000"> so that tests
+don’t run until all Posts have been removed</FONT>
+</LI>
+<LI>Now we create a new <code>Post</code> instance.
+You can pass an object literal in to set properties on the model, so we do that here
+<PRE>
+    post = new Post(title:'First!', body:'First post bastiches!')
+</PRE>
+</LI>
+<LI>Finally, in our post <code>save</code> callback we look the post back up and verify certain attributes have been set
+<PRE>
+    post.save -&gt;
+      Post.findOne _id: post._id, (err, retrievedPost) -&gt;
+        expect(retrievedPost.title).eql "First!"
+        expect(retrievedPost.body).eql "First post bastiches!"
+        done()
+</PRE>
+</LI>
+<LI>It’s a dumb test (and in fact I rarely test mongoose’s behavior like this), but it does verify that we’ve configured our model correctly
+</LI>
+</UL>
+<PRE>
+~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ gulp test
+[11:05:16] Using gulpfile ~/local/src/javascript/expressjs/clase-express-coffee/gulpfile.js
+[11:05:16] Starting 'mocha'...
+
+module.js:340
+    throw err;
+          ^
+Error: Cannot find module '../models/Post'
+</PRE>
+
+<P>
+Now let’s implement our model to make the test pass.
+
+<P>
+
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html3039"
+<A NAME="tex2html2906"
   HREF="node103.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html3033"
-  HREF="javascriptexamples.html">
+<A NAME="tex2html2900"
+  HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html3027"
+<A NAME="tex2html2896"
   HREF="node101.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html3035"
-  HREF="node101.html">
+<A NAME="tex2html2902"
+  HREF="node103.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html3037"
-  HREF="node104.html">
+<A NAME="tex2html2904"
+  HREF="node106.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -159,17 +228,17 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html3040"
-  HREF="node103.html">&#205;ndice de Tablas</A>
-<B>Sup:</B> <A NAME="tex2html3034"
-  HREF="javascriptexamples.html">Apuntes de la Asignatura</A>
-<B> Ant:</B> <A NAME="tex2html3028"
-  HREF="node101.html">&#205;ndice General</A>
+<B> Sig:</B> <A NAME="tex2html2907"
+  HREF="node103.html">&#205;ndice General</A>
+<B>Sup:</B> <A NAME="tex2html2901"
+  HREF="node96.html">CoffeeScript y Express</A>
+<B> Ant:</B> <A NAME="tex2html2897"
+  HREF="node101.html">Mongoose</A>
 </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I>Casiano Rodríguez León <BR>
-2015-04-14</I>
+2015-04-15</I>
 </ADDRESS>
 </BODY>
 </HTML>

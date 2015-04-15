@@ -35,7 +35,7 @@ $ref_files{$key} = "$dir".q|node141.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_pilgrimhtml5/;
-$ref_files{$key} = "$dir".q|node105.html|; 
+$ref_files{$key} = "$dir".q|node107.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:copia/;
@@ -67,7 +67,7 @@ $ref_files{$key} = "$dir".q|node285.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_mogensen2011introduction/;
-$ref_files{$key} = "$dir".q|node105.html|; 
+$ref_files{$key} = "$dir".q|node107.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:samplec/;
@@ -122,16 +122,16 @@ $key = q/program:adrp/;
 $ref_files{$key} = "$dir".q|node23.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/section:ejemplosimple/;
-$ref_files{$key} = "$dir".q|node20.html|; 
-$noresave{$key} = "$nosave";
-
 $key = q/subsection:regexp510lenrec/;
 $ref_files{$key} = "$dir".q|node23.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:ejemplodedatamapper/;
 $ref_files{$key} = "$dir".q|node265.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/section:ejemplosimple/;
+$ref_files{$key} = "$dir".q|node20.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/sectionpractica:csv/;
@@ -143,7 +143,7 @@ $ref_files{$key} = "$dir".q|node12.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_Proebsting/;
-$ref_files{$key} = "$dir".q|node105.html|; 
+$ref_files{$key} = "$dir".q|node107.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:optimizacion/;
@@ -355,7 +355,7 @@ $ref_files{$key} = "$dir".q|node22.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_wilson2008beautiful/;
-$ref_files{$key} = "$dir".q|node105.html|; 
+$ref_files{$key} = "$dir".q|node107.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:pila/;
@@ -419,7 +419,7 @@ $ref_files{$key} = "$dir".q|node132.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_nathanclosures/;
-$ref_files{$key} = "$dir".q|node105.html|; 
+$ref_files{$key} = "$dir".q|node107.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:estructuradeunaapprack/;
@@ -511,7 +511,7 @@ $ref_files{$key} = "$dir".q|node285.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_Muchnick:1998:ACD:286076/;
-$ref_files{$key} = "$dir".q|node105.html|; 
+$ref_files{$key} = "$dir".q|node107.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:mediaregla/;
@@ -823,7 +823,7 @@ $ref_files{$key} = "$dir".q|node72.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_nathanuniversity/;
-$ref_files{$key} = "$dir".q|node105.html|; 
+$ref_files{$key} = "$dir".q|node107.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/parrafo:mochaychai/;
