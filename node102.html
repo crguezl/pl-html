@@ -210,6 +210,9 @@ un poco. Para ello reescribimos nuestro <code>Gulpfile</code>
 para que arranque el servidor <code>mongod</code> antes de las pruebas
 y lo cierre al finalizar las pruebas:
 <PRE>
+</PRE>
+Ahora podemos ejecutar las pruebas:
+<PRE>
 [~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ cat gulpfile.coffee 
 gulp = require('gulp')
 shell = require('gulp-shell')
@@ -219,26 +222,28 @@ fs = require('fs')
 gulp.task 'default', -&gt;
   gulp.src('').pipe shell( 'DEBUG=coffeepress:* nodemon bin/www.coffee' )
 
-gulp.task 'test', [ 'killmongo' ]
+gulp.task 'test', [ 'mocha' ]
 
-gulp.task 'mocha', [ 'mongod' ], -&gt;
+gulp.task 'mocha', -&gt;
   gulp.src('')
     .pipe shell "mocha --compilers coffee:coffee-script/register --invert --grep 'feature' -R spec"
 
 # run mongod server
 gulp.task 'mongod', -&gt;
   gulp.src('')
-    .pipe shell([ 'mongod --pidfilepath /tmp/mongo.pid --logpath /tmp/mongo.log &amp;' ])
+    .pipe shell([ 'mongod --config mongod.conf 2&gt;1 &gt; /usr/local/var/mongodb/salida &amp;' ])
 
 # kill mongod server
-gulp.task 'killmongo', [ "mocha" ],  -&gt;
-  fs.readFile '/tmp/mongo.pid', 'utf8', (err, pid) -&gt;
-    return console.log(err) if (err)
-    console.log("killing #{pid}")
-    gulp.src('').pipe shell("kill #{pid}")
-</PRE>
-Ahora podemos ejecutar las pruebas:
-<PRE>
+gulp.task 'killmongo', -&gt;
+    fs.readFile '/usr/local/var/mongodb/mongo.pid', 'utf8', (err, pid) -&gt;
+      return console.log(err) if (err)
+      console.log("killing #{pid}")
+      gulp.src('').pipe shell("kill #{pid}")
+
+# run mongod server
+gulp.task 'ps', -&gt;
+  gulp.src('')
+    .pipe shell( 'ps -fA | grep mongod')
 </PRE>
 
 <P>
