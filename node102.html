@@ -243,8 +243,73 @@ gulp.task 'ps', -&gt;
   gulp.src('')
     .pipe shell( 'ps -fA | grep mongod')
 </PRE>
-Ahora podemos ejecutar las pruebas:
+Ahora podemos facilmente comprobar si el servidor mongo está activo:
 <PRE>
+[~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ gulp ps
+[14:23:52] Using gulpfile ~/local/src/javascript/expressjs/clase-express-coffee/gulpfile.js
+[14:23:52] Starting 'ps'...
+  501 33200 33199   0  2:23PM ttys011    0:00.01 /bin/sh -c ps -fA | grep mongod
+  501 33202 33200   0  2:23PM ttys011    0:00.00 grep mongod
+[14:23:53] Finished 'ps' after 107 ms
+</PRE>
+Vemos que no. Lo arrancamos:
+<PRE>
+[~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ gulp mongod
+[14:23:59] Using gulpfile ~/local/src/javascript/expressjs/clase-express-coffee/gulpfile.js
+[14:23:59] Starting 'mongod'...
+[14:24:00] Finished 'mongod' after 37 ms
+</PRE>
+Comprobamos que efectivamente está corriendo:
+<PRE>
+[~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ gulp ps
+[14:24:11] Using gulpfile ~/local/src/javascript/expressjs/clase-express-coffee/gulpfile.js
+[14:24:11] Starting 'ps'...
+  501 33212     1   0  2:24PM ttys011    0:00.25 mongod --config mongod.conf
+  501 33228 33227   0  2:24PM ttys011    0:00.00 /bin/sh -c ps -fA | grep mongod
+  501 33230 33228   0  2:24PM ttys011    0:00.00 grep mongod
+[14:24:11] Finished 'ps' after 82 ms
+</PRE>
+Ejecutamos las pruebas:
+<PRE>
+[~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ gulp test
+[14:24:21] Using gulpfile ~/local/src/javascript/expressjs/clase-express-coffee/gulpfile.js
+[14:24:21] Starting 'mocha'...
+
+
+  Post
+    ok: should create a new post
+
+  routes
+    index
+      ok: should display index with posts
+    new post
+      ok: should display the add post page
+
+  3 passing (179ms)
+
+[14:24:22] Finished 'mocha' after 1.4 s
+[14:24:22] Starting 'test'...
+[14:24:22] Finished 'test' after 17 microseg
+</PRE>
+Vemos que la prueba <code>should create a new post</code> pasa.
+
+<P>
+Si lo deseamos podemos parar el servidor <code>mongod</code>:
+<PRE>
+[~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ gulp killmongo
+[14:24:42] Using gulpfile ~/local/src/javascript/expressjs/clase-express-coffee/gulpfile.js
+[14:24:42] Starting 'killmongo'...
+[14:24:42] Finished 'killmongo' after 537 microseg
+killing 33212
+</PRE>
+Comprobamos que - efectivamente - el proceso no existe:
+<PRE>
+[~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ gulp ps
+[14:24:45] Using gulpfile ~/local/src/javascript/expressjs/clase-express-coffee/gulpfile.js
+[14:24:45] Starting 'ps'...
+  501 33274 33270   0  2:24PM ttys011    0:00.00 /bin/sh -c ps -fA | grep mongod
+  501 33276 33274   0  2:24PM ttys011    0:00.00 grep mongod
+[14:24:46] Finished 'ps' after 89 ms
 </PRE>
 
 <P>
