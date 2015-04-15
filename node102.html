@@ -120,11 +120,11 @@ describe 'Post', -&gt;
     mongoose.connect 'mongodb://localhost/coffeepress', -&gt;
       Post.remove done
   it 'should create a new post', (done) -&gt;
-    post = new Post(title:'First!', body:'First post bastiches!')
+    post = new Post(title:'First!', body:'First post!')
     post.save -&gt;
       Post.findOne _id: post._id, (err, retrievedPost) -&gt;
         expect(retrievedPost.title).eql "First!"
-        expect(retrievedPost.body).eql "First post bastiches!"
+        expect(retrievedPost.body).eql "First post!"
         done()
 </PRE>
 
@@ -144,7 +144,7 @@ don’t run until all Posts have been removed</FONT>
 <LI>Now we create a new <code>Post</code> instance.
 You can pass an object literal in to set properties on the model, so we do that here
 <PRE>
-    post = new Post(title:'First!', body:'First post bastiches!')
+    post = new Post(title:'First!', body:'First post!')
 </PRE>
 </LI>
 <LI>Finally, in our post <code>save</code> callback we look the post back up and verify certain attributes have been set
@@ -152,11 +152,11 @@ You can pass an object literal in to set properties on the model, so we do that 
     post.save -&gt;
       Post.findOne _id: post._id, (err, retrievedPost) -&gt;
         expect(retrievedPost.title).eql "First!"
-        expect(retrievedPost.body).eql "First post bastiches!"
+        expect(retrievedPost.body).eql "First post!"
         done()
 </PRE>
 </LI>
-<LI>It’s a dumb test (and in fact I rarely test mongoose’s behavior like this), but it does verify that we’ve configured our model correctly
+<LI>It’s a dumb test, but it does verify that we’ve configured our model correctly
 </LI>
 </UL>
 <PRE>
@@ -171,7 +171,19 @@ Error: Cannot find module '../models/Post'
 </PRE>
 
 <P>
-Now let’s implement our model to make the test pass.
+Now let’s implement our model:
+<PRE>
+$ mkdir models
+$ cat models/Post.coffee 
+mongoose = require 'mongoose'
+
+Post = new mongoose.Schema(
+  title: String
+  body: String
+)
+
+module.exports = mongoose.model 'Post', Post
+</PRE>
 
 <P>
 
