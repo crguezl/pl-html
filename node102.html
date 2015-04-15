@@ -205,13 +205,10 @@ $ gulp test
   1) Post "before all" hook:
      Error: timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.
 </PRE>
-Será mejor automatizar el proceso de ejecutar las pruebas 
-un poco. Para ello reescribimos nuestro <code>Gulpfile</code>
-para que arranque el servidor <code>mongod</code> antes de las pruebas
-y lo cierre al finalizar las pruebas:
-<PRE>
-</PRE>
-Ahora podemos ejecutar las pruebas:
+Será mejor extender el <code>gulpfile</code>
+un poco para controlar el estado del servidor
+<code>mongod</code> antes y después de las 
+pruebas:
 <PRE>
 [~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ cat gulpfile.coffee 
 gulp = require('gulp')
@@ -245,6 +242,9 @@ gulp.task 'killmongo', -&gt;
 gulp.task 'ps', -&gt;
   gulp.src('')
     .pipe shell( 'ps -fA | grep mongod')
+</PRE>
+Ahora podemos ejecutar las pruebas:
+<PRE>
 </PRE>
 
 <P>
