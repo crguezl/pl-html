@@ -110,6 +110,56 @@ application data and includes built-in type casting, validation, query
 building, business logic hooks and more, out of the box.
 
 <P>
+Now say we like fuzzy kittens and want to record every kitten we ever
+meet in MongoDB. 
+
+<P>
+The first thing we need to do is include mongoose in
+our project and open a connection to the test database on
+our locally running instance of MongoDB.
+
+<P>
+<PRE>
+// getting-started.js
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/test');
+</PRE>
+
+<P>
+We have a pending connection to the test database running on localhost. We
+now need to get notified if we connect successfully or if a connection
+error occurs:
+
+<P>
+<PRE>
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function (callback) {
+  // yay!
+});
+</PRE>
+
+<P>
+Once our connection opens, our callback will be called. 
+
+<P>
+For brevity, let's assume that all following code is within this callback.
+
+<P>
+With Mongoose, everything is derived from a 
+<code>Schema</code>. 
+
+<P>
+Let's get a reference to it and define our kittens.
+
+<P>
+<PRE>
+var kittySchema = mongoose.Schema({
+    name: String
+})
+</PRE>
+
+<P>
 
 <DIV CLASS="navigation"><HR>
 <A NAME="tex2html2894"
@@ -174,7 +224,7 @@ building, business logic hooks and more, out of the box.
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I>Casiano Rodríguez León <BR>
-2015-04-15</I>
+2015-04-16</I>
 </ADDRESS>
 </BODY>
 </HTML>
