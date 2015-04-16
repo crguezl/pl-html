@@ -1213,13 +1213,6 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img223.png"
  ALT="$ \rho$">|; 
 
-$key = q/%latex2htmlidmarker21007S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img100.png"
- ALT="% latex2html id marker 21007
-$ S = program$">|; 
-
 $key = q/RrightarrowalphaR;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="70" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
@@ -2021,6 +2014,13 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="291" HEIGHT="82" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img102.png"
  ALT="$ FSD = \left \{ \alpha \in (\Sigma \cup V)* : \exists S \begin{array}{c} * \Longrightarrow  {\scriptstyle RM} \end{array} \alpha \right \}$">|; 
+
+$key = q/%latex2htmlidmarker21013S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img100.png"
+ ALT="% latex2html id marker 21013
+$ S = program$">|; 
 
 $key = q/PLUS(NUM_1,NUM_2)LongrightarrowNUM_3;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG

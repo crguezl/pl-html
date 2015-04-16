@@ -182,8 +182,8 @@ var kittySchema = mongoose.Schema({
 Everything in Mongoose starts with a 
 <A NAME="tex2html426"
   HREF="http://mongoosejs.com/docs/guide.html">Schema</A>. 
-Each schema maps to a <A NAME="12000"></A><SPAN  CLASS="textbf">MongoDB</SPAN> collection and 
-<FONT COLOR="#ff0000"> defines the shape of the <A NAME="12005"></A><SPAN  CLASS="textbf">MongoDB documents</SPAN> within that collection</FONT>.
+Each schema maps to a <A NAME="12002"></A><SPAN  CLASS="textbf">MongoDB</SPAN> collection and 
+<FONT COLOR="#ff0000"> defines the shape of the <A NAME="12007"></A><SPAN  CLASS="textbf">MongoDB documents</SPAN> within that collection</FONT>.
 
 <P>
 So far so good. 
@@ -280,6 +280,63 @@ Kitten.find({ name: /^Fluff/ }, callback)
 </PRE>
 This performs a search for all documents with a name property that begins with <code>"Fluff"</code> 
 and returns the result as an array of kittens to the <code>callback</code>.
+
+<P>
+Este es el código completo de nuestro ejemplo:
+
+<P>
+<PRE>
+[~/javascript/mongoose]$ cat getting-started.js 
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/test');
+
+var kittySchema = mongoose.Schema({
+    name: String
+  });
+
+
+kittySchema.methods.speak = function() {
+  var greeting = this.name? "Meow name is "+this.name : "I don't have a name";
+  console.log(greeting);
+
+}
+
+// compiling our schema into a Model
+var Kitten = mongoose.model('Kitten', kittySchema);
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'Error en la conexión a MongoDB:'));
+
+var errDisconnect =  function(err) {
+  if (err) { console.log("Se produjo un error en la desconexión! "+err) }
+  else { console.log("Desconectando!") }
+}
+
+var main = function() {
+  console.log("Abierta la conexión con MongoDB!");
+
+  var silence = new Kitten({ name: 'Silence' });
+  console.log(silence.name);    // 'Silence'
+  silence.speak(); // 'Meow name is Silence'
+
+  var fluffy = new Kitten({ name: 'fluffy' });
+  fluffy.speak();
+
+  fluffy.save(function (err, fluffy) {
+    if (err) console.error("no puedo guardar a fluffy! "+err)
+    else console.error("fluffy guardado!");
+
+    Kitten.find({ name: /^Fluff/i },function (err, kittens) {
+      if (err) return console.error("Error buscando gatos! "+err);
+      console.log(kittens);
+
+      mongoose.disconnect(errDisconnect);
+    });
+  });
+}
+
+db.once('open', main);
+</PRE>
 
 <P>
 
