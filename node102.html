@@ -27,19 +27,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2914"
+<A NAME="tex2html2918"
   HREF="node103.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2908"
+<A NAME="tex2html2912"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2904"
+<A NAME="tex2html2908"
   HREF="node101.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2910"
+<A NAME="tex2html2914"
   HREF="node103.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2912"
+<A NAME="tex2html2916"
   HREF="node106.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -79,23 +79,32 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2915"
+<B> Sig:</B> <A NAME="tex2html2919"
   HREF="node103.html">&#205;ndice General</A>
-<B>Sup:</B> <A NAME="tex2html2909"
+<B>Sup:</B> <A NAME="tex2html2913"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2905"
+<B> Ant:</B> <A NAME="tex2html2909"
   HREF="node101.html">Mongoose</A>
 <B> Con:</B> 
-<A NAME="tex2html2910"
+<A NAME="tex2html2914"
   HREF="node103.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2912"
+<A NAME="tex2html2916"
   HREF="node106.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
 <!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html2920"
+  HREF="node102.html#SECTION06261000000000000000">Definiendo el Modelo y Probando que Funciona</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
 
 <H1><A NAME="SECTION06260000000000000000">
 Añadiendo Persistencia: Posts con MongoDB y Mongoose</A>
@@ -107,6 +116,14 @@ $ npm install --save mongoose
 $ grep mongoose package.json 
     "mongoose": "~4.0.1"
 </PRE>
+
+<P>
+
+<H2><A NAME="SECTION06261000000000000000">
+Definiendo el Modelo y Probando que Funciona</A>
+</H2>
+
+<P>
 Now we’ll create an initial test to just test mongoose out.
 <PRE>
 ~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ cat test/post-test.coffee 
@@ -156,7 +173,9 @@ You can pass an object literal in to set properties on the model, so we do that 
         done()
 </PRE>
 </LI>
-<LI>It’s a dumb test, but it does verify that we’ve configured our model correctly
+<LI>Obsérvese que las pruebas se refieren a que el modelo
+está definido correctamente. Obviamente nuestra aplicación aún no usa el modelo
+y no se está comprobando nada acerca de la relación entre la aplicación y el modelo
 </LI>
 </UL>
 <PRE>
@@ -319,19 +338,19 @@ model instead of an in memory array.
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2914"
+<A NAME="tex2html2918"
   HREF="node103.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2908"
+<A NAME="tex2html2912"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2904"
+<A NAME="tex2html2908"
   HREF="node101.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2910"
+<A NAME="tex2html2914"
   HREF="node103.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2912"
+<A NAME="tex2html2916"
   HREF="node106.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -371,17 +390,17 @@ model instead of an in memory array.
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2915"
+<B> Sig:</B> <A NAME="tex2html2919"
   HREF="node103.html">&#205;ndice General</A>
-<B>Sup:</B> <A NAME="tex2html2909"
+<B>Sup:</B> <A NAME="tex2html2913"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2905"
+<B> Ant:</B> <A NAME="tex2html2909"
   HREF="node101.html">Mongoose</A>
 </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I>Casiano Rodríguez León <BR>
-2015-04-16</I>
+2015-04-17</I>
 </ADDRESS>
 </BODY>
 </HTML>
