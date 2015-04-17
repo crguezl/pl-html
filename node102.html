@@ -362,6 +362,46 @@ Now let’s refit our routes to use the <code>Post</code>
 model instead of an in memory array.
 
 <P>
+En el fichero <code>app.coffee</code> cargamos la librería <code>mongoose</code> y conectamos
+con la base de datos: 
+<PRE>
+...
+bodyParser = require('body-parser')
+
+mongoose = require "mongoose"
+mongoose.connect 'mongodb://localhost/coffeepress'
+
+routes = require('./routes/index')
+...
+</PRE>
+
+<P>
+Los mayores cambios los hacemos en las rutas:
+<PRE>
+[~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ cat routes/index.coffee 
+express = require('express')
+Post = require '../models/Post'
+debug = require('debug')('coffeepress:server')
+util = require 'util'
+
+module.exports =
+  index: (req, res) -&gt;
+    Post.find {}, (err, posts) -&gt;
+      res.render "index",
+        title: "My Blog"
+        posts: posts
+  newPost: (req, res) -&gt;
+    res.render('add_post', {title: "Write New Post"})
+  addPost: (req, res) -&gt;
+    post = req.body
+    new Post(post).save -&gt;
+      res.redirect '/'
+  viewPost: (req, res) -&gt;
+    Post.findById req.params.id, (err, post) -&gt;
+      res.render 'post', post: post, title: post.title
+</PRE>
+
+<P>
 
 <DIV CLASS="navigation"><HR>
 <A NAME="tex2html2922"
