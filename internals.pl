@@ -122,16 +122,16 @@ $key = q/program:adrp/;
 $ref_files{$key} = "$dir".q|node23.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/subsection:regexp510lenrec/;
-$ref_files{$key} = "$dir".q|node23.html|; 
-$noresave{$key} = "$nosave";
-
 $key = q/section:ejemplodedatamapper/;
 $ref_files{$key} = "$dir".q|node265.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:ejemplosimple/;
 $ref_files{$key} = "$dir".q|node20.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/subsection:regexp510lenrec/;
+$ref_files{$key} = "$dir".q|node23.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/sectionpractica:csv/;

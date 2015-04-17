@@ -155,6 +155,19 @@ to create
 the <code>before</code> hook (which runs once before anything else in the test runs)
 to both connect to the database and then remove all of the Post objects
 from mongodb
+
+<UL>
+<LI>The four hooks in Mocha are:
+</LI>
+<LI>The <code>beforeEach()</code> hook contains code that runs before every test in a describe block.
+</LI>
+<LI>The <code>afterEach()</code> hook contains code that runs after every test in a describe block.
+</LI>
+<LI>The <code>before()</code> hook contains code that runs before any tests in each <code>describe()</code> block run. It runs before the first run of a <code>beforeEach()</code> hook.
+</LI>
+<LI>The <code>after()</code> hook contains code that runs after all tests in each <code>describe()</code> block have run. The <code>after()</code> hook will run after the last <code>afterEach()</code> hook.
+</LI>
+</UL>
 </LI>
 <LI>We pass the <code>done</code> callback to the remove call 
 <FONT COLOR="#ff0000"> so that tests
