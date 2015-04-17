@@ -1159,13 +1159,6 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img146.png"
  ALT="$\displaystyle   FIRST(X) = FIRST(X) \cup FIRST(Y_i) - \{ \epsilon \};$">|; 
 
-$key = q/%latex2htmlidmarker21077S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img100.png"
- ALT="% latex2html id marker 21077
-$ S = program$">|; 
-
 $key = q/C=left{I_1,I_2,cdotsI_nright};MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="145" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
@@ -1787,6 +1780,13 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img172.png"
  ALT="$\displaystyle \hat{\delta}(q, x) = \left \{ \begin{array}{ll} \delta(\hat{\delt...
 ...,y),a) &amp; \mbox{si $x = ya$}  q &amp; \mbox{si $x = \epsilon$} \end{array} \right.$">|; 
+
+$key = q/%latex2htmlidmarker21085S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img100.png"
+ ALT="% latex2html id marker 21085
+$ S = program$">|; 
 
 $key = q/M.;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG

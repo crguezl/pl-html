@@ -247,6 +247,27 @@ Post = new mongoose.Schema(
 
 module.exports = mongoose.model 'Post', Post
 </PRE>
+
+<P>
+
+<UL>
+<LI>Everything in Mongoose starts with a Schema. 
+<PRE>
+Post = new mongoose.Schema(
+  title: String
+  body: String
+)
+</PRE>
+Each schema maps to a MongoDB collection and defines the shape of the documents within that collection.
+</LI>
+<LI>To use our schema definition, we need to convert our <code>Post</code> Schema
+into a Model we can work with. To do so, we pass it into
+<code>mongoose.model(modelName, schema)</code>:
+<PRE>
+mongoose.model 'Post', Post
+</PRE>
+</LI>
+</UL>
 Si ejecutamos las pruebas obtenemos un fallo porque el servidor <code>mongod</code> no está arrancado:
 <PRE>
 $ gulp test
