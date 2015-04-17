@@ -27,19 +27,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2918"
+<A NAME="tex2html2922"
   HREF="node103.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2912"
+<A NAME="tex2html2916"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2908"
+<A NAME="tex2html2912"
   HREF="node101.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2914"
+<A NAME="tex2html2918"
   HREF="node103.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2916"
+<A NAME="tex2html2920"
   HREF="node106.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -79,18 +79,18 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2919"
+<B> Sig:</B> <A NAME="tex2html2923"
   HREF="node103.html">&#205;ndice General</A>
-<B>Sup:</B> <A NAME="tex2html2913"
+<B>Sup:</B> <A NAME="tex2html2917"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2909"
+<B> Ant:</B> <A NAME="tex2html2913"
   HREF="node101.html">Mongoose</A>
 <B> Con:</B> 
-<A NAME="tex2html2914"
+<A NAME="tex2html2918"
   HREF="node103.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2916"
+<A NAME="tex2html2920"
   HREF="node106.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
@@ -100,8 +100,10 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
 
 <UL CLASS="ChildLinks">
-<LI><A NAME="tex2html2920"
+<LI><A NAME="tex2html2924"
   HREF="node102.html#SECTION06261000000000000000">Definiendo el Modelo y Probando que Funciona</A>
+<LI><A NAME="tex2html2925"
+  HREF="node102.html#SECTION06262000000000000000">Usando la Base de Datos MongoDB en vez de un Array en Nuestro Ejemplo</A>
 </UL>
 <!--End of Table of Child-Links-->
 <HR>
@@ -262,7 +264,25 @@ gulp.task 'ps', -&gt;
   gulp.src('')
     .pipe shell( 'ps -fA | grep mongod')
 </PRE>
-Ahora podemos facilmente comprobar si el servidor mongo está activo:
+Este es el fichero de configuración para <code>mongod</code> que estoy usando:
+<PRE>
+[~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ cat mongod.conf 
+# Store data in /usr/local/var/mongodb instead of the default /data/db
+dbpath = /usr/local/var/mongodb
+
+# Append logs to /usr/local/var/mongo.log
+logpath = /usr/local/var/mongodb/mongo.log
+logappend = true
+
+# Save the PID of the daemon on that file
+pidfilepath = /usr/local/var/mongodb/mongo.pid
+
+# Only accept local connections
+bind_ip = 127.0.0.1
+</PRE>
+
+<P>
+Ahora podemos fácilmente comprobar si el servidor mongo está activo:
 <PRE>
 [~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ gulp ps
 [14:23:52] Using gulpfile ~/local/src/javascript/expressjs/clase-express-coffee/gulpfile.js
@@ -332,25 +352,31 @@ Comprobamos que - efectivamente - el proceso no existe:
 </PRE>
 
 <P>
+
+<H2><A NAME="SECTION06262000000000000000">
+Usando la Base de Datos MongoDB en vez de un Array en Nuestro Ejemplo</A>
+</H2>
+
+<P>
 Now let’s refit our routes to use the <code>Post</code> 
 model instead of an in memory array.
 
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2918"
+<A NAME="tex2html2922"
   HREF="node103.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2912"
+<A NAME="tex2html2916"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2908"
+<A NAME="tex2html2912"
   HREF="node101.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2914"
+<A NAME="tex2html2918"
   HREF="node103.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2916"
+<A NAME="tex2html2920"
   HREF="node106.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -390,11 +416,11 @@ model instead of an in memory array.
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2919"
+<B> Sig:</B> <A NAME="tex2html2923"
   HREF="node103.html">&#205;ndice General</A>
-<B>Sup:</B> <A NAME="tex2html2913"
+<B>Sup:</B> <A NAME="tex2html2917"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2909"
+<B> Ant:</B> <A NAME="tex2html2913"
   HREF="node101.html">Mongoose</A>
 </DIV>
 <!--End of Navigation Panel-->
