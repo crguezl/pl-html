@@ -203,6 +203,19 @@ You can pass an object literal in to set properties on the model, so we do that 
         expect(retrievedPost.body).eql "First post!"
         done()
 </PRE>
+
+<UL>
+<LI>Documents can be retreived using each models 
+verb|find|, verb|findById|, verb|findOne|, or verb|where| 
+static methods.
+</LI>
+<LI>El primer argumento <code>{_id: post._id}</code> es la condición y especifica el documento que 
+queremos buscar
+</LI>
+<LI>El segundo argumento <code>(err, retrievedPost) -&gt; ...</code> es la callback que se ejecuta
+cuando el documento ha sido encontrado
+</LI>
+</UL>
 </LI>
 <LI>Obsérvese que las pruebas se refieren a que el modelo
 está definido correctamente. Obviamente nuestra aplicación aún no usa el modelo
