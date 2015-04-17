@@ -27,19 +27,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2922"
+<A NAME="tex2html2923"
   HREF="node103.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2916"
+<A NAME="tex2html2917"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2912"
+<A NAME="tex2html2913"
   HREF="node101.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2918"
+<A NAME="tex2html2919"
   HREF="node103.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2920"
+<A NAME="tex2html2921"
   HREF="node106.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -79,18 +79,18 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2923"
+<B> Sig:</B> <A NAME="tex2html2924"
   HREF="node103.html">&#205;ndice General</A>
-<B>Sup:</B> <A NAME="tex2html2917"
+<B>Sup:</B> <A NAME="tex2html2918"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2913"
+<B> Ant:</B> <A NAME="tex2html2914"
   HREF="node101.html">Mongoose</A>
 <B> Con:</B> 
-<A NAME="tex2html2918"
+<A NAME="tex2html2919"
   HREF="node103.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2920"
+<A NAME="tex2html2921"
   HREF="node106.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
@@ -100,9 +100,9 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
 
 <UL CLASS="ChildLinks">
-<LI><A NAME="tex2html2924"
-  HREF="node102.html#SECTION06261000000000000000">Definiendo el Modelo y Probando que Funciona</A>
 <LI><A NAME="tex2html2925"
+  HREF="node102.html#SECTION06261000000000000000">Definiendo el Modelo y Probando que Funciona</A>
+<LI><A NAME="tex2html2926"
   HREF="node102.html#SECTION06262000000000000000">Usando la Base de Datos MongoDB en vez de un Array en Nuestro Ejemplo</A>
 </UL>
 <!--End of Table of Child-Links-->
@@ -153,7 +153,7 @@ to create
 </LI>
 <LI>Since we want our test to start with a clean slate, we use
 the <code>before</code> hook (which runs once before anything else in the test runs)
-to both connect to the database and then remove all of the Post objects
+to both connect to the database and then <code>remove</code> all of the Post objects
 from mongodb
 
 <UL>
@@ -167,9 +167,25 @@ from mongodb
 </LI>
 <LI>The <code>after()</code> hook contains code that runs after all tests in each <code>describe()</code> block have run. The <code>after()</code> hook will run after the last <code>afterEach()</code> hook.
 </LI>
+<LI>See
+<A NAME="tex2html428"
+  HREF="https://medium.com/@kanyang/hooks-in-mocha-87cb43baa91c">Hooks in Mocha</A>
+</LI>
+</UL>
+
+<UL>
+<LI>Models have a static remove method available for removing all documents matching conditions.
+<PRE>
+Post.remove({ title: 'first' }, function (err) {
+  if (err) return handleError(err);
+  // removed!
+});
+</PRE>
+When no condition is specified all the documents are removed
+</LI>
 </UL>
 </LI>
-<LI>We pass the <code>done</code> callback to the remove call 
+<LI>We pass the <code>done</code> callback to the <code>remove</code> call 
 <FONT COLOR="#ff0000"> so that tests
 don’t run until all Posts have been removed</FONT>
 </LI>
@@ -417,19 +433,19 @@ module.exports =
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2922"
+<A NAME="tex2html2923"
   HREF="node103.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2916"
+<A NAME="tex2html2917"
   HREF="node96.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2912"
+<A NAME="tex2html2913"
   HREF="node101.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2918"
+<A NAME="tex2html2919"
   HREF="node103.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2920"
+<A NAME="tex2html2921"
   HREF="node106.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -469,11 +485,11 @@ module.exports =
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2923"
+<B> Sig:</B> <A NAME="tex2html2924"
   HREF="node103.html">&#205;ndice General</A>
-<B>Sup:</B> <A NAME="tex2html2917"
+<B>Sup:</B> <A NAME="tex2html2918"
   HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2913"
+<B> Ant:</B> <A NAME="tex2html2914"
   HREF="node101.html">Mongoose</A>
 </DIV>
 <!--End of Navigation Panel-->
