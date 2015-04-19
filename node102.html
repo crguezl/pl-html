@@ -213,7 +213,11 @@ static methods.
 queremos buscar
 </LI>
 <LI>El segundo argumento <code>(err, retrievedPost) -&gt; ...</code> es la callback que se ejecuta
-cuando el documento ha sido encontrado
+cuando el documento ha sido encontrado. 
+
+<P>
+Aprovechamos esta callback para hacer
+las pruebas y llamar finalmente a <code>done()</code> para indicar la finalización de las pruebas.
 </LI>
 </UL>
 </LI>
@@ -258,7 +262,8 @@ Post = new mongoose.Schema(
   body: String
 )
 </PRE>
-Each schema maps to a MongoDB collection and defines the shape of the documents within that collection.
+
+<FONT COLOR="#ff0000"> Each schema maps to a MongoDB collection and defines the shape of the documents within that collection</FONT>.
 </LI>
 <LI>To use our schema definition, we need to convert our <code>Post</code> Schema
 into a Model we can work with. To do so, we pass it into
