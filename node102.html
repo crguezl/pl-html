@@ -470,6 +470,84 @@ module.exports =
 </PRE>
 
 <P>
+Acabaremos mejorando un poco las pruebas:
+<PRE>
+[~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ cat test/routes-test.coffee 
+chai = require 'chai'
+expect = chai.expect
+mongoose = require "mongoose"
+Post     = require "../models/Post"
+
+routes = require '../routes/index'
+
+describe 'routes', -&gt;
+  req = 
+    params: {}
+    body: {}
+  res = 
+    redirect: (route) -&gt;
+      # do nothing
+    render: (view, vars) -&gt; 
+      # do nothing
+  before (done) -&gt;
+    mongoose.connect 'mongodb://localhost/coffeepress', -&gt;
+      Post.remove done
+
+  describe 'index', -&gt;
+    it "should display index with posts", (done) -&gt;
+      res.render = (view, vars) -&gt; # redefinimos render
+        expect(view).to.be.equal 'index'
+        expect(vars.title).to.be.equal 'My Blog'
+        expect(vars.posts).deep.equal []
+        done()
+      routes.index(req, res)
+
+  describe 'new post', -&gt;
+    it "should display the add post page", (done)-&gt;
+      res.render = (view, vars) -&gt; # redefinimos render
+        expect(view).to.be.equal 'add_post'
+        expect(vars.title).to.be.equal 'Write New Post'
+        done()
+      routes.newPost(req, res)
+    it "should add a new post when posted to", (done) -&gt;
+      req.body = 
+        title: "My Post!"
+        body: "My wonderful post."
+
+      routes.addPost req, redirect: (route) -&gt;
+        expect(route).eql "/"
+        routes.index req, render: (view, vars) -&gt;
+          expect(view).equal "index"
+          expect(vars.posts[0].title).eql 'My Post!'
+          expect(vars.posts[0].body).eql "My wonderful post."
+          done()
+</PRE>
+Cuando las ejecutamos tenemos:
+<PRE>
+~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ gulp test
+[22:14:06] Using gulpfile ~/local/src/javascript/expressjs/clase-express-coffee/gulpfile.js
+[22:14:06] Starting 'mocha'...
+
+
+  Post
+    ok: should create a new post
+
+  routes
+    index
+      ok: should display index with posts
+    new post
+      ok: should display the add post page
+      ok: should add a new post when posted to
+
+
+  4 passing (165ms)
+
+[22:14:07] Finished 'mocha' after 1.42 s
+[22:14:07] Starting 'test'...
+[22:14:07] Finished 'test' after 17 micros
+</PRE>
+
+<P>
 
 <DIV CLASS="navigation"><HR>
 <A NAME="tex2html2923"
