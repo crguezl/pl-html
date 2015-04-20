@@ -28,19 +28,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html1608"
+<A NAME="tex2html1610"
   HREF="node34.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html1602"
+<A NAME="tex2html1604"
   HREF="node30.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html1596"
+<A NAME="tex2html1598"
   HREF="node32.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html1604"
+<A NAME="tex2html1606"
   HREF="node103.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html1606"
+<A NAME="tex2html1608"
   HREF="node106.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -80,18 +80,18 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html1609"
+<B> Sig:</B> <A NAME="tex2html1611"
   HREF="node34.html">Acciones Intermedias</A>
-<B>Sup:</B> <A NAME="tex2html1603"
+<B>Sup:</B> <A NAME="tex2html1605"
   HREF="node30.html">Análisis Descendente mediante Parsing</A>
-<B> Ant:</B> <A NAME="tex2html1597"
+<B> Ant:</B> <A NAME="tex2html1599"
   HREF="node32.html">PEGJS</A>
 <B> Con:</B> 
-<A NAME="tex2html1604"
+<A NAME="tex2html1606"
   HREF="node103.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html1606"
+<A NAME="tex2html1608"
   HREF="node106.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
@@ -103,24 +103,28 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <UL CLASS="ChildLinks">
 <LI><UL>
 <LI><UL>
-<LI><A NAME="tex2html1610"
-  HREF="node33.html#SECTION04430010000000000000">Donde</A>
-<LI><A NAME="tex2html1611"
-  HREF="node33.html#SECTION04430020000000000000">arithmetics.pegjs</A>
 <LI><A NAME="tex2html1612"
-  HREF="node33.html#SECTION04430030000000000000">Initializers</A>
+  HREF="node33.html#SECTION04430010000000000000">Donde</A>
 <LI><A NAME="tex2html1613"
-  HREF="node33.html#SECTION04430040000000000000">Parsing Expression Types</A>
+  HREF="node33.html#SECTION04430020000000000000">arithmetics.pegjs</A>
 <LI><A NAME="tex2html1614"
-  HREF="node33.html#SECTION04430050000000000000">main.js</A>
+  HREF="node33.html#SECTION04430030000000000000">PEG Syntax</A>
 <LI><A NAME="tex2html1615"
-  HREF="node33.html#SECTION04430060000000000000">Rakefile</A>
+  HREF="node33.html#SECTION04430040000000000000">Rules Syntax</A>
 <LI><A NAME="tex2html1616"
-  HREF="node33.html#SECTION04430070000000000000">Compilación</A>
+  HREF="node33.html#SECTION04430050000000000000">Initializers</A>
+<LI><A NAME="tex2html1617"
+  HREF="node33.html#SECTION04430060000000000000">Parsing Expression Types</A>
+<LI><A NAME="tex2html1618"
+  HREF="node33.html#SECTION04430070000000000000">main.js</A>
+<LI><A NAME="tex2html1619"
+  HREF="node33.html#SECTION04430080000000000000">Rakefile</A>
+<LI><A NAME="tex2html1620"
+  HREF="node33.html#SECTION04430090000000000000">Compilación</A>
 </UL>
 </UL>
 <BR>
-<LI><A NAME="tex2html1617"
+<LI><A NAME="tex2html1621"
   HREF="node33.html#SECTION04431000000000000000">Asociación Incorrecta para la Resta y la División</A>
 </UL>
 <!--End of Table of Child-Links-->
@@ -214,13 +218,18 @@ NUMBER = _ digits:$[0-9]+ _ { return parseInt(digits, 10); }
 
 <P>
 
+<H4><A NAME="SECTION04430030000000000000">
+PEG Syntax</A>
+</H4>
+  
+
 <UL>
-<LI>On the top level, the grammar consists of <A NAME="6103"></A><SPAN  CLASS="textbf">rules</SPAN>. 
+<LI>On the top level, the grammar consists of <A NAME="6109"></A><SPAN  CLASS="textbf">rules</SPAN>. 
 </LI>
 <LI>Each rule has a name (e.g. <code>primary</code>) that
 identifies the rule, and a 
 </LI>
-<LI><A NAME="6105"></A><SPAN  CLASS="textbf">parsing expression</SPAN> e.g. 
+<LI><A NAME="6111"></A><SPAN  CLASS="textbf">parsing expression</SPAN> e.g. 
 <PRE>
 integer / LEFTPAR additive:additive RIGHTPAR { return additive; }
 </PRE>
@@ -233,11 +242,16 @@ can also contain human-readable name that is used in error messages
 (in our example, only the <code>integer</code> rule has a human-readable name). 
 </LI>
 <LI>The
-parsing starts at the first rule, which is also called the <A NAME="6107"></A><SPAN  CLASS="textbf">start rule</SPAN>.
+parsing starts at the first rule, which is also called the <A NAME="6113"></A><SPAN  CLASS="textbf">start rule</SPAN>.
 </LI>
 </UL>
 
 <P>
+
+<H4><A NAME="SECTION04430040000000000000">
+Rules Syntax</A>
+</H4>
+  
 
 <UL>
 <LI>A rule name must be a JavaScript identifier. 
@@ -258,13 +272,13 @@ is allowed.
 
 <P>
 
-<H4><A NAME="SECTION04430030000000000000">
+<H4><A NAME="SECTION04430050000000000000">
 Initializers</A>
 </H4>
   
 
 <UL>
-<LI>Rules can be preceded by an <A NAME="6113"></A><SPAN  CLASS="textbf">initializer</SPAN> — a piece of JavaScript
+<LI>Rules can be preceded by an <A NAME="6123"></A><SPAN  CLASS="textbf">initializer</SPAN> — a piece of JavaScript
 code in curly braces (<code>{</code> and <code>}</code>). 
 </LI>
 <LI>
@@ -314,7 +328,7 @@ integer "integer"
 
 <P>
 
-<H4><A NAME="SECTION04430040000000000000">
+<H4><A NAME="SECTION04430060000000000000">
 Parsing Expression Types</A>
 </H4>
   
@@ -351,7 +365,7 @@ Try to match the expression. If the match succeeds,
 
 <P>
 
-<H4><A NAME="SECTION04430050000000000000">
+<H4><A NAME="SECTION04430070000000000000">
 main.js</A>
 </H4>
   
@@ -366,7 +380,7 @@ console.log(r);
 
 <P>
 
-<H4><A NAME="SECTION04430060000000000000">
+<H4><A NAME="SECTION04430080000000000000">
 Rakefile</A>
 </H4>
   
@@ -390,7 +404,7 @@ end
 
 <P>
 
-<H4><A NAME="SECTION04430070000000000000">
+<H4><A NAME="SECTION04430090000000000000">
 Compilación</A>
 </H4>
   
@@ -411,7 +425,7 @@ Asociación Incorrecta para la Resta y la División</A>
 <P>
 <P>
 <DIV><B>Definición  <SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; 
-<I>Una <A NAME="6141"></A><SPAN  CLASS="textbf">gramática es recursiva por la izquierda</SPAN> cuando existe una derivación
+<I>Una <A NAME="6151"></A><SPAN  CLASS="textbf">gramática es recursiva por la izquierda</SPAN> cuando existe una derivación
 <!-- MATH
  $A \stackrel{*}{\Longrightarrow} A \alpha$
  -->
@@ -432,7 +446,7 @@ una regla de producción de la forma <!-- MATH
 En este caso se dice que la recursión por la izquierda es directa.</I></DIV><P></P>
 
 <P>
-Cuando la gramática es <A NAME="6143"></A><SPAN  CLASS="textbf">recursiva por la izquierda</SPAN>, 
+Cuando la gramática es <A NAME="6153"></A><SPAN  CLASS="textbf">recursiva por la izquierda</SPAN>, 
 el método 
 de análisis recursivo descendente predictivo no funciona. 
 En ese caso, el procedimiento
@@ -478,19 +492,19 @@ console.log(r);
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html1608"
+<A NAME="tex2html1610"
   HREF="node34.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html1602"
+<A NAME="tex2html1604"
   HREF="node30.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html1596"
+<A NAME="tex2html1598"
   HREF="node32.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html1604"
+<A NAME="tex2html1606"
   HREF="node103.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html1606"
+<A NAME="tex2html1608"
   HREF="node106.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -530,11 +544,11 @@ console.log(r);
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html1609"
+<B> Sig:</B> <A NAME="tex2html1611"
   HREF="node34.html">Acciones Intermedias</A>
-<B>Sup:</B> <A NAME="tex2html1603"
+<B>Sup:</B> <A NAME="tex2html1605"
   HREF="node30.html">Análisis Descendente mediante Parsing</A>
-<B> Ant:</B> <A NAME="tex2html1597"
+<B> Ant:</B> <A NAME="tex2html1599"
   HREF="node32.html">PEGJS</A>
 </DIV>
 <!--End of Navigation Panel-->
