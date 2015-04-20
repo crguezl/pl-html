@@ -266,10 +266,15 @@ and pass an input string as a parameter.
 The method will return 
 
 <UL>
-<LI>a parse result or 
+<LI>a parse result (the exact value depends on the grammar used to build the parser) or 
 </LI>
 <LI>throw an 
 <FONT COLOR="#ff0000"> exception</FONT> if the input is invalid.  
+
+<P>
+The exception will contain 
+<code>offset</code>, <code>line</code>, <code>column</code>, <code>expected</code>, <code>found</code> and <code>message</code> 
+properties with more details about the error.
 </LI>
 </UL>
 You can tweak parser behavior by passing a second parameter with
@@ -525,7 +530,7 @@ Selects between optimizing the generated parser for parsing speed
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I>Casiano Rodríguez León <BR>
-2015-04-19</I>
+2015-04-20</I>
 </ADDRESS>
 </BODY>
 </HTML>
