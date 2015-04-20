@@ -213,12 +213,12 @@ NUMBER = _ digits:$[0-9]+ _ { return parseInt(digits, 10); }
 <P>
 
 <UL>
-<LI>On the top level, the grammar consists of <A NAME="6091"></A><SPAN  CLASS="textbf">rules</SPAN>. 
+<LI>On the top level, the grammar consists of <A NAME="6093"></A><SPAN  CLASS="textbf">rules</SPAN>. 
 </LI>
 <LI>Each rule has a name (e.g. <code>primary</code>) that
 identifies the rule, and a 
 </LI>
-<LI><A NAME="6093"></A><SPAN  CLASS="textbf">parsing expression</SPAN> e.g. 
+<LI><A NAME="6095"></A><SPAN  CLASS="textbf">parsing expression</SPAN> e.g. 
 <PRE>
 integer / LEFTPAR additive:additive RIGHTPAR { return additive; }
 </PRE>
@@ -231,7 +231,21 @@ can also contain human-readable name that is used in error messages
 (in our example, only the <code>integer</code> rule has a human-readable name). 
 </LI>
 <LI>The
-parsing starts at the first rule, which is also called the <A NAME="6095"></A><SPAN  CLASS="textbf">start rule</SPAN>.
+parsing starts at the first rule, which is also called the <A NAME="6097"></A><SPAN  CLASS="textbf">start rule</SPAN>.
+</LI>
+</UL>
+
+<P>
+
+<UL>
+<LI>A rule name must be a JavaScript identifier. 
+</LI>
+<LI>It is followed by an equality sign (<code>=</code>) and a parsing expression.
+</LI>
+<LI>If the rule has a human-readable name, 
+it is written as a JavaScript string between the name and separating equality sign. 
+</LI>
+<LI>Rules need to be separated only by whitespace (their beginning is easily recognizable), but a semicolon (“;”) after the parsing expression is allowed.
 </LI>
 </UL>
 
@@ -334,7 +348,7 @@ Asociación Incorrecta para la Resta y la División</A>
 <P>
 <P>
 <DIV><B>Definición  <SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; 
-<I>Una <A NAME="6119"></A><SPAN  CLASS="textbf">gramática es recursiva por la izquierda</SPAN> cuando existe una derivación
+<I>Una <A NAME="6121"></A><SPAN  CLASS="textbf">gramática es recursiva por la izquierda</SPAN> cuando existe una derivación
 <!-- MATH
  $A \stackrel{*}{\Longrightarrow} A \alpha$
  -->
@@ -355,7 +369,7 @@ una regla de producción de la forma <!-- MATH
 En este caso se dice que la recursión por la izquierda es directa.</I></DIV><P></P>
 
 <P>
-Cuando la gramática es <A NAME="6121"></A><SPAN  CLASS="textbf">recursiva por la izquierda</SPAN>, 
+Cuando la gramática es <A NAME="6123"></A><SPAN  CLASS="textbf">recursiva por la izquierda</SPAN>, 
 el método 
 de análisis recursivo descendente predictivo no funciona. 
 En ese caso, el procedimiento
