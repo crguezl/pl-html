@@ -378,13 +378,12 @@ Opciones: output</A>
   
 
 <P>
-When
+
+<UL>
+<LI>When
 <code>output</code>
 is set to 
-<FONT COLOR="#ff0000"> parser</FONT>, the method will return generated parser object; if
-set to 
-<FONT COLOR="#0000ff"> source</FONT>, it will return parser source code as a string (default:
-<code>parser</code>).
+<FONT COLOR="#ff0000"> parser</FONT>, the method will return generated parser object; 
 <PRE>
 &gt; PEG = require("pegjs")
 &gt; grammar = "a = 'hello' b\nb='world'"
@@ -392,9 +391,23 @@ set to
 &gt; console.log(grammar)
 a = 'hello' b
 b='world'
-undefined
-&gt; parser = PEG.buildParser(grammar,{ output: "parse"})
-undefined
+&gt; parser = PEG.buildParser(grammar,{ output: "parser"})
+{ SyntaxError: [Function: SyntaxError],
+  parse: [Function: parse] }
+  &gt; parser.parse("helloworld")
+  [ 'hello', 'world' ]
+</PRE>
+</LI>
+<LI>if
+set to 
+<FONT COLOR="#0000ff"> source</FONT>, it will return parser source code as a string 
+</LI>
+<LI>(default: <code>parser</code>).
+</LI>
+</UL>
+
+<P>
+<PRE>
 &gt; parser = PEG.buildParser(grammar,{ output: "source"})
 &gt; typeof parser
 'string'
