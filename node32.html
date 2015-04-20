@@ -310,8 +310,8 @@ rules the parser will be allowed to start parsing from (default: the first rule 
 [~/srcPLgrado/pegjs/examples(master)]$ cat allowedstartrules.js 
 var PEG = require("pegjs");
 var grammar = "a = 'hello' b\nb = 'world'"; //"a = 'hello' b\nb='world';
-console.log(grammar);
-
+console.log(grammar); // a = 'hello' b
+                      // b = 'world'
 var parser = PEG.buildParser(grammar,{ allowedStartRules: ['a', 'b'] });
 var r = parser.parse("helloworld", { startRule: 'a' });
 console.log(r); // [ 'hello', 'world' ]
