@@ -444,8 +444,9 @@ parser = PEG.buildParser grammar, plugins: [coffee]
 r = parser.parse "hello world"
 console.log("r = #{r}")
 </PRE>
-
-<P>
+La ejecución nos muestra además el orden de abajo - arriba
+y de izquierda -derecha en la ejecución de las acciones 
+semánticas:
 <PRE>
 [~/srcPLgrado/pegjs_examples(master)]$ coffee plugin.coffee 
 1
