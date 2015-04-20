@@ -431,25 +431,27 @@ indica que plugin se van a usar.
 
 <P>
 <PRE>
-[~/srcPLgrado/pegjs/examples(master)]$ cat plugin.coffee 
+[~/srcPLgrado/pegjs_examples(master)]$ cat plugin.coffee 
 #!/usr/bin/env coffee
 PEG = require 'pegjs'
 coffee = require 'pegjs-coffee-plugin'
 grammar = """
-a = 'hello' _ b { console.log 1 }
+a = 'hello' _ b { console.log 3; "hello world!" }
 b = 'world'     { console.log 2 }
-_ = [ \t]+      { console.log 3 }
+_ = [ \t]+      { console.log 1 }
 """
 parser = PEG.buildParser grammar, plugins: [coffee]
 r = parser.parse "hello world"
+console.log("r = #{r}")
 </PRE>
 
 <P>
 <PRE>
-[~/srcPLgrado/pegjs/examples(master)]$ ./plugin.coffee 
-3
-2
+[~/srcPLgrado/pegjs_examples(master)]$ coffee plugin.coffee 
 1
+2
+3
+r = hello world!
 </PRE>
 
 <P>
