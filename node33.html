@@ -224,12 +224,12 @@ PEG Syntax</A>
   
 
 <UL>
-<LI>On the top level, the grammar consists of <A NAME="6109"></A><SPAN  CLASS="textbf">rules</SPAN>. 
+<LI>On the top level, the grammar consists of <A NAME="6114"></A><SPAN  CLASS="textbf">rules</SPAN>. 
 </LI>
 <LI>Each rule has a name (e.g. <code>primary</code>) that
 identifies the rule, and a 
 </LI>
-<LI><A NAME="6111"></A><SPAN  CLASS="textbf">parsing expression</SPAN> e.g. 
+<LI><A NAME="6116"></A><SPAN  CLASS="textbf">parsing expression</SPAN> e.g. 
 <PRE>
 integer / LEFTPAR additive:additive RIGHTPAR { return additive; }
 </PRE>
@@ -242,7 +242,7 @@ can also contain human-readable name that is used in error messages
 (in our example, only the <code>integer</code> rule has a human-readable name). 
 </LI>
 <LI>The
-parsing starts at the first rule, which is also called the <A NAME="6113"></A><SPAN  CLASS="textbf">start rule</SPAN>.
+parsing starts at the first rule, which is also called the <A NAME="6118"></A><SPAN  CLASS="textbf">start rule</SPAN>.
 </LI>
 </UL>
 
@@ -278,7 +278,7 @@ Initializers</A>
   
 
 <UL>
-<LI>Rules can be preceded by an <A NAME="6123"></A><SPAN  CLASS="textbf">initializer</SPAN> — a piece of JavaScript
+<LI>Rules can be preceded by an <A NAME="6128"></A><SPAN  CLASS="textbf">initializer</SPAN> — a piece of JavaScript
 code in curly braces (<code>{</code> and <code>}</code>). 
 </LI>
 <LI>
@@ -338,6 +338,25 @@ The parsing expressions of the rules are used to match the input text to the gra
 <P>
 There are various types of expressions — matching characters or
 character classes, indicating optional parts and repetition, etc.
+
+<P>
+If an expression successfully matches a part of the text when running the
+generated parser, it produces a <A NAME="6138"></A><SPAN  CLASS="textbf">match result</SPAN>, which is a JavaScript value.
+
+<P>
+
+<UL>
+<LI>
+<FONT COLOR="#0000ff"> An expression matching a literal string produces a JavaScript string containing matched part of the input</FONT>.
+</LI>
+<LI>
+<FONT COLOR="#ff0000"> An expression matching repeated occurrence of some subexpression produces a JavaScript array with all the matches</FONT>.
+</LI>
+<LI>The match results propagate through the rules when the rule names are used in expressions, up to the start rule. 
+</LI>
+<LI>The generated parser returns start rule's match result when parsing is successful.
+</LI>
+</UL>
 
 <P>
 Expressions can also contain references to other rules. 
@@ -434,7 +453,7 @@ Asociación Incorrecta para la Resta y la División</A>
 <P>
 <P>
 <DIV><B>Definición  <SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; 
-<I>Una <A NAME="6151"></A><SPAN  CLASS="textbf">gramática es recursiva por la izquierda</SPAN> cuando existe una derivación
+<I>Una <A NAME="6162"></A><SPAN  CLASS="textbf">gramática es recursiva por la izquierda</SPAN> cuando existe una derivación
 <!-- MATH
  $A \stackrel{*}{\Longrightarrow} A \alpha$
  -->
@@ -455,7 +474,7 @@ una regla de producción de la forma <!-- MATH
 En este caso se dice que la recursión por la izquierda es directa.</I></DIV><P></P>
 
 <P>
-Cuando la gramática es <A NAME="6153"></A><SPAN  CLASS="textbf">recursiva por la izquierda</SPAN>, 
+Cuando la gramática es <A NAME="6164"></A><SPAN  CLASS="textbf">recursiva por la izquierda</SPAN>, 
 el método 
 de análisis recursivo descendente predictivo no funciona. 
 En ese caso, el procedimiento
