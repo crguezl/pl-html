@@ -664,7 +664,7 @@ position. This description will be used as part of a message of the
 thrown exception.
 
 <P>
-The code inside an action can also invoke the error function, which also
+The code inside an action can also invoke the <code>error</code> function, which also
 makes the parser throw an exception. The function takes one parameter
 — an error message. This message will be used by the thrown exception.
 
@@ -675,10 +675,18 @@ action code must be balanced.
 
 <P>
 The code inside the action can also access the string matched by the
-expression using the text function.
+expression using the <code>text</code> function.
 
 <P>
-The code inside the action can also access the parse position at the beginning of the action's expression using the offset function. It returns a zero-based character index into the input string. The code can also access the line and column at the beginning of the action's expression using the line and column functions. Both return one-based indexes.
+The code inside the action can also access the parse position at the beginning of the action's expression using the <code>offset</code> function. 
+
+<P>
+It returns a zero-based character index into the input string. 
+
+<P>
+The code can also access the line and column at 
+the beginning of the action's expression using the <code>line</code> and <code>column</code>
+functions. Both return one-based indexes.
 
 <P>
 The code inside the action can also access options passed to the parser using the options variable.
