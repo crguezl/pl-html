@@ -661,13 +661,6 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img360.png"
  ALT="$ t \theta = t\{x_1/x_1 \theta, \ldots x_k/x_k \theta\}$">|; 
 
-$key = q/%latex2htmlidmarker21451S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img100.png"
- ALT="% latex2html id marker 21451
-$ S = program$">|; 
-
 $key = q/displaystylesi(epsiloninFIRST(Y_k)andi>k)FIRST(X)=FIRST(X)cup{epsilon};MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="490" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
@@ -973,6 +966,13 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="21" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
  SRC="|."$dir".q|img388.png"
  ALT="$ 2^s$">|; 
+
+$key = q/%latex2htmlidmarker21466S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img100.png"
+ ALT="% latex2html id marker 21466
+$ S = program$">|; 
 
 $key = q/Arightarrowalpha{action}beta;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
