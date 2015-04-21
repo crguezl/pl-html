@@ -228,12 +228,12 @@ PEG Syntax</A>
   
 
 <UL>
-<LI>On the top level, the grammar consists of <A NAME="6136"></A><SPAN  CLASS="textbf">rules</SPAN>. 
+<LI>On the top level, the grammar consists of <A NAME="6138"></A><SPAN  CLASS="textbf">rules</SPAN>. 
 </LI>
 <LI>Each rule has a name (e.g. <code>primary</code>) that
 identifies the rule, and a 
 </LI>
-<LI><A NAME="6138"></A><SPAN  CLASS="textbf">parsing expression</SPAN> e.g. 
+<LI><A NAME="6140"></A><SPAN  CLASS="textbf">parsing expression</SPAN> e.g. 
 <PRE>
 integer / LEFTPAR additive:additive RIGHTPAR { return additive; }
 </PRE>
@@ -251,7 +251,7 @@ integer "integer"
 </PRE>
 </LI>
 <LI>The
-parsing starts at the first rule, which is also called the <A NAME="6142"></A><SPAN  CLASS="textbf">start rule</SPAN>.
+parsing starts at the first rule, which is also called the <A NAME="6144"></A><SPAN  CLASS="textbf">start rule</SPAN>.
 </LI>
 </UL>
 
@@ -287,7 +287,7 @@ Initializers</A>
   
 
 <UL>
-<LI>Rules can be preceded by an <A NAME="6152"></A><SPAN  CLASS="textbf">initializer</SPAN> — a piece of JavaScript
+<LI>Rules can be preceded by an <A NAME="6154"></A><SPAN  CLASS="textbf">initializer</SPAN> — a piece of JavaScript
 code in curly braces (<code>{</code> and <code>}</code>). 
 </LI>
 <LI>
@@ -306,32 +306,48 @@ the parser using the <code>options</code> variable.
 <FONT COLOR="#ff0000"> Curly braces in the initializer
 code must be balanced</FONT>. 
 </LI>
-<LI>Let's look at a variant of the example grammar from above
-using a simple initializer.
+<LI>This example illustrates what we said about initializers:
 <PRE>
-{
-  function makeInteger(o) {
-    return parseInt(o.join(""), 10);
-  }
-}
+[~/srcPLgrado/pegjs_examples(master)]$ cat initializer.js 
+var PEG = require("pegjs");
+var grammar = [
+' {                             ',
+'   util = require("util");     ',
+'                               ',
+'   var g = "visible variable"; ',
+'   console.log("Inside Initializer! options = "+util.inspect(options)); ',
+' }                             ',
+" start = 'a' { console.log(g); return 1; } ",
+"       / &amp;   { console.log('inside predicate: '+g); return true; } 'b' { return 2; }"
+];
 
-start
-  = additive
+grammar = grammar.join('\n');
+console.log("GRAMMAR:\n"+grammar);
 
-additive
-  = left:multiplicative "+" right:additive { return left + right; }
-  / multiplicative
-
-multiplicative
-  = left:primary "*" right:multiplicative { return left * right; }
-  / primary
-
-primary
-  = integer
-  / "(" additive:additive ")" { return additive; }
-
-integer "integer"
-  = digits:[0-9]+ { return makeInteger(digits); }
+var parser = PEG.buildParser(grammar);
+var r = parser.parse("a", { x: 'hello' });
+console.log(r); 
+r = parser.parse("b");
+console.log(r);
+</PRE>
+Produces the following output:
+<PRE>
+[~/srcPLgrado/pegjs_examples(master)]$ node initializer.js 
+GRAMMAR:
+ {                             
+   util = require("util");     
+                               
+   var g = "visible variable"; 
+   console.log("Inside Initializer! options = "+util.inspect(options)); 
+ }                             
+ start = 'a' { console.log(g); return 1; } 
+       / &amp;   { console.log('inside predicate: '+g); return true; } 'b' { return 2; }
+Inside Initializer! options = { x: 'hello' }
+visible variable
+1
+Inside Initializer! options = {}
+inside predicate: visible variable
+2
 </PRE>
 </LI>
 </UL>
@@ -355,7 +371,7 @@ Expressions can also contain references to other rules.
 
 <P>
 If an expression successfully matches a part of the text when running the
-generated parser, it produces a <A NAME="6162"></A><SPAN  CLASS="textbf">match result</SPAN>, which is a JavaScript value.
+generated parser, it produces a <A NAME="6164"></A><SPAN  CLASS="textbf">match result</SPAN>, which is a JavaScript value.
 
 <P>
 
@@ -773,7 +789,7 @@ Asociación Incorrecta para la Resta y la División</A>
 <P>
 <P>
 <DIV><B>Definición  <SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; 
-<I>Una <A NAME="6200"></A><SPAN  CLASS="textbf">gramática es recursiva por la izquierda</SPAN> cuando existe una derivación
+<I>Una <A NAME="6202"></A><SPAN  CLASS="textbf">gramática es recursiva por la izquierda</SPAN> cuando existe una derivación
 <!-- MATH
  $A \stackrel{*}{\Longrightarrow} A \alpha$
  -->
@@ -794,7 +810,7 @@ una regla de producción de la forma <!-- MATH
 En este caso se dice que la recursión por la izquierda es directa.</I></DIV><P></P>
 
 <P>
-Cuando la gramática es <A NAME="6202"></A><SPAN  CLASS="textbf">recursiva por la izquierda</SPAN>, 
+Cuando la gramática es <A NAME="6204"></A><SPAN  CLASS="textbf">recursiva por la izquierda</SPAN>, 
 el método 
 de análisis recursivo descendente predictivo no funciona. 
 En ese caso, el procedimiento
