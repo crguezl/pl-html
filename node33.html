@@ -296,7 +296,8 @@ before the generated parser starts parsing</FONT>
 </LI>
 <LI>All variables and functions
 defined in the initializer are accessible in rule actions and semantic
-predicates (the ce<code>&amp;</code> and <code>!</code> are called syntactic predicates)
+predicates (the <code>&amp; { predicate }</code> and <code>! { predicate }</code> 
+are called semantic predicates)
 </LI>
 <LI>The code inside the initializer can access options passed to
 the parser using the <code>options</code> variable. 
