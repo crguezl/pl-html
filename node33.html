@@ -228,12 +228,12 @@ PEG Syntax</A>
   
 
 <UL>
-<LI>On the top level, the grammar consists of <A NAME="6133"></A><SPAN  CLASS="textbf">rules</SPAN>. 
+<LI>On the top level, the grammar consists of <A NAME="6136"></A><SPAN  CLASS="textbf">rules</SPAN>. 
 </LI>
 <LI>Each rule has a name (e.g. <code>primary</code>) that
 identifies the rule, and a 
 </LI>
-<LI><A NAME="6135"></A><SPAN  CLASS="textbf">parsing expression</SPAN> e.g. 
+<LI><A NAME="6138"></A><SPAN  CLASS="textbf">parsing expression</SPAN> e.g. 
 <PRE>
 integer / LEFTPAR additive:additive RIGHTPAR { return additive; }
 </PRE>
@@ -242,11 +242,16 @@ against the input text and possibly contains some JavaScript code that
 determines what happens when the pattern matches successfully. 
 </LI>
 <LI>A rule
-can also contain human-readable name that is used in error messages
+can also contain 
+<FONT COLOR="#ff0000"> human-readable</FONT> name that is used in error messages
 (in our example, only the <code>integer</code> rule has a human-readable name). 
+<PRE>
+integer "integer"
+  = NUMBER
+</PRE>
 </LI>
 <LI>The
-parsing starts at the first rule, which is also called the <A NAME="6137"></A><SPAN  CLASS="textbf">start rule</SPAN>.
+parsing starts at the first rule, which is also called the <A NAME="6142"></A><SPAN  CLASS="textbf">start rule</SPAN>.
 </LI>
 </UL>
 
@@ -282,7 +287,7 @@ Initializers</A>
   
 
 <UL>
-<LI>Rules can be preceded by an <A NAME="6147"></A><SPAN  CLASS="textbf">initializer</SPAN> — a piece of JavaScript
+<LI>Rules can be preceded by an <A NAME="6152"></A><SPAN  CLASS="textbf">initializer</SPAN> — a piece of JavaScript
 code in curly braces (<code>{</code> and <code>}</code>). 
 </LI>
 <LI>
@@ -349,7 +354,7 @@ Expressions can also contain references to other rules.
 
 <P>
 If an expression successfully matches a part of the text when running the
-generated parser, it produces a <A NAME="6157"></A><SPAN  CLASS="textbf">match result</SPAN>, which is a JavaScript value.
+generated parser, it produces a <A NAME="6162"></A><SPAN  CLASS="textbf">match result</SPAN>, which is a JavaScript value.
 
 <P>
 
@@ -767,7 +772,7 @@ Asociación Incorrecta para la Resta y la División</A>
 <P>
 <P>
 <DIV><B>Definición  <SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; 
-<I>Una <A NAME="6195"></A><SPAN  CLASS="textbf">gramática es recursiva por la izquierda</SPAN> cuando existe una derivación
+<I>Una <A NAME="6200"></A><SPAN  CLASS="textbf">gramática es recursiva por la izquierda</SPAN> cuando existe una derivación
 <!-- MATH
  $A \stackrel{*}{\Longrightarrow} A \alpha$
  -->
@@ -788,7 +793,7 @@ una regla de producción de la forma <!-- MATH
 En este caso se dice que la recursión por la izquierda es directa.</I></DIV><P></P>
 
 <P>
-Cuando la gramática es <A NAME="6197"></A><SPAN  CLASS="textbf">recursiva por la izquierda</SPAN>, 
+Cuando la gramática es <A NAME="6202"></A><SPAN  CLASS="textbf">recursiva por la izquierda</SPAN>, 
 el método 
 de análisis recursivo descendente predictivo no funciona. 
 En ese caso, el procedimiento
@@ -896,7 +901,7 @@ console.log(r);
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I>Casiano Rodríguez León <BR>
-2015-04-20</I>
+2015-04-21</I>
 </ADDRESS>
 </BODY>
 </HTML>
