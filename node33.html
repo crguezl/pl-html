@@ -511,12 +511,29 @@ means all lowercase letters).
 
 <P>
 Preceding the characters with
-<code>^</code> inverts the matched set (e.g. <code>[^a-z]</code> means cl<I>"all character but
+<code>^</code> inverts the matched set (e.g. <code>[^a-z]</code> means <I>"all character but
 lowercase letters</I>). 
 
 <P>
 Appending <code>i</code> right after the literal makes the
 match case-insensitive.
+
+<pre>
+[~/srcPLgrado/pegjs_examples(master)]$ cat regexp.coffee 
+PEG = require('pegjs')
+coffee = require 'pegjs-coffee-plugin'
+grammar = '''
+start = a: [aeiou\u2661]i . [^x-z] 
+'''
+parser = PEG.buildParser(grammar, plugins: [coffee])
+r = parser.parse('Abr')
+console.log r
+r = parser.parse('♡br')
+console.log r
+[~/srcPLgrado/pegjs_examples(master)]$ coffee regexp.coffee 
+[ 'A', 'b', 'r' ]
+[ '♡', 'b', 'r' ]
+</pre>
 
 <P>
 </LI>
