@@ -7,8 +7,8 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 <HTML>
 <HEAD>
-<TITLE>La Gramática de PEG.js</TITLE>
-<META NAME="description" CONTENT="La Gramática de PEG.js">
+<TITLE>Usando Pegjs con CoffeeScript</TITLE>
+<META NAME="description" CONTENT="Usando Pegjs con CoffeeScript">
 <META NAME="keywords" CONTENT="javascriptexamples">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -28,19 +28,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html1794"
+<A NAME="tex2html1796"
   HREF="node44.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html1788"
+<A NAME="tex2html1790"
   HREF="node30.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html1782"
+<A NAME="tex2html1784"
   HREF="node42.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html1790"
+<A NAME="tex2html1792"
   HREF="node104.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html1792"
+<A NAME="tex2html1794"
   HREF="node107.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -80,257 +80,144 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html1795"
+<B> Sig:</B> <A NAME="tex2html1797"
   HREF="node44.html">Práctica: Analizador de PL0</A>
-<B>Sup:</B> <A NAME="tex2html1789"
+<B>Sup:</B> <A NAME="tex2html1791"
   HREF="node30.html">Análisis Descendente mediante Parsing</A>
-<B> Ant:</B> <A NAME="tex2html1783"
-  HREF="node42.html">Usando Pegjs con CoffeeScript</A>
+<B> Ant:</B> <A NAME="tex2html1785"
+  HREF="node42.html">Un Lenguaje Dependiente del</A>
 <B> Con:</B> 
-<A NAME="tex2html1790"
+<A NAME="tex2html1792"
   HREF="node104.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html1792"
+<A NAME="tex2html1794"
   HREF="node107.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
 <!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><UL>
+<LI><UL>
+<LI><A NAME="tex2html1798"
+  HREF="node43.html#SECTION044130010000000000000">Instalación de pegjs-coffee-plugin</A>
+<LI><A NAME="tex2html1799"
+  HREF="node43.html#SECTION044130020000000000000">Ejemplo Sencillo</A>
+<LI><A NAME="tex2html1800"
+  HREF="node43.html#SECTION044130030000000000000">Véase También</A>
+</UL></UL></UL>
+<!--End of Table of Child-Links-->
+<HR>
 
 <H1><A NAME="SECTION044130000000000000000">
-La Gramática de PEG.js</A>
+Usando Pegjs con CoffeeScript</A>
 </H1>
 
 <P>
+
+<H4><A NAME="SECTION044130010000000000000">
+Instalación de pegjs-coffee-plugin</A>
+</H4>
+  
+
 <PRE>
-[~/srcPLgrado/pegjs(master)]$ cat src/parser.pegjs 
-  = __ initializer:initializer? rules:rule+ 
-
-initializer
-  = code:action semicolon? 
-
-rule
-  = name:identifier displayName:string? equals expression:expression semicolon? 
-
-expression
-  = choice
-
-choice
-  = head:sequence tail:(slash sequence)* 
-
-sequence
-  = elements:labeled* code:action 
-  / elements:labeled* 
-
-labeled
-  = label:identifier colon expression:prefixed 
-  / prefixed
-
-prefixed
-  = dollar expression:suffixed 
-  / and code:action 
-  / and expression:suffixed 
-  / not code:action 
-  / not expression:suffixed 
-  / suffixed
-
-suffixed
-  = expression:primary question 
-  / expression:primary star 
-  / expression:primary plus 
-  / primary
-
-primary
-  = name:identifier !(string? equals) 
-  / literal
-  / class
-  / dot 
-  / lparen expression:expression rparen 
-
-/* "Lexical" elements */
-
-action "action"
-  = braced:braced __ 
-
-braced
-  = $("{" (braced / nonBraceCharacters)* "}")
-
-nonBraceCharacters
-  = nonBraceCharacter+
-
-nonBraceCharacter
-  = [^{}]
-
-equals    = "=" __ 
-colon     = ":" __ 
-semicolon = ";" __ 
-slash     = "/" __ 
-and       = "&amp;" __ 
-not       = "!" __ 
-dollar    = "$" __ 
-question  = "?" __ 
-star      = "*" __ 
-plus      = "+" __ 
-lparen    = "(" __ 
-rparen    = ")" __ 
-dot       = "." __ 
-
-/*
- * Modeled after ECMA-262, 5th ed., 7.6, but much simplified:
- *
- * * no Unicode escape sequences
- *
- * * "Unicode combining marks" and "Unicode connection punctuation" can't be
- *   part of the identifier
- *
- * * only [a-zA-Z] is considered a "Unicode letter"
- *
- * * only [0-9] is considered a "Unicode digit"
- *
- * The simplifications were made just to make the implementation little bit
- * easier, there is no "philosophical" reason behind them.
- *
- * Contrary to ECMA 262, the "$" character is not valid because it serves other
- * purpose in the grammar.
- */
-identifier "identifier"
-  = chars:$((letter / "_") (letter / digit / "_")*) __ 
-
-/*
- * Modeled after ECMA-262, 5th ed., 7.8.4. (syntax &amp; semantics, rules only
- * vaguely).
- */
-literal "literal"
-  = value:(doubleQuotedString / singleQuotedString) flags:"i"? __ 
-
-string "string"
-  = string:(doubleQuotedString / singleQuotedString) __ 
-
-doubleQuotedString
-  = '"' chars:doubleQuotedCharacter* '"' 
-
-doubleQuotedCharacter
-  = simpleDoubleQuotedCharacter
-  / simpleEscapeSequence
-  / zeroEscapeSequence
-  / hexEscapeSequence
-  / unicodeEscapeSequence
-  / eolEscapeSequence
-
-simpleDoubleQuotedCharacter
-  = !('"' / "\\" / eolChar) char_:. 
-
-singleQuotedString
-  = "'" chars:singleQuotedCharacter* "'" 
-
-singleQuotedCharacter
-  = simpleSingleQuotedCharacter
-  / simpleEscapeSequence
-  / zeroEscapeSequence
-  / hexEscapeSequence
-  / unicodeEscapeSequence
-  / eolEscapeSequence
-
-simpleSingleQuotedCharacter
-  = !("'" / "\\" / eolChar) char_:. 
-
-class "character class"
-  = "[" inverted:"^"? parts:(classCharacterRange / classCharacter)* "]" flags:"i"? __ 
-
-classCharacterRange
-  = begin:classCharacter "-" end:classCharacter 
-
-classCharacter
-  = char_:bracketDelimitedCharacter 
-
-bracketDelimitedCharacter
-  = simpleBracketDelimitedCharacter
-  / simpleEscapeSequence
-  / zeroEscapeSequence
-  / hexEscapeSequence
-  / unicodeEscapeSequence
-  / eolEscapeSequence
-
-simpleBracketDelimitedCharacter
-  = !("]" / "\\" / eolChar) char_:. 
-
-simpleEscapeSequence
-  = "\\" !(digit / "x" / "u" / eolChar) char_:. 
-
-zeroEscapeSequence
-  = "\\0" !digit 
-
-hexEscapeSequence
-  = "\\x" digits:$(hexDigit hexDigit) 
-
-unicodeEscapeSequence
-  = "\\u" digits:$(hexDigit hexDigit hexDigit hexDigit) 
-
-eolEscapeSequence
-  = "\\" eol:eol 
-
-digit
-  = [0-9]
-
-hexDigit
-  = [0-9a-fA-F]
-
-letter
-  = lowerCaseLetter
-  / upperCaseLetter
-
-lowerCaseLetter
-  = [a-z]
-
-upperCaseLetter
-  = [A-Z]
-
-__ = (whitespace / eol / comment)*
-
-/* Modeled after ECMA-262, 5th ed., 7.4. */
-comment "comment"
-  = singleLineComment
-  / multiLineComment
-
-singleLineComment
-  = "//" (!eolChar .)*
-
-multiLineComment
-  = "/*" (!"*/" .)* "*/"
-
-/* Modeled after ECMA-262, 5th ed., 7.3. */
-eol "end of line"
-  = "\n"
-  / "\r\n"
-  / "\r"
-  / "\u2028"
-  / "\u2029"
-
-eolChar
-  = [\n\r\u2028\u2029]
-
-/* Modeled after ECMA-262, 5th ed., 7.2. */
-whitespace "whitespace"
-  = [ \t\v\f\u00A0\uFEFF\u1680\u180E\u2000-\u200A\u202F\u205F\u3000]
+[~/Dropbox/src/javascript/PLgrado/pegjs/examples(master)]$ sudo  npm install -g pegjs-coffee-plugin
 </PRE>
 
 <P>
 
+<H4><A NAME="SECTION044130020000000000000">
+Ejemplo Sencillo</A>
+</H4>
+  
+
+<PRE>
+[~/Dropbox/src/javascript/PLgrado/pegjs-coffee-plugin/examples(master)]$ cat simple.pegjs 
+{ 
+  @reduce = (left, right)-&gt;  
+    sum = left
+    for t in right
+      op = t[0]
+      num = t[1]
+      switch op 
+        when '+' then sum += num; break
+        when '-' then sum -= num; break
+        when '*' then sum *= num; break
+        when '/' then sum /= num; break
+        else console.log("Error! "+op)
+    sum
+  
+}
+sum   = left:product right:([+-] product)* { @reduce(left, right); }
+product = left:value right:([*/] value)*   { @reduce(left, right); }
+value   = number:[0-9]+                    { parseInt(number.join(''),10) }
+        / '(' sum:sum ')'                  { sum }
+</PRE>
+
+<P>
+<PRE>
+[~/Dropbox/src/javascript/PLgrado/pegjs-coffee-plugin/examples(master)]$  cat use_simple.coffee 
+PEG = require("./simple.js")
+r = PEG.parse("2+3*(2+1)-10/2")
+console.log(r)
+</PRE>
+
+<P>
+<PRE>
+[~/Dropbox/src/javascript/PLgrado/pegjs-coffee-plugin/examples(master)]$ cat Rakefile 
+
+task :default do 
+  sh "pegcoffee simple.pegjs"
+end
+
+task :run do
+  sh "coffee use_simple.coffee"
+end
+</PRE>
+
+<P>
+<PRE>
+[~/Dropbox/src/javascript/PLgrado/pegjs-coffee-plugin/examples(master)]$ rake
+pegcoffee simple.pegjs
+[~/Dropbox/src/javascript/PLgrado/pegjs-coffee-plugin/examples(master)]$ rake run
+coffee use_simple.coffee
+6
+</PRE>
+
+<P>
+
+<H4><A NAME="SECTION044130030000000000000">
+Véase También</A>
+</H4>
+  
+
+<UL>
+<LI><A NAME="tex2html263"
+  HREF="https://github.com/Dignifiedquire/pegjs-coffee-plugin">pegjs-coffee-plugin</A>
+en GitHub
+</LI>
+</UL>
+
+<P>
+
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html1794"
+<A NAME="tex2html1796"
   HREF="node44.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html1788"
+<A NAME="tex2html1790"
   HREF="node30.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html1782"
+<A NAME="tex2html1784"
   HREF="node42.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html1790"
+<A NAME="tex2html1792"
   HREF="node104.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html1792"
+<A NAME="tex2html1794"
   HREF="node107.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -370,12 +257,12 @@ whitespace "whitespace"
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html1795"
+<B> Sig:</B> <A NAME="tex2html1797"
   HREF="node44.html">Práctica: Analizador de PL0</A>
-<B>Sup:</B> <A NAME="tex2html1789"
+<B>Sup:</B> <A NAME="tex2html1791"
   HREF="node30.html">Análisis Descendente mediante Parsing</A>
-<B> Ant:</B> <A NAME="tex2html1783"
-  HREF="node42.html">Usando Pegjs con CoffeeScript</A>
+<B> Ant:</B> <A NAME="tex2html1785"
+  HREF="node42.html">Un Lenguaje Dependiente del</A>
 </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>

@@ -122,16 +122,16 @@ $key = q/program:adrp/;
 $ref_files{$key} = "$dir".q|node23.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/section:ejemplodedatamapper/;
-$ref_files{$key} = "$dir".q|node265.html|; 
-$noresave{$key} = "$nosave";
-
 $key = q/section:ejemplosimple/;
 $ref_files{$key} = "$dir".q|node20.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:regexp510lenrec/;
 $ref_files{$key} = "$dir".q|node23.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/section:ejemplodedatamapper/;
+$ref_files{$key} = "$dir".q|node265.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/sectionpractica:csv/;
@@ -479,7 +479,7 @@ $ref_files{$key} = "$dir".q|node48.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:eliminaleftrec/;
-$ref_files{$key} = "$dir".q|node38.html|; 
+$ref_files{$key} = "$dir".q|node39.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/practica:creacionydocdemodulo/;
@@ -783,7 +783,7 @@ $ref_files{$key} = "$dir".q|node148.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:eliminarecesquem/;
-$ref_files{$key} = "$dir".q|node38.html|; 
+$ref_files{$key} = "$dir".q|node39.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:errores/;

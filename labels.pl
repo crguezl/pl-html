@@ -122,16 +122,16 @@ $key = q/program:adrp/;
 $external_labels{$key} = "$URL/" . q|node23.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/section:ejemplodedatamapper/;
-$external_labels{$key} = "$URL/" . q|node265.html|; 
-$noresave{$key} = "$nosave";
-
 $key = q/section:ejemplosimple/;
 $external_labels{$key} = "$URL/" . q|node20.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:regexp510lenrec/;
 $external_labels{$key} = "$URL/" . q|node23.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/section:ejemplodedatamapper/;
+$external_labels{$key} = "$URL/" . q|node265.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/sectionpractica:csv/;
@@ -479,7 +479,7 @@ $external_labels{$key} = "$URL/" . q|node48.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:eliminaleftrec/;
-$external_labels{$key} = "$URL/" . q|node38.html|; 
+$external_labels{$key} = "$URL/" . q|node39.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/practica:creacionydocdemodulo/;
@@ -783,7 +783,7 @@ $external_labels{$key} = "$URL/" . q|node148.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:eliminarecesquem/;
-$external_labels{$key} = "$URL/" . q|node38.html|; 
+$external_labels{$key} = "$URL/" . q|node39.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:errores/;
@@ -994,7 +994,7 @@ $external_latex_labels{$key} = q|5.1|;
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:eliminaleftrec/;
-$external_latex_labels{$key} = q|4.8.1|; 
+$external_latex_labels{$key} = q|4.9.1|; 
 $noresave{$key} = "$nosave";
 
 $key = q/chapter:coffeescriptexpress/;
@@ -1134,7 +1134,7 @@ $external_latex_labels{$key} = q|2.5|;
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:eliminarecesquem/;
-$external_latex_labels{$key} = q|4.8.2|; 
+$external_latex_labels{$key} = q|4.9.2|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:prioridades/;

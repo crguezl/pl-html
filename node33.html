@@ -28,19 +28,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html1616"
+<A NAME="tex2html1620"
   HREF="node34.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html1610"
+<A NAME="tex2html1614"
   HREF="node30.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html1604"
+<A NAME="tex2html1608"
   HREF="node32.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html1612"
+<A NAME="tex2html1616"
   HREF="node104.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html1614"
+<A NAME="tex2html1618"
   HREF="node107.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -80,18 +80,18 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html1617"
-  HREF="node34.html">Acciones Intermedias</A>
-<B>Sup:</B> <A NAME="tex2html1611"
+<B> Sig:</B> <A NAME="tex2html1621"
+  HREF="node34.html">Sintáxis y Semántica de</A>
+<B>Sup:</B> <A NAME="tex2html1615"
   HREF="node30.html">Análisis Descendente mediante Parsing</A>
-<B> Ant:</B> <A NAME="tex2html1605"
+<B> Ant:</B> <A NAME="tex2html1609"
   HREF="node32.html">PEGJS</A>
 <B> Con:</B> 
-<A NAME="tex2html1612"
+<A NAME="tex2html1616"
   HREF="node104.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html1614"
+<A NAME="tex2html1618"
   HREF="node107.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
@@ -103,34 +103,17 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <UL CLASS="ChildLinks">
 <LI><UL>
 <LI><UL>
-<LI><A NAME="tex2html1618"
-  HREF="node33.html#SECTION04430010000000000000">Donde</A>
-<LI><A NAME="tex2html1619"
-  HREF="node33.html#SECTION04430020000000000000">arithmetics.pegjs</A>
-<LI><A NAME="tex2html1620"
-  HREF="node33.html#SECTION04430030000000000000">PEG Syntax</A>
-<LI><A NAME="tex2html1621"
-  HREF="node33.html#SECTION04430040000000000000">Rules Syntax</A>
 <LI><A NAME="tex2html1622"
-  HREF="node33.html#SECTION04430050000000000000">Initializers</A>
+  HREF="node33.html#SECTION04430010000000000000">Donde</A>
 <LI><A NAME="tex2html1623"
-  HREF="node33.html#SECTION04430060000000000000">Match Results</A>
+  HREF="node33.html#SECTION04430020000000000000">arithmetics.pegjs</A>
 <LI><A NAME="tex2html1624"
-  HREF="node33.html#SECTION04430070000000000000">Parser Actions</A>
+  HREF="node33.html#SECTION04430030000000000000">main.js</A>
 <LI><A NAME="tex2html1625"
-  HREF="node33.html#SECTION04430080000000000000">Parsing Expression Types</A>
+  HREF="node33.html#SECTION04430040000000000000">Rakefile</A>
 <LI><A NAME="tex2html1626"
-  HREF="node33.html#SECTION04430090000000000000">main.js</A>
-<LI><A NAME="tex2html1627"
-  HREF="node33.html#SECTION044300100000000000000">Rakefile</A>
-<LI><A NAME="tex2html1628"
-  HREF="node33.html#SECTION044300110000000000000">Compilación</A>
-</UL>
-</UL>
-<BR>
-<LI><A NAME="tex2html1629"
-  HREF="node33.html#SECTION04431000000000000000">Asociación Incorrecta para la Resta y la División</A>
-</UL>
+  HREF="node33.html#SECTION04430050000000000000">Compilación</A>
+</UL></UL></UL>
 <!--End of Table of Child-Links-->
 <HR>
 
@@ -223,815 +206,6 @@ NUMBER = _ digits:$[0-9]+ _ { return parseInt(digits, 10); }
 <P>
 
 <H4><A NAME="SECTION04430030000000000000">
-PEG Syntax</A>
-</H4>
-  
-
-<UL>
-<LI>On the top level, the grammar consists of <A NAME="6185"></A><SPAN  CLASS="textbf">rules</SPAN>. 
-</LI>
-<LI>Each rule has a name (e.g. <code>primary</code>) that
-identifies the rule, and a 
-</LI>
-<LI><A NAME="6187"></A><SPAN  CLASS="textbf">parsing expression</SPAN> e.g. 
-<PRE>
-integer / LEFTPAR additive:additive RIGHTPAR { return additive; }
-</PRE>
-that defines a pattern to match
-against the input text and possibly contains some JavaScript code that
-determines what happens when the pattern matches successfully. 
-</LI>
-<LI>A rule
-can also contain 
-<FONT COLOR="#ff0000"> human-readable</FONT> name that is used in error messages
-(in our example, only the <code>integer</code> rule has a human-readable name). 
-<PRE>
-integer "integer"
-  = NUMBER
-</PRE>
-</LI>
-<LI>The
-parsing starts at the first rule, which is also called the <A NAME="6191"></A><SPAN  CLASS="textbf">start rule</SPAN>.
-</LI>
-</UL>
-
-<P>
-
-<H4><A NAME="SECTION04430040000000000000">
-Rules Syntax</A>
-</H4>
-  
-
-<UL>
-<LI>A rule name must be a JavaScript identifier. 
-</LI>
-<LI>It is followed by an equality sign (<code>=</code>) and a parsing expression.
-</LI>
-<LI>If the rule has a human-readable name, 
-it is written as a JavaScript string between the name and separating equality sign. 
-<PRE>
-integer "integer" = NUMBER
-</PRE>
-</LI>
-<LI>Rules need to be separated only by whitespace (their beginning is easily
-recognizable), but a semicolon (<code>;</code>) after the parsing expression
-is allowed.
-</LI>
-</UL>
-
-<P>
-
-<H4><A NAME="SECTION04430050000000000000">
-Initializers</A>
-</H4>
-  
-
-<UL>
-<LI>Rules can be preceded by an <A NAME="6201"></A><SPAN  CLASS="textbf">initializer</SPAN> — a piece of JavaScript
-code in curly braces (<code>{</code> and <code>}</code>). 
-</LI>
-<LI>
-<FONT COLOR="#ff0000"> This code is executed
-before the generated parser starts parsing</FONT>
-</LI>
-<LI>All variables and functions
-defined in the initializer are accessible in rule actions and semantic
-predicates (the <code>&amp; { predicate }</code> and <code>! { predicate }</code> 
-are called <A NAME="6205"></A><SPAN  CLASS="textbf">semantic predicates</SPAN>)
-</LI>
-<LI>The code inside the initializer can access options passed to
-the parser using the <code>options</code> variable. 
-</LI>
-<LI>
-<FONT COLOR="#ff0000"> Curly braces in the initializer
-code must be balanced</FONT>. 
-</LI>
-<LI>This example illustrates what we said about initializers:
-<PRE>
-[~/srcPLgrado/pegjs_examples(master)]$ cat initializer.js 
-var PEG = require("pegjs");
-var grammar = [
-' {                             ',
-'   util = require("util");     ',
-'                               ',
-'   var g = "visible variable"; ',
-'   console.log("Inside Initializer! options = "+util.inspect(options)); ',
-' }                             ',
-" start = 'a' { console.log(g); return 1; } ",
-"       / &amp;   { console.log('inside predicate: '+g); return true; } 'b' { return 2; }"
-];
-
-grammar = grammar.join('\n');
-console.log("GRAMMAR:\n"+grammar);
-
-var parser = PEG.buildParser(grammar);
-var r = parser.parse("a", { x: 'hello' });
-console.log(r); 
-r = parser.parse("b");
-console.log(r);
-</PRE>
-Produces the following output:
-<PRE>
-[~/srcPLgrado/pegjs_examples(master)]$ node initializer.js 
-GRAMMAR:
- {                             
-   util = require("util");     
-                               
-   var g = "visible variable"; 
-   console.log("Inside Initializer! options = "+util.inspect(options)); 
- }                             
- start = 'a' { console.log(g); return 1; } 
-       / &amp;   { console.log('inside predicate: '+g); return true; } 'b' { return 2; }
-Inside Initializer! options = { x: 'hello' }
-visible variable
-1
-Inside Initializer! options = {}
-inside predicate: visible variable
-2
-</PRE>
-</LI>
-<LI>In the <code>coffee-pegjs-plugin</code>
-You have a save scope shared between all actions and predicates.
-
-<UL>
-<LI>To begin it is empty, then all declarations from the <code>initializer</code> are added. 
-
-<P>
-</LI>
-<LI>Afterwards you can add and remove stuff (Using for instance <code>delete myObject.property</code>) 
-as much as you like. 
-</LI>
-<LI>This scope is there even if you don't use the <code>initializer</code>.
-
-<P>
-</LI>
-<LI>So you can do something like the following:
-
-<P>
-<PRE>
-start = a { @result }
-a = "a" { @result = "awesome" }
-</PRE>
-And this will correctly return <code>awesome</code> if you call <code>parse("a")</code>.
-
-<P>
-</LI>
-<LI>Also all variable assignments in an action are safely scoped to the
-action. 
-
-<P>
-<code>{ result = "awesome" }</code> becomes 
-<code>{ var result; result = "awesome" }</code>
-</LI>
-<LI>This gives you the ability to explicitly share variables with other
-actions via <code>this</code> and the security to just assign variables for local
-use like you are used to when writing CoffeeScript.
-</LI>
-<LI>This is the Coffee version of the former JavaScript example:
-<PRE>
-[~/srcPLgrado/pegjs_examples(master)]$ cat initializer.coffee
-PEG = require('pegjs')
-coffee = require 'pegjs-coffee-plugin'
-grammar = '''
-   {                             
-     util = require("util")     
-     @g = "visible variable" 
-     console.log("Inside Initializer! options = "+util.inspect(options))
-   }                             
-   start = 'a' { console.log(@g); 1 } 
-         / &amp;   { 
-                 console.log("inside predicate: '#{@g}''")
-                 true 
-               } 'b' { 2 }
-'''
-parser = PEG.buildParser(grammar, plugins: [coffee])
-r = parser.parse('a', x: 'hello')
-console.log r
-r = parser.parse('b')
-console.log r
-</PRE>
-</LI>
-<LI>When executed produces:
-<PRE>
-[~/srcPLgrado/pegjs_examples(master)]$ coffee initializer.coffee
-Inside Initializer! options = { x: 'hello' }
-visible variable
-1
-Inside Initializer! options = {}
-inside predicate: 'visible variable''
-2
-</PRE>
-</LI>
-</UL>
-</LI>
-</UL>
-
-<P>
-
-<H4><A NAME="SECTION04430060000000000000">
-Match Results</A>
-</H4>
-  
-
-<P>
-The parsing expressions of the rules are used to match the input text to the grammar.
-
-<P>
-There are various types of expressions — matching characters or
-character classes, indicating optional parts and repetition, etc.
-
-<P>
-Expressions can also contain references to other rules. 
-
-<P>
-If an expression successfully matches a part of the text when running the
-generated parser, it produces a <A NAME="6213"></A><SPAN  CLASS="textbf">match result</SPAN>, which is a JavaScript value.
-
-<P>
-
-<UL>
-<LI>
-<FONT COLOR="#0000ff"> An expression matching a literal string produces a JavaScript string containing matched part of the input</FONT>.
-</LI>
-<LI>
-<FONT COLOR="#ff0000"> An expression matching <B>repeated occurrence</B> of some subexpression produces a <B>JavaScript array</B> with all the matches</FONT>.
-</LI>
-<LI>The match results propagate through the rules when the rule names are used in expressions, up to the start rule. 
-</LI>
-<LI>The generated parser returns start rule's match result when parsing is successful.
-</LI>
-</UL>
-
-<P>
-
-<H4><A NAME="SECTION04430070000000000000">
-Parser Actions</A>
-</H4>
-  
-
-<P>
-One special case of parser expression is a <A NAME="6225"></A><SPAN  CLASS="textbf">parser action</SPAN> — a piece of
-JavaScript code inside curly braces (<code>{</code> and <code>}</code>) that 
-<FONT COLOR="#ff0000"> takes match
-results of some of the the preceding expressions and returns a JavaScript
-value</FONT>. 
-
-<P>
-<I>This value is considered match result of the preceding expression
-(in other words, the parser action is a match result transformer)</I>.
-
-<P>
-In our arithmetics example, there are many parser actions. 
-
-<P>
-Consider this action:
-<PRE>
-digits:[0-9]+ { return parseInt(digits.join(""), 10); }
-</PRE>
-
-<UL>
-<LI>It takes the match result of the expression <code>[0-9]+</code>, 
-<FONT COLOR="#ff0000"> which is an
-array of strings containing digits</FONT>, as its parameter. 
-</LI>
-<LI>It joins the digits
-together to form a number and converts it to a JavaScript number object.
-</LI>
-</UL>
-
-<P>
-
-<H4><A NAME="SECTION04430080000000000000">
-Parsing Expression Types</A>
-</H4>
-  
-
-There are several types of parsing expressions, some of them containing
-subexpressions and thus forming a recursive structure:
-
-<UL>
-<LI><PRE>
-"literal"
-'literal'
-</PRE>
-Match exact literal string and return it. 
-The string syntax is the same as in JavaScript. 
-
-<P>
-Appending <code>i</code> right after the literal makes the match case-insensitive:
-<PRE>
-[~/srcPLgrado/pegjs_examples(master)]$ cat ignorecase.coffee 
-PEG = require('pegjs')
-coffee = require 'pegjs-coffee-plugin'
-grammar = '''
-start = a:'a'i 
-'''
-parser = PEG.buildParser(grammar, plugins: [coffee])
-r = parser.parse('A')
-console.log r
-parser = PEG.buildParser(grammar, plugins: [coffee])
-r = parser.parse('a')
-console.log r
-</PRE>
-when executed produces:
-<PRE>
-[~/srcPLgrado/pegjs_examples(master)]$ coffee ignorecase.coffee 
-A
-a
-</PRE>
-
-<P>
-</LI>
-<LI><PRE>
-.
-</PRE>
-Match exactly one character and return it as a string:
-<PRE>
-~/srcPLgrado/pegjs_examples(master)]$ cat dot.coffee 
-PEG = require('pegjs')
-coffee = require 'pegjs-coffee-plugin'
-grammar = '''
-start = a: ..
-'''
-parser = PEG.buildParser(grammar, plugins: [coffee])
-r = parser.parse('Ab')
-console.log r
-parser = PEG.buildParser(grammar, plugins: [coffee])
-r = parser.parse("\n\t")
-console.log r
-</PRE>
-When executed produces:
-<PRE>
-[~/srcPLgrado/pegjs_examples(master)]$ coffee dot.coffee 
-[ 'A', 'b' ]
-[ '\n', '\t' ]
-</PRE>
-
-<P>
-</LI>
-<LI><code>[characters]</code>
-
-<P>
-
-<UL>
-<LI>Match one character from a set and return it as a string. 
-
-<P>
-</LI>
-<LI>The characters
-in the list can be escaped in exactly the same way as in JavaScript
-string. 
-
-<P>
-</LI>
-<LI>The list of characters can also contain ranges (e.g. <code>[a-z]</code>
-means all lowercase letters). 
-
-<P>
-</LI>
-<LI>Preceding the characters with
-<code>^</code> inverts the matched set (e.g. <code>[^a-z]</code> means <I>"all character but
-lowercase letters</I>). 
-
-<P>
-</LI>
-<LI>Appending <code>i</code> right after the literal makes the
-match case-insensitive.
-</LI>
-<LI>Example:
-
-<P>
-
-<pre>
-[~/srcPLgrado/pegjs_examples(master)]$ cat regexp.coffee 
-PEG = require('pegjs')
-coffee = require 'pegjs-coffee-plugin'
-grammar = '''
-start = a: [aeiou\u2661]i . [^x-z] 
-'''
-parser = PEG.buildParser(grammar, plugins: [coffee])
-r = parser.parse('Abr')
-console.log r
-r = parser.parse('♡br')
-console.log r
-[~/srcPLgrado/pegjs_examples(master)]$ coffee regexp.coffee 
-[ 'A', 'b', 'r' ]
-[ '♡', 'b', 'r' ]
-</pre>
-</LI>
-</UL>
-
-<P>
-</LI>
-<LI><code>rule</code>
-
-<P>
-Match a parsing expression of a rule recursively and return its match result.
-
-<P>
-</LI>
-<LI><code>( expression )</code>
-
-<P>
-Match a subexpression and return its match result.
-
-<P>
-</LI>
-<LI><PRE>
-expression *
-</PRE>
-Match zero or more repetitions of the expression and 
-<FONT COLOR="#ff0000"> return their match
-results in an array</FONT>. 
-<FONT COLOR="#0000ff"> The matching is <B>greedy</B>, i.e. the parser tries to
-match the expression as many times as possible</FONT>.
-</LI>
-<LI><PRE>
-expression +
-</PRE>
-Match one or more repetitions of the expression and 
-<FONT COLOR="#ff0000"> return their
-match results in an array</FONT>. The matching is greedy, i.e. the parser tries
-to match the expression as many times as possible.
-</LI>
-<LI><PRE>
-expression ?
-</PRE>
-Try to match the expression. If the match succeeds, return its match result, otherwise return <code>null</code>.
-
-<P>
-</LI>
-<LI><code>&amp; expression</code>
-
-<P>
-Try to match the expression. 
-If the match succeeds, just return <code>undefined</code> and do not advance
-the parser position, otherwise consider the match failed.
-
-<P>
-</LI>
-<LI><code>! expression</code>
-
-<P>
-Try to match the expression. If the match does not succeed, just return
-<code>undefined</code> and do not advance the parser position, otherwise consider
-the match failed.
-
-<P>
-
-<UL>
-<LI>Here is an example recognizing JavaScript whitespaces and comments:
-<PRE>
-[~/srcPLgrado/pegjs/examples(master)]$ cat notpredicate.pegjs 
-__ = (whitespace / eol / comment)*
-
-/* Modeled after ECMA-262, 5th ed., 7.4. */
-comment "comment"
-  = singleLineComment
-  / multiLineComment
-
-singleLineComment
-  = "//" (!eolChar .)*   { return text(); }
-
-multiLineComment
-  = "/*" (!"*/" .)* "*/" { return text(); }
-
-
-/* Modeled after ECMA-262, 5th ed., 7.3. */
-eol "end of line"
-  = "\n"
-  / "\r\n"
-  / "\r"
-  / "\u2028"
-  / "\u2029"
-
-eolChar
-  = [\n\r\u2028\u2029]
-
-whitespace "whitespace"
-  = [ \t\v\f\u00A0\uFEFF\u1680\u180E\u2000-\u200A\u202F\u205F\u3000]
-</PRE>
-</LI>
-<LI>Once it is compiled we can call it from our main program:
-<PRE>
-[~/srcPLgrado/pegjs/examples(master)]$  cat mainnotpredicate.js 
-var PEG = require("./notpredicate.js");
-var input = process.argv[2] || "// one comment\n"+
-                               "// another comment \t/\n"+
-                               "/* a\n"+
-                               "   third comment */";
-console.log("\n*****\n"+input+"\n*****\n");
-var r = PEG.parse(input);
-console.log(r);
-</PRE>
-</LI>
-<LI>This is the output:
-<PRE>
-[~/srcPLgrado/pegjs/examples(master)]$ pegjs notpredicate.pegjs 
-[~/srcPLgrado/pegjs/examples(master)]$ node mainnotpredicate.js 
-
-*****
-// one comment
-// another comment      /
-/* a
-   third comment */
-*****
-
-[ '// one comment',
-  '\n',
-  '// another comment \t/',
-  '\n',
-  '/* a\n   third comment */' ]
-</PRE>
-</LI>
-</UL>
-</LI>
-<LI><code>&amp; { predicate }</code>
-
-<P>
-
-<UL>
-<LI>
-<FONT COLOR="#ff0000"> The predicate is a piece of JavaScript code that is executed as if it was
-inside a function</FONT>. 
-
-<P>
-</LI>
-<LI>It gets the match results of labeled expressions in
-preceding expression as its arguments. 
-
-<P>
-</LI>
-<LI>It should return some JavaScript
-value using the <code>return</code> statement. 
-
-<P>
-</LI>
-<LI>If the returned value evaluates to
-<code>true</code> in boolean context, just return <code>undefined</code> and do not advance the
-parser position; otherwise consider the match failed.
-
-<P>
-</LI>
-<LI>The code inside the predicate can access all variables and functions defined in the initializer at the beginning of the grammar.
-
-<P>
-</LI>
-<LI>The code inside the predicate can also access the current parse position
-using the <code>offset</code> function.
-The <code>offset</code> function returns a zero-based character index into the input string. 
-
-<P>
-</LI>
-<LI>The code
-can also access the current line and column using the <code>line</code> and <code>column</code>
-functions. 
-Both return one-based indexes.
-
-<P>
-</LI>
-<LI>The code inside the predicate can also access options passed to the parser using the 
-<code>options</code> variable.
-
-<P>
-</LI>
-<LI>Note that curly braces in the predicate code must be balanced.
-
-<P>
-</LI>
-<LI>The following CoffeeScript example illustrates all these points:
-<PRE>
-[~/srcPLgrado/pegjs_examples(master)]$ cat semantic_predicate.coffee 
-PEG = require('pegjs')
-coffee = require 'pegjs-coffee-plugin'
-grammar = '''
-   {                             
-     @util = require("util")     
-     @g = "visible variable" 
-     console.log("Inside Initializer! options = "+@util.inspect(options))
-   }                             
-   start = 'a' { console.log(@g); 1 } 
-         / c:'c' '\\n' &amp;   { 
-                       console.log("inside predicate: @g = '#{@g}' c = '#{c}'")
-                       console.log("options = #{@util.inspect(options)}")
-                       console.log("offset = #{offset()}")
-                       console.log("line = #{line()}")
-                       console.log("column = #{column()}")
-                       true 
-                     } 'b' { 2 }
-'''
-parser = PEG.buildParser(grammar, plugins: [coffee])
-r = parser.parse('a', x: 'hello')
-console.log r
-r = parser.parse("c\nb", y : 'world')
-console.log r
-</PRE>
-When executed produces the following output:
-<PRE>
-[~/srcPLgrado/pegjs_examples(master)]$ coffee semantic_predicate.coffee 
-Inside Initializer! options = { x: 'hello' }
-visible variable
-1
-Inside Initializer! options = { y: 'world' }
-inside predicate: @g = 'visible variable' c = 'c'
-options = { y: 'world' }
-offset = 2
-line = 2
-column = 1
-2
-</PRE>
-
-<P>
-</LI>
-</UL>
-
-<P>
-</LI>
-<LI><code>! { predicate }</code>
-
-<P>
-
-<UL>
-<LI>The predicate is a piece of JavaScript code that is executed as if it was
-inside a function. 
-
-<P>
-</LI>
-<LI>It gets the match results of labeled expressions in
-preceding expression as its arguments. 
-
-<P>
-</LI>
-<LI>It should return some JavaScript
-value using the <code>return</code> statement. 
-
-<P>
-</LI>
-<LI>If the returned value evaluates to
-<code>false</code> in boolean context, just return <code>undefined</code> and do not advance the
-parser position; otherwise consider the match failed.
-
-<P>
-</LI>
-<LI>The code inside the predicate can access all variables and functions defined in the initializer at the beginning of the grammar.
-
-<P>
-</LI>
-<LI>The code inside the predicate can also access the current parse position using the 
-<code>offset</code> function. 
-The <code>offset</code> function returns a zero-based character index into the input string. 
-
-<P>
-</LI>
-<LI>The code can also access the current line and column using the 
-<code>line</code> and <code>column</code> functions. 
-Both return one-based indexes.
-
-<P>
-</LI>
-<LI>The code inside the predicate can also access options passed to the
-parser using the <code>options</code> variable.
-
-<P>
-</LI>
-<LI>Note that curly braces in the predicate code must be balanced.
-</LI>
-</UL>
-
-<P>
-</LI>
-<LI><PRE>
-$ expression
-</PRE>
-Try to match the expression. If the match succeeds, 
-
-<FONT COLOR="#ff0000"> return the matched string instead of the match result</FONT>.
-
-<P>
-</LI>
-<LI><code>label : expression</code>
-
-<P>
-
-<UL>
-<LI>Match the expression and remember its match result under given <code>label</code>. 
-
-<P>
-</LI>
-<LI>The label must be a JavaScript identifier.
-
-<P>
-</LI>
-<LI>Labeled expressions are useful together with actions, where saved match
-results can be accessed by action's JavaScript code.
-</LI>
-</UL>
-
-<P>
-</LI>
-<LI><code>expression1 expression2 ... expressionn</code>
-
-<P>
-Match a sequence of expressions and return their match results in an array.
-
-<P>
-</LI>
-<LI><code>expression { action }</code>
-
-<P>
-
-<UL>
-<LI>Match the expression. If the match is successful, run the <code>action</code>, 
-otherwise consider the match failed.
-
-<P>
-</LI>
-<LI>The <code>action</code> is a piece of JavaScript code that is executed as if it was
-inside a function. 
-
-<P>
-</LI>
-<LI>It gets the match results of labeled expressions in
-preceding expression as its arguments. 
-
-<P>
-</LI>
-<LI>The action should return some
-JavaScript value using the <code>return</code> statement. 
-
-<P>
-</LI>
-<LI>This value is considered
-match result of the preceding expression.
-
-<P>
-</LI>
-<LI>To indicate an error, the code inside the action can invoke the <code>expected</code>
-function, which makes the parser throw an exception. 
-
-<P>
-The function takes
-one parameter — a <code>description</code> of what was expected at the current
-position. This<code> description</code> will be used as part of a message of the
-thrown exception.
-
-<P>
-</LI>
-<LI>The code inside an action can also invoke the <code>error</code> function, which also
-makes the parser throw an exception. The function takes one parameter
-— an <code>error</code> message. This message will be used by the thrown exception.
-
-<P>
-</LI>
-<LI>The code inside the action can access all variables and functions defined
-in the initializer at the beginning of the grammar. 
-
-<P>
-</LI>
-<LI>Curly braces in the
-action code must be balanced.
-
-<P>
-</LI>
-<LI>The code inside the action can also access the string matched by the
-expression using the <code>text</code> function.
-
-<P>
-</LI>
-<LI>The code inside the action can also access the parse position at the beginning of the action's expression using the <code>offset</code> function. 
-It returns a zero-based character index into the input string. 
-
-<P>
-</LI>
-<LI>The code can also access the line and column at 
-the beginning of the action's expression using the <code>line</code> and <code>column</code>
-functions. Both return one-based indexes.
-
-<P>
-</LI>
-<LI>The code inside the action can also access options passed to the parser using the <code>options</code> 
-variable.
-
-<P>
-</LI>
-<LI>Note that curly braces in the action code must be balanced.
-</LI>
-</UL>
-
-<P>
-</LI>
-<LI><PRE>
-expression1 / expression2 / ... / expressionn
-</PRE>
-Try to match the first expression, if it does not succeed, try the second one, etc. Return the match result of the first successfully matched expression. If no expression matches, consider the match failed.
-
-<P>
-</LI>
-</UL>
-
-<P>
-
-<H4><A NAME="SECTION04430090000000000000">
 main.js</A>
 </H4>
   
@@ -1046,7 +220,7 @@ console.log(r);
 
 <P>
 
-<H4><A NAME="SECTION044300100000000000000">
+<H4><A NAME="SECTION04430040000000000000">
 Rakefile</A>
 </H4>
   
@@ -1070,7 +244,7 @@ end
 
 <P>
 
-<H4><A NAME="SECTION044300110000000000000">
+<H4><A NAME="SECTION04430050000000000000">
 Compilación</A>
 </H4>
   
@@ -1084,93 +258,20 @@ node main.js
 
 <P>
 
-<H2><A NAME="SECTION04431000000000000000">
-Asociación Incorrecta para la Resta y la División</A>
-</H2>
-
-<P>
-<P>
-<DIV><B>Definición  <SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; 
-<I>Una <A NAME="6258"></A><SPAN  CLASS="textbf">gramática es recursiva por la izquierda</SPAN> cuando existe una derivación
-<!-- MATH
- $A \stackrel{*}{\Longrightarrow} A \alpha$
- -->
-<SPAN CLASS="MATH"><IMG
- WIDTH="80" HEIGHT="24" ALIGN="BOTTOM" BORDER="0"
- SRC="img58.png"
- ALT="$ A \stackrel{*}{\Longrightarrow} A \alpha$"></SPAN>. 
-</I>
-<P>
-<I>En particular, es recursiva por la izquierda si contiene
-una regla de producción de la forma <!-- MATH
- $A \rightarrow A \alpha$
- -->
-<SPAN CLASS="MATH"><IMG
- WIDTH="69" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img59.png"
- ALT="$ A \rightarrow A \alpha$"></SPAN>. 
-En este caso se dice que la recursión por la izquierda es directa.</I></DIV><P></P>
-
-<P>
-Cuando la gramática es <A NAME="6260"></A><SPAN  CLASS="textbf">recursiva por la izquierda</SPAN>, 
-el método 
-de análisis recursivo descendente predictivo no funciona. 
-En ese caso, el procedimiento
-<code>A</code> asociado con <SPAN CLASS="MATH"><IMG
- WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img2.png"
- ALT="$ A$"></SPAN> ciclaría para siempre sin llegar a consumir ningún 
-terminal. 
-
-<P>
-Es por eso que hemos escrito las reglas de la calculadora con recursividad
-a derechas, 
-<PRE>
-additive
-  = left:multiplicative PLUS right:additive { return left + right; }
-  / left:multiplicative MINUS right:additive { return left - right; }
-  / multiplicative
-
-multiplicative
-  = left:primary MULT right:multiplicative { return left * right; }
-  / left:primary DIV right:multiplicative { return left / right; }
-  / primary
-</PRE>
-
-<P>
-pero eso da lugar a árboles hundidos hacia la derecha y a una
-aplicación de las reglas semánticas errónea:
-
-<P>
-<PRE>
-[~/pegjs/examples(master)]$ cat main.js 
-var PEG = require("./arithmetics.js");
-var r = PEG.parse("5-3-2");
-console.log(r);
-</PRE>
-
-<P>
-<PRE>
-[~/pegjs/examples(master)]$ node main.js
-4
-</PRE>
-
-<P>
-
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html1616"
+<A NAME="tex2html1620"
   HREF="node34.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html1610"
+<A NAME="tex2html1614"
   HREF="node30.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html1604"
+<A NAME="tex2html1608"
   HREF="node32.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html1612"
+<A NAME="tex2html1616"
   HREF="node104.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html1614"
+<A NAME="tex2html1618"
   HREF="node107.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -1210,11 +311,11 @@ console.log(r);
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html1617"
-  HREF="node34.html">Acciones Intermedias</A>
-<B>Sup:</B> <A NAME="tex2html1611"
+<B> Sig:</B> <A NAME="tex2html1621"
+  HREF="node34.html">Sintáxis y Semántica de</A>
+<B>Sup:</B> <A NAME="tex2html1615"
   HREF="node30.html">Análisis Descendente mediante Parsing</A>
-<B> Ant:</B> <A NAME="tex2html1605"
+<B> Ant:</B> <A NAME="tex2html1609"
   HREF="node32.html">PEGJS</A>
 </DIV>
 <!--End of Navigation Panel-->
