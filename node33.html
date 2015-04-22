@@ -679,13 +679,22 @@ the match failed.
 <P>
 
 <UL>
-<LI>Here is an example recognizing JavaScript one line comments:
+<LI>Here is an example recognizing JavaScript whitespaces and comments:
 <PRE>
 [~/srcPLgrado/pegjs/examples(master)]$ cat notpredicate.pegjs 
-__ = (whitespace / eol /singleLineComment)*
+__ = (whitespace / eol / comment)*
+
+/* Modeled after ECMA-262, 5th ed., 7.4. */
+comment "comment"
+  = singleLineComment
+  / multiLineComment
 
 singleLineComment
-  = "//" $(!eolChar .)*
+  = "//" (!eolChar .)*   { return text(); }
+
+multiLineComment
+  = "/*" (!"*/" .)* "*/" { return text(); }
+
 
 /* Modeled after ECMA-262, 5th ed., 7.3. */
 eol "end of line"
@@ -706,7 +715,10 @@ whitespace "whitespace"
 <PRE>
 [~/srcPLgrado/pegjs/examples(master)]$  cat mainnotpredicate.js 
 var PEG = require("./notpredicate.js");
-var input = process.argv[2] || " // one comment\n// another comment \t";
+var input = process.argv[2] || "// one comment\n"+
+                               "// another comment \t/\n"+
+                               "/* a\n"+
+                               "   third comment */";
 console.log("\n*****\n"+input+"\n*****\n");
 var r = PEG.parse(input);
 console.log(r);
@@ -718,14 +730,17 @@ console.log(r);
 [~/srcPLgrado/pegjs/examples(master)]$ node mainnotpredicate.js 
 
 *****
- // one comment
-// another comment      
+// one comment
+// another comment      /
+/* a
+   third comment */
 *****
 
-[ ' ',
-  [ '//', ' one comment' ],
+[ '// one comment',
   '\n',
-  [ '//', ' another comment \t' ] ]
+  '// another comment \t/',
+  '\n',
+  '/* a\n   third comment */' ]
 </PRE>
 </LI>
 </UL>
