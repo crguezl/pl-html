@@ -378,8 +378,9 @@ And this will correctly return <code>awesome</code> if you call <code>parse("a")
 </LI>
 <LI>Also all variable assignments in an action are safely scoped to the
 action. 
-</LI>
-<LI><code>{ result = "awesome" }</code> becomes 
+
+<P>
+<code>{ result = "awesome" }</code> becomes 
 <code>{ var result; result = "awesome" }</code>
 </LI>
 <LI>This gives you the ability to explicitly share variables with other
