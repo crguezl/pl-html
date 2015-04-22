@@ -681,12 +681,10 @@ the match failed.
 <LI>Here is an example recognizing JavaScript one line comments:
 <PRE>
 [~/srcPLgrado/pegjs/examples(master)]$ cat notpredicate.pegjs 
-start = __ $[0-9]+ __
-
-__ = $(whitespace / eol /singleLineComment)*
+__ = (whitespace / eol /singleLineComment)*
 
 singleLineComment
-  = "//" (!eolChar .)*
+  = "//" $(!eolChar .)*
 
 /* Modeled after ECMA-262, 5th ed., 7.3. */
 eol "end of line"
@@ -705,17 +703,28 @@ whitespace "whitespace"
 </LI>
 <LI>Once it is compiled we can call it from our main program:
 <PRE>
-[~/srcPLgrado/pegjs/examples(master)]$ cat mainnotpredicate.js 
+[~/srcPLgrado/pegjs/examples(master)]$  cat mainnotpredicate.js 
 var PEG = require("./notpredicate.js");
-var input = process.argv[2] || "\n\n532 \t";
+var input = process.argv[2] || " // one comment\n// another comment \t";
+console.log("\n*****\n"+input+"\n*****\n");
 var r = PEG.parse(input);
 console.log(r);
 </PRE>
 </LI>
 <LI>This is the output:
 <PRE>
+[~/srcPLgrado/pegjs/examples(master)]$ pegjs notpredicate.pegjs 
 [~/srcPLgrado/pegjs/examples(master)]$ node mainnotpredicate.js 
-[ '\n\n', '532', ' \t' ]
+
+*****
+ // one comment
+// another comment      
+*****
+
+[ ' ',
+  [ '//', ' one comment' ],
+  '\n',
+  [ '//', ' another comment \t' ] ]
 </PRE>
 </LI>
 <LI><code>&amp; { predicate }</code>

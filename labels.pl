@@ -122,16 +122,16 @@ $key = q/program:adrp/;
 $external_labels{$key} = "$URL/" . q|node23.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/section:ejemplodedatamapper/;
-$external_labels{$key} = "$URL/" . q|node265.html|; 
-$noresave{$key} = "$nosave";
-
 $key = q/section:ejemplosimple/;
 $external_labels{$key} = "$URL/" . q|node20.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:regexp510lenrec/;
 $external_labels{$key} = "$URL/" . q|node23.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/section:ejemplodedatamapper/;
+$external_labels{$key} = "$URL/" . q|node265.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/sectionpractica:csv/;
