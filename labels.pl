@@ -30,6 +30,10 @@ $key = q/practica:analisis_semantico/;
 $external_labels{$key} = "$URL/" . q|node70.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/section:UnEjemploSencillo/;
+$external_labels{$key} = "$URL/" . q|node33.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/practica:esquemadetradsimple/;
 $external_labels{$key} = "$URL/" . q|node141.html|; 
 $noresave{$key} = "$nosave";
@@ -66,12 +70,12 @@ $key = q/cite_eloquentjavascript/;
 $external_labels{$key} = "$URL/" . q|node285.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/cite_mogensen2011introduction/;
-$external_labels{$key} = "$URL/" . q|node108.html|; 
-$noresave{$key} = "$nosave";
-
 $key = q/section:samplec/;
 $external_labels{$key} = "$URL/" . q|node115.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/cite_mogensen2011introduction/;
+$external_labels{$key} = "$URL/" . q|node108.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:lexicomodular/;
@@ -122,12 +126,12 @@ $key = q/program:adrp/;
 $external_labels{$key} = "$URL/" . q|node23.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/section:ejemplodedatamapper/;
-$external_labels{$key} = "$URL/" . q|node265.html|; 
-$noresave{$key} = "$nosave";
-
 $key = q/section:ejemplosimple/;
 $external_labels{$key} = "$URL/" . q|node20.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/section:ejemplodedatamapper/;
+$external_labels{$key} = "$URL/" . q|node265.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:regexp510lenrec/;
@@ -506,12 +510,12 @@ $key = q/sectionpractica:conversordetemperaturas/;
 $external_labels{$key} = "$URL/" . q|node9.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/cite_osmani2012learning/;
-$external_labels{$key} = "$URL/" . q|node285.html|; 
-$noresave{$key} = "$nosave";
-
 $key = q/cite_Muchnick:1998:ACD:286076/;
 $external_labels{$key} = "$URL/" . q|node108.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/cite_osmani2012learning/;
+$external_labels{$key} = "$URL/" . q|node285.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:mediaregla/;
@@ -1031,6 +1035,10 @@ $noresave{$key} = "$nosave";
 
 $key = q/practica:treetransofrmationsPL0/;
 $external_latex_labels{$key} = q|7.6|; 
+$noresave{$key} = "$nosave";
+
+$key = q/section:UnEjemploSencillo/;
+$external_latex_labels{$key} = q|4.3|; 
 $noresave{$key} = "$nosave";
 
 $key = q/practica:ambitocalc/;

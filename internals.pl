@@ -30,6 +30,10 @@ $key = q/practica:analisis_semantico/;
 $ref_files{$key} = "$dir".q|node70.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/section:UnEjemploSencillo/;
+$ref_files{$key} = "$dir".q|node33.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/practica:esquemadetradsimple/;
 $ref_files{$key} = "$dir".q|node141.html|; 
 $noresave{$key} = "$nosave";
@@ -66,12 +70,12 @@ $key = q/cite_eloquentjavascript/;
 $ref_files{$key} = "$dir".q|node285.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/cite_mogensen2011introduction/;
-$ref_files{$key} = "$dir".q|node108.html|; 
-$noresave{$key} = "$nosave";
-
 $key = q/section:samplec/;
 $ref_files{$key} = "$dir".q|node115.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/cite_mogensen2011introduction/;
+$ref_files{$key} = "$dir".q|node108.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:lexicomodular/;
@@ -122,12 +126,12 @@ $key = q/program:adrp/;
 $ref_files{$key} = "$dir".q|node23.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/section:ejemplodedatamapper/;
-$ref_files{$key} = "$dir".q|node265.html|; 
-$noresave{$key} = "$nosave";
-
 $key = q/section:ejemplosimple/;
 $ref_files{$key} = "$dir".q|node20.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/section:ejemplodedatamapper/;
+$ref_files{$key} = "$dir".q|node265.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:regexp510lenrec/;
@@ -506,12 +510,12 @@ $key = q/sectionpractica:conversordetemperaturas/;
 $ref_files{$key} = "$dir".q|node9.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/cite_osmani2012learning/;
-$ref_files{$key} = "$dir".q|node285.html|; 
-$noresave{$key} = "$nosave";
-
 $key = q/cite_Muchnick:1998:ACD:286076/;
 $ref_files{$key} = "$dir".q|node108.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/cite_osmani2012learning/;
+$ref_files{$key} = "$dir".q|node285.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:mediaregla/;
