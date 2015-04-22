@@ -228,12 +228,12 @@ PEG Syntax</A>
   
 
 <UL>
-<LI>On the top level, the grammar consists of <A NAME="6170"></A><SPAN  CLASS="textbf">rules</SPAN>. 
+<LI>On the top level, the grammar consists of <A NAME="6174"></A><SPAN  CLASS="textbf">rules</SPAN>. 
 </LI>
 <LI>Each rule has a name (e.g. <code>primary</code>) that
 identifies the rule, and a 
 </LI>
-<LI><A NAME="6172"></A><SPAN  CLASS="textbf">parsing expression</SPAN> e.g. 
+<LI><A NAME="6176"></A><SPAN  CLASS="textbf">parsing expression</SPAN> e.g. 
 <PRE>
 integer / LEFTPAR additive:additive RIGHTPAR { return additive; }
 </PRE>
@@ -251,7 +251,7 @@ integer "integer"
 </PRE>
 </LI>
 <LI>The
-parsing starts at the first rule, which is also called the <A NAME="6176"></A><SPAN  CLASS="textbf">start rule</SPAN>.
+parsing starts at the first rule, which is also called the <A NAME="6180"></A><SPAN  CLASS="textbf">start rule</SPAN>.
 </LI>
 </UL>
 
@@ -287,7 +287,7 @@ Initializers</A>
   
 
 <UL>
-<LI>Rules can be preceded by an <A NAME="6186"></A><SPAN  CLASS="textbf">initializer</SPAN> — a piece of JavaScript
+<LI>Rules can be preceded by an <A NAME="6190"></A><SPAN  CLASS="textbf">initializer</SPAN> — a piece of JavaScript
 code in curly braces (<code>{</code> and <code>}</code>). 
 </LI>
 <LI>
@@ -297,7 +297,7 @@ before the generated parser starts parsing</FONT>
 <LI>All variables and functions
 defined in the initializer are accessible in rule actions and semantic
 predicates (the <code>&amp; { predicate }</code> and <code>! { predicate }</code> 
-are called <A NAME="6190"></A><SPAN  CLASS="textbf">semantic predicates</SPAN>)
+are called <A NAME="6194"></A><SPAN  CLASS="textbf">semantic predicates</SPAN>)
 </LI>
 <LI>The code inside the initializer can access options passed to
 the parser using the <code>options</code> variable. 
@@ -444,7 +444,7 @@ Expressions can also contain references to other rules.
 
 <P>
 If an expression successfully matches a part of the text when running the
-generated parser, it produces a <A NAME="6198"></A><SPAN  CLASS="textbf">match result</SPAN>, which is a JavaScript value.
+generated parser, it produces a <A NAME="6202"></A><SPAN  CLASS="textbf">match result</SPAN>, which is a JavaScript value.
 
 <P>
 
@@ -469,7 +469,7 @@ Parser Actions</A>
   
 
 <P>
-One special case of parser expression is a <A NAME="6210"></A><SPAN  CLASS="textbf">parser action</SPAN> — a piece of
+One special case of parser expression is a <A NAME="6214"></A><SPAN  CLASS="textbf">parser action</SPAN> — a piece of
 JavaScript code inside curly braces (<code>{</code> and <code>}</code>) that 
 <FONT COLOR="#ff0000"> takes match
 results of some of the the preceding expressions and returns a JavaScript
@@ -728,6 +728,52 @@ Both return one-based indexes.
 <P>
 </LI>
 <LI>Note that curly braces in the predicate code must be balanced.
+
+<P>
+</LI>
+<LI>the follwing CoffeeScript example illustrates all these points:
+<PRE>
+[~/srcPLgrado/pegjs_examples(master)]$ cat semantic_predicate.coffee 
+PEG = require('pegjs')
+coffee = require 'pegjs-coffee-plugin'
+grammar = '''
+   {                             
+     @util = require("util")     
+     @g = "visible variable" 
+     console.log("Inside Initializer! options = "+@util.inspect(options))
+   }                             
+   start = 'a' { console.log(@g); 1 } 
+         / c:'c' '\\n' &amp;   { 
+                       console.log("inside predicate: @g = '#{@g}' c = '#{c}'")
+                       console.log("options = #{@util.inspect(options)}")
+                       console.log("offset = #{offset()}")
+                       console.log("line = #{line()}")
+                       console.log("column = #{column()}")
+                       true 
+                     } 'b' { 2 }
+'''
+parser = PEG.buildParser(grammar, plugins: [coffee])
+r = parser.parse('a', x: 'hello')
+console.log r
+r = parser.parse("c\nb", y : 'world')
+console.log r
+</PRE>
+When executed produces the following output:
+<PRE>
+[~/srcPLgrado/pegjs_examples(master)]$ coffee semantic_predicate.coffee 
+Inside Initializer! options = { x: 'hello' }
+visible variable
+1
+Inside Initializer! options = { y: 'world' }
+inside predicate: @g = 'visible variable' c = 'c'
+options = { y: 'world' }
+offset = 2
+line = 2
+column = 1
+2
+</PRE>
+
+<P>
 </LI>
 </UL>
 
@@ -977,7 +1023,7 @@ Asociación Incorrecta para la Resta y la División</A>
 <P>
 <P>
 <DIV><B>Definición  <SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; 
-<I>Una <A NAME="6243"></A><SPAN  CLASS="textbf">gramática es recursiva por la izquierda</SPAN> cuando existe una derivación
+<I>Una <A NAME="6247"></A><SPAN  CLASS="textbf">gramática es recursiva por la izquierda</SPAN> cuando existe una derivación
 <!-- MATH
  $A \stackrel{*}{\Longrightarrow} A \alpha$
  -->
@@ -998,7 +1044,7 @@ una regla de producción de la forma <!-- MATH
 En este caso se dice que la recursión por la izquierda es directa.</I></DIV><P></P>
 
 <P>
-Cuando la gramática es <A NAME="6245"></A><SPAN  CLASS="textbf">recursiva por la izquierda</SPAN>, 
+Cuando la gramática es <A NAME="6249"></A><SPAN  CLASS="textbf">recursiva por la izquierda</SPAN>, 
 el método 
 de análisis recursivo descendente predictivo no funciona. 
 En ese caso, el procedimiento
