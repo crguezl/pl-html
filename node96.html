@@ -7,8 +7,8 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 <HTML>
 <HEAD>
-<TITLE>CoffeeScript y Express</TITLE>
-<META NAME="description" CONTENT="CoffeeScript y Express">
+<TITLE>Cake</TITLE>
+<META NAME="description" CONTENT="Cake">
 <META NAME="keywords" CONTENT="javascriptexamples">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -19,28 +19,28 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 
 <LINK REL="STYLESHEET" HREF="mystyle.css">
 
-<LINK REL="previous" HREF="node91.html">
-<LINK REL="up" HREF="node90.html">
+<LINK REL="previous" HREF="node95.html">
+<LINK REL="up" HREF="node92.html">
 <LINK REL="next" HREF="node97.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2769"
+<A NAME="tex2html2774"
   HREF="node97.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2763"
-  HREF="node90.html">
+<A NAME="tex2html2768"
+  HREF="node92.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2759"
+<A NAME="tex2html2764"
   HREF="node95.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2765"
-  HREF="node103.html">
+<A NAME="tex2html2770"
+  HREF="node104.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2767"
-  HREF="node106.html">
+<A NAME="tex2html2772"
+  HREF="node107.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -79,171 +79,80 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2770"
-  HREF="node97.html">Getting Started</A>
-<B>Sup:</B> <A NAME="tex2html2764"
-  HREF="node90.html">SEPTIMA PARTE: APUNTES DE</A>
-<B> Ant:</B> <A NAME="tex2html2760"
-  HREF="node95.html">Cake</A>
+<B> Sig:</B> <A NAME="tex2html2775"
+  HREF="node97.html">CoffeeScript y Express</A>
+<B>Sup:</B> <A NAME="tex2html2769"
+  HREF="node92.html">CoffeeScript. Introducción</A>
+<B> Ant:</B> <A NAME="tex2html2765"
+  HREF="node95.html">Ambito/Scope</A>
 <B> Con:</B> 
-<A NAME="tex2html2765"
-  HREF="node103.html">
+<A NAME="tex2html2770"
+  HREF="node104.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2767"
-  HREF="node106.html">
+<A NAME="tex2html2772"
+  HREF="node107.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
 <!--End of Navigation Panel-->
-
-<H1><A NAME="SECTION06200000000000000000"></A>
-<A NAME="chapter:coffeescriptexpress"></A>
-<BR>
-CoffeeScript y Express
-</H1>
-Literally taken from
-James carr blog and updated 2015:
-
-<P>
-<A NAME="tex2html400"
-  HREF="http://blog.james-carr.org/2012/01/16/blog-rolling-with-mongodb-node-js-and-coffeescript/">http://blog.james-carr.org/2012/01/16/blog-rolling-with-mongodb-node-js-and-coffeescript/</A>
-<P>
-<BR> <HR>
 <!--Table of Child-Links-->
 <A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
 
 <UL CLASS="ChildLinks">
-<LI><A NAME="tex2html2771"
-  HREF="node97.html">Getting Started</A>
-<UL>
-<LI><A NAME="tex2html2772"
-  HREF="node97.html#SECTION06210010000000000000">Express generator</A>
-<LI><A NAME="tex2html2773"
-  HREF="node97.html#SECTION06210020000000000000">The Structure</A>
-<LI><A NAME="tex2html2774"
-  HREF="node97.html#SECTION06210030000000000000">package.json</A>
-<LI><A NAME="tex2html2775"
-  HREF="node97.html#SECTION06210040000000000000">app.js</A>
+<LI><UL>
+<LI><UL>
 <LI><A NAME="tex2html2776"
-  HREF="node97.html#SECTION06210050000000000000">El método <TT>app.use</TT></A>
-<LI><A NAME="tex2html2777"
-  HREF="node97.html#SECTION06210060000000000000">Middleware</A>
-<LI><A NAME="tex2html2778"
-  HREF="node97.html#SECTION06210070000000000000">Las Rutas / Routing</A>
-<LI><A NAME="tex2html2779"
-  HREF="node97.html#SECTION06210080000000000000">Running</A>
-<LI><A NAME="tex2html2780"
-  HREF="node97.html#SECTION06210090000000000000">El módulo debug</A>
-</UL>
-<BR>
-<LI><A NAME="tex2html2781"
-  HREF="node98.html">Porting to Coffeescript</A>
-<UL>
-<LI><A NAME="tex2html2782"
-  HREF="node98.html#SECTION06220010000000000000">Ejecución del Servidor</A>
-</UL>
-<BR>
-<LI><A NAME="tex2html2783"
-  HREF="node99.html">Pruebas</A>
-<UL>
-<LI><A NAME="tex2html2784"
-  HREF="node99.html#SECTION06230010000000000000">Mocha, Chai y Expect: instalando las dependencias</A>
-<LI><A NAME="tex2html2785"
-  HREF="node99.html#SECTION06230020000000000000">Una Prueba Sencilla</A>
-<LI><A NAME="tex2html2786"
-  HREF="node99.html#SECTION06230030000000000000">¿Cómo lo vamos a hacer?</A>
-<LI><A NAME="tex2html2787"
-  HREF="node99.html#SECTION06230040000000000000">Should display index with posts: red</A>
-<LI><A NAME="tex2html2788"
-  HREF="node99.html#SECTION06230050000000000000">Should display index with posts: green</A>
-<LI><A NAME="tex2html2789"
-  HREF="node99.html#SECTION06230060000000000000">Expect vars posts equal empty array: red</A>
-<LI><A NAME="tex2html2790"
-  HREF="node99.html#SECTION06230070000000000000">Expect vars posts equal empty array: green</A>
-<LI><A NAME="tex2html2791"
-  HREF="node99.html#SECTION06230080000000000000">views/index.jade</A>
-<LI><A NAME="tex2html2792"
-  HREF="node99.html#SECTION06230090000000000000">views/layout.jade</A>
-<LI><A NAME="tex2html2793"
-  HREF="node99.html#SECTION062300100000000000000">Should display the add post page: red</A>
-<LI><A NAME="tex2html2794"
-  HREF="node99.html#SECTION062300110000000000000">Should display the add post page: (false) green</A>
-<LI><A NAME="tex2html2795"
-  HREF="node99.html#SECTION062300120000000000000">Mocha: done</A>
-<LI><A NAME="tex2html2796"
-  HREF="node99.html#SECTION062300130000000000000">Escribiendo newPost</A>
-<LI><A NAME="tex2html2797"
-  HREF="node99.html#SECTION062300140000000000000">views/add_post.jade</A>
-<LI><A NAME="tex2html2798"
-  HREF="node99.html#SECTION062300150000000000000">Should display the add post page: (true) green</A>
-<LI><A NAME="tex2html2799"
-  HREF="node99.html#SECTION062300160000000000000">Gulpfile</A>
-<LI><A NAME="tex2html2800"
-  HREF="node99.html#SECTION062300170000000000000">Guardando el Post</A>
-<LI><A NAME="tex2html2801"
-  HREF="node99.html#SECTION062300180000000000000">Viewing a Single Post</A>
-</UL>
-<BR>
-<LI><A NAME="tex2html2802"
-  HREF="node100.html">MongoDB</A>
-<UL>
-<LI><A NAME="tex2html2803"
-  HREF="node100.html#SECTION06241000000000000000">Introducción</A>
-<UL>
-<LI><A NAME="tex2html2804"
-  HREF="node100.html#SECTION06241010000000000000">NoSQL</A>
-<LI><A NAME="tex2html2805"
-  HREF="node100.html#SECTION06241020000000000000">Relational  Database</A>
-<LI><A NAME="tex2html2806"
-  HREF="node100.html#SECTION06241030000000000000">Document Oriented DataBase</A>
-</UL>
-<LI><A NAME="tex2html2807"
-  HREF="node100.html#SECTION06242000000000000000">Getting Started with MongoDB</A>
-<LI><A NAME="tex2html2808"
-  HREF="node100.html#SECTION06243000000000000000">Create a Collection and Insert Documents</A>
-<LI><A NAME="tex2html2809"
-  HREF="node100.html#SECTION06244000000000000000">Insert Documents using a For Loop or a JavaScript Function</A>
-<UL>
-<LI><A NAME="tex2html2810"
-  HREF="node100.html#SECTION06244010000000000000">Insert Multiple Documents Using a For Loop</A>
-<LI><A NAME="tex2html2811"
-  HREF="node100.html#SECTION06244020000000000000">Working with the Cursor</A>
-</UL>
-</UL>
-<BR>
-<LI><A NAME="tex2html2812"
-  HREF="node101.html">Mongoose</A>
-<UL>
-<LI><A NAME="tex2html2813"
-  HREF="node101.html#SECTION06251000000000000000">Getting Started</A>
-</UL>
-<BR>
-<LI><A NAME="tex2html2814"
-  HREF="node102.html">Añadiendo Persistencia: Posts con MongoDB y Mongoose</A>
-<UL>
-<LI><A NAME="tex2html2815"
-  HREF="node102.html#SECTION06261000000000000000">Definiendo el Modelo y Probando que Funciona</A>
-<LI><A NAME="tex2html2816"
-  HREF="node102.html#SECTION06262000000000000000">Usando la Base de Datos MongoDB en vez de un Array en Nuestro Ejemplo</A>
-</UL></UL>
+  HREF="node96.html#SECTION06140010000000000000">See</A>
+</UL></UL></UL>
 <!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION06140000000000000000">
+Cake</A>
+</H1>
+
+<P>
+Cakefiles are inspired by the venerable Makefiles, the build system for
+C and friends. 
+
+<P>
+The premise of a Makefile and its variants (Ruby users will also be familiar with Rakefiles) is simple: it consists of various tasks which can be invoked individually from the command line. 
+
+<P>
+Each task definition contains instructions that will be run when the task is run. In a Cakefile, the task definitions and bodies are all written in CoffeeScript.
+
+<P>
+
+<H4><A NAME="SECTION06140010000000000000">
+See</A>
+</H4>
+  
+
+<UL>
+<LI><A NAME="tex2html399"
+  HREF="https://github.com/jashkenas/coffeescript/wiki/%5BHowTo%5D-Compiling-and-Setting-Up-Build-Tools">HowTo: Compiling and Setting Up Build Tools</A>
+in repo jashkenas/coffeescript
+</LI>
+</UL>
+
+<P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2769"
+<A NAME="tex2html2774"
   HREF="node97.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2763"
-  HREF="node90.html">
+<A NAME="tex2html2768"
+  HREF="node92.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2759"
+<A NAME="tex2html2764"
   HREF="node95.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2765"
-  HREF="node103.html">
+<A NAME="tex2html2770"
+  HREF="node104.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2767"
-  HREF="node106.html">
+<A NAME="tex2html2772"
+  HREF="node107.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -282,12 +191,12 @@ James carr blog and updated 2015:
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2770"
-  HREF="node97.html">Getting Started</A>
-<B>Sup:</B> <A NAME="tex2html2764"
-  HREF="node90.html">SEPTIMA PARTE: APUNTES DE</A>
-<B> Ant:</B> <A NAME="tex2html2760"
-  HREF="node95.html">Cake</A>
+<B> Sig:</B> <A NAME="tex2html2775"
+  HREF="node97.html">CoffeeScript y Express</A>
+<B>Sup:</B> <A NAME="tex2html2769"
+  HREF="node92.html">CoffeeScript. Introducción</A>
+<B> Ant:</B> <A NAME="tex2html2765"
+  HREF="node95.html">Ambito/Scope</A>
 </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>

@@ -7,8 +7,8 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 <HTML>
 <HEAD>
-<TITLE>Análisis Sintáctico Ascendente en JavaScript</TITLE>
-<META NAME="description" CONTENT="Análisis Sintáctico Ascendente en JavaScript">
+<TITLE>Práctica: Inventando un Lenguaje: Tortoise</TITLE>
+<META NAME="description" CONTENT="Práctica: Inventando un Lenguaje: Tortoise">
 <META NAME="keywords" CONTENT="javascriptexamples">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -19,29 +19,28 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 
 <LINK REL="STYLESHEET" HREF="mystyle.css">
 
-<LINK REL="next" HREF="node68.html">
-<LINK REL="previous" HREF="node30.html">
-<LINK REL="up" HREF="node6.html">
+<LINK REL="previous" HREF="node45.html">
+<LINK REL="up" HREF="node30.html">
 <LINK REL="next" HREF="node47.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html1834"
+<A NAME="tex2html1837"
   HREF="node47.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html1828"
-  HREF="node6.html">
+<A NAME="tex2html1831"
+  HREF="node30.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html1822"
+<A NAME="tex2html1827"
   HREF="node45.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html1830"
-  HREF="node103.html">
+<A NAME="tex2html1833"
+  HREF="node104.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html1832"
-  HREF="node106.html">
+<A NAME="tex2html1835"
+  HREF="node107.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -80,214 +79,140 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html1835"
-  HREF="node47.html">Conceptos Básicos para el</A>
-<B>Sup:</B> <A NAME="tex2html1829"
-  HREF="node6.html">PARTE: APUNTES DE PROCESADORES</A>
-<B> Ant:</B> <A NAME="tex2html1823"
-  HREF="node45.html">Práctica: Inventando un Lenguaje:</A>
+<B> Sig:</B> <A NAME="tex2html1838"
+  HREF="node47.html">Análisis Sintáctico Ascendente en</A>
+<B>Sup:</B> <A NAME="tex2html1832"
+  HREF="node30.html">Análisis Descendente mediante Parsing</A>
+<B> Ant:</B> <A NAME="tex2html1828"
+  HREF="node45.html">Práctica: Ambiguedad en C++</A>
 <B> Con:</B> 
-<A NAME="tex2html1830"
-  HREF="node103.html">
+<A NAME="tex2html1833"
+  HREF="node104.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html1832"
-  HREF="node106.html">
+<A NAME="tex2html1835"
+  HREF="node107.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
 <!--End of Navigation Panel-->
-
-<H1><A NAME="SECTION04500000000000000000">
-Análisis Sintáctico Ascendente en JavaScript</A>
-</H1>
-<BR> <HR>
 <!--Table of Child-Links-->
 <A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
 
 <UL CLASS="ChildLinks">
-<LI><A NAME="tex2html1836"
-  HREF="node47.html">Conceptos Básicos para el Análisis Sintáctico</A>
-<UL>
-<LI><A NAME="tex2html1837"
-  HREF="node47.html#SECTION04511000000000000000">Ejercicio</A>
-</UL>
-<BR>
-<LI><A NAME="tex2html1838"
-  HREF="node48.html">Ejemplo Simple en Jison</A>
-<UL>
+<LI><UL>
+<LI><UL>
 <LI><A NAME="tex2html1839"
-  HREF="node48.html#SECTION04520010000000000000">Gramática</A>
-<LI><A NAME="tex2html1840"
-  HREF="node48.html#SECTION04520020000000000000">basic2_lex.jison</A>
-<LI><A NAME="tex2html1841"
-  HREF="node48.html#SECTION04520030000000000000">index.html</A>
-<LI><A NAME="tex2html1842"
-  HREF="node48.html#SECTION04520040000000000000">Rakefile</A>
-<LI><A NAME="tex2html1843"
-  HREF="node48.html#SECTION04520050000000000000">Véase También</A>
-<LI><A NAME="tex2html1844"
-  HREF="node48.html#SECTION04520060000000000000">global.css</A>
-<LI><A NAME="tex2html1845"
-  HREF="node48.html#SECTION04521000000000000000">Véase También</A>
-<LI><A NAME="tex2html1846"
-  HREF="node48.html#SECTION04522000000000000000">Práctica: Secuencia de Asignaciones Simples</A>
-</UL>
-<BR>
-<LI><A NAME="tex2html1847"
-  HREF="node49.html">Ejemplo en Jison: Calculadora Simple</A>
-<UL>
-<LI><A NAME="tex2html1848"
-  HREF="node49.html#SECTION04530010000000000000">calculator.jison</A>
-<LI><A NAME="tex2html1849"
-  HREF="node49.html#SECTION04530020000000000000">main.js</A>
-<LI><A NAME="tex2html1850"
-  HREF="node49.html#SECTION04530030000000000000">calculator.html</A>
-<LI><A NAME="tex2html1851"
-  HREF="node49.html#SECTION04530040000000000000">Rakefile</A>
-<LI><A NAME="tex2html1852"
-  HREF="node49.html#SECTION04530050000000000000">global.css</A>
-<LI><A NAME="tex2html1853"
-  HREF="node49.html#SECTION04530060000000000000">test/assert.html</A>
-<LI><A NAME="tex2html1854"
-  HREF="node49.html#SECTION04530070000000000000">test/test.css</A>
-<LI><A NAME="tex2html1855"
-  HREF="node49.html#SECTION04530080000000000000">test/test.html</A>
-<LI><A NAME="tex2html1856"
-  HREF="node49.html#SECTION04531000000000000000">Práctica: Calculadora con Listas de Expresiones y Variables</A>
-</UL>
-<BR>
-<LI><A NAME="tex2html1857"
-  HREF="node50.html">Conceptos Básicos del Análisis LR</A>
-<LI><A NAME="tex2html1858"
-  HREF="node51.html">Construcción de las Tablas para el Análisis SLR</A>
-<UL>
-<LI><A NAME="tex2html1859"
-  HREF="node51.html#SECTION04551000000000000000">Los conjuntos de Primeros y Siguientes</A>
-<LI><A NAME="tex2html1860"
-  HREF="node51.html#SECTION04552000000000000000">Construcción de las Tablas</A>
-</UL>
-<BR>
-<LI><A NAME="tex2html1861"
-  HREF="node52.html">Práctica: Analizador de PL0 Usando Jison</A>
-<UL>
-<LI><A NAME="tex2html1862"
-  HREF="node52.html#SECTION04560010000000000000">Donde</A>
-<LI><A NAME="tex2html1863"
-  HREF="node52.html#SECTION04560020000000000000">Tareas</A>
-<LI><A NAME="tex2html1864"
-  HREF="node52.html#SECTION04560030000000000000">Referencias para esta Práctica</A>
-</UL>
-<BR>
-<LI><A NAME="tex2html1865"
-  HREF="node53.html">Práctica: Análisis de Ámbito en PL0</A>
-<UL>
-<LI><A NAME="tex2html1866"
-  HREF="node53.html#SECTION04570010000000000000">Objetivos</A>
-</UL>
-<BR>
-<LI><A NAME="tex2html1867"
-  HREF="node54.html">Práctica: Traducción de Infijo a Postfijo</A>
-<LI><A NAME="tex2html1868"
-  HREF="node55.html">Práctica: Calculadora  con Funciones</A>
-<LI><A NAME="tex2html1869"
-  HREF="node56.html">Práctica: Calculadora con Análisis de Ámbito</A>
-<LI><A NAME="tex2html1870"
-  HREF="node57.html">Algoritmo de Análisis LR</A>
-<LI><A NAME="tex2html1871"
-  HREF="node58.html">El módulo Generado por <TT>jison</TT></A>
-<UL>
-<LI><A NAME="tex2html1872"
-  HREF="node58.html#SECTION045121000000000000000">Version</A>
-<LI><A NAME="tex2html1873"
-  HREF="node58.html#SECTION045122000000000000000">Gramática Inicial</A>
-<LI><A NAME="tex2html1874"
-  HREF="node58.html#SECTION045123000000000000000">Tablas</A>
-<LI><A NAME="tex2html1875"
-  HREF="node58.html#SECTION045124000000000000000">Acciones Semánticas</A>
-<LI><A NAME="tex2html1876"
-  HREF="node58.html#SECTION045125000000000000000">Tabla de Acciones y GOTOs</A>
-<LI><A NAME="tex2html1877"
-  HREF="node58.html#SECTION045126000000000000000">defaultActions</A>
-<LI><A NAME="tex2html1878"
-  HREF="node58.html#SECTION045127000000000000000">Reducciones</A>
-<LI><A NAME="tex2html1879"
-  HREF="node58.html#SECTION045128000000000000000">Desplazamientos/Shifts</A>
-<LI><A NAME="tex2html1880"
-  HREF="node58.html#SECTION045129000000000000000">Manejo de Errores</A>
-<LI><A NAME="tex2html1881"
-  HREF="node58.html#SECTION0451210000000000000000">Analizador Léxico</A>
-<LI><A NAME="tex2html1882"
-  HREF="node58.html#SECTION0451211000000000000000">Exportación</A>
-</UL>
-<BR>
-<LI><A NAME="tex2html1883"
-  HREF="node59.html">Precedencia y Asociatividad</A>
-<LI><A NAME="tex2html1884"
-  HREF="node60.html">Esquemas de Traducción</A>
-<LI><A NAME="tex2html1885"
-  HREF="node61.html">Manejo en <TT>jison</TT> de Atributos Heredados</A>
-<LI><A NAME="tex2html1886"
-  HREF="node62.html">Definición Dirigida por la Sintáxis</A>
-<LI><A NAME="tex2html1887"
-  HREF="node63.html">Ejercicios: Casos de Estudio</A>
-<UL>
-<LI><A NAME="tex2html1888"
-  HREF="node63.html#SECTION045171000000000000000">Un mal diseño</A>
-<UL>
-<LI><A NAME="tex2html1889"
-  HREF="node63.html#SECTION045171010000000000000">Donde</A>
-</UL>
-<LI><A NAME="tex2html1890"
-  HREF="node63.html#SECTION045172000000000000000">Gramática no LR(1)</A>
-<UL>
-<LI><A NAME="tex2html1891"
-  HREF="node63.html#SECTION045172010000000000000">Donde</A>
-</UL>
-<LI><A NAME="tex2html1892"
-  HREF="node63.html#SECTION045173000000000000000">Un Lenguaje Intrínsecamente Ambiguo</A>
-<UL>
-<LI><A NAME="tex2html1893"
-  HREF="node63.html#SECTION045173010000000000000">Donde</A>
-</UL>
-<LI><A NAME="tex2html1894"
-  HREF="node63.html#SECTION045174000000000000000">Conflicto reduce-reduce</A>
-<UL>
-<LI><A NAME="tex2html1895"
-  HREF="node63.html#SECTION045174010000000000000">Solución</A>
-<LI><A NAME="tex2html1896"
-  HREF="node63.html#SECTION045174020000000000000">Donde</A>
-<LI><A NAME="tex2html1897"
-  HREF="node63.html#SECTION045174030000000000000">Véase</A>
-</UL>
-</UL>
-<BR>
-<LI><A NAME="tex2html1898"
-  HREF="node64.html">Recuperación de Errores</A>
-<LI><A NAME="tex2html1899"
-  HREF="node65.html">Depuración en <TT>jison</TT></A>
-<LI><A NAME="tex2html1900"
-  HREF="node66.html">Construcción del Árbol Sintáctico</A>
-<LI><A NAME="tex2html1901"
-  HREF="node67.html">Consejos a seguir al escribir un programa <TT>jison</TT></A>
-</UL>
+  HREF="node46.html#SECTION044160010000000000000">Recursos</A>
+</UL></UL></UL>
 <!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION044160000000000000000"></A>
+   <A NAME="6377"></A>
+<BR>
+Práctica: Inventando un Lenguaje: Tortoise
+</H1>
+
+<P>
+El objetivo de esta práctica es crear un lenguaje de programación 
+imperativa sencillo de estilo <A NAME="tex2html268"
+  HREF="http://en.wikipedia.org/wiki/Logo_programming_language">LOGO</A>.
+Para ello lea el capítulo
+<A NAME="tex2html269"
+  HREF="http://nathansuniversity.com/turtle.html">Inventing a Language - Tortoise</A>
+del 
+<A NAME="tex2html270"
+  HREF="http://nathansuniversity.com/turtle.html">curso PL101: Create Your Own Programming Language</A>
+de 
+<A NAME="tex2html271"
+  HREF="http://nathansjslessons.appspot.com/">Nathan Whitehead</A>.
+Haga todos los ejercicios e implemente el lenguaje descrito.
+
+<P>
+Puede encontrar una solución a la práctica en GitHub en el repositorio
+<A NAME="tex2html272"
+  HREF="https://github.com/dingram/pl101">pl101</A>
+de 
+<A NAME="tex2html273"
+  HREF="http://www.dmi.me.uk/blog/">Dave Ingram</A>. Usela como guía cuando se sienta desorientado.
+
+<P>
+
+<H4><A NAME="SECTION044160010000000000000">
+Recursos</A>
+</H4>
+  
+
+<UL>
+<LI><A NAME="tex2html274"
+  HREF="http://nathansuniversity.com/turtle.html">Inventing a Language - Tortoise</A>
+por Nathan Whitehead
+</LI>
+<LI>Repositorio
+<A NAME="tex2html275"
+  HREF="https://github.com/dingram/pl101">dingram / pl101 en GitHub</A>
+con las soluciones a esta práctica. 
+
+<P>
+
+<UL>
+<LI>Blog de <A NAME="tex2html276"
+  HREF="http://www.dmi.me.uk/blog/">dingram (Dave Ingram)</A>
+</LI>
+</UL>
+</LI>
+<LI>Repositorio
+<A NAME="tex2html277"
+  HREF="https://github.com/PatrixCR/PL101">PatrixCR / PL101 en GitHub</A>
+con las soluciones a esta práctica. 
+
+<P>
+</LI>
+<LI>Repositorio
+<A NAME="tex2html278"
+  HREF="https://github.com/cndreisbach/PL101">Clinton N. Dreisbach/ PL101 en GitHub</A>
+con contenidos del curso PL101
+
+<P>
+</LI>
+<LI><A NAME="tex2html279"
+  HREF="http://nathansuniversity.com/vanilla/discussion/79/lesson-6-inventing-a-language-for-turtle-graphics/p1">Foro</A>
+<P>
+</LI>
+<LI>Sobre Nathan Whitehead
+  
+<UL>
+<LI><A NAME="tex2html280"
+  HREF="http://nathansjslessons.appspot.com/">Nathan's Lessons</A>
+</LI>
+<LI><A NAME="tex2html281"
+  HREF="https://github.com/nwhitehead">Nathan Whitehead en GitHub</A>
+</LI>
+<LI><A NAME="tex2html282"
+  HREF="http://www.youtube.com/user/NathanWhitehead">Nathan in YouTube</A>
+</LI>
+</UL>
+</LI>
+</UL>
+
+<P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html1834"
+<A NAME="tex2html1837"
   HREF="node47.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html1828"
-  HREF="node6.html">
+<A NAME="tex2html1831"
+  HREF="node30.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html1822"
+<A NAME="tex2html1827"
   HREF="node45.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html1830"
-  HREF="node103.html">
+<A NAME="tex2html1833"
+  HREF="node104.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html1832"
-  HREF="node106.html">
+<A NAME="tex2html1835"
+  HREF="node107.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -326,12 +251,12 @@ Análisis Sintáctico Ascendente en JavaScript</A>
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html1835"
-  HREF="node47.html">Conceptos Básicos para el</A>
-<B>Sup:</B> <A NAME="tex2html1829"
-  HREF="node6.html">PARTE: APUNTES DE PROCESADORES</A>
-<B> Ant:</B> <A NAME="tex2html1823"
-  HREF="node45.html">Práctica: Inventando un Lenguaje:</A>
+<B> Sig:</B> <A NAME="tex2html1838"
+  HREF="node47.html">Análisis Sintáctico Ascendente en</A>
+<B>Sup:</B> <A NAME="tex2html1832"
+  HREF="node30.html">Análisis Descendente mediante Parsing</A>
+<B> Ant:</B> <A NAME="tex2html1828"
+  HREF="node45.html">Práctica: Ambiguedad en C++</A>
 </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>

@@ -7,8 +7,8 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 <HTML>
 <HEAD>
-<TITLE>Getting Started</TITLE>
-<META NAME="description" CONTENT="Getting Started">
+<TITLE>CoffeeScript y Express</TITLE>
+<META NAME="description" CONTENT="CoffeeScript y Express">
 <META NAME="keywords" CONTENT="javascriptexamples">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -19,29 +19,28 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 
 <LINK REL="STYLESHEET" HREF="mystyle.css">
 
-<LINK REL="next" HREF="node98.html">
-<LINK REL="previous" HREF="node96.html">
-<LINK REL="up" HREF="node96.html">
+<LINK REL="previous" HREF="node92.html">
+<LINK REL="up" HREF="node91.html">
 <LINK REL="next" HREF="node98.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2829"
+<A NAME="tex2html2787"
   HREF="node98.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2823"
-  HREF="node96.html">
+<A NAME="tex2html2781"
+  HREF="node91.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2817"
+<A NAME="tex2html2777"
   HREF="node96.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2825"
-  HREF="node103.html">
+<A NAME="tex2html2783"
+  HREF="node104.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2827"
-  HREF="node106.html">
+<A NAME="tex2html2785"
+  HREF="node107.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -80,717 +79,171 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2830"
-  HREF="node98.html">Porting to Coffeescript</A>
-<B>Sup:</B> <A NAME="tex2html2824"
-  HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2818"
-  HREF="node96.html">CoffeeScript y Express</A>
+<B> Sig:</B> <A NAME="tex2html2788"
+  HREF="node98.html">Getting Started</A>
+<B>Sup:</B> <A NAME="tex2html2782"
+  HREF="node91.html">SEPTIMA PARTE: APUNTES DE</A>
+<B> Ant:</B> <A NAME="tex2html2778"
+  HREF="node96.html">Cake</A>
 <B> Con:</B> 
-<A NAME="tex2html2825"
-  HREF="node103.html">
+<A NAME="tex2html2783"
+  HREF="node104.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2827"
-  HREF="node106.html">
+<A NAME="tex2html2785"
+  HREF="node107.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
 <!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION06200000000000000000"></A>
+<A NAME="chapter:coffeescriptexpress"></A>
+<BR>
+CoffeeScript y Express
+</H1>
+Literally taken from
+James carr blog and updated 2015:
+
+<P>
+<A NAME="tex2html400"
+  HREF="http://blog.james-carr.org/2012/01/16/blog-rolling-with-mongodb-node-js-and-coffeescript/">http://blog.james-carr.org/2012/01/16/blog-rolling-with-mongodb-node-js-and-coffeescript/</A>
+<P>
+<BR> <HR>
 <!--Table of Child-Links-->
 <A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
 
 <UL CLASS="ChildLinks">
-<LI><UL>
-<LI><UL>
+<LI><A NAME="tex2html2789"
+  HREF="node98.html">Getting Started</A>
+<UL>
+<LI><A NAME="tex2html2790"
+  HREF="node98.html#SECTION06210010000000000000">Express generator</A>
+<LI><A NAME="tex2html2791"
+  HREF="node98.html#SECTION06210020000000000000">The Structure</A>
+<LI><A NAME="tex2html2792"
+  HREF="node98.html#SECTION06210030000000000000">package.json</A>
+<LI><A NAME="tex2html2793"
+  HREF="node98.html#SECTION06210040000000000000">app.js</A>
+<LI><A NAME="tex2html2794"
+  HREF="node98.html#SECTION06210050000000000000">El método <TT>app.use</TT></A>
+<LI><A NAME="tex2html2795"
+  HREF="node98.html#SECTION06210060000000000000">Middleware</A>
+<LI><A NAME="tex2html2796"
+  HREF="node98.html#SECTION06210070000000000000">Las Rutas / Routing</A>
+<LI><A NAME="tex2html2797"
+  HREF="node98.html#SECTION06210080000000000000">Running</A>
+<LI><A NAME="tex2html2798"
+  HREF="node98.html#SECTION06210090000000000000">El módulo debug</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html2799"
+  HREF="node99.html">Porting to Coffeescript</A>
+<UL>
+<LI><A NAME="tex2html2800"
+  HREF="node99.html#SECTION06220010000000000000">Ejecución del Servidor</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html2801"
+  HREF="node100.html">Pruebas</A>
+<UL>
+<LI><A NAME="tex2html2802"
+  HREF="node100.html#SECTION06230010000000000000">Mocha, Chai y Expect: instalando las dependencias</A>
+<LI><A NAME="tex2html2803"
+  HREF="node100.html#SECTION06230020000000000000">Una Prueba Sencilla</A>
+<LI><A NAME="tex2html2804"
+  HREF="node100.html#SECTION06230030000000000000">¿Cómo lo vamos a hacer?</A>
+<LI><A NAME="tex2html2805"
+  HREF="node100.html#SECTION06230040000000000000">Should display index with posts: red</A>
+<LI><A NAME="tex2html2806"
+  HREF="node100.html#SECTION06230050000000000000">Should display index with posts: green</A>
+<LI><A NAME="tex2html2807"
+  HREF="node100.html#SECTION06230060000000000000">Expect vars posts equal empty array: red</A>
+<LI><A NAME="tex2html2808"
+  HREF="node100.html#SECTION06230070000000000000">Expect vars posts equal empty array: green</A>
+<LI><A NAME="tex2html2809"
+  HREF="node100.html#SECTION06230080000000000000">views/index.jade</A>
+<LI><A NAME="tex2html2810"
+  HREF="node100.html#SECTION06230090000000000000">views/layout.jade</A>
+<LI><A NAME="tex2html2811"
+  HREF="node100.html#SECTION062300100000000000000">Should display the add post page: red</A>
+<LI><A NAME="tex2html2812"
+  HREF="node100.html#SECTION062300110000000000000">Should display the add post page: (false) green</A>
+<LI><A NAME="tex2html2813"
+  HREF="node100.html#SECTION062300120000000000000">Mocha: done</A>
+<LI><A NAME="tex2html2814"
+  HREF="node100.html#SECTION062300130000000000000">Escribiendo newPost</A>
+<LI><A NAME="tex2html2815"
+  HREF="node100.html#SECTION062300140000000000000">views/add_post.jade</A>
+<LI><A NAME="tex2html2816"
+  HREF="node100.html#SECTION062300150000000000000">Should display the add post page: (true) green</A>
+<LI><A NAME="tex2html2817"
+  HREF="node100.html#SECTION062300160000000000000">Gulpfile</A>
+<LI><A NAME="tex2html2818"
+  HREF="node100.html#SECTION062300170000000000000">Guardando el Post</A>
+<LI><A NAME="tex2html2819"
+  HREF="node100.html#SECTION062300180000000000000">Viewing a Single Post</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html2820"
+  HREF="node101.html">MongoDB</A>
+<UL>
+<LI><A NAME="tex2html2821"
+  HREF="node101.html#SECTION06241000000000000000">Introducción</A>
+<UL>
+<LI><A NAME="tex2html2822"
+  HREF="node101.html#SECTION06241010000000000000">NoSQL</A>
+<LI><A NAME="tex2html2823"
+  HREF="node101.html#SECTION06241020000000000000">Relational  Database</A>
+<LI><A NAME="tex2html2824"
+  HREF="node101.html#SECTION06241030000000000000">Document Oriented DataBase</A>
+</UL>
+<LI><A NAME="tex2html2825"
+  HREF="node101.html#SECTION06242000000000000000">Getting Started with MongoDB</A>
+<LI><A NAME="tex2html2826"
+  HREF="node101.html#SECTION06243000000000000000">Create a Collection and Insert Documents</A>
+<LI><A NAME="tex2html2827"
+  HREF="node101.html#SECTION06244000000000000000">Insert Documents using a For Loop or a JavaScript Function</A>
+<UL>
+<LI><A NAME="tex2html2828"
+  HREF="node101.html#SECTION06244010000000000000">Insert Multiple Documents Using a For Loop</A>
+<LI><A NAME="tex2html2829"
+  HREF="node101.html#SECTION06244020000000000000">Working with the Cursor</A>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html2830"
+  HREF="node102.html">Mongoose</A>
+<UL>
 <LI><A NAME="tex2html2831"
-  HREF="node97.html#SECTION06210010000000000000">Express generator</A>
+  HREF="node102.html#SECTION06251000000000000000">Getting Started</A>
+</UL>
+<BR>
 <LI><A NAME="tex2html2832"
-  HREF="node97.html#SECTION06210020000000000000">The Structure</A>
+  HREF="node103.html">Añadiendo Persistencia: Posts con MongoDB y Mongoose</A>
+<UL>
 <LI><A NAME="tex2html2833"
-  HREF="node97.html#SECTION06210030000000000000">package.json</A>
+  HREF="node103.html#SECTION06261000000000000000">Definiendo el Modelo y Probando que Funciona</A>
 <LI><A NAME="tex2html2834"
-  HREF="node97.html#SECTION06210040000000000000">app.js</A>
-<LI><A NAME="tex2html2835"
-  HREF="node97.html#SECTION06210050000000000000">El método <TT>app.use</TT></A>
-<LI><A NAME="tex2html2836"
-  HREF="node97.html#SECTION06210060000000000000">Middleware</A>
-<LI><A NAME="tex2html2837"
-  HREF="node97.html#SECTION06210070000000000000">Las Rutas / Routing</A>
-<LI><A NAME="tex2html2838"
-  HREF="node97.html#SECTION06210080000000000000">Running</A>
-<LI><A NAME="tex2html2839"
-  HREF="node97.html#SECTION06210090000000000000">El módulo debug</A>
-</UL></UL></UL>
+  HREF="node103.html#SECTION06262000000000000000">Usando la Base de Datos MongoDB en vez de un Array en Nuestro Ejemplo</A>
+</UL></UL>
 <!--End of Table of Child-Links-->
-<HR>
-
-<H1><A NAME="SECTION06210000000000000000">
-Getting Started</A>
-</H1>
-This is a tutorial on using 
-
-<UL>
-<LI>node.js, 
-</LI>
-<LI>coffeescript and 
-</LI>
-<LI>mongodb 
-</LI>
-</UL>
-to build a simple blog. 
-
-<P>
-Quite obviously, you’re going to need node.js and mongodb installed. I
-recommend downloading and installing from the node.js website and
-following the instructions. 
-
-<P>
-I will note that this tutorial covers 
-<PRE>
-[~/local/src/coffee]$ express --version
-4.11.2
-</PRE>
-so
-if you come across this post a year from now (2015) the API might have changed
-significantly since then. 
-
-<P>
-You will also need mongodb installed.
-
-<P>
-
-<UL>
-<LI>If you use Ubuntu (or some other Debian derivative)
-you should consider installing from their apt repository. 
-
-<P>
-</LI>
-<LI>OSX? No problem,
-you can also install it via homebrew.
-</LI>
-</UL>
-
-<P>
-Finally, since we’ll be using coffeescript for this tutorial,
-run 
-<PRE>
-[~/local/src/coffee]$ npm install -g coffee-script
-npm http GET https://registry.npmjs.org/coffee-script
-npm http 200 https://registry.npmjs.org/coffee-script
-/usr/local/bin/coffee -&gt; /usr/local/lib/node_modules/coffee-script/bin/coffee
-/usr/local/bin/cake -&gt; /usr/local/lib/node_modules/coffee-script/bin/cake
-coffee-script@1.9.1 /usr/local/lib/node_modules/coffee-script
-[~/local/src/coffee]$ coffee --version
-CoffeeScript version 1.9.1
-</PRE>
-(you might need to sudo) to install
-coffeescript. 
-
-<P>
-Run coffee from the commandline to access the coffeescript
-REPL. If all works well, install these additional packages listed below
-via npm that we’ll be using throughout the tutorial.
-
-<P>
-
-<UL>
-<LI>express
-</LI>
-<LI>mocha. 
-Véase la sección <I>Pruebas: Mocha y Chai</I>
-<A HREF="node9.html#parrafo:mochaychai">1.2</A>
-</LI>
-</UL>
-
-<P>
-
-<H4><A NAME="SECTION06210010000000000000">
-Express generator</A>
-</H4>
-  
-
-<P>
-Now let’s bootstrap our project structure. Type 
-<PRE>
-express coffeepress
-</PRE>
-to generate a skeleton express project structure. 
-<PRE>
-[~/local/src/coffee]$ express coffeepress
-
-   create : coffeepress
-   create : coffeepress/package.json
-   create : coffeepress/app.js
-   create : coffeepress/public
-   create : coffeepress/public/images
-   create : coffeepress/public/javascripts
-   create : coffeepress/public/stylesheets
-   create : coffeepress/public/stylesheets/style.css
-   create : coffeepress/routes
-   create : coffeepress/routes/index.js
-   create : coffeepress/routes/users.js
-   create : coffeepress/views
-   create : coffeepress/views/index.jade
-   create : coffeepress/views/layout.jade
-   create : coffeepress/views/error.jade
-   create : coffeepress/bin
-   create : coffeepress/bin/www
-
-   install dependencies:
-     $ cd coffeepress &amp;&amp; npm install
-
-   run the app:
-     $ DEBUG=coffeepress:* ./bin/www
-</PRE>
-
-<P>
-You should see output similar to the following:
-<PRE>
-[~/local/src/coffee]$ cd coffeepress
-[~/local/src/coffee/coffeepress]$ tree
-.
-|--- app.js
-|--- bin
-|   `-- www
-|--- package.json
-|--- public
-|   |--- images
-|   |--- javascripts
-|   `-- stylesheets
-|       `-- style.css
-|--- routes
-|   |--- index.js
-|   `-- users.js
-`-- views
-    |--- error.jade
-    |--- index.jade
-    `-- layout.jade
-
-7 directories, 9 files
-</PRE>
-
-<P>
-This is called <A NAME="12212"></A><SPAN  CLASS="textbf">Scaffolding</SPAN>.
-
-<P>
-The idea is simple: most projects
-require a certain amount of so-called 
-<FONT COLOR="#ff0000"> boilerplate</FONT> code, and who
-wants to recreate that code every time you begin a new project? A simple
-way is to create a rough skeleton of a project, and every time you need
-a new project, you just copy this skeleton, or template.
-
-<P>
-Express has taken a page from Ruby on Rails and provided the <code>express</code>
-utility  to
-generate scaffolding to start your Express project.
-
-<P>
-<PRE>
-[~/src/coffee]$ express --help
-
-  Usage: express [options] [dir]
-
-  Options:
-
-    -h, --help          output usage information
-    -V, --version       output the version number
-    -e, --ejs           add ejs engine support (defaults to jade)
-        --hbs           add handlebars engine support
-    -H, --hogan         add hogan.js engine support
-    -c, --css &lt;engine&gt;  add stylesheet &lt;engine&gt; support (less|stylus|compass) (defaults to plain css)
-        --git           add .gitignore
-    -f, --force         force on non-empty directory
-</PRE>
-
-<P>
-Boilerplate is also useful for the actual HTML that will be delivered to the client. See 
-for example  
-<A NAME="tex2html401"
-  HREF="https://html5boilerplate.com/">https://html5boilerplate.com/</A>.
-
-<P>
-
-<H4><A NAME="SECTION06210020000000000000">
-The Structure</A>
-</H4>
-  
-
-<P>
-There are three folders in the root:
-
-<UL>
-<LI>public: This folder contains the static assets.
-Express relies on a middleware to handle static files.
-<PRE>
-app.use(express.static(path.join(__dirname, 'public')));
-</PRE>
-The static middleware allows you to designate one or more directories
-as containing static resources that are simply to be delivered to the
-client without any special handling. This is where you would put things
-like images, CSS files, and client-side JavaScript files.
-<PRE>
-|--- public
-|   |--- images
-|   |--- javascripts
-|   `-- stylesheets
-|       `-- style.css
-</PRE>
-</LI>
-<LI>views: This folder is populated with Jade templates by default
-<PRE>
-| 
-`-- views
-    |--- error.jade
-    |--- index.jade
-    `-- layout.jade
-</PRE>
-Where a view differs from a static resource (like an image or CSS file)
-is that a view doesn’t necessarily have to be static: the HTML can be
-constructed on the fly to provide a customized page for each request.
-
-<P>
-Express supports many different view engines that provide different levels of abstraction. 
-Express gives some preference to a view engine called Jade 
-</LI>
-<LI>routes: This folder includes the routes (these are the equivalent controllers)
-<PRE>
-|
-|--- routes
-|   |--- index.js
-|   `-- users.js
-</PRE>
-</LI>
-</UL>
-Apart from these existing folders and the models folder, which we need to create ourselves, we might also create folders for 
-
-<UL>
-<LI>tests, 
-</LI>
-<LI>logs, or 
-</LI>
-<LI>configuration. 
-</LI>
-</UL>
-
-<P>
-The best thing about this structure is that
-it's easy to get started with and is known to most developers.
-
-<P>
-
-<H4><A NAME="SECTION06210030000000000000">
-package.json</A>
-</H4>
-  
-
-<P>
-The <code>package.json</code> file is automatically populated with 
-
-<UL>
-<LI>the name of the application, 
-</LI>
-<LI>the dependencies, 
-</LI>
-<LI>the private attribute: If you set <code>"private": true</code> in your 
-<code>package.json</code>, then <code>npm</code> will refuse to publish it.  
-This is a way to prevent accidental publication of private repositories.
-</LI>
-<LI>the starting script. 
-</LI>
-</UL>
-<PRE>
-[/tmp/coffeepress]$ cat package.json 
-{
-  "name": "coffeepress",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
-  "dependencies": {
-    "body-parser": "~1.10.2",
-    "cookie-parser": "~1.3.3",
-    "debug": "~2.1.1",
-    "express": "~4.11.1",
-    "jade": "~1.9.1",
-    "morgan": "~1.5.1",
-    "serve-favicon": "~2.2.0"
-  }
-</PRE>
-
-<UL>
-<LI>The module
-<A NAME="tex2html402"
-  HREF="https://github.com/expressjs/body-parser">body-parser</A>
-is a piece of express middleware that·
-reads a form's input and stores it as a javascript
-object accessible through <code>req.body</code>·
-
-<P>
-</LI>
-<LI>The module
-<A NAME="tex2html403"
-  HREF="https://github.com/expressjs/cookie-parser">cookie-parser</A>
-parses the Cookie header and populate <code>req.cookies</code> 
-with an object keyed by the cookie names. 
-
-<P>
-</LI>
-<LI>The 
-<A NAME="tex2html404"
-  HREF="https://github.com/expressjs/morgan">morgan</A>
-module provides a HTTP request logger middleware.
-</LI>
-<LI>The
-<A NAME="tex2html405"
-  HREF="https://github.com/expressjs/serve-favicon">serve-favicon</A>
-module provides a middleware for serving a favicon
-</LI>
-</UL>
-
-<P>
-The starting script is <code>bin/www</code> which  loads <code>app.js</code> 
-<PRE>
-[/tmp/coffeepress]$ cat bin/www 
-#!/usr/bin/env node
-
-/**
- * Module dependencies.
- */
-
-var app = require('../app');
-var debug = require('debug')('coffeepress:server');
-var http = require('http');
-
-/**
- * Get port from environment and store in Express.
- */
-
-var port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
-
-/**
- * Create HTTP server.
- */
-
-var server = http.createServer(app);
-
-/**
- * Listen on provided port, on all network interfaces.
- */
-
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
-
-/**
- * Normalize a port into a number, string, or false.
- */
-
-function normalizePort(val) {
-  var port = parseInt(val, 10);
-
-  if (isNaN(port)) {
-    // named pipe
-    return val;
-  }
-
-  if (port &gt;= 0) {
-    // port number
-    return port;
-  }
-
-  return false;
-}
-
-/**
- * Event listener for HTTP server "error" event.
- */
-
-function onError(error) {
-  if (error.syscall !== 'listen') {
-    throw error;
-  }
-
-  var bind = typeof port === 'string'
-    ? 'Pipe ' + port
-    : 'Port ' + port
-
-  // handle specific listen errors with friendly messages
-  switch (error.code) {
-    case 'EACCES':
-      console.error(bind + ' requires elevated privileges');
-      process.exit(1);
-      break;
-    case 'EADDRINUSE':
-      console.error(bind + ' is already in use');
-      process.exit(1);
-      break;
-    default:
-      throw error;
-  }
-}
-
-/**
- * Event listener for HTTP server "listening" event.
- */
-
-function onListening() {
-  var addr = server.address();
-  var bind = typeof addr === 'string'
-    ? 'pipe ' + addr
-    : 'port ' + addr.port;
-  debug('Listening on ' + bind);
-}
-</PRE>
-
-<P>
-
-<H4><A NAME="SECTION06210040000000000000">
-app.js</A>
-</H4>
-  
-
-<P>
-<code>app.js</code> loads the middleware, assigns the route handlers, and starts the server. 
-
-<P>
-<PRE>
-[/tmp/coffeepress]$ cat app.js
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-
-var routes = require('./routes/index');
-var users = require('./routes/users');
-
-var app = express();
-
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
-
-// uncomment after placing your favicon in /public
-//app.use(favicon(__dirname + '/public/favicon.ico'));
-app.use(logger('dev'));
-app.use(bodyParser.json()); // Returns middleware that only parses json
-/* 
-URLs can only be sent over the Internet using the ASCII character-set.
-Since URLs often contain characters outside the ASCII set, 
-the URL has to be converted into a valid ASCII format.
-*/
-app.use(bodyParser.urlencoded({ extended: false }));
-   //The "extended" syntax allows for rich objects and arrays to be encoded 
-
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/', routes);
-app.use('/users', users);
-
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
-});
-
-// error handlers
-
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-    app.use(function(err, req, res, next) {
-        res.status(err.status || 500);
-        res.render('error', {
-            message: err.message,
-            error: err
-        });
-    });
-}
-
-// production error handler
-// no stacktraces leaked to user
-app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-        message: err.message,
-        error: {}
-    });
-});
-
-
-module.exports = app;
-</PRE>
-
-<P>
-
-<H4><A NAME="SECTION06210050000000000000">
-El método <TT>app.use</TT></A>
-</H4>
-  
-
-<UL>
-<LI>El método
-<A NAME="tex2html406"
-  HREF="http://expressjs.com/4x/api.html#app.use">app.use</A>
-<code>app.use([path,] function [, function...])</code>
-mounts the middleware function(s) at the path. 
-If path is not specified, it defaults to <code>"/"</code>.
-
-<P>
-Asi pues 
-<PRE>
-var routes = require('./routes/index');
-var users = require('./routes/users');
-
-....
-
-app.use('/', routes);
-app.use('/users', users);
-</PRE>
-las rutas especificadas en <code>routes</code> quedan montadas en la raiz 
-y las rutas especificadas en <code>users</code> quedan montadas en <code>users/...</code>
-</LI>
-</UL>
-mientras que este middleware queda asociado con la raiz:
-<PRE>
-app.use(function(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
-});
-</PRE>
-
-<P>
-
-<H4><A NAME="SECTION06210060000000000000">
-Middleware</A>
-</H4>
-  
-
-<P>
-Middleware is a way to encapsulate functionality: 
-specifically, functionality that operates on an HTTP request to your application. 
-
-<P>
-Practically, a middleware is simply a function that
-takes three arguments: 
-
-<UL>
-<LI>a request object, 
-</LI>
-<LI>a response object, and 
-</LI>
-<LI>a 
-<FONT COLOR="#ff0000"> next</FONT> function
-</LI>
-</UL>
-
-<P>
-
-<UL>
-<LI>If you don’t call <code>next()</code>, the pipeline will be terminated, and
-no more route handlers or middleware will be processed. 
-</LI>
-<LI>If you don’t
-call <code>next()</code>, you should send a response to the client 
-(<code>res.send</code>, <code>res.json</code>, <code>res.render</code>, etc.); 
-if you don’t, the client will hang and eventually time out.
-</LI>
-</UL>
-
-<P>
-
-<H4><A NAME="SECTION06210070000000000000">
-Las Rutas / Routing</A>
-</H4>
-  
-
-<P>
-
-<FONT COLOR="#ff0000"> Routing is the mechanism by which requests 
-(as specified by a URL and HTTP method) are 
-routed to the code that handles them</FONT>. 
-
-<P>
-
-<H4><A NAME="SECTION06210080000000000000">
-Running</A>
-</H4>
-  
-
-<P>
-Instalamos las dependencias:
-<PRE>
-[~/src/coffee/coffeepress]$ npm install
-npm http GET https://registry.npmjs.org/jade
-....
-</PRE>
-y ejecutamos:
-<PRE>
-~/src/coffee/coffeepress]$ DEBUG=coffeepress:* ./bin/www
-  coffeepress:server Listening on port 3000 +0ms
-</PRE>
-Then load <code>http://localhost:3000/</code> in your browser to access the app.
-
-<P>
-
-<H4><A NAME="SECTION06210090000000000000">
-El módulo debug</A>
-</H4>
-  
-
-<P>
-El generador de Express nos produjo el fichero <code>bin/www</code>.
-Este programa hace uso del módulo 
-<A NAME="tex2html407"
-  HREF="https://github.com/visionmedia/debug">debug</A>
-que es el que nos permite emitir el mensaje de <code>Listening on</code>:
-<PRE>
-[~/src/coffee/coffeepress(master)]$ grep debug bin/www.coffee 
-debug = require('debug')('coffeepress:server')
-  debug 'Listening on ' + bind
-</PRE>
-La primera línea <code>debug = require('debug')('coffeepress:server')</code> carga la librería
-y establece el nombre de <code>www.coffee</code> a efectos de depuración como
-<code>coffeepress:server</code>.
-
-<P>
-The <code>DEBUG</code> environment variable must be set to a list of file names
-separated by commas or spaces. It is then used to enable these 
-<code>debug('...')</code> messages. 
-
-<P>
-Por ejemplo:
-<PRE>
-DEBUG=coffeepress:* bin/www
-</PRE>
-dice que se activan los mensajes de debug en cualquier fichero con 
-prefijo de nombre <code>coffeepress</code>.
-
-<P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2829"
+<A NAME="tex2html2787"
   HREF="node98.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2823"
-  HREF="node96.html">
+<A NAME="tex2html2781"
+  HREF="node91.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2817"
+<A NAME="tex2html2777"
   HREF="node96.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2825"
-  HREF="node103.html">
+<A NAME="tex2html2783"
+  HREF="node104.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2827"
-  HREF="node106.html">
+<A NAME="tex2html2785"
+  HREF="node107.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -829,12 +282,12 @@ prefijo de nombre <code>coffeepress</code>.
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2830"
-  HREF="node98.html">Porting to Coffeescript</A>
-<B>Sup:</B> <A NAME="tex2html2824"
-  HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2818"
-  HREF="node96.html">CoffeeScript y Express</A>
+<B> Sig:</B> <A NAME="tex2html2788"
+  HREF="node98.html">Getting Started</A>
+<B>Sup:</B> <A NAME="tex2html2782"
+  HREF="node91.html">SEPTIMA PARTE: APUNTES DE</A>
+<B> Ant:</B> <A NAME="tex2html2778"
+  HREF="node96.html">Cake</A>
 </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>

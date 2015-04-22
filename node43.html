@@ -7,8 +7,8 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 <HTML>
 <HEAD>
-<TITLE>Práctica: Analizador de PL0 Ampliado Usando PEG.js</TITLE>
-<META NAME="description" CONTENT="Práctica: Analizador de PL0 Ampliado Usando PEG.js">
+<TITLE>La Gramática de PEG.js</TITLE>
+<META NAME="description" CONTENT="La Gramática de PEG.js">
 <META NAME="keywords" CONTENT="javascriptexamples">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -28,20 +28,20 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html1790"
+<A NAME="tex2html1794"
   HREF="node44.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html1784"
+<A NAME="tex2html1788"
   HREF="node30.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html1778"
+<A NAME="tex2html1782"
   HREF="node42.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html1786"
-  HREF="node103.html">
+<A NAME="tex2html1790"
+  HREF="node104.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html1788"
-  HREF="node106.html">
+<A NAME="tex2html1792"
+  HREF="node107.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -80,140 +80,258 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html1791"
-  HREF="node44.html">Práctica: Ambiguedad en C++</A>
-<B>Sup:</B> <A NAME="tex2html1785"
+<B> Sig:</B> <A NAME="tex2html1795"
+  HREF="node44.html">Práctica: Analizador de PL0</A>
+<B>Sup:</B> <A NAME="tex2html1789"
   HREF="node30.html">Análisis Descendente mediante Parsing</A>
-<B> Ant:</B> <A NAME="tex2html1779"
+<B> Ant:</B> <A NAME="tex2html1783"
   HREF="node42.html">Usando Pegjs con CoffeeScript</A>
 <B> Con:</B> 
-<A NAME="tex2html1786"
-  HREF="node103.html">
+<A NAME="tex2html1790"
+  HREF="node104.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html1788"
-  HREF="node106.html">
+<A NAME="tex2html1792"
+  HREF="node107.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
 <!--End of Navigation Panel-->
-<!--Table of Child-Links-->
-<A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
 
-<UL CLASS="ChildLinks">
-<LI><UL>
-<LI><UL>
-<LI><A NAME="tex2html1792"
-  HREF="node43.html#SECTION044130010000000000000">Donde</A>
-<LI><A NAME="tex2html1793"
-  HREF="node43.html#SECTION044130020000000000000">Tareas</A>
-<LI><A NAME="tex2html1794"
-  HREF="node43.html#SECTION044130030000000000000">Referencias para esta Práctica</A>
-</UL></UL></UL>
-<!--End of Table of Child-Links-->
-<HR>
-
-<H1><A NAME="SECTION044130000000000000000"></A>
-   <A NAME="6356"></A>
-  
-<A NAME="practica:pl0ampliado"></A>
-<BR>
-Práctica: Analizador de PL0 Ampliado Usando PEG.js
+<H1><A NAME="SECTION044130000000000000000">
+La Gramática de PEG.js</A>
 </H1>
-Reescriba el analizador sintáctico del lenguaje PL0 
-realizado en la práctica 
-<A HREF="node26.html#practica:pl0">2.6</A>
-usando  <A NAME="tex2html264"
-  HREF="http://pegjs.majda.cz/">PEG.js</A>
-.
 
 <P>
+<PRE>
+[~/srcPLgrado/pegjs(master)]$ cat src/parser.pegjs 
+  = __ initializer:initializer? rules:rule+ 
 
-<H4><A NAME="SECTION044130010000000000000">
-Donde</A>
-</H4>
-  
+initializer
+  = code:action semicolon? 
 
-<P>
+rule
+  = name:identifier displayName:string? equals expression:expression semicolon? 
 
-<UL>
-<LI><A NAME="tex2html265"
-  HREF="https://github.com/crguezl/pegjscalc">Repositorio en GitHub</A>
-</LI>
-<LI><A NAME="tex2html266"
-  HREF="http://pegjspl0.herokuapp.com/">Despliegue en Heroku</A>
-</LI>
-<LI><PRE>
-[~/srcPLgrado/pegjscalc(master)]$ pwd -P
-/Users/casiano/local/src/javascript/PLgrado/pegjscalc
+expression
+  = choice
+
+choice
+  = head:sequence tail:(slash sequence)* 
+
+sequence
+  = elements:labeled* code:action 
+  / elements:labeled* 
+
+labeled
+  = label:identifier colon expression:prefixed 
+  / prefixed
+
+prefixed
+  = dollar expression:suffixed 
+  / and code:action 
+  / and expression:suffixed 
+  / not code:action 
+  / not expression:suffixed 
+  / suffixed
+
+suffixed
+  = expression:primary question 
+  / expression:primary star 
+  / expression:primary plus 
+  / primary
+
+primary
+  = name:identifier !(string? equals) 
+  / literal
+  / class
+  / dot 
+  / lparen expression:expression rparen 
+
+/* "Lexical" elements */
+
+action "action"
+  = braced:braced __ 
+
+braced
+  = $("{" (braced / nonBraceCharacters)* "}")
+
+nonBraceCharacters
+  = nonBraceCharacter+
+
+nonBraceCharacter
+  = [^{}]
+
+equals    = "=" __ 
+colon     = ":" __ 
+semicolon = ";" __ 
+slash     = "/" __ 
+and       = "&amp;" __ 
+not       = "!" __ 
+dollar    = "$" __ 
+question  = "?" __ 
+star      = "*" __ 
+plus      = "+" __ 
+lparen    = "(" __ 
+rparen    = ")" __ 
+dot       = "." __ 
+
+/*
+ * Modeled after ECMA-262, 5th ed., 7.6, but much simplified:
+ *
+ * * no Unicode escape sequences
+ *
+ * * "Unicode combining marks" and "Unicode connection punctuation" can't be
+ *   part of the identifier
+ *
+ * * only [a-zA-Z] is considered a "Unicode letter"
+ *
+ * * only [0-9] is considered a "Unicode digit"
+ *
+ * The simplifications were made just to make the implementation little bit
+ * easier, there is no "philosophical" reason behind them.
+ *
+ * Contrary to ECMA 262, the "$" character is not valid because it serves other
+ * purpose in the grammar.
+ */
+identifier "identifier"
+  = chars:$((letter / "_") (letter / digit / "_")*) __ 
+
+/*
+ * Modeled after ECMA-262, 5th ed., 7.8.4. (syntax &amp; semantics, rules only
+ * vaguely).
+ */
+literal "literal"
+  = value:(doubleQuotedString / singleQuotedString) flags:"i"? __ 
+
+string "string"
+  = string:(doubleQuotedString / singleQuotedString) __ 
+
+doubleQuotedString
+  = '"' chars:doubleQuotedCharacter* '"' 
+
+doubleQuotedCharacter
+  = simpleDoubleQuotedCharacter
+  / simpleEscapeSequence
+  / zeroEscapeSequence
+  / hexEscapeSequence
+  / unicodeEscapeSequence
+  / eolEscapeSequence
+
+simpleDoubleQuotedCharacter
+  = !('"' / "\\" / eolChar) char_:. 
+
+singleQuotedString
+  = "'" chars:singleQuotedCharacter* "'" 
+
+singleQuotedCharacter
+  = simpleSingleQuotedCharacter
+  / simpleEscapeSequence
+  / zeroEscapeSequence
+  / hexEscapeSequence
+  / unicodeEscapeSequence
+  / eolEscapeSequence
+
+simpleSingleQuotedCharacter
+  = !("'" / "\\" / eolChar) char_:. 
+
+class "character class"
+  = "[" inverted:"^"? parts:(classCharacterRange / classCharacter)* "]" flags:"i"? __ 
+
+classCharacterRange
+  = begin:classCharacter "-" end:classCharacter 
+
+classCharacter
+  = char_:bracketDelimitedCharacter 
+
+bracketDelimitedCharacter
+  = simpleBracketDelimitedCharacter
+  / simpleEscapeSequence
+  / zeroEscapeSequence
+  / hexEscapeSequence
+  / unicodeEscapeSequence
+  / eolEscapeSequence
+
+simpleBracketDelimitedCharacter
+  = !("]" / "\\" / eolChar) char_:. 
+
+simpleEscapeSequence
+  = "\\" !(digit / "x" / "u" / eolChar) char_:. 
+
+zeroEscapeSequence
+  = "\\0" !digit 
+
+hexEscapeSequence
+  = "\\x" digits:$(hexDigit hexDigit) 
+
+unicodeEscapeSequence
+  = "\\u" digits:$(hexDigit hexDigit hexDigit hexDigit) 
+
+eolEscapeSequence
+  = "\\" eol:eol 
+
+digit
+  = [0-9]
+
+hexDigit
+  = [0-9a-fA-F]
+
+letter
+  = lowerCaseLetter
+  / upperCaseLetter
+
+lowerCaseLetter
+  = [a-z]
+
+upperCaseLetter
+  = [A-Z]
+
+__ = (whitespace / eol / comment)*
+
+/* Modeled after ECMA-262, 5th ed., 7.4. */
+comment "comment"
+  = singleLineComment
+  / multiLineComment
+
+singleLineComment
+  = "//" (!eolChar .)*
+
+multiLineComment
+  = "/*" (!"*/" .)* "*/"
+
+/* Modeled after ECMA-262, 5th ed., 7.3. */
+eol "end of line"
+  = "\n"
+  / "\r\n"
+  / "\r"
+  / "\u2028"
+  / "\u2029"
+
+eolChar
+  = [\n\r\u2028\u2029]
+
+/* Modeled after ECMA-262, 5th ed., 7.2. */
+whitespace "whitespace"
+  = [ \t\v\f\u00A0\uFEFF\u1680\u180E\u2000-\u200A\u202F\u205F\u3000]
 </PRE>
-</LI>
-<LI><PRE>
-[~/srcPLgrado/pegjscalc(master)]$ git remote -v
-heroku  git@heroku.com:pegjspl0.git (fetch)
-heroku  git@heroku.com:pegjspl0.git (push)
-origin  git@github.com:crguezl/pegjscalc.git (fetch)
-origin  git@github.com:crguezl/pegjscalc.git (push)
-</PRE>
-</LI>
-</UL>
-
-<P>
-
-<H4><A NAME="SECTION044130020000000000000">
-Tareas</A>
-</H4>
-  
-
-<UL>
-<LI>Modifique <code>block</code> y <code>statement</code> para que los 
-<code>procedure</code> reciban argumentos y las llamadas 
-a procedimiento puedan pasar argumentos.
-Añada <code>if ... then ... else ...</code>.
-</LI>
-<LI>Actualice la documentación de la gramática para que refleje la gramática ampliada
-</LI>
-<LI>Limite el número de programas que se pueden salvar a un número prefijado, por ejemplo 10. Si se intenta salvar uno se suprime uno al azar y se guarda el nuevo.
-</LI>
-<LI>Las pruebas deben comprobar que la asociatividad a izquierdas funciona bien
-y probar todos los constructos del lenguaje así como alguna situación de error
-</LI>
-</UL>
-
-<P>
-
-<H4><A NAME="SECTION044130030000000000000">
-Referencias para esta Práctica</A>
-</H4>
-  
-
-<UL>
-<LI>Véase el capítulo <I>Heroku</I> <A HREF="node253.html#chapter:heroku"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]" SRC="crossref.png"></A>
-</LI>
-<LI><A NAME="tex2html267"
-  HREF="https://devcenter.heroku.com/articles/heroku-postgresql">Heroku Postgres</A>
-</LI>
-<LI>Véase el capítulo <I>DataMapper</I> <A HREF="node262.html#chapter:datamapper"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]" SRC="crossref.png"></A>
-</LI>
-</UL>
 
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html1790"
+<A NAME="tex2html1794"
   HREF="node44.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html1784"
+<A NAME="tex2html1788"
   HREF="node30.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html1778"
+<A NAME="tex2html1782"
   HREF="node42.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html1786"
-  HREF="node103.html">
+<A NAME="tex2html1790"
+  HREF="node104.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html1788"
-  HREF="node106.html">
+<A NAME="tex2html1792"
+  HREF="node107.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -252,11 +370,11 @@ Referencias para esta Práctica</A>
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html1791"
-  HREF="node44.html">Práctica: Ambiguedad en C++</A>
-<B>Sup:</B> <A NAME="tex2html1785"
+<B> Sig:</B> <A NAME="tex2html1795"
+  HREF="node44.html">Práctica: Analizador de PL0</A>
+<B>Sup:</B> <A NAME="tex2html1789"
   HREF="node30.html">Análisis Descendente mediante Parsing</A>
-<B> Ant:</B> <A NAME="tex2html1779"
+<B> Ant:</B> <A NAME="tex2html1783"
   HREF="node42.html">Usando Pegjs con CoffeeScript</A>
 </DIV>
 <!--End of Navigation Panel-->
