@@ -1019,53 +1019,53 @@ La Gramática de PEG.js</A>
 <PRE>
 [~/srcPLgrado/pegjs(master)]$ cat src/parser.pegjs 
 grammar
-  = __ initializer:initializer? rules:rule+ 
+  = __ initializer? rule+ 
 
 initializer
-  = code:action semicolon? 
+  = action semicolon? 
 
 rule
-  = name:identifier displayName:string? equals expression:expression semicolon? 
+  = identifier string? equals expression semicolon? 
 
 expression
   = choice
 
 choice
-  = head:sequence tail:(slash sequence)* 
+  = sequence (slash sequence)* 
 
 sequence
-  = elements:labeled* code:action 
-  / elements:labeled* 
+  = labeled* action 
+  / labeled* 
 
 labeled
-  = label:identifier colon expression:prefixed 
+  = identifier colon prefixed 
   / prefixed
 
 prefixed
-  = dollar expression:suffixed 
-  / and code:action 
-  / and expression:suffixed 
-  / not code:action 
-  / not expression:suffixed 
+  = dollar suffixed 
+  / and action 
+  / and suffixed 
+  / not action 
+  / not suffixed 
   / suffixed
 
 suffixed
-  = expression:primary question 
-  / expression:primary star 
-  / expression:primary plus 
+  = primary question 
+  / primary star 
+  / primary plus 
   / primary
 
 primary
-  = name:identifier !(string? equals) 
+  = identifier !(string? equals) 
   / literal
   / class
   / dot 
-  / lparen expression:expression rparen 
+  / lparen expression rparen 
 
 /* "Lexical" elements */
 
 action "action"
-  = braced:braced __ 
+  = braced __ 
 
 braced
   = $("{" (braced / nonBraceCharacters)* "}")
@@ -1109,20 +1109,20 @@ dot       = "." __
  * purpose in the grammar.
  */
 identifier "identifier"
-  = chars:$((letter / "_") (letter / digit / "_")*) __ 
+  = $((letter / "_") (letter / digit / "_")*) __ 
 
 /*
  * Modeled after ECMA-262, 5th ed., 7.8.4. (syntax &amp; semantics, rules only
  * vaguely).
  */
 literal "literal"
-  = value:(doubleQuotedString / singleQuotedString) flags:"i"? __ 
+  = (doubleQuotedString / singleQuotedString) "i"? __ 
 
 string "string"
-  = string:(doubleQuotedString / singleQuotedString) __ 
+  = (doubleQuotedString / singleQuotedString) __ 
 
 doubleQuotedString
-  = '"' chars:doubleQuotedCharacter* '"' 
+  = '"' doubleQuotedCharacter* '"' 
 
 doubleQuotedCharacter
   = simpleDoubleQuotedCharacter
@@ -1133,10 +1133,10 @@ doubleQuotedCharacter
   / eolEscapeSequence
 
 simpleDoubleQuotedCharacter
-  = !('"' / "\\" / eolChar) char_:. 
+  = !('"' / "\\" / eolChar) . 
 
 singleQuotedString
-  = "'" chars:singleQuotedCharacter* "'" 
+  = "'" singleQuotedCharacter* "'" 
 
 singleQuotedCharacter
   = simpleSingleQuotedCharacter
@@ -1147,16 +1147,16 @@ singleQuotedCharacter
   / eolEscapeSequence
 
 simpleSingleQuotedCharacter
-  = !("'" / "\\" / eolChar) char_:. 
+  = !("'" / "\\" / eolChar) . 
 
 class "character class"
-  = "[" inverted:"^"? parts:(classCharacterRange / classCharacter)* "]" flags:"i"? __ 
+  = "[" "^"? (classCharacterRange / classCharacter)* "]" "i"? __ 
 
 classCharacterRange
-  = begin:classCharacter "-" end:classCharacter 
+  = classCharacter "-" classCharacter 
 
 classCharacter
-  = char_:bracketDelimitedCharacter 
+  = bracketDelimitedCharacter 
 
 bracketDelimitedCharacter
   = simpleBracketDelimitedCharacter
@@ -1167,22 +1167,22 @@ bracketDelimitedCharacter
   / eolEscapeSequence
 
 simpleBracketDelimitedCharacter
-  = !("]" / "\\" / eolChar) char_:. 
+  = !("]" / "\\" / eolChar) . 
 
 simpleEscapeSequence
-  = "\\" !(digit / "x" / "u" / eolChar) char_:. 
+  = "\\" !(digit / "x" / "u" / eolChar) . 
 
 zeroEscapeSequence
   = "\\0" !digit 
 
 hexEscapeSequence
-  = "\\x" digits:$(hexDigit hexDigit) 
+  = "\\x" $(hexDigit hexDigit) 
 
 unicodeEscapeSequence
-  = "\\u" digits:$(hexDigit hexDigit hexDigit hexDigit) 
+  = "\\u" $(hexDigit hexDigit hexDigit hexDigit) 
 
 eolEscapeSequence
-  = "\\" eol:eol 
+  = "\\" eol 
 
 digit
   = [0-9]
