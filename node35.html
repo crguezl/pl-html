@@ -119,7 +119,40 @@ Al compilar nos da un mensaje de error:
 [~/srcPLgrado/pegjs/examples(master)]$ pegjs direct_intermedia.pegjs 
 1:48: Expected "/", ";", end of input or identifier but "'" found.
 </PRE>
-La solución consiste en introducir una variable sintáctica en medio que derive a la palabra vacía y que tenga asociada la correspondiente acción semántica:
+
+<P>
+La solución es sencilla: añadimos la acción como un predicado semántico.
+Véase este ejemplo:
+<PRE>
+[~/srcPLgrado/pegjs/examples(master)]$ coffee semantic_intermedia.coffee 
+acción intermedia. a = aa
+acción final. b = bb
+r = aabb
+[~/srcPLgrado/pegjs/examples(master)]$ cat semantic_intermedia.coffee 
+PEG = require 'pegjs'
+
+grammar = """
+a = a:$'a'+ 
+    &amp; { console.log("acción intermedia. a = "+a); return true; } 
+    b:$'b'+ { 
+             console.log("acción final. b = "+b); 
+             return text();
+          }
+"""
+parser = PEG.buildParser grammar
+r = parser.parse "aabb"
+console.log("r = #{r}")
+</PRE>
+Cuando se ejecuta produce esta salida:
+<PRE>
+[~/srcPLgrado/pegjs/examples(master)]$ coffee semantic_intermedia.coffee 
+acción intermedia. a = aa
+acción final. b = bb
+r = aabb
+</PRE>
+Otra posible solución consiste en introducir una variable sintáctica
+en medio que derive a la palabra vacía y que tenga asociada la
+correspondiente acción semántica:
 <PRE>
 [~/srcPLgrado/pegjs/examples(master)]$ cat intermedia.pegjs 
 a = 'a'+ temp 'b'+ { 
@@ -128,7 +161,7 @@ a = 'a'+ temp 'b'+ {
                    }
 temp = { console.log("acción intermedia"); }
 </PRE>
-Este es el progrma que usa el parser generado:
+Este es el programa que usa el parser generado:
 <PRE>
 [~/srcPLgrado/pegjs/examples(master)]$ cat main_intermedia.js 
 var parser = require("intermedia");
