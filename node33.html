@@ -228,12 +228,12 @@ PEG Syntax</A>
   
 
 <UL>
-<LI>On the top level, the grammar consists of <A NAME="6177"></A><SPAN  CLASS="textbf">rules</SPAN>. 
+<LI>On the top level, the grammar consists of <A NAME="6183"></A><SPAN  CLASS="textbf">rules</SPAN>. 
 </LI>
 <LI>Each rule has a name (e.g. <code>primary</code>) that
 identifies the rule, and a 
 </LI>
-<LI><A NAME="6179"></A><SPAN  CLASS="textbf">parsing expression</SPAN> e.g. 
+<LI><A NAME="6185"></A><SPAN  CLASS="textbf">parsing expression</SPAN> e.g. 
 <PRE>
 integer / LEFTPAR additive:additive RIGHTPAR { return additive; }
 </PRE>
@@ -251,7 +251,7 @@ integer "integer"
 </PRE>
 </LI>
 <LI>The
-parsing starts at the first rule, which is also called the <A NAME="6183"></A><SPAN  CLASS="textbf">start rule</SPAN>.
+parsing starts at the first rule, which is also called the <A NAME="6189"></A><SPAN  CLASS="textbf">start rule</SPAN>.
 </LI>
 </UL>
 
@@ -287,7 +287,7 @@ Initializers</A>
   
 
 <UL>
-<LI>Rules can be preceded by an <A NAME="6193"></A><SPAN  CLASS="textbf">initializer</SPAN> — a piece of JavaScript
+<LI>Rules can be preceded by an <A NAME="6199"></A><SPAN  CLASS="textbf">initializer</SPAN> — a piece of JavaScript
 code in curly braces (<code>{</code> and <code>}</code>). 
 </LI>
 <LI>
@@ -297,7 +297,7 @@ before the generated parser starts parsing</FONT>
 <LI>All variables and functions
 defined in the initializer are accessible in rule actions and semantic
 predicates (the <code>&amp; { predicate }</code> and <code>! { predicate }</code> 
-are called <A NAME="6197"></A><SPAN  CLASS="textbf">semantic predicates</SPAN>)
+are called <A NAME="6203"></A><SPAN  CLASS="textbf">semantic predicates</SPAN>)
 </LI>
 <LI>The code inside the initializer can access options passed to
 the parser using the <code>options</code> variable. 
@@ -444,7 +444,7 @@ Expressions can also contain references to other rules.
 
 <P>
 If an expression successfully matches a part of the text when running the
-generated parser, it produces a <A NAME="6205"></A><SPAN  CLASS="textbf">match result</SPAN>, which is a JavaScript value.
+generated parser, it produces a <A NAME="6211"></A><SPAN  CLASS="textbf">match result</SPAN>, which is a JavaScript value.
 
 <P>
 
@@ -469,7 +469,7 @@ Parser Actions</A>
   
 
 <P>
-One special case of parser expression is a <A NAME="6217"></A><SPAN  CLASS="textbf">parser action</SPAN> — a piece of
+One special case of parser expression is a <A NAME="6223"></A><SPAN  CLASS="textbf">parser action</SPAN> — a piece of
 JavaScript code inside curly braces (<code>{</code> and <code>}</code>) that 
 <FONT COLOR="#ff0000"> takes match
 results of some of the the preceding expressions and returns a JavaScript
@@ -677,6 +677,46 @@ Try to match the expression. If the match does not succeed, just return
 the match failed.
 
 <P>
+</LI>
+<LI>Here is an example:
+<PRE>
+[~/srcPLgrado/pegjs/examples(master)]$ cat notpredicate.pegjs 
+start = __ $[0-9]+ __
+
+__ = $(whitespace / eol /singleLineComment)*
+
+singleLineComment
+  = "//" (!eolChar .)*
+
+/* Modeled after ECMA-262, 5th ed., 7.3. */
+eol "end of line"
+  = "\n"
+  / "\r\n"
+  / "\r"
+  / "\u2028"
+  / "\u2029"
+
+eolChar
+  = [\n\r\u2028\u2029]
+
+whitespace "whitespace"
+  = [ \t\v\f\u00A0\uFEFF\u1680\u180E\u2000-\u200A\u202F\u205F\u3000]
+</PRE>
+</LI>
+<LI>Once it is compiled we can call it from our main program:
+<PRE>
+[~/srcPLgrado/pegjs/examples(master)]$ cat mainnotpredicate.js 
+var PEG = require("./notpredicate.js");
+var input = process.argv[2] || "\n\n532 \t";
+var r = PEG.parse(input);
+console.log(r);
+</PRE>
+</LI>
+<LI>This is the output:
+<PRE>
+[~/srcPLgrado/pegjs/examples(master)]$ node mainnotpredicate.js 
+[ '\n\n', '532', ' \t' ]
+</PRE>
 </LI>
 <LI><code>&amp; { predicate }</code>
 
@@ -1023,7 +1063,7 @@ Asociación Incorrecta para la Resta y la División</A>
 <P>
 <P>
 <DIV><B>Definición  <SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; 
-<I>Una <A NAME="6250"></A><SPAN  CLASS="textbf">gramática es recursiva por la izquierda</SPAN> cuando existe una derivación
+<I>Una <A NAME="6256"></A><SPAN  CLASS="textbf">gramática es recursiva por la izquierda</SPAN> cuando existe una derivación
 <!-- MATH
  $A \stackrel{*}{\Longrightarrow} A \alpha$
  -->
@@ -1044,7 +1084,7 @@ una regla de producción de la forma <!-- MATH
 En este caso se dice que la recursión por la izquierda es directa.</I></DIV><P></P>
 
 <P>
-Cuando la gramática es <A NAME="6252"></A><SPAN  CLASS="textbf">recursiva por la izquierda</SPAN>, 
+Cuando la gramática es <A NAME="6258"></A><SPAN  CLASS="textbf">recursiva por la izquierda</SPAN>, 
 el método 
 de análisis recursivo descendente predictivo no funciona. 
 En ese caso, el procedimiento
