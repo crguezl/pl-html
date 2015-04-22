@@ -113,7 +113,12 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
   HREF="node33.html#SECTION04430040000000000000">Rakefile</A>
 <LI><A NAME="tex2html1626"
   HREF="node33.html#SECTION04430050000000000000">Compilación</A>
-</UL></UL></UL>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html1627"
+  HREF="node33.html#SECTION04431000000000000000">Asociación Incorrecta para la Resta y la División</A>
+</UL>
 <!--End of Table of Child-Links-->
 <HR>
 
@@ -254,6 +259,79 @@ Compilación</A>
 ../bin/pegjs arithmetics.pegjs
 node main.js
 5
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION04431000000000000000">
+Asociación Incorrecta para la Resta y la División</A>
+</H2>
+
+<P>
+<P>
+<DIV><B>Definición  <SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; 
+<I>Una <A NAME="6198"></A><SPAN  CLASS="textbf">gramática es recursiva por la izquierda</SPAN> cuando existe una derivación
+<!-- MATH
+ $A \stackrel{*}{\Longrightarrow} A \alpha$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="80" HEIGHT="24" ALIGN="BOTTOM" BORDER="0"
+ SRC="img58.png"
+ ALT="$ A \stackrel{*}{\Longrightarrow} A \alpha$"></SPAN>. 
+</I>
+<P>
+<I>En particular, es recursiva por la izquierda si contiene
+una regla de producción de la forma <!-- MATH
+ $A \rightarrow A \alpha$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="69" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img59.png"
+ ALT="$ A \rightarrow A \alpha$"></SPAN>. 
+En este caso se dice que la recursión por la izquierda es directa.</I></DIV><P></P>
+
+<P>
+Cuando la gramática es <A NAME="6200"></A><SPAN  CLASS="textbf">recursiva por la izquierda</SPAN>, 
+el método 
+de análisis recursivo descendente predictivo no funciona. 
+En ese caso, el procedimiento
+<code>A</code> asociado con <SPAN CLASS="MATH"><IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ A$"></SPAN> ciclaría para siempre sin llegar a consumir ningún 
+terminal. 
+
+<P>
+Es por eso que hemos escrito las reglas de la calculadora con recursividad
+a derechas, 
+<PRE>
+additive
+  = left:multiplicative PLUS right:additive { return left + right; }
+  / left:multiplicative MINUS right:additive { return left - right; }
+  / multiplicative
+
+multiplicative
+  = left:primary MULT right:multiplicative { return left * right; }
+  / left:primary DIV right:multiplicative { return left / right; }
+  / primary
+</PRE>
+
+<P>
+pero eso da lugar a árboles hundidos hacia la derecha y a una
+aplicación de las reglas semánticas errónea:
+
+<P>
+<PRE>
+[~/pegjs/examples(master)]$ cat main.js 
+var PEG = require("./arithmetics.js");
+var r = PEG.parse("5-3-2");
+console.log(r);
+</PRE>
+
+<P>
+<PRE>
+[~/pegjs/examples(master)]$ node main.js
+4
 </PRE>
 
 <P>
