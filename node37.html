@@ -28,19 +28,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html1717"
+<A NAME="tex2html1718"
   HREF="node38.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html1711"
+<A NAME="tex2html1712"
   HREF="node30.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html1705"
+<A NAME="tex2html1706"
   HREF="node36.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html1713"
+<A NAME="tex2html1714"
   HREF="node103.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html1715"
+<A NAME="tex2html1716"
   HREF="node106.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -80,18 +80,18 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html1718"
+<B> Sig:</B> <A NAME="tex2html1719"
   HREF="node38.html">Eliminación de la Recursividad</A>
-<B>Sup:</B> <A NAME="tex2html1712"
+<B>Sup:</B> <A NAME="tex2html1713"
   HREF="node30.html">Análisis Descendente mediante Parsing</A>
-<B> Ant:</B> <A NAME="tex2html1706"
+<B> Ant:</B> <A NAME="tex2html1707"
   HREF="node36.html">PegJS en los Browser</A>
 <B> Con:</B> 
-<A NAME="tex2html1713"
+<A NAME="tex2html1714"
   HREF="node103.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html1715"
+<A NAME="tex2html1716"
   HREF="node106.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
@@ -103,16 +103,14 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <UL CLASS="ChildLinks">
 <LI><UL>
 <LI><UL>
-<LI><A NAME="tex2html1719"
-  HREF="node37.html#SECTION04470010000000000000">Donde</A>
 <LI><A NAME="tex2html1720"
-  HREF="node37.html#SECTION04470020000000000000">PEGjs Coffee Plugin</A>
+  HREF="node37.html#SECTION04470010000000000000">Donde</A>
 <LI><A NAME="tex2html1721"
-  HREF="node37.html#SECTION04470030000000000000">Un Esquema de Traducción Recursivo por la Izquierda</A>
+  HREF="node37.html#SECTION04470020000000000000">Un Esquema de Traducción Recursivo por la Izquierda</A>
 <LI><A NAME="tex2html1722"
-  HREF="node37.html#SECTION04470040000000000000">Métodología</A>
+  HREF="node37.html#SECTION04470030000000000000">Métodología</A>
 <LI><A NAME="tex2html1723"
-  HREF="node37.html#SECTION04470050000000000000">Solución</A>
+  HREF="node37.html#SECTION04470040000000000000">Solución</A>
 </UL>
 </UL>
 <BR>
@@ -151,7 +149,7 @@ origin  git@github.com:crguezl/pegjs-coffee-plugin.git (fetch)
 origin  git@github.com:crguezl/pegjs-coffee-plugin.git (push)
 </PRE>
 </LI>
-<LI><A NAME="tex2html259"
+<LI><A NAME="tex2html260"
   HREF="https://github.com/crguezl/pegjs-coffee-plugin/tree/master/examples">https://github.com/crguezl/pegjs-coffee-plugin/tree/master/examples</A>
 </LI>
 </UL>
@@ -159,45 +157,6 @@ origin  git@github.com:crguezl/pegjs-coffee-plugin.git (push)
 <P>
 
 <H4><A NAME="SECTION04470020000000000000">
-PEGjs Coffee Plugin</A>
-</H4>
-  
-
-<A NAME="tex2html260"
-  HREF="https://github.com/Dignifiedquire/pegjs-coffee-plugin">PEGjs Coffee Plugin </A>
-is a plugin for PEG.js to use CoffeeScript in actions.
-
-<P>
-Veamos un ejemplo de uso via la API:
-
-<P>
-<PRE>
-[~/srcPLgrado/pegjs/examples(master)]$ cat plugin.coffee 
-#!/usr/bin/env coffee
-PEG = require 'pegjs'
-coffee = require 'pegjs-coffee-plugin'
-grammar = """
-a = 'hello' _ b { console.log 1; "hello world!" }
-b = 'world'     { console.log 2 }
-_ = [ \t]+      { console.log 3 }
-"""
-parser = PEG.buildParser grammar, plugins: [coffee]
-r = parser.parse "hello world"
-console.log(r)
-</PRE>
-
-<P>
-<PRE>
-[~/srcPLgrado/pegjs/examples(master)]$ coffee plugin.coffee 
-3
-2
-1
-hello world!
-</PRE>
-
-<P>
-
-<H4><A NAME="SECTION04470030000000000000">
 Un Esquema de Traducción Recursivo por la Izquierda</A>
 </H4>
   
@@ -260,7 +219,7 @@ A -&gt; A 'x' do_x(yxx, x)
 
 <P>
 
-<H4><A NAME="SECTION04470040000000000000">
+<H4><A NAME="SECTION04470030000000000000">
 Métodología</A>
 </H4>
   
@@ -324,7 +283,7 @@ eliminando así la recursión por la izquierda.
 
 <P>
 
-<H4><A NAME="SECTION04470050000000000000">
+<H4><A NAME="SECTION04470040000000000000">
 Solución</A>
 </H4>
   
@@ -517,19 +476,19 @@ console.log(r);
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html1717"
+<A NAME="tex2html1718"
   HREF="node38.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html1711"
+<A NAME="tex2html1712"
   HREF="node30.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html1705"
+<A NAME="tex2html1706"
   HREF="node36.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html1713"
+<A NAME="tex2html1714"
   HREF="node103.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html1715"
+<A NAME="tex2html1716"
   HREF="node106.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -569,11 +528,11 @@ console.log(r);
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html1718"
+<B> Sig:</B> <A NAME="tex2html1719"
   HREF="node38.html">Eliminación de la Recursividad</A>
-<B>Sup:</B> <A NAME="tex2html1712"
+<B>Sup:</B> <A NAME="tex2html1713"
   HREF="node30.html">Análisis Descendente mediante Parsing</A>
-<B> Ant:</B> <A NAME="tex2html1706"
+<B> Ant:</B> <A NAME="tex2html1707"
   HREF="node36.html">PegJS en los Browser</A>
 </DIV>
 <!--End of Navigation Panel-->
