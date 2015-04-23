@@ -28,19 +28,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html1722"
+<A NAME="tex2html1726"
   HREF="node39.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html1716"
+<A NAME="tex2html1720"
   HREF="node30.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html1710"
+<A NAME="tex2html1714"
   HREF="node37.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html1718"
+<A NAME="tex2html1722"
   HREF="node104.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html1720"
+<A NAME="tex2html1724"
   HREF="node107.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -80,23 +80,32 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html1723"
+<B> Sig:</B> <A NAME="tex2html1727"
   HREF="node39.html">Eliminación de la Recursividad</A>
-<B>Sup:</B> <A NAME="tex2html1717"
+<B>Sup:</B> <A NAME="tex2html1721"
   HREF="node30.html">Análisis Descendente mediante Parsing</A>
-<B> Ant:</B> <A NAME="tex2html1711"
+<B> Ant:</B> <A NAME="tex2html1715"
   HREF="node37.html">Eliminación de la Recursividad</A>
 <B> Con:</B> 
-<A NAME="tex2html1718"
+<A NAME="tex2html1722"
   HREF="node104.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html1720"
+<A NAME="tex2html1724"
   HREF="node107.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
 <!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html1728"
+  HREF="node38.html#SECTION04481000000000000000">Eliminado la Recursividad por la Izquierda Usando Predicados Semánticos</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
 
 <H1><A NAME="SECTION04480000000000000000">
 Eliminando la Recursividad por la Izquierda en la Calculadora</A>
@@ -165,20 +174,69 @@ console.log(r);
 
 <P>
 
+<H2><A NAME="SECTION04481000000000000000">
+Eliminado la Recursividad por la Izquierda Usando Predicados Semánticos</A>
+</H2>
+<PRE>
+[~/srcPLgrado/pegjs/examples(master)]$ cat simple2.pegjs 
+{
+  var sum = 0;
+  var initsum = function(first) { 
+    sum = first; 
+    return true; 
+  };
+  var add = function(op, p) {
+    switch(op) {
+        case '+':
+            sum += p; 
+            break;
+        case '-':
+            sum -= p; 
+            break;
+        default:
+            error('"+" or "-" expected');
+    }
+    return true;
+  };
+}
+
+sum     = first:value &amp;{ return initsum(first); } (op:[+-] product:value &amp; { return add(op, product); })* { return sum; } 
+value   = number:$[0-9]+                     { return parseInt(number,10); }
+        / '(' sum:sum ')'                    { return sum; }
+</PRE>
+
+<P>
+<PRE>
+[~/srcPLgrado/pegjs/examples(master)]$ cat use_simple2.js
+var PEG = require("./simple2.js");
+var input = process.argv[2] || "5-1-2";
+var r = PEG.parse(input);
+console.log(r);
+</PRE>
+
+<P>
+<PRE>
+[~/srcPLgrado/pegjs/examples(master)]$ pegjs simple2.pegjs 
+[~/srcPLgrado/pegjs/examples(master)]$ node use_simple2.js 3-1-5
+-3
+</PRE>
+
+<P>
+
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html1722"
+<A NAME="tex2html1726"
   HREF="node39.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html1716"
+<A NAME="tex2html1720"
   HREF="node30.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html1710"
+<A NAME="tex2html1714"
   HREF="node37.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html1718"
+<A NAME="tex2html1722"
   HREF="node104.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html1720"
+<A NAME="tex2html1724"
   HREF="node107.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -218,17 +276,17 @@ console.log(r);
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html1723"
+<B> Sig:</B> <A NAME="tex2html1727"
   HREF="node39.html">Eliminación de la Recursividad</A>
-<B>Sup:</B> <A NAME="tex2html1717"
+<B>Sup:</B> <A NAME="tex2html1721"
   HREF="node30.html">Análisis Descendente mediante Parsing</A>
-<B> Ant:</B> <A NAME="tex2html1711"
+<B> Ant:</B> <A NAME="tex2html1715"
   HREF="node37.html">Eliminación de la Recursividad</A>
 </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I>Casiano Rodríguez León <BR>
-2015-04-22</I>
+2015-04-23</I>
 </ADDRESS>
 </BODY>
 </HTML>
