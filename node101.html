@@ -7,8 +7,8 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 <HTML>
 <HEAD>
-<TITLE>Mongoose</TITLE>
-<META NAME="description" CONTENT="Mongoose">
+<TITLE>Añadiendo Persistencia: Posts con MongoDB y Mongoose</TITLE>
+<META NAME="description" CONTENT="Añadiendo Persistencia: Posts con MongoDB y Mongoose">
 <META NAME="keywords" CONTENT="javascriptexamples">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -19,29 +19,28 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 
 <LINK REL="STYLESHEET" HREF="mystyle.css">
 
-<LINK REL="next" HREF="node102.html">
 <LINK REL="previous" HREF="node100.html">
-<LINK REL="up" HREF="node96.html">
+<LINK REL="up" HREF="node95.html">
 <LINK REL="next" HREF="node102.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2954"
+<A NAME="tex2html2959"
   HREF="node102.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2948"
-  HREF="node96.html">
+<A NAME="tex2html2953"
+  HREF="node95.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2942"
+<A NAME="tex2html2949"
   HREF="node100.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2950"
-  HREF="node103.html">
+<A NAME="tex2html2955"
+  HREF="node102.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2952"
-  HREF="node106.html">
+<A NAME="tex2html2957"
+  HREF="node105.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -80,19 +79,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2955"
-  HREF="node102.html">Añadiendo Persistencia: Posts con</A>
-<B>Sup:</B> <A NAME="tex2html2949"
-  HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2943"
-  HREF="node100.html">MongoDB</A>
+<B> Sig:</B> <A NAME="tex2html2960"
+  HREF="node102.html">&#205;ndice General</A>
+<B>Sup:</B> <A NAME="tex2html2954"
+  HREF="node95.html">CoffeeScript y Express</A>
+<B> Ant:</B> <A NAME="tex2html2950"
+  HREF="node100.html">Mongoose</A>
 <B> Con:</B> 
-<A NAME="tex2html2950"
-  HREF="node103.html">
+<A NAME="tex2html2955"
+  HREF="node102.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2952"
-  HREF="node106.html">
+<A NAME="tex2html2957"
+  HREF="node105.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
@@ -101,283 +100,470 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
 
 <UL CLASS="ChildLinks">
-<LI><A NAME="tex2html2956"
-  HREF="node101.html#SECTION06251000000000000000">Getting Started</A>
+<LI><A NAME="tex2html2961"
+  HREF="node101.html#SECTION06261000000000000000">Definiendo el Modelo y Probando que Funciona</A>
+<LI><A NAME="tex2html2962"
+  HREF="node101.html#SECTION06262000000000000000">Usando la Base de Datos MongoDB en vez de un Array en Nuestro Ejemplo</A>
 </UL>
 <!--End of Table of Child-Links-->
 <HR>
 
-<H1><A NAME="SECTION06250000000000000000">
-Mongoose</A>
+<H1><A NAME="SECTION06260000000000000000">
+Añadiendo Persistencia: Posts con MongoDB y Mongoose</A>
 </H1>
+Let’s add a dependency on mongoose to our project and freeze it at version 4.0.1.
+As always, run <code>npm install</code> to bring it in. 
+<PRE>
+$ npm install --save mongoose
+$ grep mongoose package.json 
+    "mongoose": "~4.0.1"
+</PRE>
 
 <P>
-<A NAME="tex2html426"
-  HREF="http://mongoosejs.com/">Mongoose</A>
-provides a straight-forward, schema-based solution to modeling your
-application data and includes built-in type casting, validation, query
-building, business logic hooks and more, out of the box.
 
-<P>
-
-<H2><A NAME="SECTION06251000000000000000">
-Getting Started</A>
+<H2><A NAME="SECTION06261000000000000000">
+Definiendo el Modelo y Probando que Funciona</A>
 </H2>
 
 <P>
-Véase
-<A NAME="tex2html427"
-  HREF="http://mongoosejs.com/docs/index.html">mongoose: getting started</A>.
-
-<P>
-Now say we like fuzzy kittens and want to record every kitten we ever
-meet in MongoDB. 
-
-<P>
-The first thing we need to do is include mongoose in
-our project and open a connection to the test database on
-our locally running instance of MongoDB.
-
-<P>
+Now we’ll create an initial test to just test mongoose out.
 <PRE>
-// getting-started.js
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
+~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ cat test/post-test.coffee 
+mongoose = require 'mongoose'
+Post     = require '../models/Post'
+chai     = require 'chai'
+expect   = chai.expect
+
+describe 'Post', -&gt;
+  before (done) -&gt;
+    mongoose.connect 'mongodb://localhost/coffeepress', -&gt;
+      Post.remove done
+  it 'should create a new post', (done) -&gt;
+    post = new Post(title:'First!', body:'First post!')
+    post.save -&gt;
+      Post.findOne _id: post._id, (err, retrievedPost) -&gt;
+        expect(retrievedPost.title).eql "First!"
+        expect(retrievedPost.body).eql "First post!"
+        done()
 </PRE>
 
-<P>
-We have a pending connection to the test database running on localhost. We
-now need to get notified if we connect successfully or if a connection
-error occurs:
+<UL>
+<LI>Here we import both <code>mongoose</code> and the model object that we’re going
+to create
+</LI>
+<LI>Since we want our test to start with a clean slate, we use
+the <code>before</code> hook (which runs once before anything else in the test runs)
+to both connect to the database and then <code>remove</code> all of the Post objects
+from mongodb
 
-<P>
+<UL>
+<LI>The four hooks in Mocha are:
+</LI>
+<LI>The <code>beforeEach()</code> hook contains code that runs before every test in a describe block.
+</LI>
+<LI>The <code>afterEach()</code> hook contains code that runs after every test in a describe block.
+</LI>
+<LI>The <code>before()</code> hook contains code that runs before any tests in each <code>describe()</code> block run. It runs before the first run of a <code>beforeEach()</code> hook.
+</LI>
+<LI>The <code>after()</code> hook contains code that runs after all tests in each <code>describe()</code> block have run. The <code>after()</code> hook will run after the last <code>afterEach()</code> hook.
+</LI>
+<LI>See
+<A NAME="tex2html430"
+  HREF="https://medium.com/@kanyang/hooks-in-mocha-87cb43baa91c">Hooks in Mocha</A>
+</LI>
+</UL>
+
+<UL>
+<LI>Models have a static remove method available for removing all documents matching conditions.
 <PRE>
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function (callback) {
-  // yay!
+Post.remove({ title: 'first' }, function (err) {
+  if (err) return handleError(err);
+  // removed!
 });
 </PRE>
-
-<P>
-Once our connection opens, our callback will be called. 
-
-<P>
-
-<FONT COLOR="#ff0000"> For brevity, let's assume that all following code is within this callback</FONT>.
-
-<P>
-With Mongoose, everything is derived from a 
-<code>Schema</code>. 
-
-<P>
-Let's get a reference to it and define our kittens.
-
-<P>
+When no condition is specified all the documents are removed
+</LI>
+</UL>
+</LI>
+<LI>We pass the <code>done</code> callback to the <code>remove</code> call 
+<FONT COLOR="#ff0000"> so that tests
+don’t run until all Posts have been removed</FONT>
+</LI>
+<LI>Now we create a new <code>Post</code> instance.
+You can pass an object literal in to set properties on the model, so we do that here
 <PRE>
-var kittySchema = mongoose.Schema({
-    name: String
-})
+    post = new Post(title:'First!', body:'First post!')
 </PRE>
-Everything in Mongoose starts with a 
-<A NAME="tex2html428"
-  HREF="http://mongoosejs.com/docs/guide.html">Schema</A>. 
-Each schema maps to a <A NAME="12447"></A><SPAN  CLASS="textbf">MongoDB</SPAN> collection and 
-<FONT COLOR="#ff0000"> defines the shape of the <A NAME="12452"></A><SPAN  CLASS="textbf">MongoDB documents</SPAN> within that collection</FONT>.
-
-<P>
-So far so good. 
-
-<P>
-We've got a schema with one property, <code>name</code>, which will be a <code>String</code>. 
-
-<P>
-The next step is compiling our schema into a 
-<A NAME="tex2html429"
-  HREF="http://mongoosejs.com/docs/models.html">Model</A>.
-
-<P>
+</LI>
+<LI>Finally, in our post <code>save</code> callback we look the post back up and verify certain attributes have been set
 <PRE>
-var Kitten = mongoose.model('Kitten', kittySchema)
+    post.save -&gt;
+      Post.findOne _id: post._id, (err, retrievedPost) -&gt;
+        expect(retrievedPost.title).eql "First!"
+        expect(retrievedPost.body).eql "First post!"
+        done()
 </PRE>
 
-<FONT COLOR="#ff0000"> A model is a class with which we construct documents</FONT>. 
+<UL>
+<LI>Documents can be retreived using each models 
+<code>find</code>, <code>findById</code>, <code>findOne</code>, or <code>where</code> 
+static methods.
+</LI>
+<LI>El primer argumento <code>{_id: post._id}</code> es la condición y especifica el documento que 
+queremos buscar
+</LI>
+<LI>El segundo argumento <code>(err, retrievedPost) -&gt; ...</code> es la callback que se ejecuta
+cuando el documento ha sido encontrado. 
 
 <P>
-In this case, each document will be a kitten with properties and behaviors as declared in our schema. 
-Let's create a kitten document representing the little guy we just met on the sidewalk outside:
+Aprovechamos esta callback para hacer
+las pruebas y llamar finalmente a <code>done()</code> para indicar la finalización de las pruebas.
+</LI>
+</UL>
+</LI>
+<LI>Obsérvese que las pruebas se refieren a que el modelo
+está definido correctamente. Obviamente nuestra aplicación aún no usa el modelo
+y no se está comprobando nada acerca de la relación entre la aplicación y el modelo
+</LI>
+</UL>
 <PRE>
-var silence = new Kitten({ name: 'Silence' })
-console.log(silence.name) // 'Silence'
-</PRE>
+~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ gulp test
+[11:05:16] Using gulpfile ~/local/src/javascript/expressjs/clase-express-coffee/gulpfile.js
+[11:05:16] Starting 'mocha'...
 
-<P>
-Kittens can meow, so let's take a look at how to add "speak" functionality to our documents:
-
-<P>
-
-<FONT COLOR="#ff0000"> methods must be added to the schema before compiling it with</FONT> <code>mongoose.model()</code>
-<PRE>
-kittySchema.methods.speak = function () {
-  var greeting = this.name
-    ? "Meow name is " + this.name
-    : "I don't have a name"
-  console.log(greeting);
-}
-
-var Kitten = mongoose.model('Kitten', kittySchema)
-</PRE>
-Functions added to the methods property of a schema get compiled into
-the Model prototype and exposed on each document instance:
-<PRE>
-var fluffy = new Kitten({ name: 'fluffy' });
-fluffy.speak()
+module.js:340
+    throw err;
+          ^
+Error: Cannot find module '../models/Post'
 </PRE>
 
 <P>
-We have talking kittens! But we still haven't saved anything to
-MongoDB. 
-
-<P>
-Each document can be saved to the database by calling its
-<code>save</code> method. 
-
-<P>
-The first argument to the callback will be an error if
-any occured.
-
-<P>
+Now let’s implement our model:
 <PRE>
-fluffy.save(function (err, fluffy) {
-  if (err) return console.error(err);
-  fluffy.speak();
-});
+$ mkdir models
+$ cat models/Post.coffee 
+mongoose = require 'mongoose'
+
+Post = new mongoose.Schema(
+  title: String
+  body: String
+)
+
+module.exports = mongoose.model 'Post', Post
 </PRE>
 
 <P>
-Say time goes by and we want to display all the kittens we've seen. 
 
-<P>
-We can access all of the kitten documents through our <code>Kitten</code> model.
-
-<P>
+<UL>
+<LI>Everything in Mongoose starts with a Schema. 
 <PRE>
-Kitten.find(function (err, kittens) {
-  if (err) return console.error(err);
-  console.log(kittens)
-})
+Post = new mongoose.Schema(
+  title: String
+  body: String
+)
+</PRE>
+
+<FONT COLOR="#ff0000"> Each schema maps to a MongoDB collection and defines the shape of the documents within that collection</FONT>.
+</LI>
+<LI>To use our schema definition, we need to convert our <code>Post</code> Schema
+into a Model we can work with. To do so, we pass it into
+<code>mongoose.model(modelName, schema)</code>:
+<PRE>
+mongoose.model 'Post', Post
+</PRE>
+</LI>
+</UL>
+Si ejecutamos las pruebas obtenemos un fallo porque el servidor <code>mongod</code> no está arrancado:
+<PRE>
+$ gulp test
+[11:34:22] Using gulpfile ~/local/src/javascript/expressjs/clase-express-coffee/gulpfile.js
+[11:34:22] Starting 'mocha'...
+
+  Post
+    1) "before all" hook
+
+  routes
+    index
+      ok: should display index with posts
+    new post
+      ok: should display the add post page
+
+  2 passing (2s)
+  1 failing
+
+  1) Post "before all" hook:
+     Error: timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.
+</PRE>
+Será mejor extender el <code>gulpfile</code>
+un poco para controlar el estado del servidor
+<code>mongod</code> antes y después de las 
+pruebas:
+<PRE>
+[~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ cat gulpfile.coffee 
+gulp = require('gulp')
+shell = require('gulp-shell')
+fs = require('fs')
+
+# run coffee server via nodemon https://github.com/remy/nodemon
+gulp.task 'default', -&gt;
+  gulp.src('').pipe shell( 'DEBUG=coffeepress:* nodemon bin/www.coffee' )
+
+gulp.task 'test', [ 'mocha' ]
+
+# run mocha
+gulp.task 'mocha', -&gt;
+  gulp.src('')
+    .pipe shell "mocha --compilers coffee:coffee-script/register --invert --grep 'feature' -R spec"
+
+# run mongod server
+gulp.task 'mongod', -&gt;
+  gulp.src('')
+    .pipe shell([ 'mongod --config mongod.conf 2&gt;1 &gt; /usr/local/var/mongodb/salida &amp;' ])
+
+# kill mongod server
+gulp.task 'killmongo', -&gt;
+    fs.readFile '/usr/local/var/mongodb/mongo.pid', 'utf8', (err, pid) -&gt;
+      return console.log(err) if (err)
+      console.log("killing #{pid}")
+      gulp.src('').pipe shell("kill #{pid}")
+
+# show mongod PID
+gulp.task 'ps', -&gt;
+  gulp.src('')
+    .pipe shell( 'ps -fA | grep mongod')
+</PRE>
+Este es el fichero de configuración para <code>mongod</code> que estoy usando:
+<PRE>
+[~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ cat mongod.conf 
+# Store data in /usr/local/var/mongodb instead of the default /data/db
+dbpath = /usr/local/var/mongodb
+
+# Append logs to /usr/local/var/mongo.log
+logpath = /usr/local/var/mongodb/mongo.log
+logappend = true
+
+# Save the PID of the daemon on that file
+pidfilepath = /usr/local/var/mongodb/mongo.pid
+
+# Only accept local connections
+bind_ip = 127.0.0.1
 </PRE>
 
 <P>
-We just logged all of the kittens in our <code>db</code> to the console. 
-
-<P>
-If we want to filter our kittens by name, Mongoose supports MongoDBs rich querying syntax.
-
-<P>
+Ahora podemos fácilmente comprobar si el servidor mongo está activo:
 <PRE>
-Kitten.find({ name: /^Fluff/ }, callback)
+[~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ gulp ps
+[14:23:52] Using gulpfile ~/local/src/javascript/expressjs/clase-express-coffee/gulpfile.js
+[14:23:52] Starting 'ps'...
+  501 33200 33199   0  2:23PM ttys011    0:00.01 /bin/sh -c ps -fA | grep mongod
+  501 33202 33200   0  2:23PM ttys011    0:00.00 grep mongod
+[14:23:53] Finished 'ps' after 107 ms
 </PRE>
-This performs a search for all documents with a name property that begins with <code>"Fluff"</code> 
-and returns the result as an array of kittens to the <code>callback</code>.
+Vemos que no. Lo arrancamos:
+<PRE>
+[~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ gulp mongod
+[14:23:59] Using gulpfile ~/local/src/javascript/expressjs/clase-express-coffee/gulpfile.js
+[14:23:59] Starting 'mongod'...
+[14:24:00] Finished 'mongod' after 37 ms
+</PRE>
+Comprobamos que efectivamente está corriendo:
+<PRE>
+[~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ gulp ps
+[14:24:11] Using gulpfile ~/local/src/javascript/expressjs/clase-express-coffee/gulpfile.js
+[14:24:11] Starting 'ps'...
+  501 33212     1   0  2:24PM ttys011    0:00.25 mongod --config mongod.conf
+  501 33228 33227   0  2:24PM ttys011    0:00.00 /bin/sh -c ps -fA | grep mongod
+  501 33230 33228   0  2:24PM ttys011    0:00.00 grep mongod
+[14:24:11] Finished 'ps' after 82 ms
+</PRE>
+Ejecutamos las pruebas:
+<PRE>
+[~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ gulp test
+[14:24:21] Using gulpfile ~/local/src/javascript/expressjs/clase-express-coffee/gulpfile.js
+[14:24:21] Starting 'mocha'...
+
+
+  Post
+    ok: should create a new post
+
+  routes
+    index
+      ok: should display index with posts
+    new post
+      ok: should display the add post page
+
+  3 passing (179ms)
+
+[14:24:22] Finished 'mocha' after 1.4 s
+[14:24:22] Starting 'test'...
+[14:24:22] Finished 'test' after 17 microseg
+</PRE>
+Vemos que la prueba <code>should create a new post</code> pasa.
 
 <P>
-Este es el código completo de nuestro ejemplo:
+Si lo deseamos podemos parar el servidor <code>mongod</code>:
+<PRE>
+[~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ gulp killmongo
+[14:24:42] Using gulpfile ~/local/src/javascript/expressjs/clase-express-coffee/gulpfile.js
+[14:24:42] Starting 'killmongo'...
+[14:24:42] Finished 'killmongo' after 537 microseg
+killing 33212
+</PRE>
+Comprobamos que - efectivamente - el proceso no existe:
+<PRE>
+[~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ gulp ps
+[14:24:45] Using gulpfile ~/local/src/javascript/expressjs/clase-express-coffee/gulpfile.js
+[14:24:45] Starting 'ps'...
+  501 33274 33270   0  2:24PM ttys011    0:00.00 /bin/sh -c ps -fA | grep mongod
+  501 33276 33274   0  2:24PM ttys011    0:00.00 grep mongod
+[14:24:46] Finished 'ps' after 89 ms
+</PRE>
 
 <P>
+
+<H2><A NAME="SECTION06262000000000000000">
+Usando la Base de Datos MongoDB en vez de un Array en Nuestro Ejemplo</A>
+</H2>
+
+<P>
+Now let’s refit our routes to use the <code>Post</code> 
+model instead of an in memory array.
+
+<P>
+En el fichero <code>app.coffee</code> cargamos la librería <code>mongoose</code> y conectamos
+con la base de datos: 
 <PRE>
-[~/javascript/mongoose]$ cat getting-started.js 
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
+...
+bodyParser = require('body-parser')
 
-var kittySchema = mongoose.Schema({
-    name: String
-  });
+mongoose = require "mongoose"
+mongoose.connect 'mongodb://localhost/coffeepress'
 
-
-kittySchema.methods.speak = function() {
-  var greeting = this.name? "Meow name is "+this.name : "I don't have a name";
-  console.log(greeting);
-
-}
-
-// compiling our schema into a Model
-var Kitten = mongoose.model('Kitten', kittySchema);
-
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'Error en la conexión a MongoDB:'));
-
-var errDisconnect =  function(err) {
-  if (err) { console.log("Se produjo un error en la desconexión! "+err) }
-  else { console.log("Desconectando!") }
-}
-
-var main = function() {
-  console.log("Abierta la conexión con MongoDB!");
-
-  var silence = new Kitten({ name: 'Silence' });
-  console.log(silence.name);    // 'Silence'
-  silence.speak(); // 'Meow name is Silence'
-
-  var fluffy = new Kitten({ name: 'fluffy' });
-  fluffy.speak();
-
-  fluffy.save(function (err, fluffy) {
-    if (err) console.error("no puedo guardar a fluffy! "+err)
-    else console.error("fluffy guardado!");
-
-    Kitten.find({ name: /^Fluff/i },function (err, kittens) {
-      if (err) return console.error("Error buscando gatos! "+err);
-      console.log(kittens);
-
-      mongoose.disconnect(errDisconnect);
-    });
-  });
-}
-
-db.once('open', main);
+routes = require('./routes/index')
+...
 </PRE>
-Cuando lo ejecutamos obtenemos:
+
+<P>
+Los mayores cambios los hacemos en las rutas:
 <PRE>
-[~/javascript/mongoose]$ node getting-started.js 
-Abierta la conexión con MongoDB!
-Silence
-Meow name is Silence
-Meow name is fluffy
-fluffy guardado!
-[ { _id: 552fb8f77e6de9990a4e6747, name: 'fluffy', __v: 0 } ]
-Desconectando!
+[~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ cat routes/index.coffee 
+express = require('express')
+Post = require '../models/Post'
+debug = require('debug')('coffeepress:server')
+util = require 'util'
+
+module.exports =
+  index: (req, res) -&gt;
+    Post.find {}, (err, posts) -&gt;
+      res.render "index",
+        title: "My Blog"
+        posts: posts
+  newPost: (req, res) -&gt;
+    res.render('add_post', {title: "Write New Post"})
+  addPost: (req, res) -&gt;
+    post = req.body
+    new Post(post).save -&gt;
+      res.redirect '/'
+  viewPost: (req, res) -&gt;
+    Post.findById req.params.id, (err, post) -&gt;
+      res.render 'post', post: post, title: post.title
 </PRE>
-Si lo ejecutamos una segunda vez obtenemos:
+
+<P>
+Acabaremos mejorando un poco las pruebas:
 <PRE>
-[~/javascript/mongoose]$ node getting-started.js 
-Abierta la conexión con MongoDB!
-Silence
-Meow name is Silence
-Meow name is fluffy
-fluffy guardado!
-[ { _id: 552fb8f77e6de9990a4e6747, name: 'fluffy', __v: 0 },
-  { _id: 552fb8f987df0fa30ab92647, name: 'fluffy', __v: 0 } ]
-Desconectando!
+[~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ cat test/routes-test.coffee 
+chai = require 'chai'
+expect = chai.expect
+mongoose = require "mongoose"
+Post     = require "../models/Post"
+
+routes = require '../routes/index'
+
+describe 'routes', -&gt;
+  req = 
+    params: {}
+    body: {}
+  res = 
+    redirect: (route) -&gt;
+      # do nothing
+    render: (view, vars) -&gt; 
+      # do nothing
+  before (done) -&gt;
+    mongoose.connect 'mongodb://localhost/coffeepress', -&gt;
+      Post.remove done
+
+  describe 'index', -&gt;
+    it "should display index with posts", (done) -&gt;
+      res.render = (view, vars) -&gt; # redefinimos render
+        expect(view).to.be.equal 'index'
+        expect(vars.title).to.be.equal 'My Blog'
+        expect(vars.posts).deep.equal []
+        done()
+      routes.index(req, res)
+
+  describe 'new post', -&gt;
+    it "should display the add post page", (done)-&gt;
+      res.render = (view, vars) -&gt; # redefinimos render
+        expect(view).to.be.equal 'add_post'
+        expect(vars.title).to.be.equal 'Write New Post'
+        done()
+      routes.newPost(req, res)
+    it "should add a new post when posted to", (done) -&gt;
+      req.body = 
+        title: "My Post!"
+        body: "My wonderful post."
+
+      routes.addPost req, redirect: (route) -&gt;
+        expect(route).eql "/"
+        routes.index req, render: (view, vars) -&gt;
+          expect(view).equal "index"
+          expect(vars.posts[0].title).eql 'My Post!'
+          expect(vars.posts[0].body).eql "My wonderful post."
+          done()
+</PRE>
+Cuando las ejecutamos tenemos:
+<PRE>
+~/javascript/expressjs/clase-express-coffee(preparapl20042015)]$ gulp test
+[22:14:06] Using gulpfile ~/local/src/javascript/expressjs/clase-express-coffee/gulpfile.js
+[22:14:06] Starting 'mocha'...
+
+
+  Post
+    ok: should create a new post
+
+  routes
+    index
+      ok: should display index with posts
+    new post
+      ok: should display the add post page
+      ok: should add a new post when posted to
+
+
+  4 passing (165ms)
+
+[22:14:07] Finished 'mocha' after 1.42 s
+[22:14:07] Starting 'test'...
+[22:14:07] Finished 'test' after 17 micros
 </PRE>
 
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2954"
+<A NAME="tex2html2959"
   HREF="node102.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2948"
-  HREF="node96.html">
+<A NAME="tex2html2953"
+  HREF="node95.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2942"
+<A NAME="tex2html2949"
   HREF="node100.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2950"
-  HREF="node103.html">
+<A NAME="tex2html2955"
+  HREF="node102.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2952"
-  HREF="node106.html">
+<A NAME="tex2html2957"
+  HREF="node105.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -416,12 +602,12 @@ Desconectando!
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2955"
-  HREF="node102.html">Añadiendo Persistencia: Posts con</A>
-<B>Sup:</B> <A NAME="tex2html2949"
-  HREF="node96.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2943"
-  HREF="node100.html">MongoDB</A>
+<B> Sig:</B> <A NAME="tex2html2960"
+  HREF="node102.html">&#205;ndice General</A>
+<B>Sup:</B> <A NAME="tex2html2954"
+  HREF="node95.html">CoffeeScript y Express</A>
+<B> Ant:</B> <A NAME="tex2html2950"
+  HREF="node100.html">Mongoose</A>
 </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>

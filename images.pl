@@ -449,6 +449,13 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img327.png"
  ALT="$ ASSIGN(LEFTVALUE, x) and$">|; 
 
+$key = q/%latex2htmlidmarker21760S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img100.png"
+ ALT="% latex2html id marker 21760
+$ S = program$">|; 
+
 $key = q/overline{A}={qinQslashexistsq'inQ:hat{delta}(q',epsilon)=q};MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="287" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
@@ -1032,13 +1039,6 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="83" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img242.png"
  ALT="$ \rho: \Sigma \rightarrow \mathds{N}$">|; 
-
-$key = q/%latex2htmlidmarker21737S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img100.png"
- ALT="% latex2html id marker 21737
-$ S = program$">|; 
 
 $key = q/aaSbb;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
