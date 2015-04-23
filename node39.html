@@ -206,7 +206,7 @@ eliminando así la recursión por la izquierda.
 <SPAN CLASS="MATH"><IMG
  WIDTH="70" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
  SRC="img93.png"
- ALT="$ R \rightarrow \alpha R$"></SPAN> se dice <A NAME="6338"></A><SPAN  CLASS="textbf">recursiva por la derecha</SPAN>.</I></DIV><P></P>
+ ALT="$ R \rightarrow \alpha R$"></SPAN> se dice <A NAME="6340"></A><SPAN  CLASS="textbf">recursiva por la derecha</SPAN>.</I></DIV><P></P>
 
 <P>
 Las producciones recursivas por la derecha dan lugar a árboles
@@ -459,31 +459,29 @@ Eliminación de la Recursividad por la Izquierda en PEGJS</A>
 </H2>
 
 <P>
-PegJS no permite acciones intermedias. Tampoco se puede acceder al atributo 
+PegJS no permite acciones intermedias aunque si predicados semánticos. 
+Tampoco se puede acceder al atributo 
 de la parte izquierda.
-Por eso, a la hora de implantar la solución anterior debemos introducir variables 
-sintácticas temporales que produzcan la palabra vacía y que vayan acompañadas de la acción semántica
-correspondiente.
+Por eso, a la hora de implantar la solución anterior debemos introducir 
+predicados semánticos.
 
 <P>
 Además nos obliga a usar variables visibles por todas las reglas semánticas para emular el acceso
-a los atributos de la parte izquierda de una regla de proudcción.
+a los atributos de la parte izquierda de una regla de producción.
 
 <P>
-El siguiente ejemplo ilustra como eliminar la reucrusión por la izquierda respetando la asociatividad de la oepración de diferencia:
+El siguiente ejemplo ilustra como eliminar la reucrusión por la izquierda respetando la asociatividad de la operación de diferencia:
 
 <P>
 <PRE>
-[~/pegjs/examples(master)]$ cat inherited.pegjs 
+[~/srcPLgrado/pegjs/examples(master)]$ cat inherited2.pegjs 
 {
   var h = 0, number = 0;
 }
-e = NUMBER aux1 r         { return h; }
-aux1 = /* empty */        { h = number; } 
 
-r =   '-' NUMBER  aux2 r  { return h; }
-    / /* empty */
-aux2 = /* empty */        { h -= number; }
+e = NUMBER &amp;{ h = number; return true; } r { return h; }
+
+r = '-' NUMBER &amp;{ h -= number; return true; } r  { return h; } / /* empty */
 
 NUMBER = _ digits:$[0-9]+ _  { number = parseInt(digits, 10); return number; }
 
@@ -491,26 +489,23 @@ _ = $[ \t\n\r]*
 </PRE>
 
 <P>
+Este es el código para usar el PEG anterior:
 <PRE>
-[~/pegjs/examples(master)]$ cat use_inherited.js 
-var PEG = require("./inherited.js");
-var r = PEG.parse("2-1-1");
+[~/srcPLgrado/pegjs/examples(master)]$ cat use_inherited2.js 
+var PEG = require("./inherited2.js");
+var input = process.argv[2] || "5-1-2";
+var r = PEG.parse(input);
 console.log(r);
+</PRE>
 
-var r = PEG.parse("4-2-1");
-console.log(r);
-
-var r = PEG.parse("2-3-1");
-console.log(r);
-
-
-[~/pegjs/examples(master)]$ pegjs inherited.pegjs 
-Referenced rule "$" does not exist.
-[~/pegjs/examples(master)]$ ../bin/pegjs inherited.pegjs 
-[~/pegjs/examples(master)]$ node use_inherited.js 
+<P>
+Al ejecutarlo obtenemos:
+<PRE>
+[~/srcPLgrado/pegjs/examples(master)]$ pegjs inherited2.pegjs 
+[~/srcPLgrado/pegjs/examples(master)]$ node use_inherited2.js 4-3-1
 0
-1
--2
+[~/srcPLgrado/pegjs/examples(master)]$ node use_inherited2.js 7-1-2
+4
 </PRE>
 
 <P>
