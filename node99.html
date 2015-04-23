@@ -7,8 +7,8 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 <HTML>
 <HEAD>
-<TITLE>MongoDB</TITLE>
-<META NAME="description" CONTENT="MongoDB">
+<TITLE>Mongoose</TITLE>
+<META NAME="description" CONTENT="Mongoose">
 <META NAME="keywords" CONTENT="javascriptexamples">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -21,27 +21,27 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 
 <LINK REL="next" HREF="node100.html">
 <LINK REL="previous" HREF="node98.html">
-<LINK REL="up" HREF="node95.html">
+<LINK REL="up" HREF="node94.html">
 <LINK REL="next" HREF="node100.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2918"
+<A NAME="tex2html2925"
   HREF="node100.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2912"
-  HREF="node95.html">
+<A NAME="tex2html2919"
+  HREF="node94.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2906"
+<A NAME="tex2html2913"
   HREF="node98.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2914"
-  HREF="node102.html">
+<A NAME="tex2html2921"
+  HREF="node101.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2916"
-  HREF="node105.html">
+<A NAME="tex2html2923"
+  HREF="node104.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -80,19 +80,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2919"
-  HREF="node100.html">Mongoose</A>
-<B>Sup:</B> <A NAME="tex2html2913"
-  HREF="node95.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2907"
-  HREF="node98.html">Pruebas</A>
+<B> Sig:</B> <A NAME="tex2html2926"
+  HREF="node100.html">Añadiendo Persistencia: Posts con</A>
+<B>Sup:</B> <A NAME="tex2html2920"
+  HREF="node94.html">CoffeeScript y Express</A>
+<B> Ant:</B> <A NAME="tex2html2914"
+  HREF="node98.html">MongoDB</A>
 <B> Con:</B> 
-<A NAME="tex2html2914"
-  HREF="node102.html">
+<A NAME="tex2html2921"
+  HREF="node101.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2916"
-  HREF="node105.html">
+<A NAME="tex2html2923"
+  HREF="node104.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
@@ -101,515 +101,283 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
 
 <UL CLASS="ChildLinks">
-<LI><A NAME="tex2html2920"
-  HREF="node99.html#SECTION06241000000000000000">Introducción</A>
-<UL>
-<LI><A NAME="tex2html2921"
-  HREF="node99.html#SECTION06241010000000000000">NoSQL</A>
-<LI><A NAME="tex2html2922"
-  HREF="node99.html#SECTION06241020000000000000">Relational  Database</A>
-<LI><A NAME="tex2html2923"
-  HREF="node99.html#SECTION06241030000000000000">Document Oriented DataBase</A>
-</UL>
-<BR>
-<LI><A NAME="tex2html2924"
-  HREF="node99.html#SECTION06242000000000000000">Getting Started with MongoDB</A>
-<LI><A NAME="tex2html2925"
-  HREF="node99.html#SECTION06243000000000000000">Create a Collection and Insert Documents</A>
-<LI><A NAME="tex2html2926"
-  HREF="node99.html#SECTION06244000000000000000">Insert Documents using a For Loop or a JavaScript Function</A>
-<UL>
 <LI><A NAME="tex2html2927"
-  HREF="node99.html#SECTION06244010000000000000">Insert Multiple Documents Using a For Loop</A>
-<LI><A NAME="tex2html2928"
-  HREF="node99.html#SECTION06244020000000000000">Working with the Cursor</A>
-</UL></UL>
+  HREF="node99.html#SECTION06251000000000000000">Getting Started</A>
+</UL>
 <!--End of Table of Child-Links-->
 <HR>
 
-<H1><A NAME="SECTION06240000000000000000">
-MongoDB</A>
+<H1><A NAME="SECTION06250000000000000000">
+Mongoose</A>
 </H1>
 
 <P>
-
-<H2><A NAME="SECTION06241000000000000000">
-Introducción</A>
-</H2>
-
-<UL>
-<LI>MongoDB (from humongous: huge; enormous) is one of many cross-platform 
-<A NAME="tex2html421"
-  HREF="http://en.wikipedia.org/wiki/Document-oriented_database">document-oriented databases</A>
-</LI>
-<LI>Is classified as a 
-<A NAME="tex2html422"
-  HREF="http://en.wikipedia.org/wiki/NoSQL">NoSQL database</A>,
-</LI>
-<LI>MongoDB eschews the traditional table-based relational database structure in favor of JSON-like documents with dynamic schemas (MongoDB calls the format BSON)
-</LI>
-</UL>
+<A NAME="tex2html426"
+  HREF="http://mongoosejs.com/">Mongoose</A>
+provides a straight-forward, schema-based solution to modeling your
+application data and includes built-in type casting, validation, query
+building, business logic hooks and more, out of the box.
 
 <P>
 
-<H4><A NAME="SECTION06241010000000000000">
-NoSQL</A>
-</H4>
-  
-
-<P>
-
-<UL>
-<LI>A NoSQL (often interpreted as Not only SQL) database 
-<FONT COLOR="#0000ff"> provides a mechanism for storage and retrieval of data that is modeled in means other than the tabular relations used in relational
-databases</FONT>
-</LI>
-<LI>Motivations for this approach include 
-
-<UL>
-<LI>simplicity of design
-</LI>
-<LI>horizontal scaling
-</LI>
-<LI>and finer control over availability
-</LI>
-</UL>
-</LI>
-<LI>The data structures used by NoSQL databases (e.g. key-value, graph, or
-document) differ from those used in relational databases, making some operations faster in NoSQL and others faster in relational databases
-</LI>
-<LI>The particular suitability of a given NoSQL database depends
-on the problem it must solve
-</LI>
-<LI>NoSQL databases are increasingly used in 
-<FONT COLOR="#ff0000"> big data</FONT> and 
-<FONT COLOR="#ff0000"> real-time web applications</FONT>
-</LI>
-<LI>NoSQL systems are also called "Not only SQL" to emphasize that they may also support SQL-like query languages
-</LI>
-<LI>Many
-NoSQL stores compromise consistency (in the sense of the CAP<A NAME="tex2html423"
-  HREF="footnode.html#foot12262"><SUP><SPAN CLASS="arabic">15</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A> theorem) in favor of availability and partition tolerance.
-</LI>
-</UL>
-
-<P>
-
-<H4><A NAME="SECTION06241020000000000000">
-Relational  Database</A>
-</H4>
-  
-
-<P>
-
-<UL>
-<LI>In a relational database, 
-<FONT COLOR="#ff0000"> data is first categorized into a number of
-predefined types, and tables are created to hold individual entries, or
-records, of each type</FONT>. 
-
-<P>
-</LI>
-<LI>The tables define the data within each record's
-fields, meaning that every record in the table has the same overall
-form. 
-
-<P>
-</LI>
-<LI>The administrator also defines the relations between the tables,
-and selects certain fields that they believe will be most commonly used
-for searching and defines indexes on them. 
-
-<P>
-</LI>
-<LI>A key concept in the relational
-design is that any data that may be repeated is placed in its own table,
-and if these instances are related to each other, a field is selected
-to group them together, the <A NAME="12419"></A><SPAN  CLASS="textbf">foreign key</SPAN>.
-
-<P>
-</LI>
-<LI>For example, an address book application will generally need to
-store the contact name, an optional image, one or more phone numbers,
-one or more mailing addresses, and one or more email addresses. 
-
-<P>
-</LI>
-<LI>In a
-canonical relational database solution, tables would be created for
-each of these records with predefined fields for each bit of data; the
-<code>CONTACT</code> table might include <code>FIRST_NAME</code>, <code>LAST_NAME</code> and <code>IMAGE</code> fields,
-while the <code>PHONE_NUMBER</code> table might include <code>COUNTRY_CODE</code>, <code>AREA_CODE</code>,
-<code>PHONE_NUMBER</code> and <code>TYPE</code> (home, work, etc). 
-
-<P>
-</LI>
-<LI>The <code>PHONE_NUMBER</code> table also
-contains a <A NAME="12421"></A><SPAN  CLASS="textbf">foreign key</SPAN> field, "<code>CONTACT_ID</code>", which holds the unique <code>ID</code>
-number assigned to the contact when it was created. 
-
-<P>
-</LI>
-<LI>In order to recreate
-the original contact, the system has to search through all of the tables
-and collect the information back together using <A NAME="12423"></A><SPAN  CLASS="textbf">joins</SPAN><A NAME="tex2html424"
-  HREF="footnode.html#foot12106"><SUP><SPAN CLASS="arabic">15</SPAN>.<SPAN CLASS="arabic">2</SPAN></SUP></A>
-</LI>
-</UL>
-
-<P>
-
-<H4><A NAME="SECTION06241030000000000000">
-Document Oriented DataBase</A>
-</H4>
-  
-
-<UL>
-<LI>In contrast, in a 
-<FONT COLOR="#ff0000"> document-oriented database</FONT> there may be no internal
-structure that maps directly onto the concept of a table, and the fields
-and relations generally don't exist as predefined concepts.
-
-<P>
-</LI>
-<LI>Instead, 
-<FONT COLOR="#0000ff"> all
-of the data for an object is placed in a single document, and stored in
-the database as a single entry</FONT>
-</LI>
-<LI>In the address book example, the document
-would contain the contact's name, image and any contact info, 
-<FONT COLOR="#0000ff"> all in a
-single record</FONT>
-
-<P>
-</LI>
-<LI>That entry is accessed through a key, some unique bit of
-data, which allows the database to retrieve and return the document to
-the application. No additional work is needed to retrieve the related
-data, all of this is returned in a single object.
-
-<P>
-</LI>
-<LI>A key difference between the document-oriented and relational models is
-that 
-<FONT COLOR="#0000ff"> the data formats are not predefined in the document case</FONT>
-</LI>
-<LI>In most
-cases, any sort of document can be stored in any database, and those
-documents can change in type and form at any time
-</LI>
-<LI>If one wishes to
-add a <code>COUNTRY_FLAG</code> to a <code>CONTACT</code>, simply add this field to new documents
-as they are inserted, this will have no effect on the database or the
-existing documents already stored, they simply won't have this field
-</LI>
-<LI>This
-indicates an advantage of the document-based model; optional fields are
-truly optional, a contact that does not include a mailing address simply
-does not have a mailing address, there is no need to check another table
-to see if there are entries
-</LI>
-<LI>To aid retrieval of information from the database, document-oriented
-systems generally allow the administrator to provide hints to the database
-to look for certain types of information
-</LI>
-<LI>In the address book example,
-the design might add hints for the first and last name fields
-</LI>
-<LI>When the
-document is inserted into the database (or later modified), the database
-engine looks for these bits of information and indexes them, in the same
-fashion as the relational model
-</LI>
-<LI>Additionally, most document-oriented
-databases allow documents to have a type associated with them, like
-<code>address book entry</code>, which allows the programmer to retrieve related
-types of information, like <code>all the address book entries</code>
-</LI>
-<LI>This provides
-functionality similar to a table, but separates the concept (categories
-of data) from its physical implementation (tables)
-</LI>
-<LI>All of this is predicated on the ability of the database engine
-to examine the data in the document and extract fields from the
-formatting, its metadata
-</LI>
-<LI>This is easy in the case of, for example, an
-XML document or HTML page, where markup tags clearly identify various
-bits of data
-</LI>
-<LI>Document-oriented databases may include functionally
-to automatically extract this sort of information from a variety of
-document types, even those that were not originally designed for easy
-access in this manner
-</LI>
-<LI>In other cases the programmer has to provide this
-information using their own code
-</LI>
-<LI>In contrast, a relational database
-relies on the programmer to handle all of these tasks, breaking down
-the document into fields and providing those to the database engine,
-which may require separate instructions if the data spans tables
-</LI>
-<LI>Document-oriented databases normally map more cleanly onto existing
-programming concepts, like object-oriented programming (OOP)
-</LI>
-</UL>
-
-<P>
-
-<H2><A NAME="SECTION06242000000000000000">
-Getting Started with MongoDB</A>
+<H2><A NAME="SECTION06251000000000000000">
+Getting Started</A>
 </H2>
 
 <P>
-
-<UL>
-<LI>Véase
-<A NAME="tex2html425"
-  HREF="http://docs.mongodb.org/manual/tutorial/getting-started/">Getting Started with MongoDB</A>
-</LI>
-</UL>
-<PRE>
-$ mongod
-all output going to: /usr/local/var/log/mongodb/mongo.log
-</PRE>
+Véase
+<A NAME="tex2html427"
+  HREF="http://mongoosejs.com/docs/index.html">mongoose: getting started</A>.
 
 <P>
-By default, mongo looks for a database server listening on port 27017
-on the localhost interface. 
+Now say we like fuzzy kittens and want to record every kitten we ever
+meet in MongoDB. 
 
 <P>
-To connect to a server on a different port
-or interface, use the <code>--port</code> and
-<code>--host</code> options.
-
-<P>
-Podemos también usar un fichero de configuración:
-<PRE>
-[~/javascript/expressjs/coffee-mongo(master)]$ cat /usr/local/etc/mongod.conf
-# Store data in /usr/local/var/mongodb instead of the default /data/db
-dbpath = /usr/local/var/mongodb
-
-# Append logs to /usr/local/var/log/mongodb/mongo.log
-logpath = /usr/local/var/log/mongodb/mongo.log
-logappend = true
-
-verbose = v 
-# Only accept local connections
-bind_ip = 127.0.0.1
-</PRE>
-
-<P>
-y ejecutarlo con la opción <code>--config</code>:
-<PRE>
-$ mongod --config /usr/local/etc/mongod.conf
-</PRE>
+The first thing we need to do is include mongoose in
+our project and open a connection to the test database on
+our locally running instance of MongoDB.
 
 <P>
 <PRE>
-[~/src/coffee/coffeepress.bak(master)]$ mongo
-MongoDB shell version: 2.4.8
-connecting to: test
-Server has startup warnings: 
-Mon Apr 13 21:53:16.204 [initandlisten] 
-Mon Apr 13 21:53:16.204 [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+// getting-started.js
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/test');
 </PRE>
 
 <P>
-After starting the mongo shell, your session will use the test database by default. At any time, issue the following operation at the mongo shell to report the name of the current database:
-<PRE>
-&gt; db
-test
-</PRE>
-
-<P>
-From the mongo shell, display the list of databases, with the following operation:
+We have a pending connection to the test database running on localhost. We
+now need to get notified if we connect successfully or if a connection
+error occurs:
 
 <P>
 <PRE>
-&gt; show dbs
-coffeepress     0.203125GB
-coffeepress-dev 0.203125GB
-dict_dev        0.203125GB
-example 0.203125GB
-local   0.078125GB
-mean    0.203125GB
-my_perpetuity_database  0.203125GB
-mydb    0.203125GB
-sinatra-example-dev     0.203125GB
-test    0.203125GB
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function (callback) {
+  // yay!
+});
 </PRE>
 
 <P>
-Switch to a new database named <code>example</code>, 
-with the following operation:
-<PRE>
-&gt; use example
-switched to db example
-</PRE>
-At any point, you can access help for the mongo shell using
-<PRE>
-&gt; help
-        db.help()                    help on db methods
-        db.mycoll.help()             help on collection methods
-        sh.help()                    sharding helpers
-        rs.help()                    replica set helpers
-        help admin                   administrative help
-        help connect                 connecting to a db help
-        help keys                    key shortcuts
-        help misc                    misc things to know
-        help mr                      mapreduce
-
-        show dbs                     show database names
-        show collections             show collections in current database
-        show users                   show users in current database
-        show profile                 show most recent system.profile entries with time &gt;= 1ms
-        show logs                    show the accessible logger names
-        show log [name]              prints out the last segment of log in memory, 'global' is default
-        use &lt;db_name&gt;                set current database
-        db.foo.find()                list objects in collection foo
-        db.foo.find( { a : 1 } )     list objects in foo where a == 1
-        it                           result of the last line evaluated; use to further iterate
-        DBQuery.shellBatchSize = x   set default number of items to display on shell
-        exit                         quit the mongo shell
-</PRE>
-
-<P>
-Furthermore, you can append the <code>.help()</code> 
-method to some JavaScript methods, any cursor object,
-as well as the <code>db</code> and <code>db.collection</code> objects to return additional help information.
-<PRE>
-&gt; db.help()
-DB methods:
-        db.addUser(userDocument)
-        db.auth(username, password)
-        ...
-</PRE>
+Once our connection opens, our callback will be called. 
 
 <P>
 
-<H2><A NAME="SECTION06243000000000000000">
-Create a Collection and Insert Documents</A>
-</H2>
-In this section, you insert documents into a new collection named <code>testData</code>
-within the new database named <code>mydb</code>.
+<FONT COLOR="#ff0000"> For brevity, let's assume that all following code is within this callback</FONT>.
 
 <P>
-Create two documents named <code>j</code> and 
-<code>k</code> by using the following sequence of JavaScript operations:
-<PRE>
-&gt; j = { name : "mongo" }
-{ "name" : "mongo" }
-&gt; k = { x : 3 }
-{ "x" : 3 }
-</PRE>
-Insert the <code>j</code> and <code>k</code> documents into the 
-<code>testData</code> collection with the following sequence of operations:
-<PRE>
-&gt; db.testData.insert( j )
-&gt; db.testData.insert( k )
-</PRE>
-When you insert the first document, the <code>mongod</code> 
-will create both the <code>mydb</code> 
-database and the <code>testData</code> collection.
-<PRE>
-&gt; show collections
-system.indexes
-testData
-</PRE>
-The mongo shell will return the list of the collections in the current (i.e. mydb) database. At this point, the only collection with user data is testData.
+With Mongoose, everything is derived from a 
+<code>Schema</code>. 
 
 <P>
-Confirm that the documents exist in the testData collection by issuing a query on the collection using the find() method:
+Let's get a reference to it and define our kittens.
 
 <P>
 <PRE>
-&gt; db.testData.find()
-{ "_id" : ObjectId("552d751969c6f61bfbe4e6ed"), "name" : "mongo" }
-{ "_id" : ObjectId("552d751a69c6f61bfbe4e6ee"), "x" : 3 }
+var kittySchema = mongoose.Schema({
+    name: String
+})
 </PRE>
-All MongoDB documents must have an <code>_id</code> field with a unique value. These operations do not explicitly specify a value for the <code>_id</code> field, so mongo creates a unique <code>ObjectId</code> value for the field before inserting it into the collection.
+Everything in Mongoose starts with a 
+<A NAME="tex2html428"
+  HREF="http://mongoosejs.com/docs/guide.html">Schema</A>. 
+Each schema maps to a <A NAME="12451"></A><SPAN  CLASS="textbf">MongoDB</SPAN> collection and 
+<FONT COLOR="#ff0000"> defines the shape of the <A NAME="12456"></A><SPAN  CLASS="textbf">MongoDB documents</SPAN> within that collection</FONT>.
 
 <P>
-
-<H2><A NAME="SECTION06244000000000000000">
-Insert Documents using a For Loop or a JavaScript Function</A>
-</H2>
-To perform the remaining procedures in this tutorial, first add more documents to your database using one or both of the procedures described in Generate Test Data.
+So far so good. 
 
 <P>
-
-<H4><A NAME="SECTION06244010000000000000">
-Insert Multiple Documents Using a For Loop</A>
-</H4>
-  
+We've got a schema with one property, <code>name</code>, which will be a <code>String</code>. 
 
 <P>
-From the mongo shell, use the for loop. If the testData collection does not exist, MongoDB will implicitly create the collection.
+The next step is compiling our schema into a 
+<A NAME="tex2html429"
+  HREF="http://mongoosejs.com/docs/models.html">Model</A>.
+
+<P>
 <PRE>
-&gt; for (var i = 1; i &lt;= 25; i++) {
-...    db.testData.insert( { x : i } )
-... }
+var Kitten = mongoose.model('Kitten', kittySchema)
 </PRE>
-Use find() to query the collection:
+
+<FONT COLOR="#ff0000"> A model is a class with which we construct documents</FONT>. 
+
+<P>
+In this case, each document will be a kitten with properties and behaviors as declared in our schema. 
+Let's create a kitten document representing the little guy we just met on the sidewalk outside:
 <PRE>
-&gt; db.testData.find()
-{ "_id" : ObjectId("552d751969c6f61bfbe4e6ed"), "name" : "mongo" }
-{ "_id" : ObjectId("552d751a69c6f61bfbe4e6ee"), "x" : 3 }
-{ "_id" : ObjectId("552d791269c6f61bfbe4e6f0"), "x" : 1 }
-{ "_id" : ObjectId("552d791269c6f61bfbe4e6f1"), "x" : 2 }
-{ "_id" : ObjectId("552d791269c6f61bfbe4e6f2"), "x" : 3 }
-....
-{ "_id" : ObjectId("552d791269c6f61bfbe4e701"), "x" : 18 }
-Type "it" for more
+var silence = new Kitten({ name: 'Silence' })
+console.log(silence.name) // 'Silence'
 </PRE>
-Iterate through the cursor.
-The find() method returns a cursor. To iterate the cursor and return more documents, type 
-<code>it</code> in the mongo shell. The shell will exhaust the cursor and return these documents:
+
+<P>
+Kittens can meow, so let's take a look at how to add "speak" functionality to our documents:
+
+<P>
+
+<FONT COLOR="#ff0000"> methods must be added to the schema before compiling it with</FONT> <code>mongoose.model()</code>
 <PRE>
-&gt; it
-{ "_id" : ObjectId("552d791269c6f61bfbe4e702"), "x" : 19 }
-.....
-{ "_id" : ObjectId("552d791269c6f61bfbe4e708"), "x" : 25 }
+kittySchema.methods.speak = function () {
+  var greeting = this.name
+    ? "Meow name is " + this.name
+    : "I don't have a name"
+  console.log(greeting);
+}
+
+var Kitten = mongoose.model('Kitten', kittySchema)
+</PRE>
+Functions added to the methods property of a schema get compiled into
+the Model prototype and exposed on each document instance:
+<PRE>
+var fluffy = new Kitten({ name: 'fluffy' });
+fluffy.speak()
 </PRE>
 
 <P>
-
-<H4><A NAME="SECTION06244020000000000000">
-Working with the Cursor</A>
-</H4>
-  
+We have talking kittens! But we still haven't saved anything to
+MongoDB. 
 
 <P>
-When you query a collection, MongoDB returns a “cursor” object that
-contains the results of the query. The mongo shell then iterates over
-the cursor to display the results. Rather than returning all results at
-once, the shell iterates over the cursor 20 times to display the first
-20 results and then waits for a request to iterate over the remaining
-results. In the shell, enter it to iterate over the next set of results.
+Each document can be saved to the database by calling its
+<code>save</code> method. 
 
 <P>
-The procedures in this section show other ways to work with a cursor. For comprehensive documentation on cursors, see Iterate the Returned Cursor.
+The first argument to the callback will be an error if
+any occured.
+
+<P>
+<PRE>
+fluffy.save(function (err, fluffy) {
+  if (err) return console.error(err);
+  fluffy.speak();
+});
+</PRE>
+
+<P>
+Say time goes by and we want to display all the kittens we've seen. 
+
+<P>
+We can access all of the kitten documents through our <code>Kitten</code> model.
+
+<P>
+<PRE>
+Kitten.find(function (err, kittens) {
+  if (err) return console.error(err);
+  console.log(kittens)
+})
+</PRE>
+
+<P>
+We just logged all of the kittens in our <code>db</code> to the console. 
+
+<P>
+If we want to filter our kittens by name, Mongoose supports MongoDBs rich querying syntax.
+
+<P>
+<PRE>
+Kitten.find({ name: /^Fluff/ }, callback)
+</PRE>
+This performs a search for all documents with a name property that begins with <code>"Fluff"</code> 
+and returns the result as an array of kittens to the <code>callback</code>.
+
+<P>
+Este es el código completo de nuestro ejemplo:
+
+<P>
+<PRE>
+[~/javascript/mongoose]$ cat getting-started.js 
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/test');
+
+var kittySchema = mongoose.Schema({
+    name: String
+  });
+
+
+kittySchema.methods.speak = function() {
+  var greeting = this.name? "Meow name is "+this.name : "I don't have a name";
+  console.log(greeting);
+
+}
+
+// compiling our schema into a Model
+var Kitten = mongoose.model('Kitten', kittySchema);
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'Error en la conexión a MongoDB:'));
+
+var errDisconnect =  function(err) {
+  if (err) { console.log("Se produjo un error en la desconexión! "+err) }
+  else { console.log("Desconectando!") }
+}
+
+var main = function() {
+  console.log("Abierta la conexión con MongoDB!");
+
+  var silence = new Kitten({ name: 'Silence' });
+  console.log(silence.name);    // 'Silence'
+  silence.speak(); // 'Meow name is Silence'
+
+  var fluffy = new Kitten({ name: 'fluffy' });
+  fluffy.speak();
+
+  fluffy.save(function (err, fluffy) {
+    if (err) console.error("no puedo guardar a fluffy! "+err)
+    else console.error("fluffy guardado!");
+
+    Kitten.find({ name: /^Fluff/i },function (err, kittens) {
+      if (err) return console.error("Error buscando gatos! "+err);
+      console.log(kittens);
+
+      mongoose.disconnect(errDisconnect);
+    });
+  });
+}
+
+db.once('open', main);
+</PRE>
+Cuando lo ejecutamos obtenemos:
+<PRE>
+[~/javascript/mongoose]$ node getting-started.js 
+Abierta la conexión con MongoDB!
+Silence
+Meow name is Silence
+Meow name is fluffy
+fluffy guardado!
+[ { _id: 552fb8f77e6de9990a4e6747, name: 'fluffy', __v: 0 } ]
+Desconectando!
+</PRE>
+Si lo ejecutamos una segunda vez obtenemos:
+<PRE>
+[~/javascript/mongoose]$ node getting-started.js 
+Abierta la conexión con MongoDB!
+Silence
+Meow name is Silence
+Meow name is fluffy
+fluffy guardado!
+[ { _id: 552fb8f77e6de9990a4e6747, name: 'fluffy', __v: 0 },
+  { _id: 552fb8f987df0fa30ab92647, name: 'fluffy', __v: 0 } ]
+Desconectando!
+</PRE>
 
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2918"
+<A NAME="tex2html2925"
   HREF="node100.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2912"
-  HREF="node95.html">
+<A NAME="tex2html2919"
+  HREF="node94.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2906"
+<A NAME="tex2html2913"
   HREF="node98.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2914"
-  HREF="node102.html">
+<A NAME="tex2html2921"
+  HREF="node101.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2916"
-  HREF="node105.html">
+<A NAME="tex2html2923"
+  HREF="node104.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -648,12 +416,12 @@ The procedures in this section show other ways to work with a cursor. For compre
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2919"
-  HREF="node100.html">Mongoose</A>
-<B>Sup:</B> <A NAME="tex2html2913"
-  HREF="node95.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2907"
-  HREF="node98.html">Pruebas</A>
+<B> Sig:</B> <A NAME="tex2html2926"
+  HREF="node100.html">Añadiendo Persistencia: Posts con</A>
+<B>Sup:</B> <A NAME="tex2html2920"
+  HREF="node94.html">CoffeeScript y Express</A>
+<B> Ant:</B> <A NAME="tex2html2914"
+  HREF="node98.html">MongoDB</A>
 </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>
