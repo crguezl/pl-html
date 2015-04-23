@@ -28,19 +28,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html1722"
+<A NAME="tex2html1718"
   HREF="node38.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html1716"
+<A NAME="tex2html1712"
   HREF="node30.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html1710"
+<A NAME="tex2html1706"
   HREF="node36.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html1718"
+<A NAME="tex2html1714"
   HREF="node102.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html1720"
+<A NAME="tex2html1716"
   HREF="node105.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -80,18 +80,18 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html1723"
+<B> Sig:</B> <A NAME="tex2html1719"
   HREF="node38.html">Dangling else: Asociando un</A>
-<B>Sup:</B> <A NAME="tex2html1717"
+<B>Sup:</B> <A NAME="tex2html1713"
   HREF="node30.html">Análisis Descendente mediante Parsing</A>
-<B> Ant:</B> <A NAME="tex2html1711"
+<B> Ant:</B> <A NAME="tex2html1707"
   HREF="node36.html">PegJS en los Browser</A>
 <B> Con:</B> 
-<A NAME="tex2html1718"
+<A NAME="tex2html1714"
   HREF="node102.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html1720"
+<A NAME="tex2html1716"
   HREF="node105.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
@@ -101,31 +101,29 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
 
 <UL CLASS="ChildLinks">
-<LI><A NAME="tex2html1724"
+<LI><A NAME="tex2html1720"
   HREF="node37.html#SECTION04471000000000000000">Eliminación Usando Operadores de Repetición</A>
 <UL>
-<LI><A NAME="tex2html1725"
+<LI><A NAME="tex2html1721"
   HREF="node37.html#SECTION04471010000000000000">Donde</A>
-<LI><A NAME="tex2html1726"
+<LI><A NAME="tex2html1722"
   HREF="node37.html#SECTION04471020000000000000">Un Esquema de Traducción Recursivo por la Izquierda</A>
-<LI><A NAME="tex2html1727"
+<LI><A NAME="tex2html1723"
   HREF="node37.html#SECTION04471030000000000000">Métodología</A>
-<LI><A NAME="tex2html1728"
+<LI><A NAME="tex2html1724"
   HREF="node37.html#SECTION04471040000000000000">Solución</A>
 </UL>
 <BR>
-<LI><A NAME="tex2html1729"
+<LI><A NAME="tex2html1725"
   HREF="node37.html#SECTION04472000000000000000">Eliminado la Recursividad por la Izquierda en la Calculadora Usando Operadores de Repetición</A>
-<LI><A NAME="tex2html1730"
-  HREF="node37.html#SECTION04473000000000000000">Eliminado la Recursividad por la Izquierda en la Calculadora Usando Predicados Semánticos</A>
-<LI><A NAME="tex2html1731"
-  HREF="node37.html#SECTION04474000000000000000">Eliminación de la Recursividad por la Izquierda y Atributos Heredados</A>
-<LI><A NAME="tex2html1732"
-  HREF="node37.html#SECTION04475000000000000000">Eliminación de la Recursión por la Izquierda en la Gramática</A>
-<LI><A NAME="tex2html1733"
-  HREF="node37.html#SECTION04476000000000000000">Eliminación de la Recursión por la Izquierda en un Esquema de Traducción</A>
-<LI><A NAME="tex2html1734"
-  HREF="node37.html#SECTION04477000000000000000">Eliminación de la Recursividad por la Izquierda en PEGJS</A>
+<LI><A NAME="tex2html1726"
+  HREF="node37.html#SECTION04473000000000000000">Eliminación Usando Predicados Semánticos</A>
+<LI><A NAME="tex2html1727"
+  HREF="node37.html#SECTION04474000000000000000">Eliminación de la Recursión por la Izquierda en un Esquema de Traducción</A>
+<LI><A NAME="tex2html1728"
+  HREF="node37.html#SECTION04475000000000000000">Eliminación de la Recursividad por la Izquierda en PEGJS</A>
+<LI><A NAME="tex2html1729"
+  HREF="node37.html#SECTION04476000000000000000">Eliminado la Recursividad por la Izquierda en la Calculadora Usando Predicados Semánticos</A>
 </UL>
 <!--End of Table of Child-Links-->
 <HR>
@@ -438,57 +436,10 @@ console.log(r);
 
 <P>
 
-<H2><A NAME="SECTION04473000000000000000">
-Eliminado la Recursividad por la Izquierda en la Calculadora Usando Predicados Semánticos</A>
-</H2>
-<PRE>
-[~/srcPLgrado/pegjs/examples(master)]$ cat simple2.pegjs 
-{
-  var sum = 0;
-  var initsum = function(first) { 
-    sum = first; 
-    return true; 
-  };
-  var add = function(op, p) {
-    switch(op) {
-        case '+':
-            sum += p; 
-            break;
-        case '-':
-            sum -= p; 
-            break;
-        default:
-            error('"+" or "-" expected');
-    }
-    return true;
-  };
-}
-
-sum     = first:value &amp;{ return initsum(first); } (op:[+-] product:value &amp; { return add(op, product); })* { return sum; } 
-value   = number:$[0-9]+                     { return parseInt(number,10); }
-        / '(' sum:sum ')'                    { return sum; }
-</PRE>
-
-<P>
-<PRE>
-[~/srcPLgrado/pegjs/examples(master)]$ cat use_simple2.js
-var PEG = require("./simple2.js");
-var input = process.argv[2] || "5-1-2";
-var r = PEG.parse(input);
-console.log(r);
-</PRE>
-
-<P>
-<PRE>
-[~/srcPLgrado/pegjs/examples(master)]$ pegjs simple2.pegjs 
-[~/srcPLgrado/pegjs/examples(master)]$ node use_simple2.js 3-1-5
--3
-</PRE>
-
-<P>
-
-<H2><A NAME="SECTION04474000000000000000">
-Eliminación de la Recursividad por la Izquierda y Atributos Heredados</A>
+<H2><A NAME="SECTION04473000000000000000"></A>
+<A NAME="subsection:eliminaleftrec"></A>
+<BR>
+Eliminación Usando Predicados Semánticos
 </H2>
 La sección anterior da una forma sencilla de resolver el problema respetando la semántica.
 Si no se dispone de operadores de repetición la cosa se vuelve mas complicada.
@@ -500,12 +451,6 @@ obviamente es mucho mejor
 usar la ilustrada anteriormente).
 
 <P>
-
-<H2><A NAME="SECTION04475000000000000000"></A>
-<A NAME="subsection:eliminaleftrec"></A>
-<BR>
-Eliminación de la Recursión por la Izquierda en la Gramática
-</H2>
 Es posible modificar la gramática para eliminar la recursión por 
 la izquierda. En este apartado nos limitaremos al caso de recursión 
 por la izquierda directa. 
@@ -582,7 +527,7 @@ eliminando así la recursión por la izquierda.
 <SPAN CLASS="MATH"><IMG
  WIDTH="70" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
  SRC="img93.png"
- ALT="$ R \rightarrow \alpha R$"></SPAN> se dice <A NAME="6340"></A><SPAN  CLASS="textbf">recursiva por la derecha</SPAN>.</I></DIV><P></P>
+ ALT="$ R \rightarrow \alpha R$"></SPAN> se dice <A NAME="6339"></A><SPAN  CLASS="textbf">recursiva por la derecha</SPAN>.</I></DIV><P></P>
 
 <P>
 Las producciones recursivas por la derecha dan lugar a árboles
@@ -626,7 +571,7 @@ de árboles operadores como el menos, que son asociativos a izquierdas.
 
 <P>
 
-<H2><A NAME="SECTION04476000000000000000"></A>
+<H2><A NAME="SECTION04474000000000000000"></A>
 <A NAME="subsection:eliminarecesquem"></A>
 <BR>
 Eliminación de la Recursión por la Izquierda en un Esquema de Traducción
@@ -830,7 +775,7 @@ El atributo <code>H</code> es un ejemplo de atributo heredado.
 
 <P>
 
-<H2><A NAME="SECTION04477000000000000000">
+<H2><A NAME="SECTION04475000000000000000">
 Eliminación de la Recursividad por la Izquierda en PEGJS</A>
 </H2>
 
@@ -886,20 +831,69 @@ Al ejecutarlo obtenemos:
 
 <P>
 
+<H2><A NAME="SECTION04476000000000000000">
+Eliminado la Recursividad por la Izquierda en la Calculadora Usando Predicados Semánticos</A>
+</H2>
+<PRE>
+[~/srcPLgrado/pegjs/examples(master)]$ cat simple2.pegjs 
+{
+  var sum = 0;
+  var initsum = function(first) { 
+    sum = first; 
+    return true; 
+  };
+  var add = function(op, p) {
+    switch(op) {
+        case '+':
+            sum += p; 
+            break;
+        case '-':
+            sum -= p; 
+            break;
+        default:
+            error('"+" or "-" expected');
+    }
+    return true;
+  };
+}
+
+sum     = first:value &amp;{ return initsum(first); } (op:[+-] product:value &amp; { return add(op, product); })* { return sum; } 
+value   = number:$[0-9]+                     { return parseInt(number,10); }
+        / '(' sum:sum ')'                    { return sum; }
+</PRE>
+
+<P>
+<PRE>
+[~/srcPLgrado/pegjs/examples(master)]$ cat use_simple2.js
+var PEG = require("./simple2.js");
+var input = process.argv[2] || "5-1-2";
+var r = PEG.parse(input);
+console.log(r);
+</PRE>
+
+<P>
+<PRE>
+[~/srcPLgrado/pegjs/examples(master)]$ pegjs simple2.pegjs 
+[~/srcPLgrado/pegjs/examples(master)]$ node use_simple2.js 3-1-5
+-3
+</PRE>
+
+<P>
+
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html1722"
+<A NAME="tex2html1718"
   HREF="node38.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html1716"
+<A NAME="tex2html1712"
   HREF="node30.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html1710"
+<A NAME="tex2html1706"
   HREF="node36.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html1718"
+<A NAME="tex2html1714"
   HREF="node102.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html1720"
+<A NAME="tex2html1716"
   HREF="node105.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -939,11 +933,11 @@ Al ejecutarlo obtenemos:
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html1723"
+<B> Sig:</B> <A NAME="tex2html1719"
   HREF="node38.html">Dangling else: Asociando un</A>
-<B>Sup:</B> <A NAME="tex2html1717"
+<B>Sup:</B> <A NAME="tex2html1713"
   HREF="node30.html">Análisis Descendente mediante Parsing</A>
-<B> Ant:</B> <A NAME="tex2html1711"
+<B> Ant:</B> <A NAME="tex2html1707"
   HREF="node36.html">PegJS en los Browser</A>
 </DIV>
 <!--End of Navigation Panel-->

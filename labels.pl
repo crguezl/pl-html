@@ -998,7 +998,7 @@ $external_latex_labels{$key} = q|5.1|;
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:eliminaleftrec/;
-$external_latex_labels{$key} = q|4.7.5|; 
+$external_latex_labels{$key} = q|4.7.3|; 
 $noresave{$key} = "$nosave";
 
 $key = q/chapter:coffeescriptexpress/;
@@ -1142,7 +1142,7 @@ $external_latex_labels{$key} = q|2.5|;
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:eliminarecesquem/;
-$external_latex_labels{$key} = q|4.7.6|; 
+$external_latex_labels{$key} = q|4.7.4|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:prioridades/;
