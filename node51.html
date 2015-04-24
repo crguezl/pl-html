@@ -7,8 +7,8 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 <HTML>
 <HEAD>
-<TITLE>Práctica: Análisis de Ámbito en PL0</TITLE>
-<META NAME="description" CONTENT="Práctica: Análisis de Ámbito en PL0">
+<TITLE>Práctica: Calculadora con Funciones</TITLE>
+<META NAME="description" CONTENT="Práctica: Calculadora con Funciones">
 <META NAME="keywords" CONTENT="javascriptexamples">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -21,27 +21,27 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 
 <LINK REL="next" HREF="node52.html">
 <LINK REL="previous" HREF="node50.html">
-<LINK REL="up" HREF="node44.html">
+<LINK REL="up" HREF="node42.html">
 <LINK REL="next" HREF="node52.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2022"
+<A NAME="tex2html2030"
   HREF="node52.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2016"
-  HREF="node44.html">
+<A NAME="tex2html2024"
+  HREF="node42.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2010"
+<A NAME="tex2html2018"
   HREF="node50.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2018"
-  HREF="node101.html">
+<A NAME="tex2html2026"
+  HREF="node99.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2020"
-  HREF="node104.html">
+<A NAME="tex2html2028"
+  HREF="node102.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -80,127 +80,108 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2023"
-  HREF="node52.html">Práctica: Traducción de Infijo</A>
-<B>Sup:</B> <A NAME="tex2html2017"
-  HREF="node44.html">Análisis Sintáctico Ascendente en</A>
-<B> Ant:</B> <A NAME="tex2html2011"
-  HREF="node50.html">Práctica: Analizador de PL0</A>
+<B> Sig:</B> <A NAME="tex2html2031"
+  HREF="node52.html">Práctica: Calculadora con Análisis</A>
+<B>Sup:</B> <A NAME="tex2html2025"
+  HREF="node42.html">Análisis Sintáctico Ascendente en</A>
+<B> Ant:</B> <A NAME="tex2html2019"
+  HREF="node50.html">Práctica: Traducción de Infijo</A>
 <B> Con:</B> 
-<A NAME="tex2html2018"
-  HREF="node101.html">
+<A NAME="tex2html2026"
+  HREF="node99.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2020"
-  HREF="node104.html">
+<A NAME="tex2html2028"
+  HREF="node102.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
 <!--End of Navigation Panel-->
-<!--Table of Child-Links-->
-<A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
 
-<UL CLASS="ChildLinks">
-<LI><UL>
-<LI><UL>
-<LI><A NAME="tex2html2024"
-  HREF="node51.html#SECTION04570010000000000000">Objetivos</A>
-</UL></UL></UL>
-<!--End of Table of Child-Links-->
-<HR>
-
-<H1><A NAME="SECTION04570000000000000000"></A>
-   <A NAME="8042"></A>
-  
-<A NAME="practica:analisisdeambitopl0"></A>
+<H1><A NAME="SECTION04590000000000000000"></A>
+   <A NAME="8053"></A>
 <BR>
-Práctica: Análisis de Ámbito en PL0
+Práctica: Calculadora  con Funciones
 </H1>
 
-<H4><A NAME="SECTION04570010000000000000">
-Objetivos</A>
-</H4>
-  
+<P>
+Añada funciones y sentencias de llamada a función a la práctica de traducción 
+de infijo a postfijo
+<A HREF="node50.html#section:calculadoraampliada">5.8</A>. Sigue un ejemplo de traducción:
 
 <P>
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170><PRE>
+def f(x) { x + 1 }
+def g(a, b) { a * f(b) }
+c = 3;
+f(1+c);
+g(3, 4)
+</PRE></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170><PRE>
+:f      args :x
+        $x
+        1
+        +
+        return
+:g      args :a,:b
+        $a
+        $b
+        call :f
+        *
+        return
+:main:
+        3
+        &amp;c
+        =
+        1
+        c
+        +
+        call :f
+        3
+        4
+        call :g
+</PRE></TD>
+</TR>
+</TABLE>
 
 <UL>
-<LI>Modifique la práctica anterior para que cada nodo del tipo <code>PROCEDURE</code>
-disponga de una tabla de símbolos en la que se almacenan todos las
-constantes, variables  y procedimientos declarados en el mismo.
-
-<P>
+<LI>Las funciones retornan la última expresión evaluada
 </LI>
-<LI>Existirá ademas una tabla de símbolos asociada con el nodo raíz 
-que representa al programa principal.
+<LI>Es un error llamar a una función con un número de argumentos 
+distinto que el número de parámetros con el que fué declarada
 </LI>
-<LI>Las declaraciones de constantes y variables no crean nodo, sino que se
-incorporan como información a la tabla de símbolos del procedimiento
-actual
+<LI>En la llamada, los argumentos se empujan en la pila.
+Después la instrucción <code>call :etiqueta</code> llama a
+la función con el nombre dado por la <code>etiqueta</code>
 </LI>
-<LI>Para una entrada de la tabla de símbolos
-<code>sym["a"]</code> se guarda que clase de objeto
-es: constante, variable, procedimiento, etc.
+<LI>Dentro de la función los argumentos se sitúan por encima del puntero 
+base. La pseudo-instrucción <code>args, p1, p2, ...</code> da nombre a los 
+parámetros empujados. Dentro del cuerpo de la función nos referimos a ellos
+prefijándolos con <code>$</code>.
 </LI>
-<LI>Si es un procedimiento se guarda el número de argumentos
-</LI>
-<LI>Si es una constante se guarda su valor
-</LI>
-<LI>Cada uso de un identificador (constante, variable, procedimiento)
-tiene un atributo <code>declared_in</code> que referencia en que nodo
-se declaró
-</LI>
-<LI>Si un identificador es usado y no fué declarado es un error
-</LI>
-<LI>Si se trata de una llamada a procedimiento (se ha usado <code>CALL</code> y el identificador corresponde a un <code>PROCEDURE</code>)
-se comprobará que el número 
-de argumentos coincide con el número de parámetros declarados en su 
-definición
-</LI>
-<LI>Si es un identificador de una constante, es un error
-que sea usado en la parte
-izquierda de una asignación (que no sea la de su declaración)
-</LI>
-<LI>Base de Datos
-
-<OL>
-<LI>Guarde en una tabla el nombre de usuario que guardó un programa.
-Provea una ruta para ver los programas de un usuario.
-</LI>
-<LI>Un programa <code>belongs_to</code> un usuario. Un usuario <code>has n</code> programas.
-Vea la sección
-<A NAME="tex2html323"
-  HREF="http://datamapper.org/docs/associations.html">DataMapper Associations</A>.
-</LI>
-</OL>
-</LI>
-<LI>Use la sección <code>issues</code> de su repositorio en 
-GitHub para coordinarse así como
-para llevar un histórico de las incidencias y la forma en la que
-se resolvieron. Repase el tutorial
-<A NAME="tex2html324"
-  HREF="https://guides.github.com/overviews/issues/">Mastering Issues</A>
-<P>
+<LI>La instrucción <code>return</code> limpia la pila dejándola en su estado anterior 
+y retorna la última expresión evaluada
 </LI>
 </UL>
 
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2022"
+<A NAME="tex2html2030"
   HREF="node52.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2016"
-  HREF="node44.html">
+<A NAME="tex2html2024"
+  HREF="node42.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2010"
+<A NAME="tex2html2018"
   HREF="node50.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2018"
-  HREF="node101.html">
+<A NAME="tex2html2026"
+  HREF="node99.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2020"
-  HREF="node104.html">
+<A NAME="tex2html2028"
+  HREF="node102.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -239,12 +220,12 @@ se resolvieron. Repase el tutorial
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2023"
-  HREF="node52.html">Práctica: Traducción de Infijo</A>
-<B>Sup:</B> <A NAME="tex2html2017"
-  HREF="node44.html">Análisis Sintáctico Ascendente en</A>
-<B> Ant:</B> <A NAME="tex2html2011"
-  HREF="node50.html">Práctica: Analizador de PL0</A>
+<B> Sig:</B> <A NAME="tex2html2031"
+  HREF="node52.html">Práctica: Calculadora con Análisis</A>
+<B>Sup:</B> <A NAME="tex2html2025"
+  HREF="node42.html">Análisis Sintáctico Ascendente en</A>
+<B> Ant:</B> <A NAME="tex2html2019"
+  HREF="node50.html">Práctica: Traducción de Infijo</A>
 </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>

@@ -7,8 +7,8 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 <HTML>
 <HEAD>
-<TITLE>Construcción del Árbol Sintáctico</TITLE>
-<META NAME="description" CONTENT="Construcción del Árbol Sintáctico">
+<TITLE>Análisis Sintáctico Ascendente en Ruby</TITLE>
+<META NAME="description" CONTENT="Análisis Sintáctico Ascendente en Ruby">
 <META NAME="keywords" CONTENT="javascriptexamples">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -19,29 +19,29 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 
 <LINK REL="STYLESHEET" HREF="mystyle.css">
 
-<LINK REL="next" HREF="node65.html">
-<LINK REL="previous" HREF="node63.html">
-<LINK REL="up" HREF="node44.html">
+<LINK REL="next" HREF="node67.html">
+<LINK REL="previous" HREF="node42.html">
+<LINK REL="up" HREF="node6.html">
 <LINK REL="next" HREF="node65.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2226"
+<A NAME="tex2html2231"
   HREF="node65.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2220"
-  HREF="node44.html">
+<A NAME="tex2html2225"
+  HREF="node6.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2214"
+<A NAME="tex2html2219"
   HREF="node63.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2222"
-  HREF="node101.html">
+<A NAME="tex2html2227"
+  HREF="node99.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2224"
-  HREF="node104.html">
+<A NAME="tex2html2229"
+  HREF="node102.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -80,47 +80,77 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2227"
-  HREF="node65.html">Consejos a seguir al</A>
-<B>Sup:</B> <A NAME="tex2html2221"
-  HREF="node44.html">Análisis Sintáctico Ascendente en</A>
-<B> Ant:</B> <A NAME="tex2html2215"
-  HREF="node63.html">Depuración en jison</A>
+<B> Sig:</B> <A NAME="tex2html2232"
+  HREF="node65.html">La Calculadora</A>
+<B>Sup:</B> <A NAME="tex2html2226"
+  HREF="node6.html">PARTE: APUNTES DE PROCESADORES</A>
+<B> Ant:</B> <A NAME="tex2html2220"
+  HREF="node63.html">Consejos a seguir al</A>
 <B> Con:</B> 
-<A NAME="tex2html2222"
-  HREF="node101.html">
+<A NAME="tex2html2227"
+  HREF="node99.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2224"
-  HREF="node104.html">
+<A NAME="tex2html2229"
+  HREF="node102.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
 <!--End of Navigation Panel-->
 
-<H1><A NAME="SECTION045200000000000000000">
-Construcción del Árbol Sintáctico</A>
+<H1><A NAME="SECTION04600000000000000000">
+Análisis Sintáctico Ascendente en Ruby</A>
 </H1>
-El siguiente ejemplo usa <code>jison</code> 
-para construir el árbol sintáctico de una expresión en infijo:
 
 <P>
+<BR> <HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html2233"
+  HREF="node65.html">La Calculadora</A>
+<UL>
+<LI><A NAME="tex2html2234"
+  HREF="node65.html#SECTION04611000000000000000">Uso desde Línea de Comandos</A>
+<LI><A NAME="tex2html2235"
+  HREF="node65.html#SECTION04612000000000000000">Análisis Léxico con <TT>rexical</TT></A>
+<LI><A NAME="tex2html2236"
+  HREF="node65.html#SECTION04613000000000000000">Análisis Sintáctico</A>
+<UL>
+<LI><A NAME="tex2html2237"
+  HREF="node65.html#SECTION04613010000000000000">Precedencias</A>
+<LI><A NAME="tex2html2238"
+  HREF="node65.html#SECTION04613020000000000000">Atributos</A>
+<LI><A NAME="tex2html2239"
+  HREF="node65.html#SECTION04613030000000000000">Declaring Tokens</A>
+<LI><A NAME="tex2html2240"
+  HREF="node65.html#SECTION04613040000000000000">Opciones</A>
+<LI><A NAME="tex2html2241"
+  HREF="node65.html#SECTION04613050000000000000">User Code Block</A>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html2242"
+  HREF="node66.html">Véase También</A>
+</UL>
+<!--End of Table of Child-Links-->
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2226"
+<A NAME="tex2html2231"
   HREF="node65.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2220"
-  HREF="node44.html">
+<A NAME="tex2html2225"
+  HREF="node6.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2214"
+<A NAME="tex2html2219"
   HREF="node63.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2222"
-  HREF="node101.html">
+<A NAME="tex2html2227"
+  HREF="node99.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2224"
-  HREF="node104.html">
+<A NAME="tex2html2229"
+  HREF="node102.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -159,12 +189,12 @@ para construir el árbol sintáctico de una expresión en infijo:
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2227"
-  HREF="node65.html">Consejos a seguir al</A>
-<B>Sup:</B> <A NAME="tex2html2221"
-  HREF="node44.html">Análisis Sintáctico Ascendente en</A>
-<B> Ant:</B> <A NAME="tex2html2215"
-  HREF="node63.html">Depuración en jison</A>
+<B> Sig:</B> <A NAME="tex2html2232"
+  HREF="node65.html">La Calculadora</A>
+<B>Sup:</B> <A NAME="tex2html2226"
+  HREF="node6.html">PARTE: APUNTES DE PROCESADORES</A>
+<B> Ant:</B> <A NAME="tex2html2220"
+  HREF="node63.html">Consejos a seguir al</A>
 </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>

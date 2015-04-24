@@ -7,8 +7,8 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 <HTML>
 <HEAD>
-<TITLE>CoffeeScript y Express</TITLE>
-<META NAME="description" CONTENT="CoffeeScript y Express">
+<TITLE>Porting to Coffeescript</TITLE>
+<META NAME="description" CONTENT="Porting to Coffeescript">
 <META NAME="keywords" CONTENT="javascriptexamples">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -19,28 +19,29 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 
 <LINK REL="STYLESHEET" HREF="mystyle.css">
 
-<LINK REL="previous" HREF="node89.html">
-<LINK REL="up" HREF="node88.html">
+<LINK REL="next" HREF="node95.html">
+<LINK REL="previous" HREF="node93.html">
+<LINK REL="up" HREF="node92.html">
 <LINK REL="next" HREF="node95.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2770"
+<A NAME="tex2html2832"
   HREF="node95.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2764"
-  HREF="node88.html">
+<A NAME="tex2html2826"
+  HREF="node92.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2760"
+<A NAME="tex2html2820"
   HREF="node93.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2766"
-  HREF="node101.html">
+<A NAME="tex2html2828"
+  HREF="node99.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2768"
-  HREF="node104.html">
+<A NAME="tex2html2830"
+  HREF="node102.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -79,171 +80,309 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2771"
-  HREF="node95.html">Getting Started</A>
-<B>Sup:</B> <A NAME="tex2html2765"
-  HREF="node88.html">SEPTIMA PARTE: APUNTES DE</A>
-<B> Ant:</B> <A NAME="tex2html2761"
-  HREF="node93.html">Cake</A>
+<B> Sig:</B> <A NAME="tex2html2833"
+  HREF="node95.html">Pruebas</A>
+<B>Sup:</B> <A NAME="tex2html2827"
+  HREF="node92.html">CoffeeScript y Express</A>
+<B> Ant:</B> <A NAME="tex2html2821"
+  HREF="node93.html">Getting Started</A>
 <B> Con:</B> 
-<A NAME="tex2html2766"
-  HREF="node101.html">
+<A NAME="tex2html2828"
+  HREF="node99.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2768"
-  HREF="node104.html">
+<A NAME="tex2html2830"
+  HREF="node102.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
 <!--End of Navigation Panel-->
-
-<H1><A NAME="SECTION06200000000000000000"></A>
-<A NAME="chapter:coffeescriptexpress"></A>
-<BR>
-CoffeeScript y Express
-</H1>
-Literally taken from
-James carr blog and updated 2015:
-
-<P>
-<A NAME="tex2html402"
-  HREF="http://blog.james-carr.org/2012/01/16/blog-rolling-with-mongodb-node-js-and-coffeescript/">http://blog.james-carr.org/2012/01/16/blog-rolling-with-mongodb-node-js-and-coffeescript/</A>
-<P>
-<BR> <HR>
 <!--Table of Child-Links-->
 <A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
 
 <UL CLASS="ChildLinks">
-<LI><A NAME="tex2html2772"
-  HREF="node95.html">Getting Started</A>
-<UL>
-<LI><A NAME="tex2html2773"
-  HREF="node95.html#SECTION06210010000000000000">Express generator</A>
-<LI><A NAME="tex2html2774"
-  HREF="node95.html#SECTION06210020000000000000">The Structure</A>
-<LI><A NAME="tex2html2775"
-  HREF="node95.html#SECTION06210030000000000000">package.json</A>
-<LI><A NAME="tex2html2776"
-  HREF="node95.html#SECTION06210040000000000000">app.js</A>
-<LI><A NAME="tex2html2777"
-  HREF="node95.html#SECTION06210050000000000000">El método <TT>app.use</TT></A>
-<LI><A NAME="tex2html2778"
-  HREF="node95.html#SECTION06210060000000000000">Middleware</A>
-<LI><A NAME="tex2html2779"
-  HREF="node95.html#SECTION06210070000000000000">Las Rutas / Routing</A>
-<LI><A NAME="tex2html2780"
-  HREF="node95.html#SECTION06210080000000000000">Running</A>
-<LI><A NAME="tex2html2781"
-  HREF="node95.html#SECTION06210090000000000000">El módulo debug</A>
-</UL>
-<BR>
-<LI><A NAME="tex2html2782"
-  HREF="node96.html">Porting to Coffeescript</A>
-<UL>
-<LI><A NAME="tex2html2783"
-  HREF="node96.html#SECTION06220010000000000000">Ejecución del Servidor</A>
-</UL>
-<BR>
-<LI><A NAME="tex2html2784"
-  HREF="node97.html">Pruebas</A>
-<UL>
-<LI><A NAME="tex2html2785"
-  HREF="node97.html#SECTION06230010000000000000">Mocha, Chai y Expect: instalando las dependencias</A>
-<LI><A NAME="tex2html2786"
-  HREF="node97.html#SECTION06230020000000000000">Una Prueba Sencilla</A>
-<LI><A NAME="tex2html2787"
-  HREF="node97.html#SECTION06230030000000000000">¿Cómo lo vamos a hacer?</A>
-<LI><A NAME="tex2html2788"
-  HREF="node97.html#SECTION06230040000000000000">Should display index with posts: red</A>
-<LI><A NAME="tex2html2789"
-  HREF="node97.html#SECTION06230050000000000000">Should display index with posts: green</A>
-<LI><A NAME="tex2html2790"
-  HREF="node97.html#SECTION06230060000000000000">Expect vars posts equal empty array: red</A>
-<LI><A NAME="tex2html2791"
-  HREF="node97.html#SECTION06230070000000000000">Expect vars posts equal empty array: green</A>
-<LI><A NAME="tex2html2792"
-  HREF="node97.html#SECTION06230080000000000000">views/index.jade</A>
-<LI><A NAME="tex2html2793"
-  HREF="node97.html#SECTION06230090000000000000">views/layout.jade</A>
-<LI><A NAME="tex2html2794"
-  HREF="node97.html#SECTION062300100000000000000">Should display the add post page: red</A>
-<LI><A NAME="tex2html2795"
-  HREF="node97.html#SECTION062300110000000000000">Should display the add post page: (false) green</A>
-<LI><A NAME="tex2html2796"
-  HREF="node97.html#SECTION062300120000000000000">Mocha: done</A>
-<LI><A NAME="tex2html2797"
-  HREF="node97.html#SECTION062300130000000000000">Escribiendo newPost</A>
-<LI><A NAME="tex2html2798"
-  HREF="node97.html#SECTION062300140000000000000">views/add_post.jade</A>
-<LI><A NAME="tex2html2799"
-  HREF="node97.html#SECTION062300150000000000000">Should display the add post page: (true) green</A>
-<LI><A NAME="tex2html2800"
-  HREF="node97.html#SECTION062300160000000000000">Gulpfile</A>
-<LI><A NAME="tex2html2801"
-  HREF="node97.html#SECTION062300170000000000000">Guardando el Post</A>
-<LI><A NAME="tex2html2802"
-  HREF="node97.html#SECTION062300180000000000000">Viewing a Single Post</A>
-</UL>
-<BR>
-<LI><A NAME="tex2html2803"
-  HREF="node98.html">MongoDB</A>
-<UL>
-<LI><A NAME="tex2html2804"
-  HREF="node98.html#SECTION06241000000000000000">Introducción</A>
-<UL>
-<LI><A NAME="tex2html2805"
-  HREF="node98.html#SECTION06241010000000000000">NoSQL</A>
-<LI><A NAME="tex2html2806"
-  HREF="node98.html#SECTION06241020000000000000">Relational  Database</A>
-<LI><A NAME="tex2html2807"
-  HREF="node98.html#SECTION06241030000000000000">Document Oriented DataBase</A>
-</UL>
-<LI><A NAME="tex2html2808"
-  HREF="node98.html#SECTION06242000000000000000">Getting Started with MongoDB</A>
-<LI><A NAME="tex2html2809"
-  HREF="node98.html#SECTION06243000000000000000">Create a Collection and Insert Documents</A>
-<LI><A NAME="tex2html2810"
-  HREF="node98.html#SECTION06244000000000000000">Insert Documents using a For Loop or a JavaScript Function</A>
-<UL>
-<LI><A NAME="tex2html2811"
-  HREF="node98.html#SECTION06244010000000000000">Insert Multiple Documents Using a For Loop</A>
-<LI><A NAME="tex2html2812"
-  HREF="node98.html#SECTION06244020000000000000">Working with the Cursor</A>
-</UL>
-</UL>
-<BR>
-<LI><A NAME="tex2html2813"
-  HREF="node99.html">Mongoose</A>
-<UL>
-<LI><A NAME="tex2html2814"
-  HREF="node99.html#SECTION06251000000000000000">Getting Started</A>
-</UL>
-<BR>
-<LI><A NAME="tex2html2815"
-  HREF="node100.html">Añadiendo Persistencia: Posts con MongoDB y Mongoose</A>
-<UL>
-<LI><A NAME="tex2html2816"
-  HREF="node100.html#SECTION06261000000000000000">Definiendo el Modelo y Probando que Funciona</A>
-<LI><A NAME="tex2html2817"
-  HREF="node100.html#SECTION06262000000000000000">Usando la Base de Datos MongoDB en vez de un Array en Nuestro Ejemplo</A>
-</UL></UL>
+<LI><UL>
+<LI><UL>
+<LI><A NAME="tex2html2834"
+  HREF="node94.html#SECTION06220010000000000000">Ejecución del Servidor</A>
+</UL></UL></UL>
 <!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION06220000000000000000">
+Porting to Coffeescript</A>
+</H1>
+At this point, let’s port our backend to coffeescript. 
+
+<P>
+You can install <code>js2coffee</code> via npm. So run the following:
+
+<P>
+<PRE>
+npm -g install js2coffee
+</PRE>
+<PRE>
+[~/src/coffee/coffeepress]$ js2coffee --version
+2.0.3
+[~/src/coffee/coffeepress]$ js2coffee --help
+Usage:
+    js2coffee FILES [options]
+
+Options:
+        --ast          prints the AST (for debugging)
+    -V, --verbose      prints more AST stuff (used with --ast)
+    -i, --indent N     indent by N spaces (default: 2)
+    -i, --indent tab   indent by tabs
+
+Modes:
+        --compat       compatibility mode *
+                       (implement workarounds to keep full compatibility)
+
+Other options:
+    -h, --help         print usage information
+    -v, --version      show version info and exit
+</PRE>
+
+<P>
+Vamos a convertir nuestros ficheros <code>*.js</code> a coffee:
+<PRE>
+~/src/coffee/coffeepress]$ ls *js **/*js bin/*
+app.js          bin/www         routes/index.js routes/users.js
+[~/src/coffee/coffeepress]$ js2coffee app.js &gt; app.coffee
+[~/src/coffee/coffeepress]$ js2coffee routes/index.js &gt; routes/index.coffee
+[~/src/coffee/coffeepress]$ js2coffee routes/users.js &gt; routes/users.coffee
+</PRE>
+Cuando probamos con el main obtenemos un error:
+<PRE>
+[~/src/coffee/coffeepress]$ js2coffee bin/www &gt; bin/www.coffee
+bin/www:1:0: [error] Unexpected token ILLEGAL
+</PRE>
+El error es debido a la primera línea para la bash con la 
+definición del intérprete:
+<PRE>
+[/tmp/coffeepress]$ cat -n bin/www 
+ 1  #!/usr/bin/env node
+ 2  
+ 3  /**
+ 4   * Module dependencies.
+ 5   */
+ 6  
+ 7  var app = require('../app');
+ 8  var debug = require('debug')('coffeepress:server');
+ 9  var http = require('http');
+10  
+11  /**
+12   * Get port from environment and store in Express.
+13   */
+14  
+15  var port = normalizePort(process.env.PORT || '3000');
+16  app.set('port', port);
+17  
+18  /**
+19   * Create HTTP server.
+20   */
+21  
+22  var server = http.createServer(app);
+23  
+24  /**
+25   * Listen on provided port, on all network interfaces.
+26   */
+27  
+28  server.listen(port);
+29  server.on('error', onError);
+30  server.on('listening', onListening);
+31  
+32  /**
+33   * Normalize a port into a number, string, or false.
+34   */
+35  
+36  function normalizePort(val) {
+37    var port = parseInt(val, 10);
+38  
+39    if (isNaN(port)) {
+40      // named pipe
+41      return val;
+42    }
+43  
+44    if (port &gt;= 0) {
+45      // port number
+46      return port;
+47    }
+48  
+49    return false;
+50  }
+51  
+52  /**
+53   * Event listener for HTTP server "error" event.
+54   */
+55  
+56  function onError(error) {
+57    if (error.syscall !== 'listen') {
+58      throw error;
+59    }
+60  
+61    var bind = typeof port === 'string'
+62      ? 'Pipe ' + port
+63      : 'Port ' + port
+64  
+65    // handle specific listen errors with friendly messages
+66    switch (error.code) {
+67      case 'EACCES':
+68        console.error(bind + ' requires elevated privileges');
+69        process.exit(1);
+70        break;
+71      case 'EADDRINUSE':
+72        console.error(bind + ' is already in use');
+73        process.exit(1);
+74        break;
+75      default:
+76        throw error;
+77    }
+78  }
+79  
+80  /**
+81   * Event listener for HTTP server "listening" event.
+82   */
+83  
+84  function onListening() {
+85    var addr = server.address();
+86    var bind = typeof addr === 'string'
+87      ? 'pipe ' + addr
+88      : 'port ' + addr.port;
+89    debug('Listening on ' + bind);
+90  }
+</PRE>
+
+<P>
+Obsérvense las líneas:
+<PRE>
+29  server.on('error', onError);
+30  server.on('listening', onListening);
+</PRE>
+
+<P>
+Many objects in Node emit events: 
+
+<UL>
+<LI>a <code>net.Server</code> emits an event each time a peer connects to it, 
+</LI>
+<LI>a <code>fs.readStream</code> emits an event when the file is opened. 
+</LI>
+</UL>
+All objects which emit events are instances of 
+<A NAME="tex2html410"
+  HREF="https://nodejs.org/api/events.html">events.EventEmitter </A>.
+
+<P>
+Functions can then be attached to objects, to be executed when an event is
+emitted. These functions are called <A NAME="12305"></A><SPAN  CLASS="textbf">listeners</SPAN>. 
+
+<P>
+Volviendo a nuestra traducción de <code>bin/www</code>, 
+si comentamos la primera línea no se producen errores pero si 
+que nos sale un warning:
+<PRE>
+~/src/coffee/coffeepress]$ js2coffee bin/www &gt; bin/www.coffee
+bin/www:37:6: [warning] Variable shadowing ('port') is not fully supported in CoffeeScript
+</PRE>
+Si cambiamos todas las apariciones de la variable 
+<code>port</code>  por p. ej. <code>lport</code>
+en la definición de la función <code>normalizePort</code> el warning desaparece:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ js2coffee bin/www &gt; bin/www.coffee 
+[~/src/coffee/coffeepress(master)]$
+</PRE>
+pero cuando ejecutamos el servidor obtenemos un nuevo error:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ coffee bin/www.coffee 
+TypeError: undefined is not a function
+  at Object.&lt;anonymous&gt; (/Users/casiano/local/src/coffee/coffeepress/bin/www.coffee:15:8)
+  at Object.&lt;anonymous&gt; (/Users/casiano/local/src/coffee/coffeepress/bin/www.coffee:3:1)
+  at Module._compile (module.js:456:26)
+</PRE>
+
+<P>
+Movemos la función <code>normalizePort</code> antes de la definición de <code>port</code> y se arregla el asunto.
+
+<P>
+
+<H4><A NAME="SECTION06220010000000000000">
+Ejecución del Servidor</A>
+</H4>
+  
+
+<P>
+<PRE>
+[~/src/coffee/coffeepress(master)]$ coffee bin/www.coffee 
+GET / 304 298.379 ms - -
+GET /stylesheets/style.css 304 6.048 ms - -
+</PRE>
+Otra forma de ejecutar el servidor es instalar <code>nodemon</code>
+<PRE>
+npm install -g nodemon
+</PRE>
+y ejecutarlo así:
+<PRE>
+~/src/coffee/coffeepress(master)]$ nodemon bin/www.coffee
+6 Apr 14:12:01 - [nodemon] v1.3.7
+6 Apr 14:12:01 - [nodemon] to restart at any time, enter `rs`
+6 Apr 14:12:01 - [nodemon] watching: *.*
+6 Apr 14:12:01 - [nodemon] starting `coffee bin/www.coffee`
+</PRE>
+<code>Nodemon</code> (see
+<A NAME="tex2html411"
+  HREF="http://nodemon.io/">http://nodemon.io/</A>
+)
+is for use during development of a node.js based application.
+
+<P>
+<code>nodemon</code> will watch the files in the directory in which <code>nodemon</code> was started, and if any files change, <code>nodemon</code> will automatically restart your node application.
+
+<P>
+<code>nodemon</code> does not require any changes to your code or method of
+development. <code>nodemon</code> simply wraps your node application and keeps an eye
+on any files that have changed. Remember that <code>nodemon</code> is a replacement
+wrapper for node, think of it as replacing the word "node" on the command
+line when you run your script.
+
+<P>
+Otra forma de ejecutar programas escritos en coffee 
+consiste en usar la posibilidad que existe de cargar
+el coffee desde un programa JavaScript usando 
+<code>coffee-script/register</code>. Modificamos <code>bin/www</code>
+como sigue:
+<PRE>
+[~/src/coffee/coffeepress.bak(master)]$ cat bin/www
+#!/usr/bin/env node
+// Note the new way of requesting CoffeeScript since 1.7.x
+require('coffee-script/register');
+// This bootstraps your server main file
+require('./www.coffee');
+</PRE>
+y ahora ejecutamos:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ node bin/www
+GET / 304 334.240 ms - -
+GET /stylesheets/style.css 304 7.269 ms - -
+</PRE>
+
+<P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2770"
+<A NAME="tex2html2832"
   HREF="node95.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2764"
-  HREF="node88.html">
+<A NAME="tex2html2826"
+  HREF="node92.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2760"
+<A NAME="tex2html2820"
   HREF="node93.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2766"
-  HREF="node101.html">
+<A NAME="tex2html2828"
+  HREF="node99.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2768"
-  HREF="node104.html">
+<A NAME="tex2html2830"
+  HREF="node102.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -282,12 +421,12 @@ James carr blog and updated 2015:
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2771"
-  HREF="node95.html">Getting Started</A>
-<B>Sup:</B> <A NAME="tex2html2765"
-  HREF="node88.html">SEPTIMA PARTE: APUNTES DE</A>
-<B> Ant:</B> <A NAME="tex2html2761"
-  HREF="node93.html">Cake</A>
+<B> Sig:</B> <A NAME="tex2html2833"
+  HREF="node95.html">Pruebas</A>
+<B>Sup:</B> <A NAME="tex2html2827"
+  HREF="node92.html">CoffeeScript y Express</A>
+<B> Ant:</B> <A NAME="tex2html2821"
+  HREF="node93.html">Getting Started</A>
 </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>

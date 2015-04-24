@@ -7,8 +7,8 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 <HTML>
 <HEAD>
-<TITLE>Dangling else: Asociando un else con su if mas cercano</TITLE>
-<META NAME="description" CONTENT="Dangling else: Asociando un else con su if mas cercano">
+<TITLE>Reconocimiento de Lenguajes con PEGjs</TITLE>
+<META NAME="description" CONTENT="Reconocimiento de Lenguajes con PEGjs">
 <META NAME="keywords" CONTENT="javascriptexamples">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -28,20 +28,20 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html1741"
+<A NAME="tex2html1745"
   HREF="node39.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html1735"
+<A NAME="tex2html1739"
   HREF="node30.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html1729"
+<A NAME="tex2html1733"
   HREF="node37.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html1737"
-  HREF="node101.html">
+<A NAME="tex2html1741"
+  HREF="node99.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html1739"
-  HREF="node104.html">
+<A NAME="tex2html1743"
+  HREF="node102.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -80,19 +80,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html1742"
-  HREF="node39.html">Not Predicate: Comentarios Anidados</A>
-<B>Sup:</B> <A NAME="tex2html1736"
+<B> Sig:</B> <A NAME="tex2html1746"
+  HREF="node39.html">Práctica: Analizador de PL0</A>
+<B>Sup:</B> <A NAME="tex2html1740"
   HREF="node30.html">Análisis Descendente mediante Parsing</A>
-<B> Ant:</B> <A NAME="tex2html1730"
+<B> Ant:</B> <A NAME="tex2html1734"
   HREF="node37.html">Eliminación de la Recursividad</A>
 <B> Con:</B> 
-<A NAME="tex2html1737"
-  HREF="node101.html">
+<A NAME="tex2html1741"
+  HREF="node99.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html1739"
-  HREF="node104.html">
+<A NAME="tex2html1743"
+  HREF="node102.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
@@ -101,24 +101,48 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
 
 <UL CLASS="ChildLinks">
-<LI><UL>
-<LI><UL>
-<LI><A NAME="tex2html1743"
-  HREF="node38.html#SECTION04480010000000000000">danglingelse.pegjs</A>
-<LI><A NAME="tex2html1744"
-  HREF="node38.html#SECTION04480020000000000000">use_danglingelse.js</A>
-<LI><A NAME="tex2html1745"
-  HREF="node38.html#SECTION04480030000000000000">Ejecución</A>
-<LI><A NAME="tex2html1746"
-  HREF="node38.html#SECTION04480040000000000000">Donde</A>
-</UL></UL></UL>
+<LI><A NAME="tex2html1747"
+  HREF="node38.html#SECTION04481000000000000000"><FONT COLOR="#ff0000"> Dangling else</FONT>: Asociando un else con su if mas cercano</A>
+<UL>
+<LI><A NAME="tex2html1748"
+  HREF="node38.html#SECTION04481010000000000000">danglingelse.pegjs</A>
+<LI><A NAME="tex2html1749"
+  HREF="node38.html#SECTION04481020000000000000">use_danglingelse.js</A>
+<LI><A NAME="tex2html1750"
+  HREF="node38.html#SECTION04481030000000000000">Ejecución</A>
+<LI><A NAME="tex2html1751"
+  HREF="node38.html#SECTION04481040000000000000">Donde</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html1752"
+  HREF="node38.html#SECTION04482000000000000000">Not Predicate: Comentarios Anidados</A>
+<UL>
+<LI><A NAME="tex2html1753"
+  HREF="node38.html#SECTION04482010000000000000">Pascal_comments.pegjs</A>
+<LI><A NAME="tex2html1754"
+  HREF="node38.html#SECTION04482020000000000000">use_pascal_comments.js</A>
+<LI><A NAME="tex2html1755"
+  HREF="node38.html#SECTION04482030000000000000">Ejecución</A>
+<LI><A NAME="tex2html1756"
+  HREF="node38.html#SECTION04482040000000000000">Donde</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html1757"
+  HREF="node38.html#SECTION04483000000000000000">Un Lenguaje Dependiente del Contexto</A>
+</UL>
 <!--End of Table of Child-Links-->
 <HR>
 
 <H1><A NAME="SECTION04480000000000000000">
+Reconocimiento de Lenguajes con PEGjs</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION04481000000000000000">
 
 <FONT COLOR="#ff0000"> Dangling else</FONT>: Asociando un else con su if mas cercano</A>
-</H1>
+</H2>
 
 <P>
 The dangling else is a problem in computer programming in which an
@@ -196,7 +220,7 @@ Here follows a solution in PEG.js:
 
 <P>
 
-<H4><A NAME="SECTION04480010000000000000">
+<H4><A NAME="SECTION04481010000000000000">
 danglingelse.pegjs</A>
 </H4>
   
@@ -220,7 +244,7 @@ then = _'then'_
 
 <P>
 
-<H4><A NAME="SECTION04480020000000000000">
+<H4><A NAME="SECTION04481020000000000000">
 use_danglingelse.js</A>
 </H4>
   
@@ -235,7 +259,7 @@ console.log(r);
 
 <P>
 
-<H4><A NAME="SECTION04480030000000000000">
+<H4><A NAME="SECTION04481030000000000000">
 Ejecución</A>
 </H4>
   
@@ -248,7 +272,7 @@ $ node use_danglingelse.js
 
 <P>
 
-<H4><A NAME="SECTION04480040000000000000">
+<H4><A NAME="SECTION04481040000000000000">
 Donde</A>
 </H4>
   
@@ -278,21 +302,190 @@ origin  git@github.com:crguezl/pegjs.git (push)
 
 <P>
 
+<H2><A NAME="SECTION04482000000000000000">
+Not Predicate: Comentarios Anidados</A>
+</H2>
+The following recursive  <A NAME="tex2html264"
+  HREF="http://pegjs.majda.cz/">PEG.js</A>
+
+program  matches Pascal-style nested comment syntax:
+<PRE>
+(* which can (* nest *) like this *)
+</PRE>
+
+<P>
+
+<H4><A NAME="SECTION04482010000000000000">
+Pascal_comments.pegjs</A>
+</H4>
+  
+
+<PRE>
+$ cat pascal_comments.pegjs 
+/* Pascal nested comments */
+
+P     =   prog:N+                          { return prog; }
+N     =   chars:$(!Begin ANY)+             { return chars;}
+        / C
+C     = Begin chars:T* End                 { return chars.join(''); }
+T     =   C 
+        / (!Begin !End char:ANY)           { return char;}
+Begin = '(*'
+End   = '*)'
+ANY   =   'z'    /* any character */       { return 'z';  }
+        / char:[^z]                        { return char; }
+</PRE>
+
+<P>
+
+<H4><A NAME="SECTION04482020000000000000">
+use_pascal_comments.js</A>
+</H4>
+  
+
+<PRE>
+$ cat use_pascal_comments.js 
+var PEG = require("./pascal_comments.js");
+var r = PEG.parse(
+  "not bla bla (* pascal (* nested *) comment *)"+
+  " pum pum (* another comment *)");
+console.log(r);
+</PRE>
+
+<P>
+
+<H4><A NAME="SECTION04482030000000000000">
+Ejecución</A>
+</H4>
+  
+
+<PRE>
+$ ../bin/pegjs pascal_comments.pegjs 
+$ node use_pascal_comments.js 
+[ 'not bla bla ',
+  ' pascal  nested  comment ',
+  ' pum pum ',
+  ' another comment ' ]
+</PRE>
+
+<P>
+
+<H4><A NAME="SECTION04482040000000000000">
+Donde</A>
+</H4>
+  
+
+<P>
+
+<UL>
+<LI><PRE>
+[~/srcPLgrado/pegjs/examples(master)]$ pwd -P
+/Users/casiano/local/src/javascript/PLgrado/pegjs/examples
+</PRE>
+
+<P>
+</LI>
+<LI><PRE>
+[~/srcPLgrado/pegjs/examples(master)]$ git remote -v
+dmajda  https://github.com/dmajda/pegjs.git (fetch)
+dmajda  https://github.com/dmajda/pegjs.git (push)
+origin  git@github.com:crguezl/pegjs.git (fetch)
+origin  git@github.com:crguezl/pegjs.git (push)
+</PRE>
+</LI>
+<LI><A NAME="tex2html265"
+  HREF="https://github.com/crguezl/pegjs/tree/master/examples">https://github.com/crguezl/pegjs/tree/master/examples</A>
+</LI>
+</UL>
+
+<P>
+
+<H2><A NAME="SECTION04483000000000000000">
+Un Lenguaje Dependiente del Contexto</A>
+</H2>
+
+<P>
+El lenguaje <!-- MATH
+ $\{ a^n b^n c^n / n \in \mathcal{N} \}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="131" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img99.png"
+ ALT="$ \{ a^n b^n c^n / n \in \mathcal{N} \}$"></SPAN> no puede ser 
+expresado mediante una gramática independiente del contexto.
+
+<P>
+<PRE>
+[~/Dropbox/src/javascript/PLgrado/pegjs/examples(master)]$ cat anbncn.pegjs 
+/*
+  The following parsing expression grammar describes the classic 
+  non-context-free language : 
+               { a^nb^nc^n / n &gt;= 1 }
+
+            S ← &amp;(A 'c') 'a'+ B !('a'/'b'/'c')
+            A ← 'a' A? 'b'
+            B ← 'b' B? 'c'
+*/
+
+S = &amp;(A 'c') 'a'+ B !('a'/'b'/'c')
+A = 'a' A? 'b'
+B = 'b' B? 'c'
+</PRE>
+
+<P>
+Este ejemplo puede ser obtenido desde GitHub:
+<PRE>
+[~/Dropbox/src/javascript/PLgrado/pegjs/examples(master)]$ git remote -v
+dmajda  https://github.com/dmajda/pegjs.git (fetch)
+dmajda  https://github.com/dmajda/pegjs.git (push)
+origin  git@github.com:crguezl/pegjs.git (fetch)
+origin  git@github.com:crguezl/pegjs.git (push)
+</PRE>
+
+<P>
+Veamos un ejemplo de uso:
+<PRE>
+[~/Dropbox/src/javascript/PLgrado/pegjs/examples(master)]$ cat use_anbncn.js 
+var PEG = require("./anbncn.js");
+var r = PEG.parse("aabbcc");
+console.log(r);
+
+try {
+  r = PEG.parse("aabbc");
+  console.log(r);
+}
+catch (e) {
+  console.log("Grr...."+e);
+}
+</PRE>
+
+<P>
+Ejecución:
+<PRE>
+[~/Dropbox/src/javascript/PLgrado/pegjs/examples(master)]$ ../bin/pegjs anbncn.pegjs 
+
+[~/Dropbox/src/javascript/PLgrado/pegjs/examples(master)]$ node use_anbncn.js 
+[ '', [ 'a', 'a' ], [ 'b', [ 'b', '', 'c' ], 'c' ], '' ]
+Grr....SyntaxError: Expected "c" but end of input found.
+</PRE>
+
+<P>
+
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html1741"
+<A NAME="tex2html1745"
   HREF="node39.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html1735"
+<A NAME="tex2html1739"
   HREF="node30.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html1729"
+<A NAME="tex2html1733"
   HREF="node37.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html1737"
-  HREF="node101.html">
+<A NAME="tex2html1741"
+  HREF="node99.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html1739"
-  HREF="node104.html">
+<A NAME="tex2html1743"
+  HREF="node102.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -331,11 +524,11 @@ origin  git@github.com:crguezl/pegjs.git (push)
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html1742"
-  HREF="node39.html">Not Predicate: Comentarios Anidados</A>
-<B>Sup:</B> <A NAME="tex2html1736"
+<B> Sig:</B> <A NAME="tex2html1746"
+  HREF="node39.html">Práctica: Analizador de PL0</A>
+<B>Sup:</B> <A NAME="tex2html1740"
   HREF="node30.html">Análisis Descendente mediante Parsing</A>
-<B> Ant:</B> <A NAME="tex2html1730"
+<B> Ant:</B> <A NAME="tex2html1734"
   HREF="node37.html">Eliminación de la Recursividad</A>
 </DIV>
 <!--End of Navigation Panel-->

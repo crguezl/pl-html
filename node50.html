@@ -7,8 +7,8 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 <HTML>
 <HEAD>
-<TITLE>Práctica: Analizador de PL0 Usando Jison</TITLE>
-<META NAME="description" CONTENT="Práctica: Analizador de PL0 Usando Jison">
+<TITLE>Práctica: Traducción de Infijo a Postfijo</TITLE>
+<META NAME="description" CONTENT="Práctica: Traducción de Infijo a Postfijo">
 <META NAME="keywords" CONTENT="javascriptexamples">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -21,27 +21,27 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 
 <LINK REL="next" HREF="node51.html">
 <LINK REL="previous" HREF="node49.html">
-<LINK REL="up" HREF="node44.html">
+<LINK REL="up" HREF="node42.html">
 <LINK REL="next" HREF="node51.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2005"
+<A NAME="tex2html2016"
   HREF="node51.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html1999"
-  HREF="node44.html">
+<A NAME="tex2html2010"
+  HREF="node42.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html1993"
+<A NAME="tex2html2004"
   HREF="node49.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2001"
-  HREF="node101.html">
+<A NAME="tex2html2012"
+  HREF="node99.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2003"
-  HREF="node104.html">
+<A NAME="tex2html2014"
+  HREF="node102.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -80,191 +80,128 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2006"
-  HREF="node51.html">Práctica: Análisis de Ámbito</A>
-<B>Sup:</B> <A NAME="tex2html2000"
-  HREF="node44.html">Análisis Sintáctico Ascendente en</A>
-<B> Ant:</B> <A NAME="tex2html1994"
-  HREF="node49.html">Construcción de las Tablas</A>
+<B> Sig:</B> <A NAME="tex2html2017"
+  HREF="node51.html">Práctica: Calculadora con Funciones</A>
+<B>Sup:</B> <A NAME="tex2html2011"
+  HREF="node42.html">Análisis Sintáctico Ascendente en</A>
+<B> Ant:</B> <A NAME="tex2html2005"
+  HREF="node49.html">Práctica: Análisis de Ámbito</A>
 <B> Con:</B> 
-<A NAME="tex2html2001"
-  HREF="node101.html">
+<A NAME="tex2html2012"
+  HREF="node99.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2003"
-  HREF="node104.html">
+<A NAME="tex2html2014"
+  HREF="node102.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
 <!--End of Navigation Panel-->
-<!--Table of Child-Links-->
-<A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
 
-<UL CLASS="ChildLinks">
-<LI><UL>
-<LI><UL>
-<LI><A NAME="tex2html2007"
-  HREF="node50.html#SECTION04560010000000000000">Donde</A>
-<LI><A NAME="tex2html2008"
-  HREF="node50.html#SECTION04560020000000000000">Tareas</A>
-<LI><A NAME="tex2html2009"
-  HREF="node50.html#SECTION04560030000000000000">Referencias para esta Práctica</A>
-</UL></UL></UL>
-<!--End of Table of Child-Links-->
-<HR>
-
-<H1><A NAME="SECTION04560000000000000000"></A>
-   <A NAME="8024"></A>
+<H1><A NAME="SECTION04580000000000000000"></A>
+   <A NAME="8051"></A>
   
-<A NAME="practica:pl0ampliadojison"></A>
+<A NAME="section:calculadoraampliada"></A>
 <BR>
-Práctica: Analizador de PL0 Usando Jison
+Práctica: Traducción de Infijo a Postfijo
 </H1>
-Reescriba el analizador sintáctico del lenguaje PL0 
-realizado en las prácticas
-<A HREF="node26.html#practica:pl0">2.6</A>
-y
-<A HREF="node41.html#practica:pl0ampliado">4.11</A>
-usando  <A NAME="tex2html312"
-  HREF="http://zaach.github.io/jison/">Jison</A>
-.
+Modifique el programa Jison realizado en la práctica 
+<A HREF="node45.html#subsectionpractica:calculadora">5.3.1</A>
+para traducir de infijo a postfijo. 
+Añada los operadores de comparación e igualdad.
+Por ejemplo
 
 <P>
-
-<H4><A NAME="SECTION04560010000000000000">
-Donde</A>
-</H4>
-  
-
-<P>
-
-<UL>
-<LI><A NAME="tex2html313"
-  HREF="https://github.com/crguezl/ull-etsii-grado-pl-jisoncalc">Repositorio en GitHub</A>
-</LI>
-<LI><A NAME="tex2html314"
-  HREF="http://jisoncalc.herokuapp.com/">Despliegue en Heroku</A>
-</LI>
-<LI><PRE>
-[~/jison/jisoncalc(develop)]$ pwd -P
-/Users/casiano/local/src/javascript/PLgrado/jison/jisoncalc
-</PRE>
-</LI>
-<LI><PRE>
-[~/jison/jisoncalc(develop)]$ git remote -v
-heroku  git@heroku.com:jisoncalc.git (fetch)
-heroku  git@heroku.com:jisoncalc.git (push)
-origin  git@github.com:crguezl/ull-etsii-grado-pl-jisoncalc.git (fetch)
-origin  git@github.com:crguezl/ull-etsii-grado-pl-jisoncalc.git (push)
-</PRE>
-</LI>
-</UL>
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>Infijo</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>Postfijo</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170><code>a = 3+2*4</code></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170><code> 3 2 4 * + &amp;a = </code></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170><code>b = a == 11</code></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170><code> a 11 == &amp;b = </code></TD>
+</TR>
+</TABLE>
+</DIV>
+En estas traducciones la notación 
+<code>&amp;a</code> indica la dirección de la variable <code>a</code>
+y <code>a</code> indica el valor almacenado en la variable <code>a</code>.
 
 <P>
-
-<H4><A NAME="SECTION04560020000000000000">
-Tareas</A>
-</H4>
-  
-
-<UL>
-<LI>La salida debe ser el AST del programa de entrada
-</LI>
-<LI>Modifique <code>block</code> y <code>statement</code> para que los 
-<code>procedure</code> reciban argumentos y las llamadas 
-a procedimiento puedan pasar argumentos.
-</LI>
-<LI>Añada <code>if ... then ... else ...</code>.
-</LI>
-<LI>Actualice la documentación de la gramática para que refleje la gramática ampliada
-</LI>
-<LI>Limite el número de programas que se pueden salvar a un número prefijado, por ejemplo 10. Si se intenta salvar uno se suprime uno al azar y se guarda el nuevo.
-</LI>
-<LI>Las pruebas deben comprobar que los AST generados reflejan la semántica
-del lenguaje así como alguna situación de error
-</LI>
-<LI>Sólo usuarios autenticados pueden salvar sus programas en la base de datos.
-</LI>
-<LI>Extienda la autenticación  <A NAME="tex2html315"
-  HREF="http://oauth.net/">OAuth</A>
- para que además de Google pueda hacerse
-con Twitter ó GitHub ó Facebook ó ... Sólo debe implementar una.
-</LI>
-<LI>Método de Entrega:
-
-<UL>
-<LI>Use un repositorio 
-privado en BitBucket o bien solicite al administrador del Centro de Cálculo 
-un repositorio privado en GitHub.
-</LI>
-<LI>Comparta dicho repositorio con sus colaboradores y con el profesor.
-</LI>
-<LI>Suba la práctica al workshop/taller antes de la fecha límite
-</LI>
-<LI>Cuando el taller pase a la fase de evaluación haga público su repositorio
-</LI>
-</UL>
-</LI>
-</UL>
+Añada sentencias 
+<code>if</code> ...
+<code>then</code> e <code>if</code> ... <code>then</code> ... <code>else</code>
 
 <P>
+Para realizar la traducción de estas sentencias
+añada 
+instrucciones <code>jmp label</code> y <code>jmpz label</code> (por <I>jump if zero</I>)
+y etiquetas:
 
-<H4><A NAME="SECTION04560030000000000000">
-Referencias para esta Práctica</A>
-</H4>
-  
-
-<UL>
-<LI>Véase el capítulo 
-<I>Oauth: Google, Twitter, GitHub, Facebook</I>
-<A HREF="node268.html#chapter:googleoauth"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]" SRC="crossref.png"></A>
-</LI>
-<LI>Véase 
-<A NAME="tex2html316"
-  HREF="http://intridea.github.io/omniauth/">Intridea Omniauth</A>
-y
-<A NAME="tex2html317"
-  HREF="https://github.com/intridea/omniauth">omniauth en GitHub</A>
-</LI>
-<LI>La gema <A NAME="tex2html318"
-  HREF="https://github.com/zquestz/omniauth-google-oauth2">omniauth-google-oauth2</A>
-</LI>
-<LI><A NAME="tex2html319"
-  HREF="https://console.developers.google.com/project">Google Developers Console</A>
-</LI>
-<LI><A NAME="tex2html320"
-  HREF="https://security.google.com/settings/security/permissions?pli=1">Revoking Access to an App in Google</A>
-</LI>
-<LI>La gema 
-<A NAME="tex2html321"
-  HREF="https://github.com/SFEley/sinatra-flash">sinatra-flash</A>
-</LI>
-<LI>Véase el capítulo <I>Heroku</I> <A HREF="node253.html#chapter:heroku"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]" SRC="crossref.png"></A>
-</LI>
-<LI><A NAME="tex2html322"
-  HREF="https://devcenter.heroku.com/articles/heroku-postgresql">Heroku Postgres</A>
-</LI>
-<LI>Véase el capítulo <I>DataMapper</I> <A HREF="node262.html#chapter:datamapper"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]" SRC="crossref.png"></A>
-</LI>
-</UL>
+<P>
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>Infijo</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>Postfijo</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227><PRE>
+a = (2+5)*3;
+if a == 0 then b = 5 else b = 3;
+c = b + 1;
+</PRE></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170><PRE>
+        2
+        5
+        +
+        3
+        *
+        &amp;a
+        =
+        a
+        0
+        ==
+        jmpz else1
+        5
+        &amp;b
+        =
+        jmp endif0
+:else1
+        3
+        &amp;b
+        =
+:endif0
+        b
+        1
+        +
+        &amp;c
+        =
+</PRE></TD>
+</TR>
+</TABLE>
+</DIV>
+Parta del repositorio 
+<A NAME="tex2html325"
+  HREF="https://github.com/crguezl/jison-simple-html-calc">https://github.com/crguezl/jison-simple-html-calc</A>.
 
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2005"
+<A NAME="tex2html2016"
   HREF="node51.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html1999"
-  HREF="node44.html">
+<A NAME="tex2html2010"
+  HREF="node42.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html1993"
+<A NAME="tex2html2004"
   HREF="node49.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2001"
-  HREF="node101.html">
+<A NAME="tex2html2012"
+  HREF="node99.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2003"
-  HREF="node104.html">
+<A NAME="tex2html2014"
+  HREF="node102.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -303,12 +240,12 @@ y
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2006"
-  HREF="node51.html">Práctica: Análisis de Ámbito</A>
-<B>Sup:</B> <A NAME="tex2html2000"
-  HREF="node44.html">Análisis Sintáctico Ascendente en</A>
-<B> Ant:</B> <A NAME="tex2html1994"
-  HREF="node49.html">Construcción de las Tablas</A>
+<B> Sig:</B> <A NAME="tex2html2017"
+  HREF="node51.html">Práctica: Calculadora con Funciones</A>
+<B>Sup:</B> <A NAME="tex2html2011"
+  HREF="node42.html">Análisis Sintáctico Ascendente en</A>
+<B> Ant:</B> <A NAME="tex2html2005"
+  HREF="node49.html">Práctica: Análisis de Ámbito</A>
 </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>
