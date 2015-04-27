@@ -7,8 +7,8 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 <HTML>
 <HEAD>
-<TITLE>SEPTIMA PARTE: APUNTES DE COFFESCRIPT</TITLE>
-<META NAME="description" CONTENT="SEPTIMA PARTE: APUNTES DE COFFESCRIPT">
+<TITLE>Inventing a language for turtle graphics</TITLE>
+<META NAME="description" CONTENT="Inventing a language for turtle graphics">
 <META NAME="keywords" CONTENT="javascriptexamples">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -19,29 +19,28 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 
 <LINK REL="STYLESHEET" HREF="mystyle.css">
 
-<LINK REL="next" HREF="node99.html">
-<LINK REL="previous" HREF="node74.html">
-<LINK REL="up" HREF="javascriptexamples.html">
+<LINK REL="previous" HREF="node85.html">
+<LINK REL="up" HREF="node75.html">
 <LINK REL="next" HREF="node87.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2640"
+<A NAME="tex2html2645"
   HREF="node87.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2634"
-  HREF="javascriptexamples.html">
+<A NAME="tex2html2639"
+  HREF="node75.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2628"
+<A NAME="tex2html2635"
   HREF="node85.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2636"
-  HREF="node99.html">
+<A NAME="tex2html2641"
+  HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2638"
-  HREF="node102.html">
+<A NAME="tex2html2643"
+  HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -80,97 +79,46 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2641"
-  HREF="node87.html">CoffeeScript. Introducción</A>
-<B>Sup:</B> <A NAME="tex2html2635"
-  HREF="javascriptexamples.html">Apuntes de la Asignatura</A>
-<B> Ant:</B> <A NAME="tex2html2629"
-  HREF="node85.html">Inventing a language for</A>
+<B> Sig:</B> <A NAME="tex2html2646"
+  HREF="node87.html">SEPTIMA PARTE: APUNTES DE</A>
+<B>Sup:</B> <A NAME="tex2html2640"
+  HREF="node75.html">PARTE: CREATE YOUR OWN</A>
+<B> Ant:</B> <A NAME="tex2html2636"
+  HREF="node85.html">Functions and all that</A>
 <B> Con:</B> 
-<A NAME="tex2html2636"
-  HREF="node99.html">
+<A NAME="tex2html2641"
+  HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2638"
-  HREF="node102.html">
+<A NAME="tex2html2643"
+  HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
 <!--End of Navigation Panel-->
 
-<H1><A NAME="SECTION06000000000000000000">
-SEPTIMA PARTE: APUNTES DE COFFESCRIPT</A>
+<H1><A NAME="SECTION05600000000000000000">
+ Inventing a language for turtle graphics</A>
 </H1>
-<BR> <HR>
-<!--Table of Child-Links-->
-<A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
-
-<UL CLASS="ChildLinks">
-<LI><A NAME="tex2html2642"
-  HREF="node87.html">CoffeeScript. Introducción</A>
-<UL>
-<LI><A NAME="tex2html2643"
-  HREF="node88.html">Introducción</A>
-<LI><A NAME="tex2html2644"
-  HREF="node89.html">CoffeeScript y JQuery</A>
-<LI><A NAME="tex2html2645"
-  HREF="node90.html">Ambito/Scope</A>
-<LI><A NAME="tex2html2646"
-  HREF="node91.html">Cake</A>
-</UL>
-<BR>
-<LI><A NAME="tex2html2647"
-  HREF="node92.html">CoffeeScript y Express</A>
-<UL>
-<LI><A NAME="tex2html2648"
-  HREF="node93.html">Getting Started</A>
-<LI><A NAME="tex2html2649"
-  HREF="node94.html">Porting to Coffeescript</A>
-<LI><A NAME="tex2html2650"
-  HREF="node95.html">Pruebas</A>
-<LI><A NAME="tex2html2651"
-  HREF="node96.html">MongoDB</A>
-<UL>
-<LI><A NAME="tex2html2652"
-  HREF="node96.html#SECTION06241000000000000000">Introducción</A>
-<LI><A NAME="tex2html2653"
-  HREF="node96.html#SECTION06242000000000000000">Getting Started with MongoDB</A>
-<LI><A NAME="tex2html2654"
-  HREF="node96.html#SECTION06243000000000000000">Create a Collection and Insert Documents</A>
-<LI><A NAME="tex2html2655"
-  HREF="node96.html#SECTION06244000000000000000">Insert Documents using a For Loop or a JavaScript Function</A>
-</UL>
-<LI><A NAME="tex2html2656"
-  HREF="node97.html">Mongoose</A>
-<UL>
-<LI><A NAME="tex2html2657"
-  HREF="node97.html#SECTION06251000000000000000">Getting Started</A>
-</UL>
-<LI><A NAME="tex2html2658"
-  HREF="node98.html">Añadiendo Persistencia: Posts con MongoDB y Mongoose</A>
-<UL>
-<LI><A NAME="tex2html2659"
-  HREF="node98.html#SECTION06261000000000000000">Definiendo el Modelo y Probando que Funciona</A>
-<LI><A NAME="tex2html2660"
-  HREF="node98.html#SECTION06262000000000000000">Usando la Base de Datos MongoDB en vez de un Array en Nuestro Ejemplo</A>
-</UL></UL></UL>
-<!--End of Table of Child-Links-->
+<A NAME="tex2html384"
+  HREF="http://nathansuniversity.com/turtle.html">http://nathansuniversity.com/turtle.html</A>
+<P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2640"
+<A NAME="tex2html2645"
   HREF="node87.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2634"
-  HREF="javascriptexamples.html">
+<A NAME="tex2html2639"
+  HREF="node75.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2628"
+<A NAME="tex2html2635"
   HREF="node85.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2636"
-  HREF="node99.html">
+<A NAME="tex2html2641"
+  HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2638"
-  HREF="node102.html">
+<A NAME="tex2html2643"
+  HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -209,17 +157,17 @@ SEPTIMA PARTE: APUNTES DE COFFESCRIPT</A>
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2641"
-  HREF="node87.html">CoffeeScript. Introducción</A>
-<B>Sup:</B> <A NAME="tex2html2635"
-  HREF="javascriptexamples.html">Apuntes de la Asignatura</A>
-<B> Ant:</B> <A NAME="tex2html2629"
-  HREF="node85.html">Inventing a language for</A>
+<B> Sig:</B> <A NAME="tex2html2646"
+  HREF="node87.html">SEPTIMA PARTE: APUNTES DE</A>
+<B>Sup:</B> <A NAME="tex2html2640"
+  HREF="node75.html">PARTE: CREATE YOUR OWN</A>
+<B> Ant:</B> <A NAME="tex2html2636"
+  HREF="node85.html">Functions and all that</A>
 </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I>Casiano Rodríguez León <BR>
-2015-04-24</I>
+2015-04-27</I>
 </ADDRESS>
 </BODY>
 </HTML>

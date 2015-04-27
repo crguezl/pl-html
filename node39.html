@@ -7,8 +7,8 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 <HTML>
 <HEAD>
-<TITLE>Práctica: Analizador de PL0 Ampliado Usando PEG.js</TITLE>
-<META NAME="description" CONTENT="Práctica: Analizador de PL0 Ampliado Usando PEG.js">
+<TITLE>Práctica: Analizador de PL0 Usando PEG.js</TITLE>
+<META NAME="description" CONTENT="Práctica: Analizador de PL0 Usando PEG.js">
 <META NAME="keywords" CONTENT="javascriptexamples">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -28,20 +28,20 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html1770"
+<A NAME="tex2html1775"
   HREF="node40.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html1764"
+<A NAME="tex2html1769"
   HREF="node30.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html1758"
+<A NAME="tex2html1763"
   HREF="node38.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html1766"
-  HREF="node99.html">
+<A NAME="tex2html1771"
+  HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html1768"
-  HREF="node102.html">
+<A NAME="tex2html1773"
+  HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -80,46 +80,30 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html1771"
-  HREF="node40.html">Práctica: Ambiguedad en C++</A>
-<B>Sup:</B> <A NAME="tex2html1765"
+<B> Sig:</B> <A NAME="tex2html1776"
+  HREF="node40.html">Práctica: Analizador de PL0</A>
+<B>Sup:</B> <A NAME="tex2html1770"
   HREF="node30.html">Análisis Descendente mediante Parsing</A>
-<B> Ant:</B> <A NAME="tex2html1759"
+<B> Ant:</B> <A NAME="tex2html1764"
   HREF="node38.html">Reconocimiento de Lenguajes con</A>
 <B> Con:</B> 
-<A NAME="tex2html1766"
-  HREF="node99.html">
+<A NAME="tex2html1771"
+  HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html1768"
-  HREF="node102.html">
+<A NAME="tex2html1773"
+  HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
 <!--End of Navigation Panel-->
-<!--Table of Child-Links-->
-<A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
-
-<UL CLASS="ChildLinks">
-<LI><UL>
-<LI><UL>
-<LI><A NAME="tex2html1772"
-  HREF="node39.html#SECTION04490010000000000000">Donde</A>
-<LI><A NAME="tex2html1773"
-  HREF="node39.html#SECTION04490020000000000000">Tareas</A>
-<LI><A NAME="tex2html1774"
-  HREF="node39.html#SECTION04490030000000000000">Referencias para esta Práctica</A>
-</UL></UL></UL>
-<!--End of Table of Child-Links-->
-<HR>
 
 <H1><A NAME="SECTION04490000000000000000"></A>
-   <A NAME="6390"></A>
-  
-<A NAME="practica:pl0ampliado"></A>
+   <A NAME="6393"></A>
 <BR>
-Práctica: Analizador de PL0 Ampliado Usando PEG.js
+Práctica: Analizador de PL0 Usando PEG.js
 </H1>
+  
 Reescriba el analizador sintáctico del lenguaje PL0 
 realizado en la práctica 
 <A HREF="node26.html#practica:pl0">2.6</A>
@@ -129,91 +113,21 @@ usando  <A NAME="tex2html266"
 
 <P>
 
-<H4><A NAME="SECTION04490010000000000000">
-Donde</A>
-</H4>
-  
-
-<P>
-
-<UL>
-<LI><A NAME="tex2html267"
-  HREF="https://github.com/crguezl/pegjscalc">Repositorio en GitHub</A>
-</LI>
-<LI><A NAME="tex2html268"
-  HREF="http://pegjspl0.herokuapp.com/">Despliegue en Heroku</A>
-</LI>
-<LI><PRE>
-[~/srcPLgrado/pegjscalc(master)]$ pwd -P
-/Users/casiano/local/src/javascript/PLgrado/pegjscalc
-</PRE>
-</LI>
-<LI><PRE>
-[~/srcPLgrado/pegjscalc(master)]$ git remote -v
-heroku  git@heroku.com:pegjspl0.git (fetch)
-heroku  git@heroku.com:pegjspl0.git (push)
-origin  git@github.com:crguezl/pegjscalc.git (fetch)
-origin  git@github.com:crguezl/pegjscalc.git (push)
-</PRE>
-</LI>
-</UL>
-
-<P>
-
-<H4><A NAME="SECTION04490020000000000000">
-Tareas</A>
-</H4>
-  
-
-<UL>
-<LI>Modifique <code>block</code> y <code>statement</code> para que los 
-<code>procedure</code> reciban argumentos y las llamadas 
-a procedimiento puedan pasar argumentos.
-Añada <code>if ... then ... else ...</code>.
-</LI>
-<LI>Actualice la documentación de la gramática para que refleje la gramática ampliada
-</LI>
-<LI>Limite el número de programas que se pueden salvar a un número prefijado, por ejemplo 10. Si se intenta salvar uno se suprime uno al azar y se guarda el nuevo.
-</LI>
-<LI>Las pruebas deben comprobar que la asociatividad a izquierdas funciona bien
-y probar todos los constructos del lenguaje así como alguna situación de error
-</LI>
-</UL>
-
-<P>
-
-<H4><A NAME="SECTION04490030000000000000">
-Referencias para esta Práctica</A>
-</H4>
-  
-
-<UL>
-<LI>Véase el capítulo <I>Heroku</I> <A HREF="node253.html#chapter:heroku"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]" SRC="crossref.png"></A>
-</LI>
-<LI><A NAME="tex2html269"
-  HREF="https://devcenter.heroku.com/articles/heroku-postgresql">Heroku Postgres</A>
-</LI>
-<LI>Véase el capítulo <I>DataMapper</I> <A HREF="node262.html#chapter:datamapper"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]" SRC="crossref.png"></A>
-</LI>
-</UL>
-
-<P>
-
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html1770"
+<A NAME="tex2html1775"
   HREF="node40.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html1764"
+<A NAME="tex2html1769"
   HREF="node30.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html1758"
+<A NAME="tex2html1763"
   HREF="node38.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html1766"
-  HREF="node99.html">
+<A NAME="tex2html1771"
+  HREF="node100.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html1768"
-  HREF="node102.html">
+<A NAME="tex2html1773"
+  HREF="node103.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -252,17 +166,17 @@ Referencias para esta Práctica</A>
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html1771"
-  HREF="node40.html">Práctica: Ambiguedad en C++</A>
-<B>Sup:</B> <A NAME="tex2html1765"
+<B> Sig:</B> <A NAME="tex2html1776"
+  HREF="node40.html">Práctica: Analizador de PL0</A>
+<B>Sup:</B> <A NAME="tex2html1770"
   HREF="node30.html">Análisis Descendente mediante Parsing</A>
-<B> Ant:</B> <A NAME="tex2html1759"
+<B> Ant:</B> <A NAME="tex2html1764"
   HREF="node38.html">Reconocimiento de Lenguajes con</A>
 </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I>Casiano Rodríguez León <BR>
-2015-04-24</I>
+2015-04-27</I>
 </ADDRESS>
 </BODY>
 </HTML>
