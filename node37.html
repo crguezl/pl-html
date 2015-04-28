@@ -530,7 +530,7 @@ eliminando así la recursión por la izquierda.
 <SPAN CLASS="MATH"><IMG
  WIDTH="70" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
  SRC="img93.png"
- ALT="$ R \rightarrow \alpha R$"></SPAN> se dice <A NAME="6357"></A><SPAN  CLASS="textbf">recursiva por la derecha</SPAN>.</I></DIV><P></P>
+ ALT="$ R \rightarrow \alpha R$"></SPAN> se dice <A NAME="6363"></A><SPAN  CLASS="textbf">recursiva por la derecha</SPAN>.</I></DIV><P></P>
 
 <P>
 Las producciones recursivas por la derecha dan lugar a árboles
@@ -649,6 +649,7 @@ orden:
 <P>
 <BR>
 <BR>
+<DIV ALIGN="CENTER">
 <TABLE CELLPADDING=3>
 <TR><TD ALIGN="LEFT"><!-- MATH
  $A   \rightarrow \gamma$
@@ -692,6 +693,7 @@ orden:
  ALT="$ R \rightarrow \epsilon$"></SPAN></TD>
 </TR>
 </TABLE>
+</DIV>
 
 <P>
 Si hay atributos en juego, la estrategia para construir un
@@ -703,6 +705,7 @@ postfijo de expresiones aritméticas de restas:
 <P>
 <BR>
 <BR>
+<DIV ALIGN="CENTER">
 <TABLE CELLPADDING=3>
 <TR><TD ALIGN="LEFT"><!-- MATH
  $expr   \rightarrow expr_1  -  NUM$
@@ -711,7 +714,7 @@ postfijo de expresiones aritméticas de restas:
  WIDTH="179" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
  SRC="img64.png"
  ALT="$ expr \rightarrow expr_1 - NUM$"></SPAN></TD>
-<TD ALIGN="LEFT"><code>{ $expr{T} = $expr[1]{T}." ".$NUM{VAL}." - "}</code></TD>
+<TD ALIGN="LEFT"><code>{ $expr{T} = $expr[1]{T}+" "+$NUM{VAL}+" - "}</code></TD>
 </TR>
 <TR><TD ALIGN="LEFT"><!-- MATH
  $expr   \rightarrow NUM$
@@ -725,6 +728,8 @@ postfijo de expresiones aritméticas de restas:
 </TABLE>
 <BR>
 <BR>
+
+</DIV>
 
 <P>
 En este caso introducimos un atributo <code>H</code> para los nodos de la clase
@@ -742,7 +747,7 @@ correspondiente atributo del el padre y/o de los hermanos del nodo:
 <P>
 <BR>
 <BR>
-
+<DIV ALIGN="CENTER">
 <!-- MATH
  $expr   \rightarrow NUM$
  -->
@@ -759,7 +764,7 @@ correspondiente atributo del el padre y/o de los hermanos del nodo:
 <SPAN CLASS="MATH"><IMG
  WIDTH="102" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
  SRC="img96.png"
- ALT="$ r \rightarrow - NUM$"></SPAN> <code>{ $r_1{H} = $r{H}." ".$NUM{VAL}." - " }</code> <SPAN CLASS="MATH"><IMG
+ ALT="$ r \rightarrow - NUM$"></SPAN> <code>{ $r_1{H} = $r{H}+" "+$NUM{VAL}." - " }</code> <SPAN CLASS="MATH"><IMG
  WIDTH="20" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
  SRC="img97.png"
  ALT="$ r_1$"></SPAN> <code>{ $r{T} = $r_1{T} }</code>
@@ -770,6 +775,8 @@ correspondiente atributo del el padre y/o de los hermanos del nodo:
  WIDTH="47" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
  SRC="img98.png"
  ALT="$ r \rightarrow \epsilon$"></SPAN> <code>{ $r{T} = $r{H} }</code>
+
+</DIV>
 <BR>
 <BR>
 
