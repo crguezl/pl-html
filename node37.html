@@ -844,6 +844,8 @@ Al ejecutarlo obtenemos:
 <H2><A NAME="SECTION04476000000000000000">
 Eliminado la Recursividad por la Izquierda en la Calculadora Usando Predicados Semánticos</A>
 </H2>
+En este ejemplo ilustramos como podemos insertar predicados semánticos entre los operadores de 
+repetición para obtener la semántica deseada:
 <PRE>
 [~/srcPLgrado/pegjs/examples(master)]$ cat simple2.pegjs 
 {
@@ -871,8 +873,10 @@ sum     = first:value &amp;{ return initsum(first); } (op:[+-] product:value &am
 value   = number:$[0-9]+                     { return parseInt(number,10); }
         / '(' sum:sum ')'                    { return sum; }
 </PRE>
-
-<P>
+El primer predicado <code>first:value &amp;{ return initsum(first); }</code> inicializa la suma.
+A continuación y aprovechando el cierre <code>*</code> se ejecuta en bucle el segundo predicado
+<code>(op:[+-] product:value &amp; { return add(op, product); })</code>i que va acumulando el resultado.
+La acción semántica final se limita a retornar el resultado acumulado.
 <PRE>
 [~/srcPLgrado/pegjs/examples(master)]$ cat use_simple2.js
 var PEG = require("./simple2.js");
