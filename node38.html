@@ -414,20 +414,16 @@ expresado mediante una gramática independiente del contexto.
 
 <P>
 <PRE>
-[~/Dropbox/src/javascript/PLgrado/pegjs/examples(master)]$ cat anbncn.pegjs 
+[~/srcPLgrado/pegjs/examples(master)]$ cat anbncn.pegjs 
 /*
   The following parsing expression grammar describes the classic 
   non-context-free language : 
                { a^nb^nc^n / n &gt;= 1 }
-
-            S ← &amp;(A 'c') 'a'+ B !('a'/'b'/'c')
-            A ← 'a' A? 'b'
-            B ← 'b' B? 'c'
 */
 
-S = &amp;(A 'c') 'a'+ B !('a'/'b'/'c')
-A = 'a' A? 'b'
-B = 'b' B? 'c'
+S = &amp;(A 'c') 'a'+ B:B !.  { return B; }
+A = 'a' A:A? 'b' { if (A) { return A+1; } else return 1; }
+B = 'b' B:B? 'c' { if (B) { return B+1; } else return 1; }
 </PRE>
 
 <P>
