@@ -439,28 +439,46 @@ origin  git@github.com:crguezl/pegjs.git (push)
 <P>
 Veamos un ejemplo de uso:
 <PRE>
-[~/Dropbox/src/javascript/PLgrado/pegjs/examples(master)]$ cat use_anbncn.js 
+[~/srcPLgrado/pegjs/examples(master)]$ cat use_anbncn.js 
+#!/usr/bin/env node
 var PEG = require("./anbncn.js");
-var r = PEG.parse("aabbcc");
-console.log(r);
 
-try {
-  r = PEG.parse("aabbc");
-  console.log(r);
+if (process.argv.length &gt; 2) {
+  try {
+    var r = PEG.parse(process.argv[2]);
+    console.log("ok "+JSON.stringify(r));
+  }
+  catch (e) {
+    console.log("Grr...."+e);
+  }
+  process.exit(0);
 }
-catch (e) {
-  console.log("Grr...."+e);
+var inputs = ["aabbcc", 
+              "aabbc",     // error
+              "aaabbbccc",
+              "aaaabbbccc"  // not accepted
+             ];
+
+for(var i = 0; i &lt; inputs.length; i++) {
+  var input = inputs[i];
+  try {
+    var r = PEG.parse(input);
+    console.log("ok "+JSON.stringify(r));
+  }
+  catch (e) {
+    console.log("Grr...."+e);
+  }
 }
 </PRE>
 
 <P>
 Ejecución:
 <PRE>
-[~/Dropbox/src/javascript/PLgrado/pegjs/examples(master)]$ ../bin/pegjs anbncn.pegjs 
-
-[~/Dropbox/src/javascript/PLgrado/pegjs/examples(master)]$ node use_anbncn.js 
-[ '', [ 'a', 'a' ], [ 'b', [ 'b', '', 'c' ], 'c' ], '' ]
+[~/srcPLgrado/pegjs/examples(master)]$ node use_anbncn.js
+ok 2
 Grr....SyntaxError: Expected "c" but end of input found.
+ok 3
+Grr....SyntaxError: Expected undefined but "a" found.
 </PRE>
 
 <P>
