@@ -321,19 +321,17 @@ Pascal_comments.pegjs</A>
   
 
 <PRE>
-$ cat pascal_comments.pegjs 
+[~/srcPLgrado/pegjs/examples(master)]$ cat pascal_comments.pegjs 
 /* Pascal nested comments */
 
-P     =   prog:N+                          { return prog; }
-N     =   chars:$(!Begin ANY)+             { return chars;}
+P     =   prog:N+                       { return prog; }
+N     =   chars:$(!Begin .)+            { return chars;}
         / C
-C     = Begin chars:T* End                 { return chars.join(''); }
+C     = Begin chars:$T* End             { return "C: "+chars; }
 T     =   C 
-        / (!Begin !End char:ANY)           { return char;}
+        / (!Begin !End char:.)          { return char;}
 Begin = '(*'
 End   = '*)'
-ANY   =   'z'    /* any character */       { return 'z';  }
-        / char:[^z]                        { return char; }
 </PRE>
 
 <P>
