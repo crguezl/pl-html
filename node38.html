@@ -143,8 +143,10 @@ Reconocimiento de Lenguajes con PEGjs</A>
 
 <P>
 
-<H2><A NAME="SECTION04481000000000000000">
-PEGs versus Gramáticas</A>
+<H2><A NAME="SECTION04481000000000000000"></A>
+<A NAME="subsection:pegvsgrammars"></A>
+<BR>
+PEGs versus Gramáticas
 </H2>
 
 <P>
@@ -347,6 +349,7 @@ Invirtiendo el orden de las Alternativas</A>
   
 
 <P>
+Si invertimos el orden de las alternativas:
 <PRE>
 [~/srcPLgrado/pegjs/examples(master)]$ cat danglingelse2.pegjs 
 /*
@@ -362,7 +365,11 @@ O = _'o'_                        { return 'o'; }
 else = _'else'_                 
 if = _'if'_
 then = _'then'_
-
+</PRE>
+el lenguaje reconocido cambia (vease el ejemplo
+en  la sección
+<A HREF="#subsection:pegvsgrammars">4.8.1</A>):
+<PRE>
 [~/srcPLgrado/pegjs/examples(master)]$ pegjs danglingelse2.pegjs 
 [~/srcPLgrado/pegjs/examples(master)]$ cat use_danglingelse2.js 
 var PEG = require("./danglingelse2.js");

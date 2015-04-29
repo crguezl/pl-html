@@ -338,6 +338,10 @@ $key = q/repaso:lasbases/;
 $external_labels{$key} = "$URL/" . q|node61.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/subsection:pegvsgrammars/;
+$external_labels{$key} = "$URL/" . q|node38.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/section:consejosyapp/;
 $external_labels{$key} = "$URL/" . q|node114.html|; 
 $noresave{$key} = "$nosave";
@@ -1053,12 +1057,12 @@ $key = q/section:ejercicioslastindex/;
 $external_latex_labels{$key} = q|1.7|; 
 $noresave{$key} = "$nosave";
 
-$key = q/definition:slrautomata/;
-$external_latex_labels{$key} = q|5.4.4|; 
-$noresave{$key} = "$nosave";
-
 $key = q/section:eyappatronesarbol/;
 $external_latex_labels{$key} = q|7.3|; 
+$noresave{$key} = "$nosave";
+
+$key = q/definition:slrautomata/;
+$external_latex_labels{$key} = q|5.4.4|; 
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:first/;
@@ -1069,12 +1073,12 @@ $key = q/practica:pl0/;
 $external_latex_labels{$key} = q|2.6|; 
 $noresave{$key} = "$nosave";
 
-$key = q/sectionpractica:csv/;
-$external_latex_labels{$key} = q|1.4|; 
-$noresave{$key} = "$nosave";
-
 $key = q/sectionpractica:csvajax/;
 $external_latex_labels{$key} = q|1.5|; 
+$noresave{$key} = "$nosave";
+
+$key = q/sectionpractica:csv/;
+$external_latex_labels{$key} = q|1.4|; 
 $noresave{$key} = "$nosave";
 
 $key = q/parrafo:jsonstringify/;
@@ -1093,12 +1097,12 @@ $key = q/section:conceptosbasicos/;
 $external_latex_labels{$key} = q|5.4|; 
 $noresave{$key} = "$nosave";
 
-$key = q/fig:wrongts/;
-$external_latex_labels{$key} = q|5.14|; 
-$noresave{$key} = "$nosave";
-
 $key = q/definition:eyapdewey/;
 $external_latex_labels{$key} = q|7.1.6|; 
+$noresave{$key} = "$nosave";
+
+$key = q/fig:wrongts/;
+$external_latex_labels{$key} = q|5.14|; 
 $noresave{$key} = "$nosave";
 
 $key = q/table:gramaticasimple/;
@@ -1109,12 +1113,12 @@ $key = q/sectionpractica:conversordetemperaturasconkarmaytravis/;
 $external_latex_labels{$key} = q|1.3|; 
 $noresave{$key} = "$nosave";
 
-$key = q/example:tablasslr/;
-$external_latex_labels{$key} = q|5.5.1|; 
-$noresave{$key} = "$nosave";
-
 $key = q/item:conflictos/;
 $external_latex_labels{$key} = q|8|; 
+$noresave{$key} = "$nosave";
+
+$key = q/example:tablasslr/;
+$external_latex_labels{$key} = q|5.5.1|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:esquemas/;
@@ -1133,12 +1137,12 @@ $key = q/fig:pegjs/;
 $external_latex_labels{$key} = q|4.1|; 
 $noresave{$key} = "$nosave";
 
-$key = q/example:eyaptutuast/;
-$external_latex_labels{$key} = q|7.1.2|; 
-$noresave{$key} = "$nosave";
-
 $key = q/section:eliminarecesquem/;
 $external_latex_labels{$key} = q|2.5|; 
+$noresave{$key} = "$nosave";
+
+$key = q/example:eyaptutuast/;
+$external_latex_labels{$key} = q|7.1.2|; 
 $noresave{$key} = "$nosave";
 
 $key = q/subsection:eliminarecesquem/;
@@ -1149,12 +1153,12 @@ $key = q/section:prioridades/;
 $external_latex_labels{$key} = q|5.13|; 
 $noresave{$key} = "$nosave";
 
-$key = q/section:errores/;
-$external_latex_labels{$key} = q|5.18|; 
-$noresave{$key} = "$nosave";
-
 $key = q/section:recursionizquierda/;
 $external_latex_labels{$key} = q|2.3|; 
+$noresave{$key} = "$nosave";
+
+$key = q/section:errores/;
+$external_latex_labels{$key} = q|5.18|; 
 $noresave{$key} = "$nosave";
 
 $key = q/section:depuracion/;
@@ -1169,20 +1173,20 @@ $key = q/section:tablas/;
 $external_latex_labels{$key} = q|5.12|; 
 $noresave{$key} = "$nosave";
 
-$key = q/ejercicio:tutugrammar/;
-$external_latex_labels{$key} = q|5.1.1|; 
-$noresave{$key} = "$nosave";
-
 $key = q/ejer:arbol/;
 $external_latex_labels{$key} = q|2|; 
 $noresave{$key} = "$nosave";
 
-$key = q/equation:deltahat/;
-$external_latex_labels{$key} = q|5.1|; 
+$key = q/ejercicio:tutugrammar/;
+$external_latex_labels{$key} = q|5.1.1|; 
 $noresave{$key} = "$nosave";
 
 $key = q/parrafo:mochaychai/;
 $external_latex_labels{$key} = q|1.2|; 
+$noresave{$key} = "$nosave";
+
+$key = q/equation:deltahat/;
+$external_latex_labels{$key} = q|5.1|; 
 $noresave{$key} = "$nosave";
 
 $key = q/definition:arbolconcreto/;
@@ -1195,6 +1199,10 @@ $noresave{$key} = "$nosave";
 
 $key = q/subsection:nfa2dfa/;
 $external_latex_labels{$key} = q|5.5.2|; 
+$noresave{$key} = "$nosave";
+
+$key = q/subsection:pegvsgrammars/;
+$external_latex_labels{$key} = q|4.8.1|; 
 $noresave{$key} = "$nosave";
 
 $key = q/example:eyaptututreegrammar/;

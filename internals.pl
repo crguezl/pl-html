@@ -338,6 +338,10 @@ $key = q/repaso:lasbases/;
 $ref_files{$key} = "$dir".q|node61.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/subsection:pegvsgrammars/;
+$ref_files{$key} = "$dir".q|node38.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/section:consejosyapp/;
 $ref_files{$key} = "$dir".q|node114.html|; 
 $noresave{$key} = "$nosave";
