@@ -136,12 +136,12 @@ PEG Syntax</A>
   
 
 <UL>
-<LI>On the top level, the grammar consists of <A NAME="6267"></A><SPAN  CLASS="textbf">rules</SPAN>. 
+<LI>On the top level, the grammar consists of <A NAME="6287"></A><SPAN  CLASS="textbf">rules</SPAN>. 
 </LI>
 <LI>Each rule has a name (e.g. <code>primary</code>) that
 identifies the rule, and a 
 </LI>
-<LI><A NAME="6269"></A><SPAN  CLASS="textbf">parsing expression</SPAN> e.g. 
+<LI><A NAME="6289"></A><SPAN  CLASS="textbf">parsing expression</SPAN> e.g. 
 <PRE>
 integer / LEFTPAR additive:additive RIGHTPAR { return additive; }
 </PRE>
@@ -159,7 +159,7 @@ integer "integer"
 </PRE>
 </LI>
 <LI>The
-parsing starts at the first rule, which is also called the <A NAME="6273"></A><SPAN  CLASS="textbf">start rule</SPAN>.
+parsing starts at the first rule, which is also called the <A NAME="6293"></A><SPAN  CLASS="textbf">start rule</SPAN>.
 </LI>
 </UL>
 
@@ -195,7 +195,7 @@ Initializers</A>
   
 
 <UL>
-<LI>Rules can be preceded by an <A NAME="6283"></A><SPAN  CLASS="textbf">initializer</SPAN> — a piece of JavaScript
+<LI>Rules can be preceded by an <A NAME="6303"></A><SPAN  CLASS="textbf">initializer</SPAN> — a piece of JavaScript
 code in curly braces (<code>{</code> and <code>}</code>). 
 </LI>
 <LI>
@@ -205,7 +205,7 @@ before the generated parser starts parsing</FONT>
 <LI>All variables and functions
 defined in the initializer are accessible in rule actions and semantic
 predicates (the <code>&amp; { predicate }</code> and <code>! { predicate }</code> 
-are called <A NAME="6287"></A><SPAN  CLASS="textbf">semantic predicates</SPAN>)
+are called <A NAME="6307"></A><SPAN  CLASS="textbf">semantic predicates</SPAN>)
 </LI>
 <LI>The code inside the initializer can access options passed to
 the parser using the <code>options</code> variable. 
@@ -353,7 +353,7 @@ Expressions can also contain references to other rules.
 
 <P>
 If an expression successfully matches a part of the text when running the
-generated parser, it produces a <A NAME="6295"></A><SPAN  CLASS="textbf">match result</SPAN>, which is a JavaScript value.
+generated parser, it produces a <A NAME="6315"></A><SPAN  CLASS="textbf">match result</SPAN>, which is a JavaScript value.
 
 <P>
 
@@ -378,7 +378,7 @@ Parser Actions</A>
   
 
 <P>
-One special case of parser expression is a <A NAME="6307"></A><SPAN  CLASS="textbf">parser action</SPAN> — a piece of
+One special case of parser expression is a <A NAME="6327"></A><SPAN  CLASS="textbf">parser action</SPAN> — a piece of
 JavaScript code inside curly braces (<code>{</code> and <code>}</code>) that 
 <FONT COLOR="#ff0000"> takes match
 results of some of the the preceding expressions and returns a JavaScript
@@ -1219,7 +1219,7 @@ whitespace "whitespace"
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I>Casiano Rodríguez León <BR>
-2015-04-29</I>
+2015-04-30</I>
 </ADDRESS>
 </BODY>
 </HTML>

@@ -116,7 +116,7 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <HR>
 
 <H1><A NAME="SECTION04150000000000000000"></A>
-   <A NAME="3669"></A>
+   <A NAME="3679"></A>
   
 <A NAME="sectionpractica:csvajax"></A>
 <BR>
@@ -252,6 +252,33 @@ En el directorio <code>views</code> hemos puesto el template:
   &lt;/body&gt;
 &lt;/html&gt;
 </PRE>
+
+<UL>
+<LI><code>req.query</code>
+
+<P>
+An object containing a property for each query string parameter in the route. If there is no query string, it is the empty object, <code>{}</code>.
+
+<P>
+<PRE>
+// GET /search?q=tobi+ferret
+req.query.q
+// =&gt; "tobi ferret"
+
+// GET /shoes?order=desc&amp;shoe[color]=blue&amp;shoe[type]=converse
+req.query.order
+// =&gt; "desc"
+
+req.query.shoe.color
+// =&gt; "blue"
+
+req.query.shoe.type
+// =&gt; "converse"
+</PRE>
+</LI>
+</UL>
+
+<P>
 Estas son las dependencias:
 <PRE>
 [~/javascript/jquery/how-jquery-works-tutorial(getallparams)]$ cat package.json 
@@ -376,7 +403,7 @@ Le añadimos
 <LI>Use los 
 <FONT COLOR="#ff0000"> Issues de GitHub</FONT> como herramienta colaborativa , indicando
 que bugs han detectado, que funcionalidades hay que añadir, etc.
-Usen <A NAME="4170"></A><SPAN  CLASS="textbf">etiquetas</SPAN> y <A NAME="4172"></A><SPAN  CLASS="textbf">milestones</SPAN> y asigne tareas a los
+Usen <A NAME="4184"></A><SPAN  CLASS="textbf">etiquetas</SPAN> y <A NAME="4186"></A><SPAN  CLASS="textbf">milestones</SPAN> y asigne tareas a los
 programadores del
 grupo. Aprenda a referenciar commits dentro de un issue, a referenciar colaboradores, etc.
 
@@ -452,7 +479,7 @@ Para ello vale la pena que lean este tutorial:
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I>Casiano Rodríguez León <BR>
-2015-04-29</I>
+2015-04-30</I>
 </ADDRESS>
 </BODY>
 </HTML>
