@@ -371,6 +371,19 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img49.png"
  ALT="$ FIRST(\alpha)$">|; 
 
+$key = q/ASSIGN(x,TIMES(y,ID));MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="232" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img353.png"
+ ALT="$ ASSIGN(x, TIMES(y,ID))$">|; 
+
+$key = q/%latex2htmlidmarker21925S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img100.png"
+ ALT="% latex2html id marker 21925
+$ S = program$">|; 
+
 $key = q/tslash2ldotp1;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
@@ -382,12 +395,6 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="45" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
  SRC="|."$dir".q|img101.png"
  ALT="$ FSD$">|; 
-
-$key = q/ASSIGN(x,TIMES(y,ID));MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="232" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img353.png"
- ALT="$ ASSIGN(x, TIMES(y,ID))$">|; 
 
 $key = q/BrightarrowY_1ldotsY_n;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1266,13 +1273,6 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="396" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img197.png"
  ALT="$ \forall a \in FOLLOW(A): action[i][a] = reduce A \rightarrow \alpha$">|; 
-
-$key = q/%latex2htmlidmarker21920S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img100.png"
- ALT="% latex2html id marker 21920
-$ S = program$">|; 
 
 $key = q/Astackrel{*}{Longrightarrow}Aalpha;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
