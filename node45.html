@@ -404,8 +404,8 @@ Práctica: Secuencia de Asignaciones Simples
 </H2>
   
 Modifique este ejemplo para que el lenguaje acepte una secuencia
-de sentencias de asignación de la forma <code>ID = NUM</code> separadas
-por puntos y comas, por ejemplo <code>a = 4; b = 4.56; c = -8.57e34</code>.
+de sentencias de asignación de la forma <code>ID = expression</code> separadas
+por puntos y comas, por ejemplo <code>a = 4; b = a+4.56; c = -8.57e34</code>.
 El analizador retorna un hash/objeto 
 cuyas claves son los identificadores y cuyos valores 
 son los números.
@@ -416,6 +416,8 @@ son los números.
 <LI>Como punto de arranque, clone el repositorio en
 <A NAME="tex2html307"
   HREF="https://github.com/crguezl/jison-simple-html-calc">https://github.com/crguezl/jison-simple-html-calc</A>.
+</LI>
+<LI>Comience añadiendo sólo la asignación <code>ID = NUM</code> y las expresiones <code>ID</code> 
 
 <P>
 </LI>
@@ -492,7 +494,7 @@ son los números.
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I>Casiano Rodríguez León <BR>
-2015-05-06</I>
+2015-05-07</I>
 </ADDRESS>
 </BODY>
 </HTML>
