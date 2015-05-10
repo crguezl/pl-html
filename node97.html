@@ -7,8 +7,8 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 <HTML>
 <HEAD>
-<TITLE>MongoDB</TITLE>
-<META NAME="description" CONTENT="MongoDB">
+<TITLE>Pruebas</TITLE>
+<META NAME="description" CONTENT="Pruebas">
 <META NAME="keywords" CONTENT="javascriptexamples">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -21,27 +21,27 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 
 <LINK REL="next" HREF="node98.html">
 <LINK REL="previous" HREF="node96.html">
-<LINK REL="up" HREF="node93.html">
+<LINK REL="up" HREF="node94.html">
 <LINK REL="next" HREF="node98.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2907"
+<A NAME="tex2html2893"
   HREF="node98.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2901"
-  HREF="node93.html">
+<A NAME="tex2html2887"
+  HREF="node94.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2895"
+<A NAME="tex2html2881"
   HREF="node96.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2903"
-  HREF="node100.html">
+<A NAME="tex2html2889"
+  HREF="node101.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2905"
-  HREF="node103.html">
+<A NAME="tex2html2891"
+  HREF="node104.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -80,19 +80,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2908"
-  HREF="node98.html">Mongoose</A>
-<B>Sup:</B> <A NAME="tex2html2902"
-  HREF="node93.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2896"
-  HREF="node96.html">Pruebas</A>
+<B> Sig:</B> <A NAME="tex2html2894"
+  HREF="node98.html">MongoDB</A>
+<B>Sup:</B> <A NAME="tex2html2888"
+  HREF="node94.html">CoffeeScript y Express</A>
+<B> Ant:</B> <A NAME="tex2html2882"
+  HREF="node96.html">Porting to Coffeescript</A>
 <B> Con:</B> 
-<A NAME="tex2html2903"
-  HREF="node100.html">
+<A NAME="tex2html2889"
+  HREF="node101.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2905"
-  HREF="node103.html">
+<A NAME="tex2html2891"
+  HREF="node104.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
@@ -101,515 +101,1083 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <A NAME="CHILD_LINKS"><STRONG>Subsecciones</STRONG></A>
 
 <UL CLASS="ChildLinks">
+<LI><UL>
+<LI><UL>
+<LI><A NAME="tex2html2895"
+  HREF="node97.html#SECTION06230010000000000000">Mocha, Chai y Expect: instalando las dependencias</A>
+<LI><A NAME="tex2html2896"
+  HREF="node97.html#SECTION06230020000000000000">Una Prueba Sencilla</A>
+<LI><A NAME="tex2html2897"
+  HREF="node97.html#SECTION06230030000000000000">¿Cómo lo vamos a hacer?</A>
+<LI><A NAME="tex2html2898"
+  HREF="node97.html#SECTION06230040000000000000">Should display index with posts: red</A>
+<LI><A NAME="tex2html2899"
+  HREF="node97.html#SECTION06230050000000000000">Should display index with posts: green</A>
+<LI><A NAME="tex2html2900"
+  HREF="node97.html#SECTION06230060000000000000">Expect vars posts equal empty array: red</A>
+<LI><A NAME="tex2html2901"
+  HREF="node97.html#SECTION06230070000000000000">Expect vars posts equal empty array: green</A>
+<LI><A NAME="tex2html2902"
+  HREF="node97.html#SECTION06230080000000000000">views/index.jade</A>
+<LI><A NAME="tex2html2903"
+  HREF="node97.html#SECTION06230090000000000000">views/layout.jade</A>
+<LI><A NAME="tex2html2904"
+  HREF="node97.html#SECTION062300100000000000000">Should display the add post page: red</A>
+<LI><A NAME="tex2html2905"
+  HREF="node97.html#SECTION062300110000000000000">Should display the add post page: (false) green</A>
+<LI><A NAME="tex2html2906"
+  HREF="node97.html#SECTION062300120000000000000">Mocha: done</A>
+<LI><A NAME="tex2html2907"
+  HREF="node97.html#SECTION062300130000000000000">Escribiendo newPost</A>
+<LI><A NAME="tex2html2908"
+  HREF="node97.html#SECTION062300140000000000000">views/add_post.jade</A>
 <LI><A NAME="tex2html2909"
-  HREF="node97.html#SECTION06241000000000000000">Introducción</A>
-<UL>
+  HREF="node97.html#SECTION062300150000000000000">Should display the add post page: (true) green</A>
 <LI><A NAME="tex2html2910"
-  HREF="node97.html#SECTION06241010000000000000">NoSQL</A>
+  HREF="node97.html#SECTION062300160000000000000">Gulpfile</A>
 <LI><A NAME="tex2html2911"
-  HREF="node97.html#SECTION06241020000000000000">Relational  Database</A>
+  HREF="node97.html#SECTION062300170000000000000">Guardando el Post</A>
 <LI><A NAME="tex2html2912"
-  HREF="node97.html#SECTION06241030000000000000">Document Oriented DataBase</A>
-</UL>
-<BR>
-<LI><A NAME="tex2html2913"
-  HREF="node97.html#SECTION06242000000000000000">Getting Started with MongoDB</A>
-<LI><A NAME="tex2html2914"
-  HREF="node97.html#SECTION06243000000000000000">Create a Collection and Insert Documents</A>
-<LI><A NAME="tex2html2915"
-  HREF="node97.html#SECTION06244000000000000000">Insert Documents using a For Loop or a JavaScript Function</A>
-<UL>
-<LI><A NAME="tex2html2916"
-  HREF="node97.html#SECTION06244010000000000000">Insert Multiple Documents Using a For Loop</A>
-<LI><A NAME="tex2html2917"
-  HREF="node97.html#SECTION06244020000000000000">Working with the Cursor</A>
-</UL></UL>
+  HREF="node97.html#SECTION062300180000000000000">Viewing a Single Post</A>
+</UL></UL></UL>
 <!--End of Table of Child-Links-->
 <HR>
 
-<H1><A NAME="SECTION06240000000000000000">
-MongoDB</A>
+<H1><A NAME="SECTION06230000000000000000">
+Pruebas</A>
 </H1>
 
 <P>
 
-<H2><A NAME="SECTION06241000000000000000">
-Introducción</A>
-</H2>
+<H4><A NAME="SECTION06230010000000000000">
+Mocha, Chai y Expect: instalando las dependencias</A>
+</H4>
+  
+
+<PRE>
+[~/src/coffee/coffeepress(master)]$ npm install --save-dev mocha expect chai
+</PRE>
+
+<P>
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat package.json 
+{
+  "name": "coffeepress",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.10.2",
+    "cookie-parser": "~1.3.3",
+    "debug": "~2.1.1",
+    "express": "~4.11.1",
+    "jade": "~1.9.1",
+    "morgan": "~1.5.1",
+    "serve-favicon": "~2.2.0"
+  },
+  "devDependencies": {
+    "expect": "~1.6.0",
+    "chai": "~2.2.0",
+    "mocha": "~2.2.1"
+  }
+}
+</PRE>
+
+<P>
+
+<H4><A NAME="SECTION06230020000000000000">
+Una Prueba Sencilla</A>
+</H4>
+  
+
+Empecemos con una prueba sencilla.
+Creamos el directorio <code>test</code> para las pruebas:
+
+<P>
+<PRE>
+[~/src/coffee/coffeepress(master)]$ mkdir test
+</PRE>
+y creamos una primera prueba:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat test/example.coffee
+chai     = require 'chai'
+expect   = chai.expect
+
+describe "feature", -&gt;
+  it "should add two numbers", -&gt;
+    expect(2+2).to.equal(4)
+</PRE>
+para ejecutarla debemos hacer:
+<PRE>
+$ mocha --compilers coffee:coffee-script/register -R spec
+
+
+  feature
+    ok: should add two numbers 
+
+
+  1 passing (7ms)
+</PRE>
+
+<P>
 
 <UL>
-<LI>MongoDB (from humongous: huge; enormous) is one of many cross-platform 
-<A NAME="tex2html422"
-  HREF="http://en.wikipedia.org/wiki/Document-oriented_database">document-oriented databases</A>
+<LI><code>mocha</code> tiene una opción:
+<PRE>
+--compilers &lt;ext&gt;:&lt;module&gt;,...
+</PRE>
+Que indica que debemos usar el <code>module</code>(s) para compilar los ficheros
+con extensión <code>ext</code>.
 </LI>
-<LI>Is classified as a 
-<A NAME="tex2html423"
-  HREF="http://en.wikipedia.org/wiki/NoSQL">NoSQL database</A>,
+<LI><A NAME="tex2html413"
+  HREF="http://stackoverflow.com/questions/20049790/how-to-pass-compiler-options-to-mocha">How to pass compiler options to mocha?</A>:
+
+<P>
+
+<UL>
+<LI>Write a script which activates the compiler with your options, 
+then use mocha's <code>--require</code> option to activate your registration script.
 </LI>
-<LI>MongoDB eschews the traditional table-based relational database structure in favor of JSON-like documents with dynamic schemas (MongoDB calls the format BSON)
+</UL>
+</LI>
+<LI>La opción <code>-R</code> o bien <code>--reporter</code> va seguida de un <code>&lt;name&gt;</code>
+y especifica el 
+<FONT COLOR="#ff0000"> reporter</FONT> a utilizar.
+</LI>
+<LI>This flag <code>-R</code> may also be used to utilize third-party reporters. For example if you 
+<code>npm install mocha-lcov-reporter</code> 
+you may then do <code>--reporter mocha-lcov-reporter</code>.
+</LI>
+<LI>La  opción <code>--reporters</code> nos da la lista de <code>reporters</code> que 
+podemos utilizar:
+<PRE>
+[~/javascript/expressjs/clase-express-coffee]$ mocha --reporters
+
+    dot - dot matrix
+    doc - html documentation
+    spec - hierarchical spec list
+    json - single json object
+    progress - progress bar
+    list - spec-style listing
+    tap - test-anything-protocol
+    landing - unicode landing strip
+    xunit - xunit reporter
+    html-cov - HTML test coverage
+    json-cov - JSON test coverage
+    min - minimal reporter (great with --watch)
+    json-stream - newline delimited json events
+    markdown - markdown documentation (github flavour)
+    nyan - nyan cat!
+</PRE>
 </LI>
 </UL>
 
 <P>
+Vamos ahora a hacer una prueba sobre nuestro código. 
+Nuestro objetivo es hacer que nuestra aplicación funcione como un pequeño blog.
 
-<H4><A NAME="SECTION06241010000000000000">
-NoSQL</A>
+<P>
+
+<H4><A NAME="SECTION06230030000000000000">
+¿Cómo lo vamos a hacer?</A>
 </H4>
   
 
 <P>
+Reescribiremos <code>routes/index.coffee</code> de manera que por cada ruta URL de la 
+aplicación el objeto <code>routes</code> exportado por <code>routes/index.coffee</code> disponga
+de un método que procesa esa ruta. Así:
 
 <UL>
-<LI>A NoSQL (often interpreted as Not only SQL) database 
-<FONT COLOR="#0000ff"> provides a mechanism for storage and retrieval of data that is modeled in means other than the tabular relations used in relational
-databases</FONT>
+<LI>Así un <code>get</code> a la ruta <code>/</code> será procesada por el método <code>index</code>
 </LI>
-<LI>Motivations for this approach include 
-
-<UL>
-<LI>simplicity of design
+<LI>Un <code>get</code> a la ruta <code>/post/new</code> será procesada por un método <code>newPost</code>, 
 </LI>
-<LI>horizontal scaling
+<LI>Un <code>post</code> a la ruta <code>/post/new</code> será procesada por un método <code>addPost</code>, 
 </LI>
-<LI>and finer control over availability
+<LI>etc.
 </LI>
 </UL>
-</LI>
-<LI>The data structures used by NoSQL databases (e.g. key-value, graph, or
-document) differ from those used in relational databases, making some operations faster in NoSQL and others faster in relational databases
-</LI>
-<LI>The particular suitability of a given NoSQL database depends
-on the problem it must solve
-</LI>
-<LI>NoSQL databases are increasingly used in 
-<FONT COLOR="#ff0000"> big data</FONT> and 
-<FONT COLOR="#ff0000"> real-time web applications</FONT>
-</LI>
-<LI>NoSQL systems are also called "Not only SQL" to emphasize that they may also support SQL-like query languages
-</LI>
-<LI>Many
-NoSQL stores compromise consistency (in the sense of the CAP<A NAME="tex2html424"
-  HREF="footnode.html#foot12360"><SUP><SPAN CLASS="arabic">15</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A> theorem) in favor of availability and partition tolerance.
-</LI>
-</UL>
+Esta correspondencia entre métodos HHTP+rutas y métodos del objeto <code>routes</code> 
+se establece en 
+el cuerpo principal de la aplicación:
+<PRE>
+[~/javascript/expressjs/coffee-mongo(master)]$ sed -ne '3p' app.coffee 
+routes   = require "./routes"
+[~/javascript/expressjs/coffee-mongo(master)]$ sed -ne '24,27p' app.coffee 
+app.get "/", routes.index
+app.get "/post/new", routes.newPost
+app.post "/post/new", routes.addPost
+app.get "/post/:id", routes.viewPost
+</PRE>
 
 <P>
 
-<H4><A NAME="SECTION06241020000000000000">
-Relational  Database</A>
+<H4><A NAME="SECTION06230040000000000000">
+Should display index with posts: red</A>
+</H4>
+  
+
+Empezaremos describiendo como debe ser la ruta <code>index</code> del objeto
+<code>routes</code>.
+
+<P>
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat test/routes-test.coffee 
+chai     = require 'chai'
+expect   = chai.expect
+routes = require "../routes/index"
+
+describe "routes", -&gt;
+  req = {}
+  res = {}
+  describe "index", -&gt;
+    it "should display index with posts", -&gt;
+      res.render = (view, vars) -&gt;
+          expect(view).equal "index"
+          expect(vars.title).equal "My Coffeepress Blog"
+      routes.index(req, res)
+</PRE>
+
+<P>
+
+<UL>
+<LI>Here we fake our requests and response in order to capture what is
+passed into the response. 
+</LI>
+<LI>We fake the render method and verify that our
+rendered view is <code>index</code> and that the variable <code>title</code> 
+is equal to what we expect to be passed in. 
+</LI>
+<LI><A NAME="tex2html414"
+  HREF="http://expressjs.com/api.html#res">Response objects</A>
+have a method <code>res.render(view [, locals] [, callback])</code>
+which renders the file whose name is given by <code>view</code> and sends the rendered HTML string to the client. 
+
+<P>
+Optional parameters of <code>res.render</code>:
+  
+<UL>
+<LI><code>locals</code>, an object whose properties define local variables for the view.
+</LI>
+<LI><code>callback</code>, a callback function. 
+
+<P>
+If provided, the method returns both the possible error and rendered string, but does not perform an automated response. 
+
+<P>
+When an error occurs, the method invokes <code>next(err)</code> 
+  internally.
+<PRE>
+// if a callback is specified, the rendered HTML string has to be sent explicitly
+res.render('index', function(err, html) {
+  res.send(html);
+});
+</PRE>
+</LI>
+</UL>
+</LI>
+</UL>
+La ruta <code>index</code> que fué generada por Express contiene el siguiente código:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat routes/index.coffee 
+express = require('express')
+router = express.Router()
+
+### GET home page. ###
+
+router.get '/', (req, res, next) -&gt;
+  res.render 'index', title: 'Express'
+  return
+module.exports = router
+</PRE>
+como se ve, lo que estamos haciendo en la prueba es sobreescribir el método <code>render</code> 
+del objeto <code>res</code> por 
+un falso <code>render</code> que hace las dos pruebas:
+<PRE>
+routes = require "../routes/index"
+...
+      res.render = (view, vars) -&gt;
+          expect(view).equal "index"
+          expect(vars.title).equal "My Coffeepress Blog"
+      routes.index(req, res)
+</PRE>
+
+<P>
+Run the tests:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ mocha --compilers coffee:coffee-script/register -R spec
+
+
+  routes
+    index
+      1) should display index with posts
+
+
+  0 passing (7ms)
+  1 failing
+
+  1) routes index should display index with posts:
+     TypeError: Object function router(req, res, next) {
+    router.handle(req, res, next);
+  } has no method 'index'
+    at Context.&lt;anonymous&gt; (/Users/casiano/local/src/coffee/coffeepress/test/routes-test.coffee:13:14)
+    ...
+</PRE>
+
+<P>
+
+<H4><A NAME="SECTION06230050000000000000">
+Should display index with posts: green</A>
+</H4>
+  
+
+Se queja de que <code>routes = require "../routes/index"</code> no tiene un método <code>index</code>.
+Se lo añadimos:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat routes/index.coffee 
+express = require('express')
+
+module.exports = 
+  index: (req, res) -&gt;
+    res.render 'index', { title: 'My Coffeepress Blog' }
+</PRE>
+
+<P>
+Y ahora las pruebas pasan:
+
+<P>
+<PRE>
+[~/src/coffee/coffeepress(master)]$ mocha --compilers coffee:coffee-script/register -R spec
+
+  routes
+    index
+      ok: should display index with posts 
+
+  1 passing (6ms)
+</PRE>
+
+<P>
+
+<H4><A NAME="SECTION06230060000000000000">
+Expect vars posts equal empty array: red</A>
+</H4>
+  
+
+Now let’s add a post variable that will be an array of posts we’ll display on the front page. Add the following assertion 
+<PRE>
+          expect(vars.posts).eql []
+</PRE>
+
+<P>
+right after the title assertion:
+
+<P>
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat test/routes-test.coffee 
+chai     = require 'chai'
+expect   = chai.expect
+routes = require "../routes/index"
+
+describe "routes", -&gt;
+  req = {}
+  res = {}
+  describe "index", -&gt;
+    it "should display index with posts", -&gt;
+      res.render = (view, vars) -&gt;
+          expect(view).equal "index"
+          expect(vars.title).equal "My Coffeepress Blog"
+          expect(vars.posts).deep.equal []
+      routes.index(req, res)
+</PRE>
+Obsérvese  que hemos usado el método <code>deep</code>. También podríamos haber usado <code>eql</code> en vez
+de <code>.deep.equal</code>.
+
+<P>
+Now the tests fail:
+
+<P>
+<PRE>
+[~/src/coffee/coffeepress(master)]$ mocha --compilers coffee:coffee-script/register -R spec
+
+  routes
+    index
+      1) should display index with posts
+
+
+  0 passing (12ms)
+  1 failing
+
+  1) routes index should display index with posts:
+     AssertionError: expected undefined to deeply equal []
+</PRE>
+
+<P>
+
+<H4><A NAME="SECTION06230070000000000000">
+Expect vars posts equal empty array: green</A>
+</H4>
+  
+
+Let us change the route to have a <code>posts</code> 
+array variable available in the template.
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat routes/index.coffee 
+express = require('express')
+
+module.exports = 
+  index: (req, res) -&gt;
+    res.render 'index', 
+      title: 'My Coffeepress Blog' 
+      posts: []
+</PRE>
+and now the tests pass:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ mocha --compilers coffee:coffee-script/register -R spec
+
+  routes
+    index
+      ok: should display index with posts 
+
+  1 passing (12ms)
+</PRE>
+
+<P>
+
+<H4><A NAME="SECTION06230080000000000000">
+views/index.jade</A>
 </H4>
   
 
 <P>
-
-<UL>
-<LI>In a relational database, 
-<FONT COLOR="#ff0000"> data is first categorized into a number of
-predefined types, and tables are created to hold individual entries, or
-records, of each type</FONT>. 
-
-<P>
-</LI>
-<LI>The tables define the data within each record's
-fields, meaning that every record in the table has the same overall
-form. 
-
-<P>
-</LI>
-<LI>The administrator also defines the relations between the tables,
-and selects certain fields that they believe will be most commonly used
-for searching and defines indexes on them. 
-
-<P>
-</LI>
-<LI>A key concept in the relational
-design is that any data that may be repeated is placed in its own table,
-and if these instances are related to each other, a field is selected
-to group them together, the <A NAME="12517"></A><SPAN  CLASS="textbf">foreign key</SPAN>.
-
-<P>
-</LI>
-<LI>For example, an address book application will generally need to
-store the contact name, an optional image, one or more phone numbers,
-one or more mailing addresses, and one or more email addresses. 
-
-<P>
-</LI>
-<LI>In a
-canonical relational database solution, tables would be created for
-each of these records with predefined fields for each bit of data; the
-<code>CONTACT</code> table might include <code>FIRST_NAME</code>, <code>LAST_NAME</code> and <code>IMAGE</code> fields,
-while the <code>PHONE_NUMBER</code> table might include <code>COUNTRY_CODE</code>, <code>AREA_CODE</code>,
-<code>PHONE_NUMBER</code> and <code>TYPE</code> (home, work, etc). 
-
-<P>
-</LI>
-<LI>The <code>PHONE_NUMBER</code> table also
-contains a <A NAME="12519"></A><SPAN  CLASS="textbf">foreign key</SPAN> field, "<code>CONTACT_ID</code>", which holds the unique <code>ID</code>
-number assigned to the contact when it was created. 
-
-<P>
-</LI>
-<LI>In order to recreate
-the original contact, the system has to search through all of the tables
-and collect the information back together using <A NAME="12521"></A><SPAN  CLASS="textbf">joins</SPAN><A NAME="tex2html425"
-  HREF="footnode.html#foot12204"><SUP><SPAN CLASS="arabic">15</SPAN>.<SPAN CLASS="arabic">2</SPAN></SUP></A>
-</LI>
-</UL>
+Completemos la vista <code>index</code>:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat views/index.jade 
+extends layout
+block content
+  - each post in posts
+    .page-header
+      li
+        a(href="/post/#{post.id}")= post.title
+        .content!=post.body
+</PRE>
 
 <P>
 
-<H4><A NAME="SECTION06241030000000000000">
-Document Oriented DataBase</A>
+<H4><A NAME="SECTION06230090000000000000">
+views/layout.jade</A>
 </H4>
   
 
+<P>
+Necesitamos un <code>layout</code>:
+<PRE>
+~/src/coffee/coffeepress(master)]$ cat views/layout.jade 
+doctype html
+html
+  head
+    title= title
+    //link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css")
+    //script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+    //script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
+    style(type="text/css")
+      #content { padding-top: 60px;}
+  body
+    .topbar-wrapper
+      .topbar
+        .topbar-inner
+          .container
+            h3: a(href="/") My Coffeepress Blog
+            ul.nav
+              li: a(href="/post/new") New Post
+              #content.container
+                block content
+</PRE>
+
 <UL>
-<LI>In contrast, in a 
-<FONT COLOR="#ff0000"> document-oriented database</FONT> there may be no internal
-structure that maps directly onto the concept of a table, and the fields
-and relations generally don't exist as predefined concepts.
-
-<P>
+<LI>Jade supports template inheritance via the <code>block</code> and <code>extends</code> keywords. 
+<PRE>
+              ...
+              #content.container
+                block content
+</PRE>
 </LI>
-<LI>Instead, 
-<FONT COLOR="#0000ff"> all
-of the data for an object is placed in a single document, and stored in
-the database as a single entry</FONT>
+<LI>A <code>block</code> is simply a 
+<FONT COLOR="#0000ff"> block of Jade</FONT> 
+that may be replaced within a child
+template, this process is recursive.
 </LI>
-<LI>In the address book example, the document
-would contain the contact's name, image and any contact info, 
-<FONT COLOR="#0000ff"> all in a
-single record</FONT>
-
-<P>
-</LI>
-<LI>That entry is accessed through a key, some unique bit of
-data, which allows the database to retrieve and return the document to
-the application. No additional work is needed to retrieve the related
-data, all of this is returned in a single object.
-
-<P>
-</LI>
-<LI>A key difference between the document-oriented and relational models is
-that 
-<FONT COLOR="#0000ff"> the data formats are not predefined in the document case</FONT>
-</LI>
-<LI>In most
-cases, any sort of document can be stored in any database, and those
-documents can change in type and form at any time
-</LI>
-<LI>If one wishes to
-add a <code>COUNTRY_FLAG</code> to a <code>CONTACT</code>, simply add this field to new documents
-as they are inserted, this will have no effect on the database or the
-existing documents already stored, they simply won't have this field
-</LI>
-<LI>This
-indicates an advantage of the document-based model; optional fields are
-truly optional, a contact that does not include a mailing address simply
-does not have a mailing address, there is no need to check another table
-to see if there are entries
-</LI>
-<LI>To aid retrieval of information from the database, document-oriented
-systems generally allow the administrator to provide hints to the database
-to look for certain types of information
-</LI>
-<LI>In the address book example,
-the design might add hints for the first and last name fields
-</LI>
-<LI>When the
-document is inserted into the database (or later modified), the database
-engine looks for these bits of information and indexes them, in the same
-fashion as the relational model
-</LI>
-<LI>Additionally, most document-oriented
-databases allow documents to have a type associated with them, like
-<code>address book entry</code>, which allows the programmer to retrieve related
-types of information, like <code>all the address book entries</code>
-</LI>
-<LI>This provides
-functionality similar to a table, but separates the concept (categories
-of data) from its physical implementation (tables)
-</LI>
-<LI>All of this is predicated on the ability of the database engine
-to examine the data in the document and extract fields from the
-formatting, its metadata
-</LI>
-<LI>This is easy in the case of, for example, an
-XML document or HTML page, where markup tags clearly identify various
-bits of data
-</LI>
-<LI>Document-oriented databases may include functionally
-to automatically extract this sort of information from a variety of
-document types, even those that were not originally designed for easy
-access in this manner
-</LI>
-<LI>In other cases the programmer has to provide this
-information using their own code
-</LI>
-<LI>In contrast, a relational database
-relies on the programmer to handle all of these tasks, breaking down
-the document into fields and providing those to the database engine,
-which may require separate instructions if the data spans tables
-</LI>
-<LI>Document-oriented databases normally map more cleanly onto existing
-programming concepts, like object-oriented programming (OOP)
+<LI><A NAME="tex2html415"
+  HREF="http://jade-lang.com/reference/inheritance/">Jade: Testing Inheritance</A>
 </LI>
 </UL>
 
 <P>
 
-<H2><A NAME="SECTION06242000000000000000">
-Getting Started with MongoDB</A>
-</H2>
-
-<P>
-
 <UL>
+<LI>The <code>extends</code> keyword allows a template to extend a layout or parent template. 
+
+<FONT COLOR="#ff0000"> It can then override certain pre-defined blocks of content</FONT>.
+</LI>
+<LI>Now to extend the <code>layout</code>, we simply create 
+the <code>index.jade</code>
+file and use the <code>extends</code> directive, giving the path 
+(with or without the <code>.jade</code> extension). 
+</LI>
+<LI>We then define  the block 
+<FONT COLOR="#ff0000"> content</FONT> using the 
+<code>block</code> declaration:
+<PRE>
+block content
+</PRE>
+</LI>
+<LI>In general, we can define
+one or more blocks that will
+override the parent block content
+</LI>
 <LI>Véase
-<A NAME="tex2html426"
-  HREF="http://docs.mongodb.org/manual/tutorial/getting-started/">Getting Started with MongoDB</A>
+<A NAME="tex2html416"
+  HREF="http://jade-lang.com/reference/inheritance/">Jade: Testing Inheritance</A>
 </LI>
 </UL>
+
+<P>
+
+<H4><A NAME="SECTION062300100000000000000">
+Should display the add post page: red</A>
+</H4>
+  
+
+Next let’s write tests for the 
+<FONT COLOR="#ff0000"> new post</FONT> route.
+
+<P>
 <PRE>
-$ mongod
-all output going to: /usr/local/var/log/mongodb/mongo.log
+[~/src/coffee/coffeepress(master)]$ cat -n test/routes-test.coffee 
+ 1  chai     = require 'chai'
+ 2  expect   = chai.expect
+ 3  routes = require "../routes/index"
+ 4  
+ 5  describe "routes", -&gt;
+ 6    req = {}
+ 7    res = {}
+ 8    describe "index", -&gt;
+ 9      it "should display index with posts", -&gt;
+..        ...
+15  
+16    describe "new post", -&gt;
+17      it "should display the add post page", -&gt;
+18        res.render = (view, vars) -&gt;
+19            expect(view).equal "add_post"
+20            expect(vars.title).equal "Write New Post"
+21      
+22        routes.newPost(req, res)
 </PRE>
-
-<P>
-By default, mongo looks for a database server listening on port 27017
-on the localhost interface. 
-
-<P>
-To connect to a server on a different port
-or interface, use the <code>--port</code> and
-<code>--host</code> options.
-
-<P>
-Podemos también usar un fichero de configuración:
+El test falla porque <code>routes</code> carece de un método <code>newPost</code>:
 <PRE>
-[~/javascript/expressjs/coffee-mongo(master)]$ cat /usr/local/etc/mongod.conf
-# Store data in /usr/local/var/mongodb instead of the default /data/db
-dbpath = /usr/local/var/mongodb
+[~/src/coffee/coffeepress(master)]$ mocha --compilers coffee:coffee-script/register -R spec test/routes-test.coffee 
 
-# Append logs to /usr/local/var/log/mongodb/mongo.log
-logpath = /usr/local/var/log/mongodb/mongo.log
-logappend = true
 
-verbose = v 
-# Only accept local connections
-bind_ip = 127.0.0.1
-</PRE>
+  routes
+    index
+      ok: should display index with posts 
+    new post
+      1) should display the add post page
 
-<P>
-y ejecutarlo con la opción <code>--config</code>:
-<PRE>
-$ mongod --config /usr/local/etc/mongod.conf
-</PRE>
 
-<P>
-<PRE>
-[~/src/coffee/coffeepress.bak(master)]$ mongo
-MongoDB shell version: 2.4.8
-connecting to: test
-Server has startup warnings: 
-Mon Apr 13 21:53:16.204 [initandlisten] 
-Mon Apr 13 21:53:16.204 [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
-</PRE>
+  1 passing (17ms)
+  1 failing
 
-<P>
-After starting the mongo shell, your session will use the test database by default. At any time, issue the following operation at the mongo shell to report the name of the current database:
-<PRE>
-&gt; db
-test
-</PRE>
-
-<P>
-From the mongo shell, display the list of databases, with the following operation:
-
-<P>
-<PRE>
-&gt; show dbs
-coffeepress     0.203125GB
-coffeepress-dev 0.203125GB
-dict_dev        0.203125GB
-example 0.203125GB
-local   0.078125GB
-mean    0.203125GB
-my_perpetuity_database  0.203125GB
-mydb    0.203125GB
-sinatra-example-dev     0.203125GB
-test    0.203125GB
-</PRE>
-
-<P>
-Switch to a new database named <code>example</code>, 
-with the following operation:
-<PRE>
-&gt; use example
-switched to db example
-</PRE>
-At any point, you can access help for the mongo shell using
-<PRE>
-&gt; help
-        db.help()                    help on db methods
-        db.mycoll.help()             help on collection methods
-        sh.help()                    sharding helpers
-        rs.help()                    replica set helpers
-        help admin                   administrative help
-        help connect                 connecting to a db help
-        help keys                    key shortcuts
-        help misc                    misc things to know
-        help mr                      mapreduce
-
-        show dbs                     show database names
-        show collections             show collections in current database
-        show users                   show users in current database
-        show profile                 show most recent system.profile entries with time &gt;= 1ms
-        show logs                    show the accessible logger names
-        show log [name]              prints out the last segment of log in memory, 'global' is default
-        use &lt;db_name&gt;                set current database
-        db.foo.find()                list objects in collection foo
-        db.foo.find( { a : 1 } )     list objects in foo where a == 1
-        it                           result of the last line evaluated; use to further iterate
-        DBQuery.shellBatchSize = x   set default number of items to display on shell
-        exit                         quit the mongo shell
-</PRE>
-
-<P>
-Furthermore, you can append the <code>.help()</code> 
-method to some JavaScript methods, any cursor object,
-as well as the <code>db</code> and <code>db.collection</code> objects to return additional help information.
-<PRE>
-&gt; db.help()
-DB methods:
-        db.addUser(userDocument)
-        db.auth(username, password)
-        ...
+  1) routes new post should display the add post page:
+     TypeError: Object #&lt;Object&gt; has no method 'newPost'
 </PRE>
 
 <P>
 
-<H2><A NAME="SECTION06243000000000000000">
-Create a Collection and Insert Documents</A>
-</H2>
-In this section, you insert documents into a new collection named <code>testData</code>
-within the new database named <code>mydb</code>.
+<H4><A NAME="SECTION062300110000000000000">
+Should display the add post page: (false) green</A>
+</H4>
+  
 
-<P>
-Create two documents named <code>j</code> and 
-<code>k</code> by using the following sequence of JavaScript operations:
+Añadamos un método <code>newPost</code> al código de la ruta:
 <PRE>
-&gt; j = { name : "mongo" }
-{ "name" : "mongo" }
-&gt; k = { x : 3 }
-{ "x" : 3 }
+[~/src/coffee/coffeepress(master)]$ cat -n routes/index.coffee 
+     1  express = require('express')
+     2  
+     3  module.exports = 
+     4    index: (req, res) -&gt;
+     5      res.render 'index', 
+     6        title: 'My Coffeepress Blog' 
+     7        posts: []
+     8  
+     9    newPost: (req, res) -&gt;
+    10      # do nothing
 </PRE>
-Insert the <code>j</code> and <code>k</code> documents into the 
-<code>testData</code> collection with the following sequence of operations:
+¡Cuando ejecutamos las pruebas pasan!:
 <PRE>
-&gt; db.testData.insert( j )
-&gt; db.testData.insert( k )
+[~/src/coffee/coffeepress(master)]$ mocha --compilers coffee:coffee-script/register -R spec test/routes-test.coffee 
+
+
+  routes
+    index
+      ok: should display index with posts 
+    new post
+      ok: should display the add post page 
+
+  2 passing (8ms)
 </PRE>
-When you insert the first document, the <code>mongod</code> 
-will create both the <code>mydb</code> 
-database and the <code>testData</code> collection.
-<PRE>
-&gt; show collections
-system.indexes
-testData
-</PRE>
-The mongo shell will return the list of the collections in the current (i.e. mydb) database. At this point, the only collection with user data is testData.
-
-<P>
-Confirm that the documents exist in the testData collection by issuing a query on the collection using the find() method:
-
-<P>
-<PRE>
-&gt; db.testData.find()
-{ "_id" : ObjectId("552d751969c6f61bfbe4e6ed"), "name" : "mongo" }
-{ "_id" : ObjectId("552d751a69c6f61bfbe4e6ee"), "x" : 3 }
-</PRE>
-All MongoDB documents must have an <code>_id</code> field with a unique value. These operations do not explicitly specify a value for the <code>_id</code> field, so mongo creates a unique <code>ObjectId</code> value for the field before inserting it into the collection.
 
 <P>
 
-<H2><A NAME="SECTION06244000000000000000">
-Insert Documents using a For Loop or a JavaScript Function</A>
-</H2>
-To perform the remaining procedures in this tutorial, first add more documents to your database using one or both of the procedures described in Generate Test Data.
-
-<P>
-
-<H4><A NAME="SECTION06244010000000000000">
-Insert Multiple Documents Using a For Loop</A>
+<H4><A NAME="SECTION062300120000000000000">
+Mocha: done</A>
 </H4>
   
 
 <P>
-From the mongo shell, use the for loop. If the testData collection does not exist, MongoDB will implicitly create the collection.
+
+<FONT COLOR="#ff0000"> That’s not good</FONT>. 
+
+<P>
+Esto es así porque <code>res.render</code> nunca es llamado ya que 
+el cuerpo de <code>newPost</code> es vacío.
+
+<P>
 <PRE>
-&gt; for (var i = 1; i &lt;= 25; i++) {
-...    db.testData.insert( { x : i } )
-... }
+18        res.render = (view, vars) -&gt;
+19            expect(view).equal "add_post"
+20            expect(vars.title).equal "Write New Post"
+21      
+22        routes.newPost(req, res)
 </PRE>
-Use find() to query the collection:
+
+<P>
+How can we make absolutely sure the test gets called during our test run? 
+
+<UL>
+<LI>Mocha has a feature that allows for easy testing in these situations. 
+</LI>
+<LI>In
+the method declaration of our test specify a parameter named <code>done</code>. 
+</LI>
+<LI>By adding <code>done</code> to the callback of <code>it()</code> 
+
+<FONT COLOR="#ff0000"> Mocha will know that it should wait for completion</FONT>.
+</LI>
+<LI>Mocha will wait until <code>done</code> is called or until some time limit is exceeded
+</LI>
+<LI><code>done</code>
+is a callback that we can call anywhere to indicate the test is
+done. 
+</LI>
+<LI>Basically the test will wait up to a default of 2000ms for it to
+be called. 
+</LI>
+</UL>
+With this in mind, let’s modify our tests with the following:
 <PRE>
-&gt; db.testData.find()
-{ "_id" : ObjectId("552d751969c6f61bfbe4e6ed"), "name" : "mongo" }
-{ "_id" : ObjectId("552d751a69c6f61bfbe4e6ee"), "x" : 3 }
-{ "_id" : ObjectId("552d791269c6f61bfbe4e6f0"), "x" : 1 }
-{ "_id" : ObjectId("552d791269c6f61bfbe4e6f1"), "x" : 2 }
-{ "_id" : ObjectId("552d791269c6f61bfbe4e6f2"), "x" : 3 }
-....
-{ "_id" : ObjectId("552d791269c6f61bfbe4e701"), "x" : 18 }
-Type "it" for more
+[~/src/coffee/coffeepress(master)]$ cat test/routes-test.coffee 
+chai     = require 'chai'
+expect   = chai.expect
+routes = require "../routes/index"
+
+describe "routes", -&gt;
+  req = {}
+  res = {}
+  describe "index", -&gt;
+    it "should display index with posts", -&gt;
+      ...
+
+  describe "new post", -&gt;
+    it "should display the add post page", (done)-&gt;
+      res.render = (view, vars) -&gt;
+          expect(view).equal "add_post"
+          expect(vars.title).equal "Write New Post"
+          done()
+    
+      routes.newPost(req, res)
 </PRE>
-Iterate through the cursor.
-The find() method returns a cursor. To iterate the cursor and return more documents, type 
-<code>it</code> in the mongo shell. The shell will exhaust the cursor and return these documents:
+Now it fails since the <code>done()</code> callback is never called:
 <PRE>
-&gt; it
-{ "_id" : ObjectId("552d791269c6f61bfbe4e702"), "x" : 19 }
-.....
-{ "_id" : ObjectId("552d791269c6f61bfbe4e708"), "x" : 25 }
+[~/src/coffee/coffeepress(master)]$ mocha --compilers coffee:coffee-script/register -R spec test/routes-test.coffee 
+
+
+  routes
+    index
+      ok: should display index with posts 
+    new post
+      1) should display the add post page
+
+
+  1 passing (2s)
+  1 failing
+
+  1) routes new post should display the add post page:
+     Error: timeout of 2000ms exceeded
+    at [object Object].&lt;anonymous&gt; (/usr/loc
 </PRE>
 
 <P>
 
-<H4><A NAME="SECTION06244020000000000000">
-Working with the Cursor</A>
+<H4><A NAME="SECTION062300130000000000000">
+Escribiendo newPost</A>
 </H4>
   
 
 <P>
-When you query a collection, MongoDB returns a “cursor” object that
-contains the results of the query. The mongo shell then iterates over
-the cursor to display the results. Rather than returning all results at
-once, the shell iterates over the cursor 20 times to display the first
-20 results and then waits for a request to iterate over the remaining
-results. In the shell, enter it to iterate over the next set of results.
+Let’s go ahead and implement the route and connect it into our router.
+<PRE>
+~/src/coffee/coffeepress(master)]$ cat routes/index.coffee 
+express = require('express')
+
+module.exports = 
+  index: (req, res) -&gt;
+    ...
+
+  newPost: (req, res) -&gt;
+    res.render 'add_post', title:"Write New Post"
+</PRE>
+And connecting it up in the <code>app.coffee</code>:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ sed -ne '20,21p' app.coffee 
+app.get '/', routes.index
+app.get '/post/new', routes.newPost
+</PRE>
 
 <P>
-The procedures in this section show other ways to work with a cursor. For comprehensive documentation on cursors, see Iterate the Returned Cursor.
+
+<H4><A NAME="SECTION062300140000000000000">
+views/add_post.jade</A>
+</H4>
+  
+
+<P>
+Ademas tenemos que añadir la vista  <code>add_post</code>:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat views/add_post.jade 
+extends layout
+block content
+  form(method="post", action="/post/new")
+    fieldset
+      legend=title
+      .clearfix
+        label(for="title") Title
+        .input
+          input.xlarge#title(type="text", name="title")
+      .clearfix
+        label(for="post") Post
+        .input
+          textarea#post.xxlarge(name="body",rows="3")
+      .actions
+        input.btn.primary(type="submit", value="Publish!")
+        |   
+        a.btn(href="/") Cancel
+</PRE>
+
+<P>
+
+<UL>
+<LI>The <code>&lt;fieldset&gt;</code> tag is used to group related elements in a form.
+</LI>
+<LI>The 
+<A NAME="tex2html417"
+  HREF="http://www.w3schools.com/tags/tag_fieldset.asp">fieldset </A>
+tag draws a box around the related elements.
+</LI>
+<LI>The 
+<A NAME="tex2html418"
+  HREF="http://www.w3schools.com/tags/tag_legend.asp">legend</A>
+tag defines a caption for the 
+<A NAME="tex2html419"
+  HREF="http://www.w3schools.com/tags/tag_fieldset.asp">fieldset </A>
+element.
+</LI>
+</UL>
+
+<P>
+
+<UL>
+<LI>On the server side We can access to the data filled in the form 
+(both the input and textarea)
+<PRE>
+input.xlarge#title(type="text", name="title")
+...
+textarea#post.xxlarge(name="body",rows="3")
+</PRE>
+using <code>req.body</code>. It
+Contains key-value pairs (with keys <code>title</code>, <code>body</code>)
+of data submitted in the request body. 
+
+<P>
+By default, <code>req.body</code> is <code>undefined</code>, 
+and is populated when you use body-parsing middleware such as 
+<code>body-parser</code>.
+</LI>
+</UL>
+
+<P>
+
+<img src="formcoffeepress.png" width="50%" />
+
+
+<P>
+
+<H4><A NAME="SECTION062300150000000000000">
+Should display the add post page: (true) green</A>
+</H4>
+  
+
+Ahora podemos ejecutar las pruebas:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ mocha --compilers coffee:coffee-script/register -R spec test/routes-test.coffee 
+
+
+  routes
+    index
+      ok: should display index with posts 
+    new post
+      ok: should display the add post page 
+
+
+  2 passing (9ms)
+</PRE>
+
+<P>
+
+<H4><A NAME="SECTION062300160000000000000">
+Gulpfile</A>
+</H4>
+  
+
+<P>
+Vamos a crear un <code>gulpfile</code> para ejecutar las tareas mas comunes
+(véase  el post
+<A NAME="tex2html420"
+  HREF="http://pem-musing.blogspot.com.es/2014/02/a-gulp-of-coffee-your-gulpfile-in.html">A gulp of coffee: your gulpfile in coffeescript</A>):
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat gulpfile.coffee 
+gulp = require('gulp')
+shell = require('gulp-shell')
+
+# run coffee server via nodemon https://github.com/remy/nodemon
+gulp.task 'default', -&gt;
+  gulp.src('').pipe shell([ 'DEBUG=coffeepress:* nodemon bin/www.coffee' ])
+
+# run coffee server
+gulp.task 'cofserver', -&gt;
+  gulp.src('').pipe shell([ 'coffee app.coffee' ])
+
+gulp.task 'test', [ 'mocha' ]
+gulp.task 'mocha', -&gt;
+  gulp.src('').pipe shell(['mocha --compilers coffee:coffee-script/register -R spec'])
+
+# run mongod server
+gulp.task 'mongod', -&gt;
+  gulp.src('').pipe shell([ 'mongod' ])
+</PRE>
+
+<P>
+Este es el correspondiente código de la version javascript:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat gulpfile.js
+// Note the new way of requesting CoffeeScript since 1.7.x
+require('coffee-script/register');
+// This bootstraps your Gulp's main file
+require('./gulpfile.coffee');
+</PRE>
+Es necesario instalar <code>gulp-shell</code>:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ npm install --save-dev gulp-shell
+</PRE>
+ahora podemos ejecutar las pruebas con <code>gulp test</code>.
+
+<P>
+
+<H4><A NAME="SECTION062300170000000000000">
+Guardando el Post</A>
+</H4>
+  
+
+Now let’s add another route to handle the post. 
+For now, we’re just going to store each post in an array. 
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat routes/index.coffee 
+express = require('express')
+debug = require('debug')('coffeepress:server')
+
+posts = [ {id:0, title: "hi", body: "Hola todo el mundo"}, {id:1, title: "world", body: "I like &lt;b&gt;coffee&lt;/b&gt;"}] 
+
+module.exports = 
+  index: (req, res) -&gt;
+    debug "en index"
+    res.render 'index', 
+          title: 'My Coffee Blog' 
+          posts: posts
+
+  newPost: (req, res) -&gt;
+    debug "en newPost"
+    res.render 'add_post', title:"Write New Post"
+
+  addPost: (req, res) -&gt;
+    debug "en addPost"
+    debug req.body
+    post = req.body
+    # [post.title, post.body ] = [req.body.title, req.body.body]
+    post.id = posts.length
+    posts.push post
+    res.redirect "/"
+</PRE>
+
+<UL>
+<LI>The module
+<A NAME="tex2html421"
+  HREF="https://github.com/expressjs/body-parser">body-parser</A>
+is a piece of express middleware that·
+reads a form's input and stores it as a javascript
+object accessible through <code>req.body</code>·
+</LI>
+<LI>By default, <code>req.body</code> is <code>undefined</code>, 
+and is populated when you use body-parsing middleware such as 
+<code>body-parser</code>.
+</LI>
+<LI>On the server side We can access to the data filled in the form 
+(both the input and textarea)
+<PRE>
+input.xlarge#title(type="text", name="title")
+...
+textarea#post.xxlarge(name="body",rows="3")
+</PRE>
+using <code>req.body</code>. It
+Contains key-value pairs (with keys <code>title</code>, <code>body</code>)
+of data submitted in the request body. 
+<PRE>
+post = req.body
+</PRE>
+or
+<PRE>
+[post.title, post.body] = [req.body.title, req.body.body]
+</PRE>
+</LI>
+</UL>
+
+<P>
+We also add a new route to <code>app.coffee</code>
+<PRE>
+~/src/coffee/coffeepress(master)]$ sed -ne '20,22p' app.coffee 
+app.get  "/"        , routes.index
+app.get  "/post/new", routes.newPost
+app.post "/post/new", routes.addPost
+</PRE>
+
+<P>
+
+<H4><A NAME="SECTION062300180000000000000">
+Viewing a Single Post</A>
+</H4>
+  
+
+<P>
+Añadimos un método <code>newPost</code> y lo montamos en <code>/post/:id</code>:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ sed -ne '20,23p' app.coffee 
+app.get  "/"        , routes.index
+app.get  "/post/new", routes.newPost
+app.post "/post/new", routes.addPost
+app.get  "/post/:id", routes.viewPost
+</PRE>
+Este es el código del manejador de la ruta <code>/post/:id</code>:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat routes/index.coffee 
+express = require('express')
+debug = require('debug')('coffeepress:server')
+
+#posts = []
+
+module.exports = 
+  index: (req, res) -&gt;
+    ...
+
+  newPost: (req, res) -&gt;
+    res.render 'add_post', title:"Write New Post"
+
+  addPost: (req, res) -&gt;
+    ...
+
+   viewPost: (req, res) -&gt;
+     post = posts[req.params.id]
+     res.render 'post', post: post, title: post.title, id: req.params.id
+</PRE>
+
+<UL>
+<LI><code>req.params</code> is an object containing properties mapped to the 
+<A NAME="12518"></A><SPAN  CLASS="textbf">named route parameters</SPAN>. 
+</LI>
+<LI>For example, if you have the route <code>/user/:name</code>, then the <code>name</code> property is available as 
+<code>req.params.name</code> 
+</LI>
+<LI>The <code>req.params</code> object defaults to <code>{}</code>
+</LI>
+<LI>Example:
+<PRE>
+// GET /user/tj
+req.params.name
+// =&gt; "tj"
+</PRE>
+</LI>
+<LI>When you use a regular expression for the route definition, capture groups are provided in the array using 
+<code>req.params[n]</code>, where <code>n</code> is the nth capture group. 
+
+<P>
+For example, the following:
+<PRE>
+router.get(/^\/commits\/(\w+)(?:\.\.(\w+))?$/, function(req, res){
+  var from = req.params[0];
+  var to = req.params[1] || 'HEAD';
+  res.send('commit range ' + from + '..' + to);
+});
+</PRE>
+would match <code>GET /commits/71dbb9c</code> as well as <code>GET /commits/71dbb9c..4c084f9</code>
+</LI>
+<LI>This rule is applied to unnamed wild card
+matches with string routes such as <code>/file/*</code>:
+<PRE>
+// GET /file/javascripts/jquery.js
+req.params[0]
+// =&gt; "javascripts/jquery.js"
+</PRE>
+</LI>
+</UL>
+Y esta es la vista <code>views/post.jade</code>:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ cat views/post.jade 
+extends layout
+block content
+  h1 Post #{ id }
+    .page-header
+      h1= post.title
+    .content!=post.body
+</PRE>
+Ahora cuando visitamos una ruta como <code>/post/2</code> nos mostrará el correspondiente post.
 
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2907"
+<A NAME="tex2html2893"
   HREF="node98.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2901"
-  HREF="node93.html">
+<A NAME="tex2html2887"
+  HREF="node94.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2895"
+<A NAME="tex2html2881"
   HREF="node96.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2903"
-  HREF="node100.html">
+<A NAME="tex2html2889"
+  HREF="node101.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2905"
-  HREF="node103.html">
+<A NAME="tex2html2891"
+  HREF="node104.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -648,17 +1216,17 @@ The procedures in this section show other ways to work with a cursor. For compre
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2908"
-  HREF="node98.html">Mongoose</A>
-<B>Sup:</B> <A NAME="tex2html2902"
-  HREF="node93.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2896"
-  HREF="node96.html">Pruebas</A>
+<B> Sig:</B> <A NAME="tex2html2894"
+  HREF="node98.html">MongoDB</A>
+<B>Sup:</B> <A NAME="tex2html2888"
+  HREF="node94.html">CoffeeScript y Express</A>
+<B> Ant:</B> <A NAME="tex2html2882"
+  HREF="node96.html">Porting to Coffeescript</A>
 </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I>Casiano Rodríguez León <BR>
-2015-05-07</I>
+2015-05-10</I>
 </ADDRESS>
 </BODY>
 </HTML>

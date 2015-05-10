@@ -7,8 +7,8 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 <HTML>
 <HEAD>
-<TITLE>Porting to Coffeescript</TITLE>
-<META NAME="description" CONTENT="Porting to Coffeescript">
+<TITLE>Getting Started</TITLE>
+<META NAME="description" CONTENT="Getting Started">
 <META NAME="keywords" CONTENT="javascriptexamples">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -21,27 +21,27 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 
 <LINK REL="next" HREF="node96.html">
 <LINK REL="previous" HREF="node94.html">
-<LINK REL="up" HREF="node93.html">
+<LINK REL="up" HREF="node94.html">
 <LINK REL="next" HREF="node96.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html2860"
+<A NAME="tex2html2855"
   HREF="node96.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2854"
-  HREF="node93.html">
+<A NAME="tex2html2849"
+  HREF="node94.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2848"
+<A NAME="tex2html2843"
   HREF="node94.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2856"
-  HREF="node100.html">
+<A NAME="tex2html2851"
+  HREF="node101.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2858"
-  HREF="node103.html">
+<A NAME="tex2html2853"
+  HREF="node104.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -80,19 +80,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2861"
-  HREF="node96.html">Pruebas</A>
-<B>Sup:</B> <A NAME="tex2html2855"
-  HREF="node93.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2849"
-  HREF="node94.html">Getting Started</A>
+<B> Sig:</B> <A NAME="tex2html2856"
+  HREF="node96.html">Porting to Coffeescript</A>
+<B>Sup:</B> <A NAME="tex2html2850"
+  HREF="node94.html">CoffeeScript y Express</A>
+<B> Ant:</B> <A NAME="tex2html2844"
+  HREF="node94.html">CoffeeScript y Express</A>
 <B> Con:</B> 
-<A NAME="tex2html2856"
-  HREF="node100.html">
+<A NAME="tex2html2851"
+  HREF="node101.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html2858"
-  HREF="node103.html">
+<A NAME="tex2html2853"
+  HREF="node104.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
 </DIV>
@@ -103,286 +103,694 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <UL CLASS="ChildLinks">
 <LI><UL>
 <LI><UL>
+<LI><A NAME="tex2html2857"
+  HREF="node95.html#SECTION06210010000000000000">Express generator</A>
+<LI><A NAME="tex2html2858"
+  HREF="node95.html#SECTION06210020000000000000">The Structure</A>
+<LI><A NAME="tex2html2859"
+  HREF="node95.html#SECTION06210030000000000000">package.json</A>
+<LI><A NAME="tex2html2860"
+  HREF="node95.html#SECTION06210040000000000000">app.js</A>
+<LI><A NAME="tex2html2861"
+  HREF="node95.html#SECTION06210050000000000000">El método <TT>app.use</TT></A>
 <LI><A NAME="tex2html2862"
-  HREF="node95.html#SECTION06220010000000000000">Ejecución del Servidor</A>
+  HREF="node95.html#SECTION06210060000000000000">Middleware</A>
+<LI><A NAME="tex2html2863"
+  HREF="node95.html#SECTION06210070000000000000">Las Rutas / Routing</A>
+<LI><A NAME="tex2html2864"
+  HREF="node95.html#SECTION06210080000000000000">Running</A>
+<LI><A NAME="tex2html2865"
+  HREF="node95.html#SECTION06210090000000000000">El módulo debug</A>
 </UL></UL></UL>
 <!--End of Table of Child-Links-->
 <HR>
 
-<H1><A NAME="SECTION06220000000000000000">
-Porting to Coffeescript</A>
+<H1><A NAME="SECTION06210000000000000000">
+Getting Started</A>
 </H1>
-At this point, let’s port our backend to coffeescript. 
-
-<P>
-You can install <code>js2coffee</code> via npm. So run the following:
-
-<P>
-<PRE>
-npm -g install js2coffee
-</PRE>
-<PRE>
-[~/src/coffee/coffeepress]$ js2coffee --version
-2.0.3
-[~/src/coffee/coffeepress]$ js2coffee --help
-Usage:
-    js2coffee FILES [options]
-
-Options:
-        --ast          prints the AST (for debugging)
-    -V, --verbose      prints more AST stuff (used with --ast)
-    -i, --indent N     indent by N spaces (default: 2)
-    -i, --indent tab   indent by tabs
-
-Modes:
-        --compat       compatibility mode *
-                       (implement workarounds to keep full compatibility)
-
-Other options:
-    -h, --help         print usage information
-    -v, --version      show version info and exit
-</PRE>
-
-<P>
-Vamos a convertir nuestros ficheros <code>*.js</code> a coffee:
-<PRE>
-~/src/coffee/coffeepress]$ ls *js **/*js bin/*
-app.js          bin/www         routes/index.js routes/users.js
-[~/src/coffee/coffeepress]$ js2coffee app.js &gt; app.coffee
-[~/src/coffee/coffeepress]$ js2coffee routes/index.js &gt; routes/index.coffee
-[~/src/coffee/coffeepress]$ js2coffee routes/users.js &gt; routes/users.coffee
-</PRE>
-Cuando probamos con el main obtenemos un error:
-<PRE>
-[~/src/coffee/coffeepress]$ js2coffee bin/www &gt; bin/www.coffee
-bin/www:1:0: [error] Unexpected token ILLEGAL
-</PRE>
-El error es debido a la primera línea para la bash con la 
-definición del intérprete:
-<PRE>
-[/tmp/coffeepress]$ cat -n bin/www 
- 1  #!/usr/bin/env node
- 2  
- 3  /**
- 4   * Module dependencies.
- 5   */
- 6  
- 7  var app = require('../app');
- 8  var debug = require('debug')('coffeepress:server');
- 9  var http = require('http');
-10  
-11  /**
-12   * Get port from environment and store in Express.
-13   */
-14  
-15  var port = normalizePort(process.env.PORT || '3000');
-16  app.set('port', port);
-17  
-18  /**
-19   * Create HTTP server.
-20   */
-21  
-22  var server = http.createServer(app);
-23  
-24  /**
-25   * Listen on provided port, on all network interfaces.
-26   */
-27  
-28  server.listen(port);
-29  server.on('error', onError);
-30  server.on('listening', onListening);
-31  
-32  /**
-33   * Normalize a port into a number, string, or false.
-34   */
-35  
-36  function normalizePort(val) {
-37    var port = parseInt(val, 10);
-38  
-39    if (isNaN(port)) {
-40      // named pipe
-41      return val;
-42    }
-43  
-44    if (port &gt;= 0) {
-45      // port number
-46      return port;
-47    }
-48  
-49    return false;
-50  }
-51  
-52  /**
-53   * Event listener for HTTP server "error" event.
-54   */
-55  
-56  function onError(error) {
-57    if (error.syscall !== 'listen') {
-58      throw error;
-59    }
-60  
-61    var bind = typeof port === 'string'
-62      ? 'Pipe ' + port
-63      : 'Port ' + port
-64  
-65    // handle specific listen errors with friendly messages
-66    switch (error.code) {
-67      case 'EACCES':
-68        console.error(bind + ' requires elevated privileges');
-69        process.exit(1);
-70        break;
-71      case 'EADDRINUSE':
-72        console.error(bind + ' is already in use');
-73        process.exit(1);
-74        break;
-75      default:
-76        throw error;
-77    }
-78  }
-79  
-80  /**
-81   * Event listener for HTTP server "listening" event.
-82   */
-83  
-84  function onListening() {
-85    var addr = server.address();
-86    var bind = typeof addr === 'string'
-87      ? 'pipe ' + addr
-88      : 'port ' + addr.port;
-89    debug('Listening on ' + bind);
-90  }
-</PRE>
-
-<P>
-Obsérvense las líneas:
-<PRE>
-29  server.on('error', onError);
-30  server.on('listening', onListening);
-</PRE>
-
-<P>
-Many objects in Node emit events: 
+This is a tutorial on using 
 
 <UL>
-<LI>a <code>net.Server</code> emits an event each time a peer connects to it, 
+<LI>node.js, 
 </LI>
-<LI>a <code>fs.readStream</code> emits an event when the file is opened. 
+<LI>coffeescript and 
+</LI>
+<LI>mongodb 
 </LI>
 </UL>
-All objects which emit events are instances of 
-<A NAME="tex2html411"
-  HREF="https://nodejs.org/api/events.html">events.EventEmitter </A>.
+to build a simple blog. 
 
 <P>
-Functions can then be attached to objects, to be executed when an event is
-emitted. These functions are called <A NAME="12407"></A><SPAN  CLASS="textbf">listeners</SPAN>. 
+Quite obviously, you’re going to need node.js and mongodb installed. I
+recommend downloading and installing from the node.js website and
+following the instructions. 
 
 <P>
-Volviendo a nuestra traducción de <code>bin/www</code>, 
-si comentamos la primera línea no se producen errores pero si 
-que nos sale un warning:
+I will note that this tutorial covers 
 <PRE>
-~/src/coffee/coffeepress]$ js2coffee bin/www &gt; bin/www.coffee
-bin/www:37:6: [warning] Variable shadowing ('port') is not fully supported in CoffeeScript
+[~/local/src/coffee]$ express --version
+4.11.2
 </PRE>
-Si cambiamos todas las apariciones de la variable 
-<code>port</code>  por p. ej. <code>lport</code>
-en la definición de la función <code>normalizePort</code> el warning desaparece:
-<PRE>
-[~/src/coffee/coffeepress(master)]$ js2coffee bin/www &gt; bin/www.coffee 
-[~/src/coffee/coffeepress(master)]$
-</PRE>
-pero cuando ejecutamos el servidor obtenemos un nuevo error:
-<PRE>
-[~/src/coffee/coffeepress(master)]$ coffee bin/www.coffee 
-TypeError: undefined is not a function
-  at Object.&lt;anonymous&gt; (/Users/casiano/local/src/coffee/coffeepress/bin/www.coffee:15:8)
-  at Object.&lt;anonymous&gt; (/Users/casiano/local/src/coffee/coffeepress/bin/www.coffee:3:1)
-  at Module._compile (module.js:456:26)
-</PRE>
+so
+if you come across this post a year from now (2015) the API might have changed
+significantly since then. 
 
 <P>
-Movemos la función <code>normalizePort</code> antes de la definición de <code>port</code> y se arregla el asunto.
+You will also need mongodb installed.
 
 <P>
 
-<H4><A NAME="SECTION06220010000000000000">
-Ejecución del Servidor</A>
+<UL>
+<LI>If you use Ubuntu (or some other Debian derivative)
+you should consider installing from their apt repository. 
+
+<P>
+</LI>
+<LI>OSX? No problem,
+you can also install it via homebrew.
+</LI>
+</UL>
+
+<P>
+Finally, since we’ll be using coffeescript for this tutorial,
+run 
+<PRE>
+[~/local/src/coffee]$ npm install -g coffee-script
+npm http GET https://registry.npmjs.org/coffee-script
+npm http 200 https://registry.npmjs.org/coffee-script
+/usr/local/bin/coffee -&gt; /usr/local/lib/node_modules/coffee-script/bin/coffee
+/usr/local/bin/cake -&gt; /usr/local/lib/node_modules/coffee-script/bin/cake
+coffee-script@1.9.1 /usr/local/lib/node_modules/coffee-script
+[~/local/src/coffee]$ coffee --version
+CoffeeScript version 1.9.1
+</PRE>
+(you might need to sudo) to install
+coffeescript. 
+
+<P>
+Run coffee from the commandline to access the coffeescript
+REPL. If all works well, install these additional packages listed below
+via npm that we’ll be using throughout the tutorial.
+
+<P>
+
+<UL>
+<LI>express
+</LI>
+<LI>mocha. 
+Véase la sección <I>Pruebas: Mocha y Chai</I>
+<A HREF="node9.html#parrafo:mochaychai">1.2</A>
+</LI>
+</UL>
+
+<P>
+
+<H4><A NAME="SECTION06210010000000000000">
+Express generator</A>
 </H4>
   
 
 <P>
+Now let’s bootstrap our project structure. Type 
 <PRE>
-[~/src/coffee/coffeepress(master)]$ coffee bin/www.coffee 
-GET / 304 298.379 ms - -
-GET /stylesheets/style.css 304 6.048 ms - -
+express coffeepress
 </PRE>
-Otra forma de ejecutar el servidor es instalar <code>nodemon</code>
+to generate a skeleton express project structure. 
 <PRE>
-npm install -g nodemon
+[~/local/src/coffee]$ express coffeepress
+
+   create : coffeepress
+   create : coffeepress/package.json
+   create : coffeepress/app.js
+   create : coffeepress/public
+   create : coffeepress/public/images
+   create : coffeepress/public/javascripts
+   create : coffeepress/public/stylesheets
+   create : coffeepress/public/stylesheets/style.css
+   create : coffeepress/routes
+   create : coffeepress/routes/index.js
+   create : coffeepress/routes/users.js
+   create : coffeepress/views
+   create : coffeepress/views/index.jade
+   create : coffeepress/views/layout.jade
+   create : coffeepress/views/error.jade
+   create : coffeepress/bin
+   create : coffeepress/bin/www
+
+   install dependencies:
+     $ cd coffeepress &amp;&amp; npm install
+
+   run the app:
+     $ DEBUG=coffeepress:* ./bin/www
 </PRE>
-y ejecutarlo así:
-<PRE>
-~/src/coffee/coffeepress(master)]$ nodemon bin/www.coffee
-6 Apr 14:12:01 - [nodemon] v1.3.7
-6 Apr 14:12:01 - [nodemon] to restart at any time, enter `rs`
-6 Apr 14:12:01 - [nodemon] watching: *.*
-6 Apr 14:12:01 - [nodemon] starting `coffee bin/www.coffee`
-</PRE>
-<code>Nodemon</code> (see
-<A NAME="tex2html412"
-  HREF="http://nodemon.io/">http://nodemon.io/</A>
-)
-is for use during development of a node.js based application.
 
 <P>
-<code>nodemon</code> will watch the files in the directory in which <code>nodemon</code> was started, and if any files change, <code>nodemon</code> will automatically restart your node application.
-
-<P>
-<code>nodemon</code> does not require any changes to your code or method of
-development. <code>nodemon</code> simply wraps your node application and keeps an eye
-on any files that have changed. Remember that <code>nodemon</code> is a replacement
-wrapper for node, think of it as replacing the word "node" on the command
-line when you run your script.
-
-<P>
-Otra forma de ejecutar programas escritos en coffee 
-consiste en usar la posibilidad que existe de cargar
-el coffee desde un programa JavaScript usando 
-<code>coffee-script/register</code>. Modificamos <code>bin/www</code>
-como sigue:
+You should see output similar to the following:
 <PRE>
-[~/src/coffee/coffeepress.bak(master)]$ cat bin/www
+[~/local/src/coffee]$ cd coffeepress
+[~/local/src/coffee/coffeepress]$ tree
+.
+|--- app.js
+|--- bin
+|   `-- www
+|--- package.json
+|--- public
+|   |--- images
+|   |--- javascripts
+|   `-- stylesheets
+|       `-- style.css
+|--- routes
+|   |--- index.js
+|   `-- users.js
+`-- views
+    |--- error.jade
+    |--- index.jade
+    `-- layout.jade
+
+7 directories, 9 files
+</PRE>
+
+<P>
+This is called <A NAME="12385"></A><SPAN  CLASS="textbf">Scaffolding</SPAN>.
+
+<P>
+The idea is simple: most projects
+require a certain amount of so-called 
+<FONT COLOR="#ff0000"> boilerplate</FONT> code, and who
+wants to recreate that code every time you begin a new project? A simple
+way is to create a rough skeleton of a project, and every time you need
+a new project, you just copy this skeleton, or template.
+
+<P>
+Express has taken a page from Ruby on Rails and provided the <code>express</code>
+utility  to
+generate scaffolding to start your Express project.
+
+<P>
+<PRE>
+[~/src/coffee]$ express --help
+
+  Usage: express [options] [dir]
+
+  Options:
+
+    -h, --help          output usage information
+    -V, --version       output the version number
+    -e, --ejs           add ejs engine support (defaults to jade)
+        --hbs           add handlebars engine support
+    -H, --hogan         add hogan.js engine support
+    -c, --css &lt;engine&gt;  add stylesheet &lt;engine&gt; support (less|stylus|compass) (defaults to plain css)
+        --git           add .gitignore
+    -f, --force         force on non-empty directory
+</PRE>
+
+<P>
+Boilerplate is also useful for the actual HTML that will be delivered to the client. See 
+for example  
+<A NAME="tex2html404"
+  HREF="https://html5boilerplate.com/">https://html5boilerplate.com/</A>.
+
+<P>
+
+<H4><A NAME="SECTION06210020000000000000">
+The Structure</A>
+</H4>
+  
+
+<P>
+There are three folders in the root:
+
+<UL>
+<LI>public: This folder contains the static assets.
+Express relies on a middleware to handle static files.
+<PRE>
+app.use(express.static(path.join(__dirname, 'public')));
+</PRE>
+The static middleware allows you to designate one or more directories
+as containing static resources that are simply to be delivered to the
+client without any special handling. This is where you would put things
+like images, CSS files, and client-side JavaScript files.
+<PRE>
+|--- public
+|   |--- images
+|   |--- javascripts
+|   `-- stylesheets
+|       `-- style.css
+</PRE>
+</LI>
+<LI>views: This folder is populated with Jade templates by default
+<PRE>
+| 
+`-- views
+    |--- error.jade
+    |--- index.jade
+    `-- layout.jade
+</PRE>
+Where a view differs from a static resource (like an image or CSS file)
+is that a view doesn’t necessarily have to be static: the HTML can be
+constructed on the fly to provide a customized page for each request.
+
+<P>
+Express supports many different view engines that provide different levels of abstraction. 
+Express gives some preference to a view engine called Jade 
+</LI>
+<LI>routes: This folder includes the routes (these are the equivalent controllers)
+<PRE>
+|
+|--- routes
+|   |--- index.js
+|   `-- users.js
+</PRE>
+</LI>
+</UL>
+Apart from these existing folders and the models folder, which we need to create ourselves, we might also create folders for 
+
+<UL>
+<LI>tests, 
+</LI>
+<LI>logs, or 
+</LI>
+<LI>configuration. 
+</LI>
+</UL>
+
+<P>
+The best thing about this structure is that
+it's easy to get started with and is known to most developers.
+
+<P>
+
+<H4><A NAME="SECTION06210030000000000000">
+package.json</A>
+</H4>
+  
+
+<P>
+The <code>package.json</code> file is automatically populated with 
+
+<UL>
+<LI>the name of the application, 
+</LI>
+<LI>the dependencies, 
+</LI>
+<LI>the private attribute: If you set <code>"private": true</code> in your 
+<code>package.json</code>, then <code>npm</code> will refuse to publish it.  
+This is a way to prevent accidental publication of private repositories.
+</LI>
+<LI>the starting script. 
+</LI>
+</UL>
+<PRE>
+[/tmp/coffeepress]$ cat package.json 
+{
+  "name": "coffeepress",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.10.2",
+    "cookie-parser": "~1.3.3",
+    "debug": "~2.1.1",
+    "express": "~4.11.1",
+    "jade": "~1.9.1",
+    "morgan": "~1.5.1",
+    "serve-favicon": "~2.2.0"
+  }
+</PRE>
+
+<UL>
+<LI>The module
+<A NAME="tex2html405"
+  HREF="https://github.com/expressjs/body-parser">body-parser</A>
+is a piece of express middleware that·
+reads a form's input and stores it as a javascript
+object accessible through <code>req.body</code>·
+
+<P>
+</LI>
+<LI>The module
+<A NAME="tex2html406"
+  HREF="https://github.com/expressjs/cookie-parser">cookie-parser</A>
+parses the Cookie header and populate <code>req.cookies</code> 
+with an object keyed by the cookie names. 
+
+<P>
+</LI>
+<LI>The 
+<A NAME="tex2html407"
+  HREF="https://github.com/expressjs/morgan">morgan</A>
+module provides a HTTP request logger middleware.
+</LI>
+<LI>The
+<A NAME="tex2html408"
+  HREF="https://github.com/expressjs/serve-favicon">serve-favicon</A>
+module provides a middleware for serving a favicon
+</LI>
+</UL>
+
+<P>
+The starting script is <code>bin/www</code> which  loads <code>app.js</code> 
+<PRE>
+[/tmp/coffeepress]$ cat bin/www 
 #!/usr/bin/env node
-// Note the new way of requesting CoffeeScript since 1.7.x
-require('coffee-script/register');
-// This bootstraps your server main file
-require('./www.coffee');
+
+/**
+ * Module dependencies.
+ */
+
+var app = require('../app');
+var debug = require('debug')('coffeepress:server');
+var http = require('http');
+
+/**
+ * Get port from environment and store in Express.
+ */
+
+var port = normalizePort(process.env.PORT || '3000');
+app.set('port', port);
+
+/**
+ * Create HTTP server.
+ */
+
+var server = http.createServer(app);
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+server.listen(port);
+server.on('error', onError);
+server.on('listening', onListening);
+
+/**
+ * Normalize a port into a number, string, or false.
+ */
+
+function normalizePort(val) {
+  var port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port &gt;= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
+
+/**
+ * Event listener for HTTP server "error" event.
+ */
+
+function onError(error) {
+  if (error.syscall !== 'listen') {
+    throw error;
+  }
+
+  var bind = typeof port === 'string'
+    ? 'Pipe ' + port
+    : 'Port ' + port
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case 'EACCES':
+      console.error(bind + ' requires elevated privileges');
+      process.exit(1);
+      break;
+    case 'EADDRINUSE':
+      console.error(bind + ' is already in use');
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+}
+
+/**
+ * Event listener for HTTP server "listening" event.
+ */
+
+function onListening() {
+  var addr = server.address();
+  var bind = typeof addr === 'string'
+    ? 'pipe ' + addr
+    : 'port ' + addr.port;
+  debug('Listening on ' + bind);
+}
 </PRE>
-y ahora ejecutamos:
+
+<P>
+
+<H4><A NAME="SECTION06210040000000000000">
+app.js</A>
+</H4>
+  
+
+<P>
+<code>app.js</code> loads the middleware, assigns the route handlers, and starts the server. 
+
+<P>
 <PRE>
-[~/src/coffee/coffeepress(master)]$ node bin/www
-GET / 304 334.240 ms - -
-GET /stylesheets/style.css 304 7.269 ms - -
+[/tmp/coffeepress]$ cat app.js
+var express = require('express');
+var path = require('path');
+var favicon = require('serve-favicon');
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+
+var routes = require('./routes/index');
+var users = require('./routes/users');
+
+var app = express();
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+
+// uncomment after placing your favicon in /public
+//app.use(favicon(__dirname + '/public/favicon.ico'));
+app.use(logger('dev'));
+app.use(bodyParser.json()); // Returns middleware that only parses json
+/* 
+URLs can only be sent over the Internet using the ASCII character-set.
+Since URLs often contain characters outside the ASCII set, 
+the URL has to be converted into a valid ASCII format.
+*/
+app.use(bodyParser.urlencoded({ extended: false }));
+   //The "extended" syntax allows for rich objects and arrays to be encoded 
+
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/', routes);
+app.use('/users', users);
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
+});
+
+// error handlers
+
+// development error handler
+// will print stacktrace
+if (app.get('env') === 'development') {
+    app.use(function(err, req, res, next) {
+        res.status(err.status || 500);
+        res.render('error', {
+            message: err.message,
+            error: err
+        });
+    });
+}
+
+// production error handler
+// no stacktraces leaked to user
+app.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+    res.render('error', {
+        message: err.message,
+        error: {}
+    });
+});
+
+
+module.exports = app;
 </PRE>
+
+<P>
+
+<H4><A NAME="SECTION06210050000000000000">
+El método <TT>app.use</TT></A>
+</H4>
+  
+
+<UL>
+<LI>El método
+<A NAME="tex2html409"
+  HREF="http://expressjs.com/4x/api.html#app.use">app.use</A>
+<code>app.use([path,] function [, function...])</code>
+mounts the middleware function(s) at the path. 
+If path is not specified, it defaults to <code>"/"</code>.
+
+<P>
+Asi pues 
+<PRE>
+var routes = require('./routes/index');
+var users = require('./routes/users');
+
+....
+
+app.use('/', routes);
+app.use('/users', users);
+</PRE>
+las rutas especificadas en <code>routes</code> quedan montadas en la raiz 
+y las rutas especificadas en <code>users</code> quedan montadas en <code>users/...</code>
+</LI>
+</UL>
+mientras que este middleware queda asociado con la raiz:
+<PRE>
+app.use(function(req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
+});
+</PRE>
+
+<P>
+
+<H4><A NAME="SECTION06210060000000000000">
+Middleware</A>
+</H4>
+  
+
+<P>
+Middleware is a way to encapsulate functionality: 
+specifically, functionality that operates on an HTTP request to your application. 
+
+<P>
+Practically, a middleware is simply a function that
+takes three arguments: 
+
+<UL>
+<LI>a request object, 
+</LI>
+<LI>a response object, and 
+</LI>
+<LI>a 
+<FONT COLOR="#ff0000"> next</FONT> function
+</LI>
+</UL>
+
+<P>
+
+<UL>
+<LI>If you don’t call <code>next()</code>, the pipeline will be terminated, and
+no more route handlers or middleware will be processed. 
+</LI>
+<LI>If you don’t
+call <code>next()</code>, you should send a response to the client 
+(<code>res.send</code>, <code>res.json</code>, <code>res.render</code>, etc.); 
+if you don’t, the client will hang and eventually time out.
+</LI>
+</UL>
+
+<P>
+
+<H4><A NAME="SECTION06210070000000000000">
+Las Rutas / Routing</A>
+</H4>
+  
+
+<P>
+
+<FONT COLOR="#ff0000"> Routing is the mechanism by which requests 
+(as specified by a URL and HTTP method) are 
+routed to the code that handles them</FONT>. 
+
+<P>
+
+<H4><A NAME="SECTION06210080000000000000">
+Running</A>
+</H4>
+  
+
+<P>
+Instalamos las dependencias:
+<PRE>
+[~/src/coffee/coffeepress]$ npm install
+npm http GET https://registry.npmjs.org/jade
+....
+</PRE>
+y ejecutamos:
+<PRE>
+~/src/coffee/coffeepress]$ DEBUG=coffeepress:* ./bin/www
+  coffeepress:server Listening on port 3000 +0ms
+</PRE>
+Then load <code>http://localhost:3000/</code> in your browser to access the app.
+
+<P>
+
+<H4><A NAME="SECTION06210090000000000000">
+El módulo debug</A>
+</H4>
+  
+
+<P>
+El generador de Express nos produjo el fichero <code>bin/www</code>.
+Este programa hace uso del módulo 
+<A NAME="tex2html410"
+  HREF="https://github.com/visionmedia/debug">debug</A>
+que es el que nos permite emitir el mensaje de <code>Listening on</code>:
+<PRE>
+[~/src/coffee/coffeepress(master)]$ grep debug bin/www.coffee 
+debug = require('debug')('coffeepress:server')
+  debug 'Listening on ' + bind
+</PRE>
+La primera línea <code>debug = require('debug')('coffeepress:server')</code> carga la librería
+y establece el nombre de <code>www.coffee</code> a efectos de depuración como
+<code>coffeepress:server</code>.
+
+<P>
+The <code>DEBUG</code> environment variable must be set to a list of file names
+separated by commas or spaces. It is then used to enable these 
+<code>debug('...')</code> messages. 
+
+<P>
+Por ejemplo:
+<PRE>
+DEBUG=coffeepress:* bin/www
+</PRE>
+dice que se activan los mensajes de debug en cualquier fichero con 
+prefijo de nombre <code>coffeepress</code>.
 
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html2860"
+<A NAME="tex2html2855"
   HREF="node96.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html2854"
-  HREF="node93.html">
+<A NAME="tex2html2849"
+  HREF="node94.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html2848"
+<A NAME="tex2html2843"
   HREF="node94.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html2856"
-  HREF="node100.html">
+<A NAME="tex2html2851"
+  HREF="node101.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html2858"
-  HREF="node103.html">
+<A NAME="tex2html2853"
+  HREF="node104.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
   WIDTH="35" ALIGN="BOTTOM" BORDER="0"
@@ -421,17 +829,17 @@ GET /stylesheets/style.css 304 7.269 ms - -
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html2861"
-  HREF="node96.html">Pruebas</A>
-<B>Sup:</B> <A NAME="tex2html2855"
-  HREF="node93.html">CoffeeScript y Express</A>
-<B> Ant:</B> <A NAME="tex2html2849"
-  HREF="node94.html">Getting Started</A>
+<B> Sig:</B> <A NAME="tex2html2856"
+  HREF="node96.html">Porting to Coffeescript</A>
+<B>Sup:</B> <A NAME="tex2html2850"
+  HREF="node94.html">CoffeeScript y Express</A>
+<B> Ant:</B> <A NAME="tex2html2844"
+  HREF="node94.html">CoffeeScript y Express</A>
 </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I>Casiano Rodríguez León <BR>
-2015-05-07</I>
+2015-05-10</I>
 </ADDRESS>
 </BODY>
 </HTML>
