@@ -201,7 +201,7 @@ Karma: Como Funciona</A>
 <P>
 
 <UL>
-<LI><A NAME="2897"></A><SPAN  CLASS="textbf">Karma</SPAN> (See 
+<LI><A NAME="2899"></A><SPAN  CLASS="textbf">Karma</SPAN> (See 
 <A NAME="tex2html68"
   HREF="http://karma-runner.github.io/0.10/intro/installation.html">Karma installation</A>)
 is essentially a tool which spawns a web server that executes source
@@ -238,7 +238,7 @@ the test code again.
 </LI>
 <LI>Each browser then loads the source files inside an
 <code>IFrame</code><A NAME="tex2html67"
-  HREF="footnode.html#foot2891"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A>, 
+  HREF="footnode.html#foot2893"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A>, 
 executes the tests and reports the results back to the server.
 </LI>
 <LI>The server collects the results from all of the captured browsers and presents them to the developer.
@@ -857,7 +857,13 @@ node_js:
 <LI><B>Setup a Test Command</B>
 
 <P>
-If you do not already have a <code>package.json</code> in your project root create one now. Travis runs <code>npm test</code> to trigger your tests so this is where you tell Travis how to run your tests.
+
+<UL>
+<LI>If you do not already have a <code>package.json</code> in your project root create one now. 
+
+<P>
+</LI>
+<LI>Travis runs <code>npm test</code> to trigger your tests so this is where you tell Travis how to run your tests.
 <PRE>
 // ...snip...
 'devDependencies': {
@@ -869,7 +875,12 @@ If you do not already have a <code>package.json</code> in your project root crea
 }
 // ...snip...
 </PRE>
-Travis will run <code>npm install</code> before every suite so this is your chance to specify any modules your app needs that Travis does not know about like Karma.
+</LI>
+<LI>Travis will run <code>npm install</code> before every suite so this is your
+chance to specify any modules your app needs that Travis does not know
+about like Karma.
+</LI>
+</UL>
 </LI>
 <LI><B>Configure Travis with Firefox</B>
 
