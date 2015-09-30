@@ -201,7 +201,7 @@ Karma: Como Funciona</A>
 <P>
 
 <UL>
-<LI><A NAME="2899"></A><SPAN  CLASS="textbf">Karma</SPAN> (See 
+<LI><A NAME="2901"></A><SPAN  CLASS="textbf">Karma</SPAN> (See 
 <A NAME="tex2html68"
   HREF="http://karma-runner.github.io/0.10/intro/installation.html">Karma installation</A>)
 is essentially a tool which spawns a web server that executes source
@@ -238,7 +238,7 @@ the test code again.
 </LI>
 <LI>Each browser then loads the source files inside an
 <code>IFrame</code><A NAME="tex2html67"
-  HREF="footnode.html#foot2893"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A>, 
+  HREF="footnode.html#foot2895"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A>, 
 executes the tests and reports the results back to the server.
 </LI>
 <LI>The server collects the results from all of the captured browsers and presents them to the developer.
@@ -897,6 +897,13 @@ before_script:
 And now, you can run your tests on Firefox, just change the <code>npm test</code> command to
 <PRE>
 karma start --browsers Firefox --single-run
+</PRE>
+</LI>
+<LI>Si sólo se quiere testear una rama particular:
+<PRE>
+branches:
+  only:
+    - tests
 </PRE>
 </LI>
 <LI><B>Notes</B>
