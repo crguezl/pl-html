@@ -562,7 +562,10 @@ applies to:
 <P>
 <DIV><B>Ejercicio  <SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; 
 <UL>
-<LI>Dado el selector
+<LI>Descendant Selector:
+
+<P>
+Dado el selector
 <PRE>
 #container .box {
    float: left;
@@ -579,7 +582,10 @@ applies to:
 &lt;div class="box"&gt;&lt;/div&gt;
 </PRE>
 </LI>
-<LI>Dada esta regla
+<LI>Child selector (targets immediate child elements):
+
+<P>
+Dada esta regla
 <PRE>
 #container &gt; .box {
    float: left;
@@ -596,7 +602,10 @@ applies to:
 &lt;/div&gt;
 </PRE>
 </LI>
-<LI>Dada esta regla <PRE>
+<LI>A general sibling combinator matches elements based on sibling relationships. That is to say, the selected elements are beside each other in the HTML.
+
+<P>
+Dada esta regla <PRE>
 h2 ~ p { margin-bottom: 20px; }
 </PRE>
 ¿A que elementos de este HTML se aplica?
@@ -610,7 +619,11 @@ h2 ~ p { margin-bottom: 20px; }
 &lt;/div&gt;
 </PRE>
 </LI>
-<LI>Dada esta regla <PRE>
+<LI>The adjacent sibling combinator uses the plus symbol (+), and is almost the same as the general sibling selector. 
+The difference is that the targeted element must be an immediate sibling, not just a general sibling. 
+
+<P>
+Dada esta regla <PRE>
 p+ p {
 text-indent: 1.5em; margin-bottom: 0;
 }
@@ -627,7 +640,10 @@ text-indent: 1.5em; margin-bottom: 0;
 &lt;/div&gt;
 </PRE>
 </LI>
-<LI>Dada esta regla:
+<LI>The attribute selector targets elements based on the presence and/or value of HTML attributes, and is declared using square brackets
+
+<P>
+Dada esta regla:
 <PRE>
 input[type="text"] {
    background-color: #444;
@@ -640,7 +656,10 @@ input[type="text"] {
   &lt;input type="submit"&gt;
 </PRE>
 </LI>
-<LI>Dada esta regla:
+<LI>A pseudo-class uses a colon character to identify a pseudo-state that an element might be in.
+
+<P>
+Dada esta regla:
 <PRE>
 a:hover {
    color: red;
@@ -649,10 +668,19 @@ a:hover {
 ¿Que porción del selector es conocido como <A NAME="2083"></A><SPAN  CLASS="textbf">pseudo-clase</SPAN>?
 ¿Cuando se aplica la regla a un ancla <code>&lt;a&gt;</code>?
 </LI>
-<LI>Exprese con palabras a que elementos del documento se aplicará la siguiente regla:
+<LI><P>
+Exprese con palabras a que elementos del documento se aplicará la siguiente regla:
 <PRE>
 #form [type=text] { border: solid 1px #ccc; }
 </PRE>
+
+<P>
+This selector combines the ID selector with the attribute selector. 
+
+<P>
+This will target all elements with a type attribute of <code>text</code> that are inside an element with an ID of form.
+
+<P>
 </LI>
 </UL></DIV><P></P>
 
@@ -1352,7 +1380,7 @@ suite('temperature', function() {
 </PRE>
 
 <P>
-The <A NAME="2434"></A><SPAN  CLASS="textbf">BDD</SPAN> interface provides <code>describe()</code>, <code>it()</code>, <code>before()</code>, <code>after()</code>, <code>beforeEach()</code>, and <code>afterEach()</code>:
+The <A NAME="2454"></A><SPAN  CLASS="textbf">BDD</SPAN> interface provides <code>describe()</code>, <code>it()</code>, <code>before()</code>, <code>after()</code>, <code>beforeEach()</code>, and <code>afterEach()</code>:
 
 <P>
 <PRE>
@@ -1368,8 +1396,8 @@ describe('Array', function(){
   });
 });
 </PRE>
-The <A NAME="2436"></A><SPAN  CLASS="textbf">Chai should</SPAN> style allows for the same chainable assertions as the 
-<A NAME="2438"></A><SPAN  CLASS="textbf">expect interface</SPAN>, however it extends each object with a <code>should</code> 
+The <A NAME="2456"></A><SPAN  CLASS="textbf">Chai should</SPAN> style allows for the same chainable assertions as the 
+<A NAME="2458"></A><SPAN  CLASS="textbf">expect interface</SPAN>, however it extends each object with a <code>should</code> 
 property to start your chain. 
 
 <P>
@@ -1380,7 +1408,7 @@ Chai Assert Style</A>
   
 
 <P>
-The <A NAME="2444"></A><SPAN  CLASS="textbf">assert style</SPAN> is exposed through assert interface. 
+The <A NAME="2464"></A><SPAN  CLASS="textbf">assert style</SPAN> is exposed through assert interface. 
 
 <P>
 This provides the classic assert-dot notation, similiar to that packaged with node.js. 
@@ -1496,7 +1524,7 @@ Manejando tareas en JS: Gulp</A>
 
 
 <P>
-Why would you want to use a <A NAME="2636"></A><SPAN  CLASS="textbf">task runner</SPAN>? 
+Why would you want to use a <A NAME="2656"></A><SPAN  CLASS="textbf">task runner</SPAN>? 
 
 <P>
 They’re small applications that automate often time consuming and boring tasks. 
@@ -1839,7 +1867,7 @@ is a headless WebKit scriptable with a JavaScript API. It has fast and native su
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I>Casiano Rodríguez León <BR>
-2015-09-30</I>
+2015-10-01</I>
 </ADDRESS>
 </BODY>
 </HTML>
