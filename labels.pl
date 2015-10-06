@@ -630,6 +630,10 @@ $key = q/cite_learningnode/;
 $external_labels{$key} = "$URL/" . q|node285.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/parrafo:dondetemperatura/;
+$external_labels{$key} = "$URL/" . q|node9.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/example:tutuast/;
 $external_labels{$key} = "$URL/" . q|node69.html|; 
 $noresave{$key} = "$nosave";
@@ -1073,12 +1077,16 @@ $key = q/practica:pl0/;
 $external_latex_labels{$key} = q|2.6|; 
 $noresave{$key} = "$nosave";
 
-$key = q/sectionpractica:csvajax/;
-$external_latex_labels{$key} = q|1.5|; 
-$noresave{$key} = "$nosave";
-
 $key = q/sectionpractica:csv/;
 $external_latex_labels{$key} = q|1.4|; 
+$noresave{$key} = "$nosave";
+
+$key = q/parrafo:dondetemperatura/;
+$external_latex_labels{$key} = q|1.2|; 
+$noresave{$key} = "$nosave";
+
+$key = q/sectionpractica:csvajax/;
+$external_latex_labels{$key} = q|1.5|; 
 $noresave{$key} = "$nosave";
 
 $key = q/parrafo:jsonstringify/;

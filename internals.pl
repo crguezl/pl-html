@@ -630,6 +630,10 @@ $key = q/cite_learningnode/;
 $ref_files{$key} = "$dir".q|node285.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/parrafo:dondetemperatura/;
+$ref_files{$key} = "$dir".q|node9.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/example:tutuast/;
 $ref_files{$key} = "$dir".q|node69.html|; 
 $noresave{$key} = "$nosave";
