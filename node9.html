@@ -854,7 +854,7 @@ The <A NAME="2131"></A><SPAN  CLASS="textbf">box model</SPAN> refers to the usua
 
 <P>
 
-<img src="cssboxmodel.png" />
+<img src="cssboxmodel.png" align="middle" />
 
 <P>
 
@@ -950,8 +950,23 @@ The margin portion of an element exists outside the element.
 ¿Que <code>border-width</code> tendrán?
 
 <P>
-Here we’ve used the same selector on two different rule sets. The second rule set will take precedence over the first, overriding any styles that are the same in both rule sets.
-The border will become 3px wide (the default border width for a visible border,)
+Here we’ve used the same selector on two different rule sets. 
+
+<P>
+The second rule set will take precedence over the first, overriding any styles that are the same in both rule sets.
+
+<P>
+In the first rule set, we’ve defined all three <code>border-related</code> properties in longhand, setting the values to display a dashed border that’s 2px wide and colored blue. 
+
+<P>
+But what’s the result of these two
+rule sets? Well, the border will become 3px wide 
+(the default border width for a visible border,) and it'll be colored green, not blue. 
+
+<P>
+This happens because the second rule set uses shorthand to
+define the <code>border-style</code> as solid, but doesn’t define the other two properties (<code>border-width</code> and 
+<code>border-color</code>).
 
 <P>
 See
@@ -1477,7 +1492,7 @@ suite('temperature', function() {
 </PRE>
 
 <P>
-The <A NAME="2534"></A><SPAN  CLASS="textbf">BDD</SPAN> interface provides <code>describe()</code>, <code>it()</code>, <code>before()</code>, <code>after()</code>, <code>beforeEach()</code>, and <code>afterEach()</code>:
+The <A NAME="2542"></A><SPAN  CLASS="textbf">BDD</SPAN> interface provides <code>describe()</code>, <code>it()</code>, <code>before()</code>, <code>after()</code>, <code>beforeEach()</code>, and <code>afterEach()</code>:
 
 <P>
 <PRE>
@@ -1493,8 +1508,8 @@ describe('Array', function(){
   });
 });
 </PRE>
-The <A NAME="2536"></A><SPAN  CLASS="textbf">Chai should</SPAN> style allows for the same chainable assertions as the 
-<A NAME="2538"></A><SPAN  CLASS="textbf">expect interface</SPAN>, however it extends each object with a <code>should</code> 
+The <A NAME="2544"></A><SPAN  CLASS="textbf">Chai should</SPAN> style allows for the same chainable assertions as the 
+<A NAME="2546"></A><SPAN  CLASS="textbf">expect interface</SPAN>, however it extends each object with a <code>should</code> 
 property to start your chain. 
 
 <P>
@@ -1505,7 +1520,7 @@ Chai Assert Style</A>
   
 
 <P>
-The <A NAME="2544"></A><SPAN  CLASS="textbf">assert style</SPAN> is exposed through assert interface. 
+The <A NAME="2552"></A><SPAN  CLASS="textbf">assert style</SPAN> is exposed through assert interface. 
 
 <P>
 This provides the classic assert-dot notation, similiar to that packaged with node.js. 
@@ -1621,7 +1636,7 @@ Manejando tareas en JS: Gulp</A>
 
 
 <P>
-Why would you want to use a <A NAME="2738"></A><SPAN  CLASS="textbf">task runner</SPAN>? 
+Why would you want to use a <A NAME="2746"></A><SPAN  CLASS="textbf">task runner</SPAN>? 
 
 <P>
 They’re small applications that automate often time consuming and boring tasks. 
