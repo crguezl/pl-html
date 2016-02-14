@@ -583,8 +583,7 @@ Dado el selector
 </PRE>
 This declaration block will apply to all elements that have a class of box that are inside an element with an <code>ID</code> of container. It's worth noting that the <code>.box</code>
 element doesn't have to be an immediate
-
-<P>
+child: there could be another element wrapping .box, and the styles would still apply.
 </LI>
 <LI>Child selector (targets immediate child elements):
 
@@ -1401,7 +1400,7 @@ suite('temperature', function() {
 </PRE>
 
 <P>
-The <A NAME="2468"></A><SPAN  CLASS="textbf">BDD</SPAN> interface provides <code>describe()</code>, <code>it()</code>, <code>before()</code>, <code>after()</code>, <code>beforeEach()</code>, and <code>afterEach()</code>:
+The <A NAME="2466"></A><SPAN  CLASS="textbf">BDD</SPAN> interface provides <code>describe()</code>, <code>it()</code>, <code>before()</code>, <code>after()</code>, <code>beforeEach()</code>, and <code>afterEach()</code>:
 
 <P>
 <PRE>
@@ -1417,8 +1416,8 @@ describe('Array', function(){
   });
 });
 </PRE>
-The <A NAME="2470"></A><SPAN  CLASS="textbf">Chai should</SPAN> style allows for the same chainable assertions as the 
-<A NAME="2472"></A><SPAN  CLASS="textbf">expect interface</SPAN>, however it extends each object with a <code>should</code> 
+The <A NAME="2468"></A><SPAN  CLASS="textbf">Chai should</SPAN> style allows for the same chainable assertions as the 
+<A NAME="2470"></A><SPAN  CLASS="textbf">expect interface</SPAN>, however it extends each object with a <code>should</code> 
 property to start your chain. 
 
 <P>
@@ -1429,7 +1428,7 @@ Chai Assert Style</A>
   
 
 <P>
-The <A NAME="2478"></A><SPAN  CLASS="textbf">assert style</SPAN> is exposed through assert interface. 
+The <A NAME="2476"></A><SPAN  CLASS="textbf">assert style</SPAN> is exposed through assert interface. 
 
 <P>
 This provides the classic assert-dot notation, similiar to that packaged with node.js. 
@@ -1545,7 +1544,7 @@ Manejando tareas en JS: Gulp</A>
 
 
 <P>
-Why would you want to use a <A NAME="2672"></A><SPAN  CLASS="textbf">task runner</SPAN>? 
+Why would you want to use a <A NAME="2670"></A><SPAN  CLASS="textbf">task runner</SPAN>? 
 
 <P>
 They’re small applications that automate often time consuming and boring tasks. 
