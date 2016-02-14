@@ -1,0 +1,22 @@
+
+DIV.navigation		 {display: none; } /* { visibility:hidden; } */
+BODY PRE,
+PRE span.synComment,
+PRE span.dbuser, 
+PRE  span.synConstant,
+PRE span.synIdentifier,
+PRE span.synStatement,
+PRE span.synPreProc,
+PRE span.synType,
+PRE span.synSpecial,
+PRE span.synUnderlined,
+PRE span.synError,
+PRE span.synTodo,
+PRE span.Linenum,
+BODY code,
+BODY A,
+BLOCKQUOTE, 
+BLOCKQUOTE code,
+DIV code   { width: 100%; background: white; text: black; color: black; }
+
+
