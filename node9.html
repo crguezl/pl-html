@@ -595,6 +595,14 @@ Dada esta regla
    padding-bottom: 15px;
 }
 </PRE>
+In this example, the selector will match all elements that have a class of 
+<code>box</code> and that are immediate children of the 
+<code>#container</code> element. 
+That means, unlike the descendant combinator, there can't be
+another element wrapping <code>.box</code>: 
+it has to be a direct child element.
+
+<P>
 ¿A que elementos de este HTML se aplica?
 <PRE>
 &lt;div id="container"&gt;
@@ -604,6 +612,19 @@ Dada esta regla
   &lt;/div&gt;
 &lt;/div&gt;
 </PRE>
+
+<P>
+In this example, the CSS from the previous code example will apply only to the first 
+<code>&lt;div&gt;</code> element that has a class of <code>box</code>. 
+
+<P>
+As you can see, the second <code>&lt;div&gt;</code>
+element with a class of box is inside
+another <code>&lt;div&gt;</code> element. 
+As a result, the styles will not apply to that element, even though it too has a class of 
+<code>box</code>.
+
+<P>
 </LI>
 <LI>A general sibling combinator matches elements based on sibling relationships. That is to say, the selected elements are beside each other in the HTML.
 
@@ -1400,7 +1421,7 @@ suite('temperature', function() {
 </PRE>
 
 <P>
-The <A NAME="2466"></A><SPAN  CLASS="textbf">BDD</SPAN> interface provides <code>describe()</code>, <code>it()</code>, <code>before()</code>, <code>after()</code>, <code>beforeEach()</code>, and <code>afterEach()</code>:
+The <A NAME="2474"></A><SPAN  CLASS="textbf">BDD</SPAN> interface provides <code>describe()</code>, <code>it()</code>, <code>before()</code>, <code>after()</code>, <code>beforeEach()</code>, and <code>afterEach()</code>:
 
 <P>
 <PRE>
@@ -1416,8 +1437,8 @@ describe('Array', function(){
   });
 });
 </PRE>
-The <A NAME="2468"></A><SPAN  CLASS="textbf">Chai should</SPAN> style allows for the same chainable assertions as the 
-<A NAME="2470"></A><SPAN  CLASS="textbf">expect interface</SPAN>, however it extends each object with a <code>should</code> 
+The <A NAME="2476"></A><SPAN  CLASS="textbf">Chai should</SPAN> style allows for the same chainable assertions as the 
+<A NAME="2478"></A><SPAN  CLASS="textbf">expect interface</SPAN>, however it extends each object with a <code>should</code> 
 property to start your chain. 
 
 <P>
@@ -1428,7 +1449,7 @@ Chai Assert Style</A>
   
 
 <P>
-The <A NAME="2476"></A><SPAN  CLASS="textbf">assert style</SPAN> is exposed through assert interface. 
+The <A NAME="2484"></A><SPAN  CLASS="textbf">assert style</SPAN> is exposed through assert interface. 
 
 <P>
 This provides the classic assert-dot notation, similiar to that packaged with node.js. 
@@ -1544,7 +1565,7 @@ Manejando tareas en JS: Gulp</A>
 
 
 <P>
-Why would you want to use a <A NAME="2670"></A><SPAN  CLASS="textbf">task runner</SPAN>? 
+Why would you want to use a <A NAME="2678"></A><SPAN  CLASS="textbf">task runner</SPAN>? 
 
 <P>
 They’re small applications that automate often time consuming and boring tasks. 
