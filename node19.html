@@ -27,19 +27,19 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <BODY >
 
 <DIV CLASS="navigation">
-<A NAME="tex2html1353"
+<A NAME="tex2html1354"
   HREF="node20.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html1347"
+<A NAME="tex2html1348"
   HREF="node7.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html1343"
+<A NAME="tex2html1344"
   HREF="node18.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html1349"
+<A NAME="tex2html1350"
   HREF="node101.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html1351"
+<A NAME="tex2html1352"
   HREF="node104.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -79,18 +79,18 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html1354"
+<B> Sig:</B> <A NAME="tex2html1355"
   HREF="node20.html">Analizadores Descendentes Predictivos en</A>
-<B>Sup:</B> <A NAME="tex2html1348"
+<B>Sup:</B> <A NAME="tex2html1349"
   HREF="node7.html">Expresiones Regulares y Análisis</A>
-<B> Ant:</B> <A NAME="tex2html1344"
+<B> Ant:</B> <A NAME="tex2html1345"
   HREF="node18.html">Práctica: Ficheros INI</A>
 <B> Con:</B> 
-<A NAME="tex2html1349"
+<A NAME="tex2html1350"
   HREF="node101.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>
 <B> Ind:</B> 
-<A NAME="tex2html1351"
+<A NAME="tex2html1352"
   HREF="node104.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A>
 <BR> <P>
@@ -102,16 +102,16 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 <UL CLASS="ChildLinks">
 <LI><UL>
 <LI><UL>
-<LI><A NAME="tex2html1355"
-  HREF="node19.html#SECTION041120010000000000000">TDOP, Top Down Operator Precedence</A>
 <LI><A NAME="tex2html1356"
+  HREF="node19.html#SECTION041120010000000000000">TDOP, Top Down Operator Precedence</A>
+<LI><A NAME="tex2html1357"
   HREF="node19.html#SECTION041120020000000000000">Objetivos de la Práctica</A>
 </UL></UL></UL>
 <!--End of Table of Child-Links-->
 <HR>
 
 <H1><A NAME="SECTION041120000000000000000"></A>
-   <A NAME="4566"></A>
+   <A NAME="4570"></A>
 <BR>
 Práctica: Analizador Léxico para Un Subconjunto de JavaScript
 </H1>
@@ -126,11 +126,11 @@ TDOP, Top Down Operator Precedence</A>
 Vamos a trabajar a partir de este repo de Douglas Crockford:
 
 <UL>
-<LI><A NAME="tex2html182"
+<LI><A NAME="tex2html183"
   HREF="https://github.com/douglascrockford/TDOP">https://github.com/douglascrockford/TDOP</A>
 </LI>
 <LI>Autor: 
-<A NAME="tex2html183"
+<A NAME="tex2html184"
   HREF="http://www.crockford.com/">Douglas Crockford</A>, douglas@crockford.com
 
 <P>
@@ -144,7 +144,7 @@ Vamos a trabajar a partir de este repo de Douglas Crockford:
 <P>
 
 <UL>
-<LI><A NAME="tex2html184"
+<LI><A NAME="tex2html185"
   HREF="http://crguezl.github.io/ull-etsii-grado-pl-minijavascript/tdop.html">tdop.html</A>
 contains a description of Vaughn Pratt's Top Down Operator Precedence,
 and describes  the parser whose lexer we are going to write in 
@@ -160,7 +160,7 @@ on <code>parse.js</code> and <code>tokens.js</code>.
 </LI>
 <LI>The file <code>tdop.js</code> contains the Simplified JavaScript parser. 
 </LI>
-<LI><A NAME="tex2html185"
+<LI><A NAME="tex2html186"
   HREF="https://github.com/douglascrockford/TDOP/blob/master/tokens.js">tokens.js</A>.
 produces an array of token objects from a string.
 
@@ -179,7 +179,7 @@ Objetivos de la Práctica</A>
 
 <P>
 Douglas Crockford escribió su analizador léxico 
-<A NAME="tex2html186"
+<A NAME="tex2html187"
   HREF="https://github.com/douglascrockford/TDOP/blob/master/tokens.js">tokens.js</A>
 sin usar expresiones regulares.
 Eso hace que sea extenso (268 líneas). Su analizador es un subconjunto de JS que no tiene 
@@ -188,7 +188,7 @@ uno de sus objetivos era que el analizador
 se analizara a si mismo.
 
 <P>
-Reescriba el analizador léxico en <A NAME="tex2html187"
+Reescriba el analizador léxico en <A NAME="tex2html188"
   HREF="https://github.com/douglascrockford/TDOP/blob/master/tokens.js">tokens.js</A>.
 usando expresiones regulares.
 
@@ -197,7 +197,7 @@ usando expresiones regulares.
 <OL>
 <LI>Evite que se hagan copias de la cadena siendo procesada. Muévase dentro de la misma cadena usando
 <code>lastIndex</code>. Parta de la solucióndada por el profesor en 
-<A NAME="tex2html188"
+<A NAME="tex2html189"
   HREF="https://github.com/crguezl/ull-etsii-grado-pl-minijavascript/blob/gh-pages/tokens.js">https://github.com/crguezl/ull-etsii-grado-pl-minijavascript/blob/gh-pages/tokens.js</A>
 </LI>
 <LI>
@@ -209,7 +209,7 @@ Vea el ejemplo en
 
 <UL>
 <LI>Express.JS:
-<A NAME="tex2html189"
+<A NAME="tex2html190"
   HREF="https://github.com/crguezl/expressloadfileontotextarea">https://github.com/crguezl/expressloadfileontotextarea</A>
 <P>
 Instale las dependencias con:
@@ -226,17 +226,17 @@ Example app listening at http://0.0.0.0:3000
 </LI>
 <LI>Añada una zona de Drag-and-Drop a la que se pueda arrastrar el fichero a analizar.
 Tiene un ejemplo de como hacerlo en el fichero 
-<A NAME="tex2html190"
+<A NAME="tex2html191"
   HREF="https://github.com/crguezl/files-in-javascript-tut/dragandrop.html">https://github.com/crguezl/files-in-javascript-tut/dragandrop.html</A>
 en:
 
 <UL>
 <LI>Repositorio:
-<A NAME="tex2html191"
+<A NAME="tex2html192"
   HREF="https://github.com/crguezl/files-in-javascript-tut">https://github.com/crguezl/files-in-javascript-tut</A>
 </LI>
 <LI>Despliegue en gh-pages:
-<A NAME="tex2html192"
+<A NAME="tex2html193"
   HREF="http://crguezl.github.io/files-in-javascript-tut/">http://crguezl.github.io/files-in-javascript-tut/</A>
 </LI>
 </UL>
@@ -265,11 +265,11 @@ Observe el ampersand en la línea
 </UL>
 </LI>
 <LI>Use los issues de GitHub. Lea
-<A NAME="tex2html193"
+<A NAME="tex2html194"
   HREF="https://guides.github.com/features/issues/index.html">Mastering Issues</A>
 </LI>
 <LI>Haga el despliegue de su aplicación en 
-<A NAME="tex2html194"
+<A NAME="tex2html195"
   HREF="https://www.heroku.com/">Heroku</A>.
 
 <P>
@@ -278,11 +278,11 @@ Observe el ampersand en la línea
 <LI>Para Express.JS véase:
 
 <UL>
-<LI>La rama heroku del repo <A NAME="tex2html195"
+<LI>La rama heroku del repo <A NAME="tex2html196"
   HREF="https://github.com/crguezl/how-jquery-works-tutorial/tree/heroku">how-jquery-works-tutorial</A>
 </LI>
 <LI>El tutorial de Heroku 
-<A NAME="tex2html196"
+<A NAME="tex2html197"
   HREF="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started with Node.js on Heroku</A>
 </LI>
 <LI>El capítulo sobre Heroku en los apuntes de LPP
@@ -301,12 +301,12 @@ Observe el ampersand en la línea
 <LI>Una primera solución de la que puede partir se encuentra en:
 
 <UL>
-<LI><A NAME="tex2html197"
+<LI><A NAME="tex2html198"
   HREF="https://github.com/crguezl/ull-etsii-grado-pl-minijavascript/tree/gh-pages">https://github.com/crguezl/ull-etsii-grado-pl-minijavascript/tree/gh-pages</A>
 en github. 
 </LI>
 <LI>Veala en funcionamiento en 
-<A NAME="tex2html198"
+<A NAME="tex2html199"
   HREF="http://crguezl.github.io/ull-etsii-grado-pl-minijavascript/">GitHub Pages</A>
 </LI>
 <LI><P>
@@ -318,16 +318,16 @@ en github.
 </UL>
 </LI>
 <LI>El método <code>tokens</code> original retorna el array de tokens. Puede encontrarlo en
-<A NAME="tex2html199"
+<A NAME="tex2html200"
   HREF="https://github.com/douglascrockford/TDOP/blob/master/tokens.js">tokens.js</A>.
 </LI>
 <LI>Mejore la solución en
-<A NAME="tex2html200"
+<A NAME="tex2html201"
   HREF="https://github.com/crguezl/ull-etsii-grado-pl-minijavascript/tree/gh-pages">https://github.com/crguezl/ull-etsii-grado-pl-minijavascript/tree/gh-pages</A>
 </LI>
 <LI>Para esta práctica es necesario familiarizarse con la forma en que funciona la OOP
 en JS. Vea este
-<A NAME="tex2html201"
+<A NAME="tex2html202"
   HREF="http://jsfiddle.net/casiano/Mw9dW/">jsfiddle</A>
 </LI>
 </OL>
@@ -335,19 +335,19 @@ en JS. Vea este
 <P>
 
 <DIV CLASS="navigation"><HR>
-<A NAME="tex2html1353"
+<A NAME="tex2html1354"
   HREF="node20.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html1347"
+<A NAME="tex2html1348"
   HREF="node7.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html1343"
+<A NAME="tex2html1344"
   HREF="node18.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html1349"
+<A NAME="tex2html1350"
   HREF="node101.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
-<A NAME="tex2html1351"
+<A NAME="tex2html1352"
   HREF="node104.html">
 <IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> <A NAME="tex2html2"
   HREF="http://nereida.deioc.ull.es/perlexamples/index.html"><IMG
@@ -387,11 +387,11 @@ en JS. Vea este
  SRC="logopcgull.gif"
  ALT="crguezl at github"></A>
 <BR>
-<B> Sig:</B> <A NAME="tex2html1354"
+<B> Sig:</B> <A NAME="tex2html1355"
   HREF="node20.html">Analizadores Descendentes Predictivos en</A>
-<B>Sup:</B> <A NAME="tex2html1348"
+<B>Sup:</B> <A NAME="tex2html1349"
   HREF="node7.html">Expresiones Regulares y Análisis</A>
-<B> Ant:</B> <A NAME="tex2html1344"
+<B> Ant:</B> <A NAME="tex2html1345"
   HREF="node18.html">Práctica: Ficheros INI</A>
 </DIV>
 <!--End of Navigation Panel-->
