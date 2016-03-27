@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.1.18)  16 FEB 2016 09:17
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.1.18)  27 MAR 2016 20:13
 entering extended mode
  %&-line parsing enabled.
 **./images.tex
@@ -453,20 +453,20 @@ latex2htmlLength oddsidemargin=-15.36446pt
 
 latex2htmlLength evensidemargin=-15.36446pt
 
-LaTeX Font Info:    Try loading font information for U+lasy on input line 1195.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 1196.
 
 (/usr/share/texmf-texlive/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 1195.
+LaTeX Font Info:    Try loading font information for U+msa on input line 1196.
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 1195.
+LaTeX Font Info:    Try loading font information for U+msb on input line 1196.
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-l2hSize :tex2html_wrap_inline22407:7.98248pt::7.98248pt::64.81665pt.
+l2hSize :tex2html_wrap_inline22435:7.98248pt::7.98248pt::64.81665pt.
 [1
 
 

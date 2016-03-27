@@ -1267,11 +1267,11 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img197.png"
  ALT="$ \forall a \in FOLLOW(A): action[i][a] = reduce A \rightarrow \alpha$">|; 
 
-$key = q/%latex2htmlidmarker22407S=program;MSF=1.6;LFS=11;AAT/;
+$key = q/%latex2htmlidmarker22435S=program;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
  SRC="|."$dir".q|img100.png"
- ALT="% latex2html id marker 22407
+ ALT="% latex2html id marker 22435
 $ S = program$">|; 
 
 $key = q/Astackrel{*}{Longrightarrow}Aalpha;MSF=1.6;LFS=11;AAT/;
