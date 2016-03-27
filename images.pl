@@ -1267,13 +1267,6 @@ $cached_env_img{$key} = q|<IMG
  SRC="|."$dir".q|img197.png"
  ALT="$ \forall a \in FOLLOW(A): action[i][a] = reduce A \rightarrow \alpha$">|; 
 
-$key = q/%latex2htmlidmarker22435S=program;MSF=1.6;LFS=11;AAT/;
-$cached_env_img{$key} = q|<IMG
- WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
- SRC="|."$dir".q|img100.png"
- ALT="% latex2html id marker 22435
-$ S = program$">|; 
-
 $key = q/Astackrel{*}{Longrightarrow}Aalpha;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  WIDTH="80" HEIGHT="24" ALIGN="BOTTOM" BORDER="0"
@@ -1635,6 +1628,13 @@ $cached_env_img{$key} = q|<IMG
  WIDTH="123" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
  SRC="|."$dir".q|img289.png"
  ALT="$ LEFTVALUE$">|; 
+
+$key = q/%latex2htmlidmarker22437S=program;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="|."$dir".q|img100.png"
+ ALT="% latex2html id marker 22437
+$ S = program$">|; 
 
 $key = q/SiArightarrowalphaB;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
