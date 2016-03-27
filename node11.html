@@ -400,7 +400,7 @@ Al analizar <code>w</code> debería haber un campo vacío al principio, uno en m
 y otro al final.
 
 <P>
-Para resolverlo hemos usado lookahead 
+Para resolverlo hemos usado lookahead <code>(^|,)(?=\s*(,|$))</code> que dice que una coma seguida de una coma o el final da lugar a un nuevo campo (y que si al comienzo hay una coma también se produce un nuevo campo):
 <PRE>
 &gt; r
 /\s*"((?:[^"\\]|\\.)*)"\s*|\s*([^,]+)|(^|,)(?=\s*(,|$))/g
@@ -2194,6 +2194,8 @@ Además de todo lo descrito en los apartados anteriores, la práctica debe cumpl
 siguientes requisitos:
 
 <UL>
+<LI>Use XRegExp
+</LI>
 <LI>Los templates deben hacerse usando underscore y el truco del elemento <code>script</code> en el HTML
 </LI>
 <LI>Se debe usar locaStorage para almacenar las últimas entradas
